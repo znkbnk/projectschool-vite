@@ -1,0 +1,105 @@
+// routes/userRoutes.js
+import express from "express";
+import User from "../models/userModel.js";
+import admin from "firebase-admin";
+
+const router = express.Router();
+
+// Middleware to verify Firebase token
+const verifyFirebaseToken = async (req, res, next) => {
+  try {
+    const authHeader = req.headers.authorization;
+    if (!authHeader?.startsWith("Bearer ")) {
+      return res.status(401).json({ error: "Missing token" });
+    }
+    const idToken = authHeader.split("Bearer ")[1];
+    const decoded = await admin.auth().verifyIdToken(idToken);
+    req.firebaseUid = decoded.uid;
+    next();
+  } catch (err) {
+    console.error("[Auth] Invalid token:", err.message);
+    return res.status(401).json({ error: "Invalid token" });
+  }
+};
+
+// Get user subscription status and admin status
+router.get(
+  "/users/:uid/subscription-status",
+  verifyFirebaseToken,
+  async (req, res) => {
+    res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+    res.setHeader("Pragma", "no-cache");
+    res.setHeader("Expires", "0");
+    res.setHeader("Surrogate-Control", "no-store");
+
+    try {
+      const { uid } = req.params;
+      if (!uid) return res.status(400).json({ error: "User ID is required" });
+      if (req.firebaseUid !== uid) return res.status(403).json({ error: "Unauthorized access" });
+
+      const user = await User.findOne(
+        { firebaseUid: uid },
+        { subscriptionStatus: 1, isAdmin: 1, _id: 0 }
+      );
+
+      const response = {
+        subscriptionStatus: user?.subscriptionStatus || "not_subscribed",
+        isAdmin: user?.isAdmin || false,
+      };
+
+      return res.json(response);
+    } catch (error) {
+      console.error("Error fetching subscription status:", error);
+      res.status(500).json({
+        error: "Internal server error",
+        subscriptionStatus: "not_subscribed",
+        isAdmin: false,
+      });
+    }
+  }
+);
+
+// Update user subscription status
+router.post(
+  "/users/:uid/update-subscription",
+  verifyFirebaseToken,
+  async (req, res) => {
+    try {
+      const { uid } = req.params;
+      const { subscriptionStatus } = req.body;
+
+      if (!uid || !subscriptionStatus) {
+        return res.status(400).json({ error: "User ID and subscription status required" });
+      }
+      if (req.firebaseUid !== uid) {
+        return res.status(403).json({ error: "Unauthorized access" });
+      }
+
+      const validStatuses = ["not_subscribed", "subscribed", "past_due", "canceled", "incomplete", "trialing"];
+      if (!validStatuses.includes(subscriptionStatus)) {
+        return res.status(400).json({ error: "Invalid subscription status" });
+      }
+
+      const updatedUser = await User.findOneAndUpdate(
+        { firebaseUid: uid },
+        { $set: { subscriptionStatus } },
+        { new: true, projection: { subscriptionStatus: 1, isAdmin: 1 } }
+      );
+
+      if (!updatedUser) {
+        return res.status(404).json({ error: "User not found" });
+      }
+
+      res.json({
+        success: true,
+        subscriptionStatus: updatedUser.subscriptionStatus,
+        isAdmin: updatedUser.isAdmin,
+      });
+    } catch (error) {
+      console.error("Error updating subscription:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  }
+);
+
+export { router, verifyFirebaseToken };

@@ -1,0 +1,8 @@
+.env
+/node_modules
+
+changeValueInMongoDB.js
+workingServer.js
+runOnce/updateSubscriptionStatus.js
+/runOnce
+firebase-admin-sdk.json

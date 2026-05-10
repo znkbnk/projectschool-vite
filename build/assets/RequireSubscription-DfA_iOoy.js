@@ -1,0 +1,2 @@
+import{r as e}from"./chunk-5KNZJZUH-CqMt8rkw.js";import{t}from"./useAuthContext-DSmvdGca.js";import{t as n}from"./jsx-runtime-ByUrNkr2.js";var r=n(),i=({children:n,redirectTo:i=`/`})=>{let{subscriptionStatus:a,isLoading:o}=t();return o?null:a===`subscribed`?n:(0,r.jsx)(e,{to:i,replace:!0})};export{i as default};
+//# sourceMappingURL=RequireSubscription-DfA_iOoy.js.map

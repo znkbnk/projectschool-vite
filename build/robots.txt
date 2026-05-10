@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /api/
+Disallow: /editor/
+Disallow: /login
+Disallow: /*structured-data*.json
+Disallow: /*.json$
+Disallow: /interview/interview-correct-code/
+Disallow: /interview/InterviewQuiz/
+Disallow: /mobile-message
+Disallow: /notavailable
+Disallow: /success
+Disallow: /exercises/React/structured-data*.json
+Disallow: /exercises/Live/structured-data*.json
+Disallow: /blogs/devessentials/structured-data*.json
+
+# Block query parameters on login
+Disallow: /login?*
+
+Sitemap: https://www.projectschool.dev/sitemap.xml

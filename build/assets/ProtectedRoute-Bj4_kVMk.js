@@ -1,0 +1,2 @@
+import{o as e,r as t}from"./chunk-5KNZJZUH-CqMt8rkw.js";import{t as n}from"./jsx-runtime-ByUrNkr2.js";var r=n(),i=({children:n,isLoggedIn:i,isAdmin:a,isLoading:o})=>{let s=e();return o?(0,r.jsx)(`div`,{style:{display:`flex`,justifyContent:`center`,alignItems:`center`,height:`100vh`},children:(0,r.jsx)(`div`,{children:`Loading...`})}):!i&&!a?(0,r.jsx)(t,{to:`/login?redirect=${s.pathname}`,replace:!0}):n};export{i as default};
+//# sourceMappingURL=ProtectedRoute-Bj4_kVMk.js.map

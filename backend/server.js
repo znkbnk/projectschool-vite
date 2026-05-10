@@ -69,6 +69,9 @@ const guideRoutes = guideRoutesModule.default || guideRoutesModule;
 const allowedOrigins = [
   "https://projectschool.dev",
   "https://www.projectschool.dev",
+  "https://projectschool-vite.netlify.app/",
+  "http://localhost:3000",
+  "http://localhost:5000",
 ];
 
 if (process.env.NODE_ENV !== "production") {
@@ -202,7 +205,7 @@ process.on("SIGTERM", () => {
 /* ------------------------------------------------------------------
    9. Start Server
    ------------------------------------------------------------------ */
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 const server = app.listen(PORT, () => {
   console.log(`✓ Server running on port ${PORT}`);
   console.log(`✓ Environment: ${process.env.NODE_ENV || "development"}`);

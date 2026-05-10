@@ -1,0 +1,2 @@
+import{o as e,t}from"./react-DC5jstkq.js";import{s as n}from"./chunk-5KNZJZUH-CqMt8rkw.js";import{t as r}from"./useAuthContext-DSmvdGca.js";var i=e(t(),1),a=({children:e})=>{let{isLoggedIn:t,subscriptionStatus:a,isLoading:o}=r(),s=a?.toLowerCase()===`subscribed`,c=n();return(0,i.useEffect)(()=>{!o&&!s&&c(t?`/pricing`:`/signup`)},[o,s,t,c]),o||!s?null:e};export{a as default};
+//# sourceMappingURL=GuideAccessGate-BNDuFaSv.js.map

@@ -1,0 +1,857 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Quiz",
+  "name": "React Interview Questions Quiz",
+  "description": "A comprehensive React interview quiz with code snippets to test your understanding of React concepts, hooks, and components for frontend developer preparation.",
+  "url": "https://www.projectschool.dev/interview/interview-code-quiz",
+  "inLanguage": "en",
+  "educationalLevel": "Beginner to Advanced",
+  "learningResourceType": "Quiz",
+  "datePublished": "2025-03-03",
+  "provider": {
+    "@type": "EducationalOrganization",
+    "name": "Project School",
+    "url": "https://www.projectschool.dev",
+    "email": "support@projectschool.dev",
+    "logo": "https://www.projectschool.dev/pslogosmall.webp"
+  },
+  "audience": [
+    { "@type": "Audience", "audienceType": "Beginner" },
+    { "@type": "Audience", "audienceType": "Intermediate" },
+    { "@type": "Audience", "audienceType": "Advanced" }
+  ],
+  "duration": "PT45M",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "Question",
+        "position": 1,
+        "text": "What does the following React code do? ```const [isOpen, setIsOpen] = useState(false); const toggleModal = () => setIsOpen(!isOpen);```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Toggles the visibility of a modal"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Changes the value of 'isOpen' to true"
+          },
+          { "@type": "Answer", "text": "Sets 'isOpen' to false" },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "The function 'toggleModal' changes the value of 'isOpen' to its opposite (true/false), which could be used to control the visibility of a modal.",
+        "keywords": [
+          "React.js",
+          "useState",
+          "React hooks",
+          "Frontend Developer Interview",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 2,
+        "text": "What does the following React code do? ```const [user, setUser] = useState({ name: '', age: 0 }); const handleChange = (event) => { const { name, value } = event.target; setUser((prevState) => ({ ...prevState, [name]: value })); }; return <input name=\"name\" value={user.name} onChange={handleChange} />;```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Updates the name in the 'user' state object"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "None of the above" },
+          { "@type": "Answer", "text": "Resets the 'user' state object" },
+          {
+            "@type": "Answer",
+            "text": "Only changes the 'name' field in the state object"
+          }
+        ],
+        "description": "This code handles input changes and updates the 'name' property in the 'user' state object using the spread operator to maintain the other properties.",
+        "keywords": [
+          "React.js",
+          "useState",
+          "React object state",
+          "Frontend Developer Interview",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 3,
+        "text": "What does the following React code do? ```const MyComponent = ({ children }) => <div>{children}</div>; return <MyComponent>Hello World</MyComponent>;```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Renders 'Hello World' inside a div"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "Displays 'Hello World' as a prop" },
+          { "@type": "Answer", "text": "None of the above" },
+          {
+            "@type": "Answer",
+            "text": "Throws an error because children is undefined"
+          }
+        ],
+        "description": "The component accepts 'children' as a prop and renders it inside a div. The string 'Hello World' is passed as children to MyComponent.",
+        "keywords": [
+          "React.js",
+          "children prop",
+          "React functional components",
+          "Frontend Developer Interview",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 4,
+        "text": "What does the following React code do? ```const MyComponent = () => { const [count, setCount] = useState(0); return ( <div> <button onClick={() => setCount((prevCount) => prevCount + 1)}>Increment</button> <p>{count}</p> </div> ); };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Increments the count by 1 when the button is clicked"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "Sets the count to 1 on every render" },
+          { "@type": "Answer", "text": "Increments count by 2 when clicked" },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "The code increments the count by 1 using the updater function of the setCount state setter, which ensures the update is based on the most recent state.",
+        "keywords": [
+          "React.js",
+          "useState",
+          "State Updates",
+          "Frontend Developer Interview",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 5,
+        "text": "What does the following React code do? ```const MyComponent = () => { const [text, setText] = useState(''); const handleChange = (e) => setText(e.target.value); return <input value={text} onChange={handleChange} />; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Creates a controlled input that updates state"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "Renders an uncontrolled input field" },
+          { "@type": "Answer", "text": "None of the above" },
+          {
+            "@type": "Answer",
+            "text": "Automatically resets the text value to empty"
+          }
+        ],
+        "description": "The input's value is controlled by the 'text' state. The handleChange function updates the state as the user types.",
+        "keywords": [
+          "React.js",
+          "Controlled Components",
+          "useState",
+          "React input field",
+          "Frontend Developer Interview",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 6,
+        "text": "What does the following React code do? ```const [counter, setCounter] = useState(0); useEffect(() => { document.title = `Counter: ${counter}`; }, [counter]);```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Updates the document title to display the counter value"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Sets the counter to 0 when the component mounts"
+          },
+          {
+            "@type": "Answer",
+            "text": "Tracks counter changes but doesn't update the document title"
+          },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "The useEffect hook runs every time the 'counter' value changes, updating the document title with the current counter value.",
+        "keywords": [
+          "React.js",
+          "useEffect",
+          "Document Title",
+          "React hooks",
+          "Frontend Developer Interview",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 7,
+        "text": "What does the following React code do? ```const MyComponent = () => { const [data, setData] = useState([]); useEffect(() => { fetch('/api/data') .then(response => response.json()) .then(result => setData(result)); }, []); return <div>{data.length > 0 ? <p>{data[0].name}</p> : <p>Loading...</p>}</div>; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fetches data from an API and renders the first item's name"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Always shows 'Loading...' because the state is never updated"
+          },
+          { "@type": "Answer", "text": "None of the above" },
+          {
+            "@type": "Answer",
+            "text": "Fetches and displays the data, but only shows 'Loading...' when there is an error"
+          }
+        ],
+        "description": "This code uses the useEffect hook to fetch data when the component mounts. It conditionally renders either the first item's name or 'Loading...' until the data is fetched.",
+        "keywords": [
+          "React.js",
+          "useEffect",
+          "API calls",
+          "React conditional rendering",
+          "Frontend Developer Interview",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 8,
+        "text": "What does the following React code do? ```const [isVisible, setIsVisible] = useState(true); const toggleVisibility = () => setIsVisible((prev) => !prev); return <button onClick={toggleVisibility}>Toggle</button>;```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Toggles the visibility of an element"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "None of the above" },
+          {
+            "@type": "Answer",
+            "text": "Sets 'isVisible' to true when clicked"
+          },
+          { "@type": "Answer", "text": "Only toggles the visibility once" }
+        ],
+        "description": "This code uses a button to toggle the 'isVisible' state between true and false each time it is clicked.",
+        "keywords": [
+          "React.js",
+          "useState",
+          "Toggle Visibility",
+          "Frontend Developer Interview",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 9,
+        "text": "What does the following React code do? ```const [userData, setUserData] = useState(null); useEffect(() => { fetch('/api/user') .then(response => response.json()) .then(data => setUserData(data)); }, []);```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both a and c"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Fetches data from an API and stores it in state"
+          },
+          {
+            "@type": "Answer",
+            "text": "Displays an error if the API call fails"
+          },
+          {
+            "@type": "Answer",
+            "text": "Sets the user data when the component mounts"
+          }
+        ],
+        "description": "The useEffect hook fetches data from an API when the component mounts and updates the 'userData' state with the fetched data.",
+        "keywords": [
+          "React.js",
+          "useEffect",
+          "API calls",
+          "React hooks",
+          "Frontend Developer Interview",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 10,
+        "text": "What does the following React code do? ```const handleClick = () => { alert('Button clicked!'); }; return <button onClick={handleClick}>Click Me</button>;```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Displays a button that shows an alert on click"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "Changes the button text to 'Clicked'" },
+          {
+            "@type": "Answer",
+            "text": "Logs a message to the console on click"
+          },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "The code defines a function 'handleClick' that triggers an alert when the button is clicked.",
+        "keywords": [
+          "React.js",
+          "Event Handling",
+          "React button click",
+          "Frontend Developer Interview",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 11,
+        "text": "What does the following React code do? ```const MyComponent = ({ title }) => <h1>{title}</h1>; MyComponent.defaultProps = { title: 'Default Title' };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sets the default title if no prop is passed"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Overrides the title prop with 'Default Title'"
+          },
+          { "@type": "Answer", "text": "Renders a static title" },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "The defaultProps feature is used to specify default values for props in case they are not passed.",
+        "keywords": [
+          "React.js",
+          "defaultProps",
+          "React props",
+          "Frontend Developer Interview",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 12,
+        "text": "What does the following React code do? ```const [name, setName] = useState(''); const handleChange = (event) => setName(event.target.value); return <input value={name} onChange={handleChange} />;```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All of the above"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Creates an input field that updates state on change"
+          },
+          {
+            "@type": "Answer",
+            "text": "Displays a static value in the input field"
+          },
+          {
+            "@type": "Answer",
+            "text": "Sets the value of the input to the 'name' state"
+          }
+        ],
+        "description": "The code binds the input field's value to the 'name' state and updates it whenever the user types in the input.",
+        "keywords": [
+          "React.js",
+          "Controlled Components",
+          "useState",
+          "Frontend Developer Interview",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 13,
+        "text": "What does the following React code do? ```const MyComponent = () => { const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]); return <div>{memoizedValue}</div>; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Memoizes the result of computeExpensiveValue for performance optimization"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "Updates the component on each render" },
+          { "@type": "Answer", "text": "Caches the value of 'a' and 'b'" },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "The useMemo hook is used to memoize expensive calculations, re-calculating the value only when 'a' or 'b' change, improving performance.",
+        "keywords": [
+          "React.js",
+          "useMemo",
+          "Performance Optimization",
+          "React hooks",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 14,
+        "text": "What does the following React code do? ```const MyComponent = () => { const [isToggled, setIsToggled] = useState(false); const handleClick = () => setIsToggled((prev) => !prev); return <div>{isToggled ? \"Toggled!\" : \"Not Toggled\"}</div>; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Displays 'Toggled!' when the state is true and 'Not Toggled' when false"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "Always displays 'Toggled!'" },
+          { "@type": "Answer", "text": "Sets the state to true only once" },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "This component toggles between 'Toggled!' and 'Not Toggled' based on the value of 'isToggled' state.",
+        "keywords": [
+          "React.js",
+          "useState",
+          "Conditional Rendering",
+          "State Toggling",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 15,
+        "text": "What does the following React code do? ```const MyComponent = () => { const [counter, setCounter] = useState(0); useEffect(() => { console.log(counter); }, []); return <button onClick={() => setCounter(counter + 1)}>Increment</button>; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Logs the counter value only once, when the component mounts"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Logs the counter value every time it changes"
+          },
+          {
+            "@type": "Answer",
+            "text": "Logs 'undefined' because the state is never updated"
+          },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "The empty dependency array in useEffect ensures that the log is only executed once when the component mounts, regardless of state changes.",
+        "keywords": [
+          "React.js",
+          "useEffect",
+          "useState",
+          "React Hooks",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 16,
+        "text": "What does the following React code do? ```const MyComponent = () => { const [count, setCount] = useState(0); const increment = () => setCount(count + 1); return <button onClick={increment}>Increment</button>; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Increments the count value by 1 each time the button is clicked"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Sets the count value to 1 on every click"
+          },
+          {
+            "@type": "Answer",
+            "text": "Prevents the button from being clicked"
+          },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "The increment function increases the 'count' state by 1 every time the button is clicked.",
+        "keywords": [
+          "React.js",
+          "useState",
+          "Button Click",
+          "React events",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 17,
+        "text": "What does the following React code do? ```const MyComponent = () => { const [show, setShow] = useState(false); return ( <div> <button onClick={() => setShow(!show)}>Toggle</button> {show && <p>Visible content</p>} </div> ); };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Toggles the visibility of the <p> element when the button is clicked"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Only shows the <p> element on the initial render"
+          },
+          { "@type": "Answer", "text": "Always displays the <p> element" },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "The button toggles the 'show' state, which conditionally renders the <p> element when 'show' is true.",
+        "keywords": [
+          "React.js",
+          "useState",
+          "Conditional Rendering",
+          "Frontend Developer Interview",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 18,
+        "text": "What does the following React code do? ```const MyComponent = () => { const [count, setCount] = useState(0); useEffect(() => { document.title = `Count: ${count}`; }); return <div>{count}</div>; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sets the document title to 'Count: X' on every render"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Sets the document title only on the initial render"
+          },
+          {
+            "@type": "Answer",
+            "text": "Updates the document title to 'Count: 0' after each click"
+          },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "Since the useEffect hook doesn't have a dependency array, it runs after every render, updating the document title to the current count value.",
+        "keywords": [
+          "React.js",
+          "useEffect",
+          "useState",
+          "React Hooks",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 19,
+        "text": "What does the following React code do? ```const MyComponent = () => { const [name, setName] = useState(''); const handleChange = (e) => setName(e.target.value); return <input type=\"text\" value={name} onChange={handleChange} />; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Updates the input field value with the 'name' state on each change"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Sets the input value to an empty string"
+          },
+          {
+            "@type": "Answer",
+            "text": "Prevents any changes to the input field"
+          },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "The input's value is controlled by the 'name' state, and the handleChange function updates it as the user types.",
+        "keywords": [
+          "React.js",
+          "useState",
+          "Input Handling",
+          "React forms",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 20,
+        "text": "What does the following React code do? ```const MyComponent = () => { const [isActive, setIsActive] = useState(false); return ( <div onClick={() => setIsActive(!isActive)}> {isActive ? 'Active' : 'Inactive'} </div> ); };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Toggles between 'Active' and 'Inactive' when clicked"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "Always displays 'Inactive' text" },
+          { "@type": "Answer", "text": "Only toggles 'Inactive' on click" },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "The onClick event toggles the 'isActive' state, which determines whether the displayed text is 'Active' or 'Inactive'.",
+        "keywords": [
+          "React.js",
+          "useState",
+          "Click Events",
+          "React Text Toggling",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 21,
+        "text": "What does the following React code do? ```const MyComponent = () => { const [inputValue, setInputValue] = useState(''); const handleSubmit = (event) => { event.preventDefault(); alert(inputValue); }; return ( <form onSubmit={handleSubmit}> <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} /> <button type=\"submit\">Submit</button> </form> ); };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Displays an alert with the input value when the form is submitted"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Prevents the form submission but doesn't handle the input value"
+          },
+          {
+            "@type": "Answer",
+            "text": "Resets the input value every time it is submitted"
+          },
+          { "@type": "Answer", "text": "None of the above" }
+        ],
+        "description": "The handleSubmit function prevents the default form submission behavior and shows an alert with the input value.",
+        "keywords": [
+          "React.js",
+          "useState",
+          "Form Handling",
+          "React Forms",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 22,
+        "text": "What does the following React code do? ```const MyComponent = React.memo(({ count, increment }) => { console.log('Rendering MyComponent'); return ( <div> <p>{count}</p> <button onClick={increment}>Increment</button> </div> ); });```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The component will only re-render when props 'count' or 'increment' change"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "None of the above" },
+          {
+            "@type": "Answer",
+            "text": "The component will re-render on every state update"
+          },
+          { "@type": "Answer", "text": "The component never re-renders" }
+        ],
+        "description": "React.memo is a higher-order component that memoizes the component to prevent unnecessary re-renders when the props do not change.",
+        "keywords": [
+          "React.js",
+          "React.memo",
+          "Performance Optimization",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 23,
+        "text": "What does the following React code do? ```const Counter = () => { const [count, setCount] = useState(0); const increment = useCallback(() => setCount(c => c + 1), []); return <button onClick={increment}>{count}</button>; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The increment function is memoized, preventing re-creation on every render"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "None of the above" },
+          {
+            "@type": "Answer",
+            "text": "The increment function is re-created every time the component renders"
+          },
+          {
+            "@type": "Answer",
+            "text": "The counter doesn't increment due to an error"
+          }
+        ],
+        "description": "The useCallback hook memoizes the increment function, ensuring it is not re-created on every render, improving performance when passed to child components.",
+        "keywords": [
+          "React.js",
+          "useCallback",
+          "Memoization",
+          "React Hooks",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 24,
+        "text": "What will be the result of the following code? ```const Counter = () => { const [count, setCount] = useState(0); useEffect(() => { console.log(count); }, [count]); return <button onClick={() => setCount(count + 1)}>Increment</button>; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Logs the count value every time it changes"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Logs 'undefined' because count is not set initially"
+          },
+          { "@type": "Answer", "text": "None of the above" },
+          {
+            "@type": "Answer",
+            "text": "Logs '0' only once when the component mounts"
+          }
+        ],
+        "description": "The useEffect hook listens for changes to the 'count' state and logs it whenever the state updates, thanks to the dependency array [count].",
+        "keywords": [
+          "React.js",
+          "useEffect",
+          "useState",
+          "React Hooks",
+          "State Changes",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 25,
+        "text": "What will be the result of the following code? ```const Counter = () => { const [count, setCount] = useState(0); const increment = () => setCount(count + 1); const memoizedIncrement = useMemo(() => increment, []); return <button onClick={memoizedIncrement}>{count}</button>; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The button's click handler is memoized, improving performance"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "None of the above" },
+          {
+            "@type": "Answer",
+            "text": "The button's click handler is re-created on every render"
+          },
+          {
+            "@type": "Answer",
+            "text": "The counter doesn't increment due to an error in memoization"
+          }
+        ],
+        "description": "The useMemo hook memoizes the increment function, ensuring it is not re-created on every render, which can improve performance in certain scenarios.",
+        "keywords": [
+          "React.js",
+          "useMemo",
+          "Memoization",
+          "Performance Optimization",
+          "React Hooks",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 26,
+        "text": "What does the following React code do? ```const usePrevious = (value) => { const ref = useRef(); useEffect(() => { ref.current = value; }, [value]); return ref.current; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Returns the previous value of the passed state or prop"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "None of the above" },
+          {
+            "@type": "Answer",
+            "text": "Stores the current value of the state or prop"
+          },
+          { "@type": "Answer", "text": "Always returns 'undefined'" }
+        ],
+        "description": "The custom hook usePrevious stores the previous value of the state or prop by updating a ref inside useEffect, and returning the ref's current value.",
+        "keywords": [
+          "React.js",
+          "useRef",
+          "useEffect",
+          "Custom Hooks",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 27,
+        "text": "What will happen if the following code is executed? ```const MyComponent = () => { const [isVisible, setIsVisible] = useState(true); return ( <div> {isVisible && <p>Visible</p>} <button onClick={() => setIsVisible(!isVisible)}>Toggle Visibility</button> </div> ); };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The component re-renders every time the button is clicked"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "The <p> element will be removed from the DOM instead of hidden"
+          },
+          { "@type": "Answer", "text": "None of the above" },
+          {
+            "@type": "Answer",
+            "text": "The <p> element will be hidden, but still present in the DOM"
+          }
+        ],
+        "description": "When the button is clicked, it toggles the state and triggers a re-render. The <p> element is conditionally rendered based on the 'isVisible' state.",
+        "keywords": [
+          "React.js",
+          "useState",
+          "Conditional Rendering",
+          "Re-renders",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 28,
+        "text": "What does the following React code do? ```const ParentComponent = () => { const [count, setCount] = useState(0); const memoizedValue = useMemo(() => count * 2, [count]); return <ChildComponent value={memoizedValue} />; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The memoized value (count * 2) is recalculated only when 'count' changes"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "None of the above" },
+          {
+            "@type": "Answer",
+            "text": "The memoized value is recalculated on every render of the ParentComponent"
+          },
+          {
+            "@type": "Answer",
+            "text": "The memoized value is calculated once and never updated"
+          }
+        ],
+        "description": "useMemo ensures that the calculation of 'count * 2' is only re-executed when 'count' changes, optimizing performance.",
+        "keywords": [
+          "React.js",
+          "useMemo",
+          "Performance Optimization",
+          "React interview questions",
+          "React Hooks"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 29,
+        "text": "What will be the result of the following code? ```const MyComponent = () => { const [value, setValue] = useState(''); const handleSubmit = (e) => { e.preventDefault(); console.log(value); }; return ( <form onSubmit={handleSubmit}> <input value={value} onChange={(e) => setValue(e.target.value)} /> <button type=\"submit\">Submit</button> </form> ); };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Logs the input value to the console when the form is submitted"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Resets the input value when the form is submitted"
+          },
+          { "@type": "Answer", "text": "None of the above" },
+          {
+            "@type": "Answer",
+            "text": "Prevents the form from submitting and logs 'undefined'"
+          }
+        ],
+        "description": "The handleSubmit function prevents the form from refreshing the page and logs the value from the input field to the console.",
+        "keywords": [
+          "React.js",
+          "useState",
+          "Form Handling",
+          "React Forms",
+          "React interview questions"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 30,
+        "text": "What does the following React code do? ```const MyComponent = () => { const [count, setCount] = useState(0); useEffect(() => { const interval = setInterval(() => setCount(c => c + 1), 1000); return () => clearInterval(interval); }, []); return <div>{count}</div>; };```",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Starts an interval to increment the count every second and cleans up on unmount"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "None of the above" },
+          {
+            "@type": "Answer",
+            "text": "Increments the count every second indefinitely"
+          },
+          {
+            "@type": "Answer",
+            "text": "Logs the count to the console every second"
+          }
+        ],
+        "description": "The useEffect hook sets up an interval to increment the count every second, and cleans up the interval when the component unmounts.",
+        "keywords": [
+          "React.js",
+          "useEffect",
+          "useState",
+          "Interval",
+          "React interview questions"
+        ]
+      }
+    ],
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Interview",
+          "item": "https://www.projectschool.dev/interview"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Interview Code Quiz",
+          "item": "https://www.projectschool.dev/interview/interview-code-quiz"
+        }
+      ]
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.projectschool.dev/interview/interview-code-quiz",
+      "validFrom": "2024-01-01"
+    }
+  }
+}

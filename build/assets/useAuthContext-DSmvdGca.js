@@ -1,0 +1,2 @@
+import{o as e,t}from"./react-DC5jstkq.js";var n=e(t(),1),r=(0,n.createContext)(null),i=()=>{let e=(0,n.useContext)(r);if(!e)throw Error(`useAuthContext must be used within AuthProvider`);return e};export{r as n,i as t};
+//# sourceMappingURL=useAuthContext-DSmvdGca.js.map

@@ -69,7 +69,7 @@ const guideRoutes = guideRoutesModule.default || guideRoutesModule;
 const allowedOrigins = [
   "https://projectschool.dev",
   "https://www.projectschool.dev",
-  "https://projectschool-vite.netlify.app/",
+  "https://projectschool-vite.netlify.app",
   "http://localhost:3000",
   "http://localhost:5000",
 ];

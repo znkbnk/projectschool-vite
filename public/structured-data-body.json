@@ -1,0 +1,70 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "ProjectSchool",
+    "url": "https://www.projectschool.dev",
+    "logo": "https://www.projectschool.dev/images/logowebp.webp",
+    "description": "ProjectSchool empowers learners to master React through 60+ real-world projects, 8 comprehensive guides (useState, useEffect, useContext, useReducer, React Router, Data Fetching, and more), 500+ practical tasks, 5 unique React interview prep methods (questions, tasks, quizzes, code challenges), live projects from Freelancer and Fiverr, and 50+ 'Build With Me' live lessons. The Dev Essentials blog offers tutorials on Firebase authentication, Stripe payments, JavaScript pagination, PropTypes, Chrome extensions with Rspack, and more.",
+    "sameAs": ["https://www.instagram.com/reactlessons"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "support@projectschool.dev"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "React Learning Resources",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "name": "React Projects",
+            "description": "60+ React projects with detailed steps to practice real-world skills."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "name": "React Guides",
+            "description": "8 next-level React guides covering hooks (useState, useEffect, useContext, useReducer), routing (React Router), data fetching, and more."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "name": "Practical Tasks",
+            "description": "500+ practical tasks and exercises to enhance React skills."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "name": "React Interview Prep",
+            "description": "5 different ways to prepare for React interviews, including questions, tasks, quizzes, and code challenges."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "name": "Live Projects",
+            "description": "Live projects built from real client requests sourced from Freelancer, Fiverr, and more."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "name": "Build With Me Lessons",
+            "description": "50+ live lessons in the 'Build With Me' section, building a School Management & Booking system."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "name": "Dev Essentials Blog",
+            "description": "In-depth tutorials on Firebase authentication, Stripe payments, JavaScript pagination, PropTypes, Chrome extensions with Rspack, and more."
+          }
+        }
+      ]
+    }
+  }
+]

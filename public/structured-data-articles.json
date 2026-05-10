@@ -1,0 +1,786 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to create Authentication Guard Component",
+    "description": "Today we'll walk through the process of implementing authentication in a React application using Firebase and React Router. We'll create an AuthGuard component to manage the authentication state and protect routes that require authentication, ensuring a seamless user experience.",
+    "datePublished": "2024-04-04T00:00:00Z",
+    "dateModified": "2024-04-04T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "/images/React-icon.webp",
+    "keywords": "React, Firebase, Authentication, AuthGuard",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentials/How-to-create-Authentication-Guard-Component"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How to create Authentication Guard Component",
+          "item": "https://www.projectschool.dev/blogs/devessentials/How-to-create-Authentication-Guard-Component"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "InsightTrack: Empowering Your Digital Presence",
+    "description": "Google Analytics is a powerful web analytics service offered by Google that helps website owners and marketers track and analyze their website traffic and user behavior. By providing detailed insights into visitor demographics, acquisition channels, user engagement, and conversion metrics, Google Analytics enables businesses to make data-driven decisions to improve their online presence, optimize marketing strategies, and enhance the overall user experience.",
+    "datePublished": "2024-05-05T00:00:00Z",
+    "dateModified": "2024-05-05T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "/images/googleAnalytics.webp",
+    "keywords": "Google Analytics, Web Analytics, Website Traffic, User Behavior, Digital Marketing, Data-Driven Decisions",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentials/InsightTrack-Empowering-Your-Digital-Presence"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "InsightTrack: Empowering Your Digital Presence",
+          "item": "https://www.projectschool.dev/blogs/devessentials/InsightTrack-Empowering-Your-Digital-Presence"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Mastering JavaScript Pagination",
+    "description": "Discover the ins and outs of JavaScript pagination in this comprehensive guide. Learn the theory behind pagination, explore practical code examples, and uncover where and why pagination shines in web development. From enhancing performance to improving user experience, pagination is a powerful technique you don't want to overlook.",
+    "datePublished": "2024-05-08T00:00:00Z",
+    "dateModified": "2024-05-08T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "https://www.projectschool.dev/images/articleImg/3/title.webp",
+    "keywords": "JavaScript, Pagination, Web Development, User Experience, Performance Optimization, Coding Examples",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentialss/devessentials/Mastering-JavaScript-Pagination"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Mastering JavaScript Pagination",
+          "item": "https://www.projectschool.dev/blogs/devessentialss/devessentials/Mastering-JavaScript-Pagination"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Going Live with Stripe in Your React Project",
+    "description": "Transitioning your React project from Stripe's test environment to the live environment is a crucial step to start processing real payments. This process ensures that your application is fully prepared to handle secure transactions in a production setting.",
+    "datePublished": "2024-06-23T00:00:00Z",
+    "dateModified": "2024-06-23T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "https://www.projectschool.dev/images/articleImg/4/title.webp",
+    "keywords": "React, Stripe, Payment Processing, Live Environment, Secure Transactions, Frontend Development",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentials/Going-Live-with-Stripe-in-Your-React-Project"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Going Live with Stripe in Your React Project",
+          "item": "https://www.projectschool.dev/blogs/devessentials/Going-Live-with-Stripe-in-Your-React-Project"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Guide to Implementing Git in Visual Studio Code",
+    "description": "This step-by-step guide provides detailed instructions on installing Git and Visual Studio Code, configuring Git, managing repositories, and performing common Git operations such as staging, committing, and pushing changes to a remote repository. Ideal for beginners, this guide ensures a smooth start to using Git in your development workflow.",
+    "datePublished": "2024-07-13T00:00:00Z",
+    "dateModified": "2024-07-13T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "https://www.projectschool.dev/images/articleImg/5/title.webp",
+    "keywords": "Git, Visual Studio Code, Version Control, Repository Management, Beginners Guide, Development Workflow",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentials/Guide-to-Implementing-Git-in-Visual-Studio-Code"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Guide to Implementing Git in Visual Studio Code",
+          "item": "https://www.projectschool.dev/blogs/devessentials/Guide-to-Implementing-Git-in-Visual-Studio-Code"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "EADDRINUSE Error",
+    "description": "This guide provides detailed steps to resolve the EADDRINUSE error on Windows, which occurs when the port you're trying to use is already occupied by another process. You'll learn how to identify and kill the process using the port, or change the port to get your application running again.",
+    "datePublished": "2025-01-28T00:00:00Z",
+    "dateModified": "2025-01-28T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "https://www.projectschool.dev/images/articleImg/6/title.webp",
+    "keywords": "EADDRINUSE, Windows, Port Conflict, Debugging, Node.js, Application Troubleshooting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentials/EADDRINUSE-error"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "EADDRINUSE Error",
+          "item": "https://www.projectschool.dev/blogs/devessentials/EADDRINUSE-error"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Run a React Frontend and Node.js Backend Simultaneously with One Command",
+    "description": "Streamline your full-stack development workflow by running your React frontend and Node.js backend with a single command. Learn how to use tools like `concurrently`, custom scripts, or `npm-run-all` to save time and simplify your process.",
+    "datePublished": "2025-02-08T00:00:00Z",
+    "dateModified": "2025-02-08T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "https://www.projectschool.dev/images/articleImg/7/cover.webp",
+    "keywords": "React, Node.js, Full-Stack Development, Concurrently, Workflow Optimization",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentials/How-to-Run-a-React-Frontend-and-NodeJS-Backend-Simultaneously-with-One-Command"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How to Run a React Frontend and Node.js Backend Simultaneously with One Command",
+          "item": "https://www.projectschool.dev/blogs/devessentials/How-to-Run-a-React-Frontend-and-NodeJS-Backend-Simultaneously-with-One-Command"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Test Webhooks Using Stripe CLI: A Comprehensive Guide",
+    "description": "Testing webhooks is essential for building reliable applications with Stripe, but it can be tricky without the right tools. This guide provides a step-by-step walkthrough on using the Stripe CLI to test webhooks locally, debug issues, and even handle scenarios like Heroku backends or Windows Defender blocking the CLI. By the end, you'll be equipped to test webhooks confidently and ensure your integration is production-ready.",
+    "datePublished": "2025-02-15T00:00:00Z",
+    "dateModified": "2025-02-15T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "https://www.projectschool.dev/images/articleImg/8/8cover.webp",
+    "keywords": "Stripe CLI, Webhooks, Testing, Local Development, Heroku, Debugging, Payment Integration",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentials/How-to-Test-Webhooks-Using-Stripe-CLI"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How to Test Webhooks Using Stripe CLI: A Comprehensive Guide",
+          "item": "https://www.projectschool.dev/blogs/devessentials/How-to-Test-Webhooks-Using-Stripe-CLI"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "A Comprehensive Guide to PropTypes in React",
+    "description": "PropTypes in React is a runtime type-checking tool that ensures components receive the correct data types for their props, reducing bugs and improving maintainability. This guide covers everything from installation and basic usage to advanced techniques and a comparison with TypeScript, helping developers understand why and how to use PropTypes effectively.",
+    "datePublished": "2025-03-02T00:00:00Z",
+    "dateModified": "2025-03-02T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "https://www.projectschool.dev/images/articleImg/9/1intro.webp",
+    "keywords": "React, PropTypes, Type Checking, Component Development, TypeScript Comparison, Code Maintainability",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentials/A-Comprehensive-Guide-to-PropTypes-in-React"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "A Comprehensive Guide to PropTypes in React",
+          "item": "https://www.projectschool.dev/blogs/devessentials/A-Comprehensive-Guide-to-PropTypes-in-React"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The End of Create React App and What to Use Next",
+    "description": "Create React App is officially deprecated as of 2025, marking the end of an era for React developers. This in-depth guide explores why CRA faded, its limitations, and the best modern alternatives like Vite, Next.js, and Rspack. With detailed comparisons, pros and cons, and practical examples, discover which tool suits your next React project—whether you're building SPAs, static sites, or full-stack apps.",
+    "datePublished": "2025-03-07T00:00:00Z",
+    "dateModified": "2025-03-07T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "https://www.projectschool.dev/images/articleImg/10/first.webp",
+    "keywords": "Create React App, React Alternatives, Vite, Next.js, Rspack, Modern React Tools",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentials/The-End-of-Create-React-App-and-What-to-Use-Next"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "The End of Create React App and What to Use Next",
+          "item": "https://www.projectschool.dev/blogs/devessentials/The-End-of-Create-React-App-and-What-to-Use-Next"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Building a ChatGPT Powered React App with Rspack: A Step-by-Step Guide",
+    "description": "Learn how to create a ChatGPT-powered React application using Rspack, the modern build tool. This comprehensive guide walks you through setting up Rspack, integrating the OpenAI API, and building a seamless chat interface with React. Discover the advantages of using Rspack over traditional tools and how to leverage AI capabilities in your web applications.",
+    "datePublished": "2025-04-14T00:00:00Z",
+    "dateModified": "2025-04-14T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "https://www.projectschool.dev/images/articleImg/11/cover.webp",
+    "keywords": "ChatGPT, React, Rspack, OpenAI API, AI Integration, Modern Web Development",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentials/Building-a-ChatGPT-Powered-React-App-with-Rspack"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Building a ChatGPT Powered React App with Rspack: A Step-by-Step Guide",
+          "item": "https://www.projectschool.dev/blogs/devessentials/Building-a-ChatGPT-Powered-React-App-with-Rspack"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Setting Up Stripe Payments in React: The Ultimate Guide",
+    "description": "Learn how to seamlessly integrate Stripe payments into your React application with this comprehensive tutorial. From setting up secure environment variables to building a robust backend and frontend, this guide covers every detail, including advanced features, security best practices, and troubleshooting tips to ensure a smooth payment experience.",
+    "datePublished": "2025-02-28T00:00:00Z",
+    "dateModified": "2025-02-28T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "https://www.projectschool.dev/images/articleImg/12/cover12.webp",
+    "keywords": "React, Stripe, Payment Integration, Node.js, Express, Security Best Practices, Web Development",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentials/Setting-Up-Stripe-Payments-in-React-The-Ultimate-Guide"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Setting Up Stripe Payments in React: The Ultimate Guide",
+          "item": "https://www.projectschool.dev/blogs/devessentials/Setting-Up-Stripe-Payments-in-React-The-Ultimate-Guide"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Go Live with Your Chrome Extension Using React and Rspack: A Beginner-Friendly Guide",
+    "description": "Discover how to build and publish a Chrome extension using React and Rspack with this step-by-step guide. Learn to create essential files like manifest.json and background.js, bundle your project with Rspack, prepare icons, and comply with Chrome Web Store policies, including avoiding disallowed third-party services, to share your app with the world.",
+    "datePublished": "2025-05-27T00:00:00Z",
+    "dateModified": "2025-05-27T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "https://www.projectschool.dev/images/articleImg/13/cover13.webp",
+    "keywords": "React, Chrome Extension, CSS, Rspack, Manifest.json, Background.js, Web Development, Chrome Web Store",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentials/How-to-Go-Live-with-Your-Chrome-Extension-Using-React-and-Rspack"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How to Go Live with Your Chrome Extension Using React and Plain CSS",
+          "item": "https://www.projectschool.dev/blogs/devessentials/How-to-Go-Live-with-Your-Chrome-Extension-Using-React-and-Rspack"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "React Interview Guide 2025: Deep Technical Knowledge",
+    "description": "Master advanced React concepts for front-end developers, including authentication architecture, lifecycle deep dives, useRef patterns, concurrent rendering, micro-frontends, and modern state management with Zustand and React Query. Packed with code examples and insights into React Server Components.",
+    "datePublished": "2025-09-06T00:00:00Z",
+    "dateModified": "2025-09-06T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Project School",
+      "url": "https://www.projectschool.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "www.projectschool.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.projectschool.dev/pslogosmall.webp"
+      }
+    },
+    "image": "https://www.projectschool.dev/images/articleImg/react-interview/react-interview.webp",
+    "keywords": "React, React Interview, Authentication, Lifecycle Methods, useRef, Concurrent Rendering, Micro-Frontends, Zustand, React Query, React Server Components, Web Development",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.projectschool.dev/blogs/devessentials/React-Interview-Guide-2025-Part-1"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.projectschool.dev/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dev Essentials",
+          "item": "https://www.projectschool.dev/blogs/devessentials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "React Interview Guide 2025: Deep Technical Knowledge",
+          "item": "https://www.projectschool.dev/blogs/devessentials/React-Interview-Guide-2025-Part-1"
+        }
+      ]
+    }
+  }
+]

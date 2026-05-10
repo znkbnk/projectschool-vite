@@ -1,0 +1,637 @@
+/* Existing root and global styles remain unchanged */
+html {
+  width: 100%;
+  height: 100vh;
+  background: var(--bg);
+  font-size-adjust: 0.5;
+}
+
+.Toastify__toast-container {
+  position: fixed;
+  top: 80px !important;
+  z-index: 9999;
+}
+
+:root {
+  --bg: hsl(0 0% 2%);
+  --color: hsl(0 0% 100% / 0.1);
+  --underline-width: 1lh;
+  --underline-block-width: 200vmax;
+  --underline-color: hsl(0 0% 50% / 0.15);
+  --underline-color-hover: hsl(180 100% 50% / 1);
+  --underline-transition: 5s;
+  --finish-fill: hsl(0 0% 100%);
+  --accent: hsl(0 0% 100%);
+  --fill: hsl(0 0% 50%);
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+body {
+  background-color: #080808 !important;
+  color: #fff;
+  font-family: "Roboto", "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  accent-color: red;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  padding-top: var(--navbar-height);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 600;
+  background: linear-gradient(var(--finish-fill), var(--fill));
+  background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-weight: 600;
+  background: linear-gradient(var(--finish-fill), var(--fill));
+  background-clip: text;
+  color: transparent;
+}
+
+h3 {
+  font-weight: 420;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+h6 {
+  font-size: 30px;
+  font-weight: 600;
+  background: linear-gradient(var(--finish-fill), var(--fill));
+  background-clip: text;
+  color: transparent;
+  margin: 10px;
+}
+
+p > span {
+  color: white;
+}
+
+.component-title {
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-box {
+  background: linear-gradient(90deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.guide-inline-link {
+  color: #fb61d4;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.guide-inline-link:hover {
+  border-bottom-color: #d800a2;
+  color: #d800a2;
+}
+
+/* Button 28 */
+.button-28 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  flex: 1;
+  padding: 0.6rem 0.5rem;
+  font-family:
+    "Lato",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: clamp(0.65rem, 1.5vw, 0.85rem); /* Responsive font size */
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 0; /* Allow shrinking */
+}
+
+/* Previous Button */
+.button-28.previous {
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+}
+
+.button-28.previous:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-hover);
+  transform: translateX(-3px);
+}
+
+.button-28.previous::before {
+  content: "←";
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.button-28.previous:hover::before {
+  transform: translateX(-3px);
+}
+
+/* Next Button */
+.button-28.next {
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+}
+
+.button-28.next:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-hover);
+  transform: translateX(3px);
+}
+
+.button-28.next::after {
+  content: "→";
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.button-28.next:hover::after {
+  transform: translateX(3px);
+}
+
+/* Complete Button - Default State */
+.button-28.complete {
+  color: white;
+  background: var(--gradient-pink);
+  border: none;
+}
+.button-28.complete::before {
+  content: "✓";
+  font-size: 1rem;
+}
+
+.button-28.complete.completed::before {
+  content: "✓";
+}
+
+.button-28.complete:hover {
+  transform: translateY(-2px);
+}
+
+.button-28.complete:active {
+  transform: translateY(0);
+}
+
+/* Complete Button - Completed State */
+.button-28.complete.completed {
+  background: var(--gradient-green);
+  box-shadow: 0 4px 15px rgba(39, 202, 64, 0.3);
+  pointer-events: none;
+}
+
+@container task-panel (max-width: 350px) {
+  .task-buttons {
+    gap: 0.4rem;
+    padding: 0.6rem;
+  }
+
+  .button-28 {
+    padding: 0.6rem;
+    font-size: 0; /* Hide text */
+    min-width: 44px;
+    flex: 0 1 auto;
+  }
+
+  .button-28.previous::before,
+  .button-28.next::after,
+  .button-28.complete::before {
+    font-size: 1.1rem; /* Keep icons visible */
+  }
+}
+
+/* Even narrower - compact icons */
+@container task-panel (max-width: 280px) {
+  .task-buttons {
+    gap: 0.3rem;
+    padding: 0.5rem;
+  }
+
+  .button-28 {
+    padding: 0.5rem;
+    min-width: 38px;
+  }
+
+  .button-28.previous::before,
+  .button-28.next::after,
+  .button-28.complete::before {
+    font-size: 1rem;
+  }
+}
+
+/* Main button signup */
+.getStartedButton {
+  display: block;
+  width: 320px;
+  max-width: 100%;
+  margin: 30px auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  background: #f0f0f0;
+  border: 2px solid #333;
+  border-radius: 50px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(233, 231, 231, 0.356);
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.getStartedButton:hover {
+  color: white;
+  background: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.getStartedButton:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.getStartedButton::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.getStartedButton:hover::before {
+  opacity: 1;
+  animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: rotate(45deg) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(45deg) translate(50%, 50%);
+  }
+}
+
+/* Video popup */
+.video-popup-window {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 70%;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 100000;
+  border: #777 solid 0.1px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(175, 175, 175, 0.349);
+  align-items: center;
+  justify-content: center;
+}
+
+.video-container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-container iframe {
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.video-close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Button 84 */
+.button-84 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  font-family:
+    "Lato",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient line at left */
+.button-84::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gradient-pink);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.button-84:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-hover);
+  transform: translateX(4px);
+}
+
+.button-84:hover::before {
+  opacity: 1;
+}
+
+.button-84:active {
+  transform: translateX(2px);
+}
+
+/* Button Icons */
+.button-84 .btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.button-84:hover .btn-icon {
+  transform: scale(1.1);
+}
+
+/* Individual Button Color Variants */
+
+/* Cheatsheet - Pink */
+.button-84.btn-cheatsheet::before {
+  background: var(--gradient-pink);
+}
+
+.button-84.btn-cheatsheet:hover {
+  border-color: rgba(251, 97, 212, 0.4);
+  box-shadow: var(--glow-pink);
+}
+
+.button-84.btn-cheatsheet .btn-icon {
+  color: var(--accent-pink);
+}
+
+/* Styles - Purple */
+.button-84.btn-styles::before {
+  background: var(--gradient-purple);
+}
+
+.button-84.btn-styles:hover {
+  border-color: rgba(189, 147, 249, 0.4);
+  box-shadow: 0 0 20px rgba(189, 147, 249, 0.3);
+}
+
+.button-84.btn-styles .btn-icon {
+  color: var(--accent-purple);
+}
+
+/* Solution - Blue */
+.button-84.btn-solution::before {
+  background: var(--gradient-blue);
+}
+
+.button-84.btn-solution:hover {
+  border-color: rgba(97, 218, 251, 0.4);
+  box-shadow: var(--glow-blue);
+}
+
+.button-84.btn-solution .btn-icon {
+  color: var(--accent-blue);
+}
+
+/* Video - Yellow */
+.button-84.btn-video::before {
+  background: var(--gradient-yellow);
+}
+
+.button-84.btn-video:hover {
+  border-color: rgba(255, 189, 46, 0.4);
+  box-shadow: 0 0 20px rgba(255, 189, 46, 0.3);
+}
+
+.button-84.btn-video .btn-icon {
+  color: var(--accent-yellow);
+}
+
+.button-84:focus-visible,
+.button-28:focus-visible {
+  outline: 2px solid var(--accent-pink);
+  outline-offset: 3px;
+}
+
+.filter-dropdown {
+  background-color: #464d55;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #25292e;
+  padding: 8px 15px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  font-family:
+    expo-brand-demi,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif;
+  transition: all 150ms;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.filter-dropdown:hover {
+  background-color: #25292e;
+}
+
+.filter-dropdown:focus {
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 3px;
+}
+
+.sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.sort h4 {
+  color: #fff;
+  margin-right: 15px;
+}
+
+@media (max-width: 600px) {
+  .filter-dropdown {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .sort {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .sort h4 {
+    margin-bottom: 10px;
+  }
+  .bold-article-paragraph {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .button-81 {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #333;
+}

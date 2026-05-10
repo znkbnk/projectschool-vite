@@ -1,0 +1,182 @@
+/* .login-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d1117;
+  overflow: hidden;
+  position: relative;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(30, 144, 255, 0.1) 0%,
+    rgba(30, 144, 255, 0.05) 25%,
+    transparent 50%
+  );
+  animation: glowingBackground 15s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes glowingBackground {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+section#entry-page {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+section#entry-page form {
+  background: rgba(30, 30, 30, 0.8);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(30, 144, 255, 0.3);
+}
+
+section#entry-page form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(30, 144, 255, 0.2);
+}
+
+section#entry-page form h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+}
+
+section#entry-page form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+section#entry-page form fieldset legend {
+  color: #1e90ff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+section#entry-page form fieldset ul {
+  list-style: none;
+  padding: 0;
+}
+
+section#entry-page form fieldset ul li {
+  margin-bottom: 1rem;
+}
+
+section#entry-page form fieldset ul li label {
+  display: block;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+section#entry-page form fieldset ul li input {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+section#entry-page form fieldset ul li input:focus {
+  outline: none;
+  background: rgba(30, 144, 255, 0.1);
+  border-color: #1e90ff;
+}
+
+section#entry-page form button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  background: #1e90ff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+section#entry-page form button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+section#entry-page form button:hover::before {
+  left: 100%;
+}
+
+.login-button {
+  background: transparent !important;
+  border: 2px solid #1e90ff !important;
+  color: #1e90ff !important;
+}
+
+.login-button:hover {
+  background: rgba(30, 144, 255, 0.1) !important;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.forgot-password a {
+  color: #1e90ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+}
+
+@media only screen and (max-width: 600px) {
+  section#entry-page {
+    padding: 1rem;
+  }
+  
+  section#entry-page form {
+    padding: 1.5rem;
+  }
+} */

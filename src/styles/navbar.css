@@ -1,0 +1,814 @@
+/* ============================================
+   NAVBAR CSS - Matching Homepage Design
+   ============================================ */
+
+:root {
+  --navbar-height: 50px;
+  --bg-primary: #080808;
+  --bg-secondary: #0d0d0d;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.4);
+  --accent-blue: #61dafb;
+  --accent-pink: #fb61d4;
+  --accent-pink-dark: #d800a2;
+  --gradient-pink: linear-gradient(135deg, #fb61d4, #d800a2);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(251, 97, 212, 0.3);
+  --glow-pink: 0 0 60px rgba(251, 97, 212, 0.15);
+}
+
+/* ============================================
+   MAIN NAVIGATION
+   ============================================ */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100vw;
+  z-index: 9999;
+  background: rgba(8, 8, 8, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0;
+  margin: 0;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  background: rgba(8, 8, 8, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: var(--navbar-height);
+  gap: 1rem;
+}
+
+/* ============================================
+   LOGO
+   ============================================ */
+nav img {
+  height: calc(var(--navbar-height) - 20px);
+  max-height: 30px;
+  width: auto;
+  object-fit: contain;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+nav img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(251, 97, 212, 0.4));
+}
+
+/* ============================================
+   MIDDLE SECTION - Desktop Nav
+   ============================================ */
+.middle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+/* ============================================
+   NAVIGATION LINKS
+   ============================================ */
+.nav-link {
+  color: var(--text-secondary);
+  font-family:
+    "Lato",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  background: var(--bg-card);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.5rem;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-pink);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: calc(100% - 2rem);
+}
+
+/* Remove underline from dropdown triggers */
+.nav-link.dropdown-trigger::after {
+  display: none;
+}
+
+/* ============================================
+   DROPDOWN STYLES
+   ============================================ */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Dropdown arrow icon */
+.dropdown-trigger .dropdown-arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--text-secondary);
+  transition: transform 0.3s ease;
+  margin-left: 0.4rem;
+  flex-shrink: 0;
+}
+
+.dropdown-trigger:hover .dropdown-arrow {
+  border-top-color: var(--text-primary);
+}
+
+.dropdown-trigger[aria-expanded="true"] .dropdown-arrow {
+  transform: rotate(180deg);
+  border-top-color: var(--accent-pink);
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: rgba(13, 13, 13, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  border: 1px solid var(--border-subtle);
+  min-width: 220px;
+  padding: 0.5rem;
+  animation: dropdownFade 0.2s ease forwards;
+}
+
+.dropdown-menu.responsive {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: none;
+  border: none;
+  border-left: 2px solid var(--accent-pink);
+  border-radius: 0;
+  margin-left: 1rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding-right: 10px;
+}
+
+/* Extend hover area to the right for easier sub-menu access */
+.dropdown-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 20px;
+  height: 100%;
+  background: transparent;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-link:hover {
+  background: rgba(251, 97, 212, 0.1);
+  padding-left: 1.25rem;
+}
+
+/* ============================================
+   SUB-DROPDOWN MENU
+   ============================================ */
+.sub-dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: rgba(13, 13, 13, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  z-index: 1001;
+  border: 1px solid var(--border-subtle);
+  min-width: 200px;
+  max-width: 220px;
+  padding: 0.5rem;
+  /* Scrollable so it never goes off screen */
+  max-height: 70vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+/* Thin scrollbar for webkit */
+.sub-dropdown-menu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sub-dropdown-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sub-dropdown-menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.sub-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(251, 97, 212, 0.3);
+}
+
+/* Bridge element to maintain hover when moving to sub-dropdown */
+.sub-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 25px;
+  height: 100%;
+  background: transparent;
+}
+
+.dropdown-item:hover .sub-dropdown-menu {
+  display: block;
+  animation: dropdownFade 0.2s ease forwards;
+}
+
+/* Keep sub-dropdown visible when hovering over it */
+.sub-dropdown-menu:hover {
+  display: block;
+}
+
+/* ============================================
+   SUB-DROPDOWN ITEMS
+   ============================================ */
+.sub-dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.sub-dropdown-item:hover {
+  color: var(--text-primary);
+  background: rgba(251, 97, 212, 0.1);
+  padding-left: 1.25rem;
+}
+
+/* Locked guide items — dimmer, lock icon sits neatly on the right */
+.sub-dropdown-item--locked {
+  color: var(--text-muted);
+}
+
+.sub-dropdown-item--locked:hover {
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   AUTH BUTTONS
+   ============================================ */
+.auth-buttons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.button-35 {
+  font-family:
+    "Lato",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.button-35:hover {
+  border-color: var(--accent-pink);
+  background: rgba(251, 97, 212, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Primary button style for Sign Up */
+.auth-buttons .button-35:last-child {
+  background: var(--gradient-pink);
+  border: none;
+  color: white;
+}
+
+.auth-buttons .button-35:last-child:hover {
+  box-shadow: 0 5px 20px rgba(251, 97, 212, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   PROFILE/MENU DROPDOWN
+   ============================================ */
+.menu-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-menu-button {
+  background: var(--gradient-pink);
+  border: none;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  gap: 0.5rem;
+}
+
+.profile-menu-button .dropdown-arrow {
+  border-top-color: white;
+}
+
+.profile-menu-button:hover {
+  box-shadow: 0 5px 20px rgba(251, 97, 212, 0.4);
+  transform: translateY(-2px);
+}
+
+.menu-dropdown {
+  right: 0;
+  left: auto;
+  min-width: 180px;
+}
+
+.menu-item {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.menu-item:hover {
+  color: var(--text-primary);
+  background: rgba(251, 97, 212, 0.1);
+  padding-left: 1.25rem;
+}
+
+.signout-item {
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 0.75rem;
+  border-radius: 0 0 8px 8px;
+}
+
+.signout-item:hover {
+  background: rgba(251, 97, 212, 0.2);
+  color: var(--accent-pink);
+}
+
+/* ============================================
+   MOBILE MENU ICON
+   ============================================ */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 0;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.menu-icon:hover {
+  border-color: var(--accent-pink);
+  background: rgba(251, 97, 212, 0.1);
+}
+
+.menu-icon__line {
+  width: 20px;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-icon.open {
+  background: rgba(251, 97, 212, 0.1);
+  border-color: var(--accent-pink);
+}
+
+.menu-icon.open .menu-icon__line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-icon.open .menu-icon__line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.menu-icon.open .menu-icon__line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============================================
+   RESPONSIVE/MOBILE MENU
+   ============================================ */
+.responsive-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 1rem;
+  left: 1rem;
+  background: rgba(13, 13, 13, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 999;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-subtle);
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.responsive-links.open {
+  display: flex;
+  animation: dropdownFade 0.3s ease forwards;
+}
+
+.responsive-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.responsive-nav-link {
+  font-family:
+    "Lato",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.875rem 1rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  display: block;
+  line-height: 1.2;
+}
+
+/* Dropdown trigger specific styles for mobile */
+.responsive-nav-link.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.responsive-nav-link:hover {
+  color: var(--text-primary);
+  background: rgba(251, 97, 212, 0.1);
+}
+
+.responsive-dropdown .dropdown-trigger {
+  width: 100%;
+}
+
+/* Mobile dropdown arrow */
+.responsive-dropdown .dropdown-arrow,
+.responsive-links .dropdown-arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid var(--text-secondary);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.responsive-dropdown .dropdown-trigger:hover .dropdown-arrow {
+  border-top-color: var(--text-primary);
+}
+
+.responsive-dropdown .dropdown-trigger[aria-expanded="true"] .dropdown-arrow {
+  transform: rotate(180deg);
+  border-top-color: var(--accent-pink);
+}
+
+/* Mobile dropdown styling */
+.responsive-links .dropdown-menu.responsive {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.responsive-links .dropdown-link {
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Large tablets and small desktops */
+@media only screen and (max-width: 1024px) {
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .middle {
+    gap: 0.25rem;
+  }
+
+  .dropdown-menu {
+    min-width: 200px;
+  }
+
+  .sub-dropdown-menu {
+    min-width: 200px;
+    max-width: 220px;
+  }
+}
+
+/* Tablets */
+@media only screen and (max-width: 900px) {
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.6rem;
+  }
+
+  .button-35 {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  nav img {
+    height: 45px;
+  }
+}
+
+/* Mobile breakpoint */
+@media only screen and (max-width: 768px) {
+  .middle {
+    display: none;
+  }
+
+  .profile-menu {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  nav img {
+    height: 42px;
+  }
+
+  .auth-buttons {
+    gap: 0.5rem;
+  }
+
+  .button-35 {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.875rem;
+    border-radius: 8px;
+  }
+
+  .responsive-links {
+    right: 1rem;
+    left: 1rem;
+  }
+}
+
+/* Small phones */
+@media only screen and (max-width: 480px) {
+  nav img {
+    height: 38px;
+  }
+
+  .auth-buttons {
+    gap: 0.4rem;
+  }
+
+  .button-35 {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .menu-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-icon__line {
+    width: 18px;
+  }
+
+  .responsive-links {
+    right: 0.75rem;
+    left: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .responsive-nav-link {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+/* Extra small phones */
+@media only screen and (max-width: 360px) {
+  nav img {
+    height: 34px;
+  }
+
+  .button-35 {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .auth-buttons {
+    gap: 0.3rem;
+  }
+}
+
+/* Desktop - ensure middle is visible */
+@media only screen and (min-width: 769px) {
+  .middle {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .responsive-links {
+    display: none !important;
+  }
+
+  .profile-menu {
+    display: block;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  nav,
+  nav img,
+  .nav-link,
+  .nav-link::after,
+  .button-35,
+  .dropdown-menu,
+  .menu-icon__line {
+    transition: none;
+    animation: none;
+  }
+
+  .dropdown-menu,
+  .responsive-links.open {
+    animation: none;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.nav-link:focus-visible,
+.button-35:focus-visible,
+.menu-icon:focus-visible,
+.dropdown-link:focus-visible,
+.responsive-nav-link:focus-visible {
+  outline: 2px solid var(--accent-pink);
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  nav {
+    border-bottom-width: 2px;
+  }
+
+  .dropdown-menu,
+  .responsive-links {
+    border-width: 2px;
+  }
+
+  .nav-link,
+  .dropdown-link,
+  .responsive-nav-link {
+    color: var(--text-primary);
+  }
+}

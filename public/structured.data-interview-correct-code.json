@@ -1,0 +1,1922 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Quiz",
+  "name": "React Interview Correct Code Quiz",
+  "description": "A detailed React interview quiz featuring code snippets to test your ability to identify correct implementations of React concepts, hooks, and patterns for frontend development mastery.",
+  "url": "https://www.projectschool.dev/interview/interview-correct-code/:slug",
+  "inLanguage": "en",
+  "educationalLevel": "Beginner to Advanced",
+  "learningResourceType": "Quiz",
+  "datePublished": "2025-03-03",
+  "provider": {
+    "@type": "EducationalOrganization",
+    "name": "Project School",
+    "url": "https://www.projectschool.dev",
+    "email": "support@projectschool.dev",
+    "logo": "https://www.projectschool.dev/pslogosmall.webp"
+  },
+  "audience": [
+    { "@type": "Audience", "audienceType": "Beginner" },
+    { "@type": "Audience", "audienceType": "Intermediate" },
+    { "@type": "Audience", "audienceType": "Advanced" }
+  ],
+  "duration": "PT1H30M",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "Question",
+        "position": 1,
+        "text": "Which code snippet correctly defines a React functional component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```function MyComponent() { return <h1>Hello</h1>; }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = () => { return <h1>Hello</h1>; }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```class MyComponent extends React.Component { render() { return <h1>Hello</h1>; } }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```function MyComponent() { return <h1>Hello</h1>; }```"
+          }
+        ],
+        "description": "A React functional component can be defined as a plain JavaScript function returning JSX, like `function MyComponent() { return <h1>Hello</h1>; }`.",
+        "keywords": [
+          "React",
+          "functional component",
+          "JSX",
+          "frontend interview"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 2,
+        "text": "Which code snippet correctly uses `useState` to define a state variable in a functional component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const [count, setCount] = useState(0);```"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "```const count = useState(0);```" },
+          {
+            "@type": "Answer",
+            "text": "```const [count, setCount] = state(0);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const count = 0; const setCount = (value) => { count = value; };```"
+          }
+        ],
+        "description": "`useState` returns an array with the state variable and its setter, correctly destructured as `[count, setCount]`.",
+        "keywords": ["React", "useState", "state management", "hooks"]
+      },
+      {
+        "@type": "Question",
+        "position": 3,
+        "text": "Which code snippet correctly passes a prop from a parent to a child component in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const [count, setCount] = useState(0);```"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "```const count = useState(0);```" },
+          {
+            "@type": "Answer",
+            "text": "```const [count, setCount] = state(0);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const count = 0; const setCount = (value) => { count = value; };```"
+          }
+        ],
+        "description": "Note: This question's options seem incorrect in your data; the correct answer should involve props, e.g., `<Child count={count} />`.",
+        "keywords": ["React", "props", "parent-child", "state"]
+      },
+      {
+        "@type": "Question",
+        "position": 4,
+        "text": "Which code snippet correctly uses the `useEffect` hook in a functional component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```useEffect(() => { document.title = 'Hello'; }, []);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { document.title = 'Hello'; });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { document.title = 'Hello'; }, 0);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { document.title = 'Hello'; }, null);```"
+          }
+        ],
+        "description": "`useEffect` with an empty dependency array (`[]`) runs once on mount, making it ideal for side effects like setting the document title.",
+        "keywords": ["React", "useEffect", "side effects", "hooks"]
+      },
+      {
+        "@type": "Question",
+        "position": 5,
+        "text": "Which code snippet correctly handles an event in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```<button onClick={handleClick}>Click me</button>```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```<button onClick='handleClick'>Click me</button>```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```<button onClick={() => handleClick()}>Click me</button>```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```<button handleClick='Click me'></button>```"
+          }
+        ],
+        "description": "In React, event handlers are assigned directly as functions (`onClick={handleClick}`) without quotes or unnecessary arrow functions.",
+        "keywords": ["React", "event handling", "onClick", "frontend"]
+      },
+      {
+        "@type": "Question",
+        "position": 6,
+        "text": "Which code snippet correctly updates the state of a React functional component based on the previous state?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```setCount(prevCount => prevCount + 1);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```setCount(prevCount => prevCount++);```"
+          },
+          { "@type": "Answer", "text": "```setCount(count + 1);```" },
+          { "@type": "Answer", "text": "```setCount(count => count + 1);```" }
+        ],
+        "description": "Using the functional update form (`prevCount => prevCount + 1`) ensures safe state updates based on the previous state.",
+        "keywords": ["React", "useState", "state update", "functional update"]
+      },
+      {
+        "@type": "Question",
+        "position": 7,
+        "text": "Which code snippet correctly defines a memoized component using `React.memo`?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MemoizedComponent = React.memo(MyComponent);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MemoizedComponent = memo(MyComponent);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MemoizedComponent = React.memo(MyComponent, []);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MemoizedComponent = MyComponent.memo();```"
+          }
+        ],
+        "description": "`React.memo` wraps a component to prevent re-renders unless props change, correctly written as `React.memo(MyComponent)`.",
+        "keywords": ["React", "React.memo", "optimization", "memoization"]
+      },
+      {
+        "@type": "Question",
+        "position": 8,
+        "text": "Which code snippet correctly handles a form submission in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const handleSubmit = (event) => { event.preventDefault(); console.log('Form submitted'); };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const handleSubmit = (event) => { event.preventDefault; console.log('Form submitted'); };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const handleSubmit = (event) => { event.prevent(); console.log('Form submitted'); };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const handleSubmit = (event) => { console.log('Form submitted'); };```"
+          }
+        ],
+        "description": "`event.preventDefault()` stops the default form submission behavior, correctly implemented here.",
+        "keywords": ["React", "form handling", "event", "preventDefault"]
+      },
+      {
+        "@type": "Question",
+        "position": 9,
+        "text": "Which code snippet correctly uses `useReducer` to manage state in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const [state, dispatch] = useReducer(reducer, initialState);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const [state, dispatch] = useReducer(initialState, reducer);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const [state, dispatch] = useReducer(reducer);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const [state, dispatch] = useReducer(state, dispatch);```"
+          }
+        ],
+        "description": "`useReducer` takes a reducer function and initial state, returning state and dispatch function.",
+        "keywords": ["React", "useReducer", "state management", "hooks"]
+      },
+      {
+        "@type": "Question",
+        "position": 10,
+        "text": "Which code snippet correctly implements a custom hook in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```function useCustomHook() { const [state, setState] = useState(0); return [state, setState]; }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```function useCustomHook() { return useState(0); }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const useCustomHook = () => { const [state, setState] = useState(0); return [state, setState]; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const useCustomHook = () => { return useState(0); };```"
+          }
+        ],
+        "description": "Custom hooks are functions starting with 'use', encapsulating reusable logic like state management.",
+        "keywords": ["React", "custom hook", "useState", "hooks"]
+      },
+      {
+        "@type": "Question",
+        "position": 11,
+        "text": "Which code snippet correctly implements a context provider in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyContext = React.createContext(); const MyProvider = ({ children }) => { return <MyContext.Provider value={value}>{children}</MyContext.Provider>; };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyContext = React.createContext(); const MyProvider = ({ children }) => { return <MyContext.Provider>{children}</MyContext.Provider>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyContext = createContext(); const MyProvider = ({ children }) => { return <MyContext.Provider value={value} />; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyContext = React.createContext(); const MyProvider = ({ children }) => { return <Provider value={value}>{children}</Provider>; };```"
+          }
+        ],
+        "description": "A context provider uses `React.createContext()` and `<Provider>` to share values with child components.",
+        "keywords": ["React", "context", "provider", "state sharing"]
+      },
+      {
+        "@type": "Question",
+        "position": 12,
+        "text": "Which code snippet correctly implements React Router to navigate between two routes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```<BrowserRouter><Route path='/' component={Home} /><Route path='/about' component={About} /></BrowserRouter>```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```<Router><Route path='/' component={Home} /><Route path='/about' component={About} /></Router>```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```<BrowserRouter><Route path='/' exact component={Home} /><Route path='/about' exact component={About} /></BrowserRouter>```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```<BrowserRouter><Home path='/' /><About path='/about' /></BrowserRouter>```"
+          }
+        ],
+        "description": "`BrowserRouter` and `Route` components correctly set up navigation between routes.",
+        "keywords": ["React", "React Router", "routing", "navigation"]
+      },
+      {
+        "@type": "Question",
+        "position": 13,
+        "text": "Which code snippet correctly uses `React.lazy` to dynamically import a component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyComponent = React.lazy(() => import('./MyComponent'));```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = lazy(() => import('./MyComponent'));```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.lazy(import('./MyComponent'));```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = () => { import('./MyComponent'); };```"
+          }
+        ],
+        "description": "`React.lazy` requires a dynamic import wrapped in a function for lazy loading.",
+        "keywords": ["React", "React.lazy", "lazy loading", "optimization"]
+      },
+      {
+        "@type": "Question",
+        "position": 14,
+        "text": "Which code snippet correctly prevents a component from re-rendering when the props don't change?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyComponent = React.memo(({ name }) => { return <div>{name}</div>; })```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = memo(({ name }) => { return <div>{name}</div>; })```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.memo((props) => { return <div>{props.name}</div>; })```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.memo(function(props) { return <div>{props.name}</div>; })```"
+          }
+        ],
+        "description": "`React.memo` with a functional component prevents re-renders unless props change.",
+        "keywords": ["React", "React.memo", "optimization", "re-rendering"]
+      },
+      {
+        "@type": "Question",
+        "position": 15,
+        "text": "Which code snippet correctly uses `useLayoutEffect` to update the DOM after rendering?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```useLayoutEffect(() => { document.getElementById('my-element').style.color = 'red'; }, []);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```useLayoutEffect(() => { document.getElementById('my-element').style.color = 'red'; });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useLayoutEffect(() => { document.getElementById('my-element').style.color = 'red'; }, [myState]);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { document.getElementById('my-element').style.color = 'red'; }, []);```"
+          }
+        ],
+        "description": "`useLayoutEffect` with an empty dependency array runs synchronously after DOM updates.",
+        "keywords": ["React", "useLayoutEffect", "DOM update", "hooks"]
+      },
+      {
+        "@type": "Question",
+        "position": 16,
+        "text": "Which code snippet correctly implements a custom hook to fetch data from an API?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```function useFetch(url) { const [data, setData] = useState(null); useEffect(() => { fetch(url).then(res => res.json()).then(setData); }, [url]); return data; }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```function useFetch(url) { const data = useState(null); useEffect(() => { fetch(url).then((res) => res.json()).then(data[1]); }, [url]); return data[0]; }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```function useFetch(url) { const data = useState(null); return fetch(url).then(res => res.json()); }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```function useFetch(url) { useEffect(() => { fetch(url).then(res => res.json()).then(data => data); }, [url]); }```"
+          }
+        ],
+        "description": "A custom hook like `useFetch` uses `useState` and `useEffect` to fetch and return data.",
+        "keywords": ["React", "custom hook", "data fetching", "useEffect"]
+      },
+      {
+        "@type": "Question",
+        "position": 17,
+        "text": "Which code snippet correctly implements error boundaries in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```class ErrorBoundary extends React.Component { constructor(props) { super(props); this.state = { hasError: false }; } static getDerivedStateFromError(error) { return { hasError: true }; } componentDidCatch(error, info) { console.log(error, info); } render() { return this.state.hasError ? <h1>Something went wrong.</h1> : this.props.children; } }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```class ErrorBoundary extends React.Component { constructor(props) { super(props); this.state = { hasError: false }; } static getSnapshotBeforeUpdate(prevProps, prevState) { return null; } componentDidCatch(error, info) { console.log(error, info); } render() { return this.state.hasError ? <h1>Something went wrong.</h1> : this.props.children; } }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```function ErrorBoundary({ children }) { const [hasError, setHasError] = useState(false); try { return children; } catch (error) { setHasError(true); } return hasError ? <h1>Something went wrong.</h1> : null; }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```class ErrorBoundary extends React.Component { constructor(props) { super(props); this.state = { hasError: true }; } static getDerivedStateFromError(error) { return { hasError: false }; } componentDidCatch(error, info) { console.log(error, info); } render() { return this.state.hasError ? <h1>Something went wrong.</h1> : this.props.children; } }```"
+          }
+        ],
+        "description": "Error boundaries use `getDerivedStateFromError` and `componentDidCatch` to handle errors gracefully.",
+        "keywords": [
+          "React",
+          "error boundary",
+          "class component",
+          "error handling"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 18,
+        "text": "Which code snippet correctly defines a higher-order component (HOC) that adds a 'loading' prop to the wrapped component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```function withLoading(WrappedComponent) { return function(props) { return props.isLoading ? <div>Loading...</div> : <WrappedComponent {...props} />; }; }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```function withLoading(WrappedComponent) { return function({ isLoading, ...props }) { return isLoading ? <div>Loading...</div> : <WrappedComponent {...props} />; }; }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```function withLoading(WrappedComponent) { return (props) => { return props.isLoading && <div>Loading...</div>; }; }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```function withLoading(WrappedComponent) { return function(props) { return <WrappedComponent {...props} />; }; }```"
+          }
+        ],
+        "description": "An HOC wraps a component, adding conditional logic based on props like `isLoading`.",
+        "keywords": ["React", "HOC", "higher-order component", "loading"]
+      },
+      {
+        "@type": "Question",
+        "position": 19,
+        "text": "Which code snippet correctly implements the `useReducer` hook to manage state in a React component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```function counterReducer(state, action) { switch(action.type) { case 'increment': return { count: state.count + 1 }; default: return state; } } const [state, dispatch] = useReducer(counterReducer, { count: 0 });```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```function counterReducer(state, action) { switch(action) { case 'increment': return { count: state.count + 1 }; default: return state; } } const [state, dispatch] = useReducer(counterReducer, { count: 0 });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```function counterReducer(state, action) { if(action === 'increment') { return { count: state.count + 1 }; } return state; } const [state, dispatch] = useReducer(counterReducer, { count: 0 });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const [state, dispatch] = useReducer(counterReducer, { count: 0 }, { increment: () => dispatch({ type: \"increment\" }) });```"
+          }
+        ],
+        "description": "`useReducer` with a switch statement and action type correctly manages complex state.",
+        "keywords": ["React", "useReducer", "state management", "reducer"]
+      },
+      {
+        "@type": "Question",
+        "position": 20,
+        "text": "Which code snippet correctly implements the `useEffect` hook to run an effect when a component mounts and unmounts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```useEffect(() => { console.log('Component mounted'); return () => { console.log('Component unmounted'); }; }, []);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { console.log('Component mounted'); }, []); return () => { console.log('Component unmounted'); };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { console.log('Component mounted'); return () => { console.log('Component unmounted'); }, []);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { console.log('Component mounted'); return () => { console.log('Component unmounted'); }; }, [dependency]);```"
+          }
+        ],
+        "description": "`useEffect` with a cleanup function and empty array runs on mount and unmount only.",
+        "keywords": ["React", "useEffect", "mount", "unmount"]
+      },
+      {
+        "@type": "Question",
+        "position": 21,
+        "text": "Which code snippet correctly uses React's `forwardRef` to pass a ref to a child component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyComponent = React.forwardRef((props, ref) => { return <div ref={ref}>Hello</div>; });```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = (props, ref) => { return <div ref={ref}>Hello</div>; }; MyComponent = React.forwardRef(MyComponent);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = (props) => { return <div ref={props.ref}>Hello</div>; }; MyComponent = React.forwardRef(MyComponent);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.forwardRef((props) => { return <div ref={props.ref}>Hello</div>; });```"
+          }
+        ],
+        "description": "`forwardRef` correctly passes a ref to a child component's DOM element.",
+        "keywords": ["React", "forwardRef", "refs", "child component"]
+      },
+      {
+        "@type": "Question",
+        "position": 22,
+        "text": "Which code snippet correctly implements code splitting using React's `React.lazy` and `Suspense`?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); <Suspense fallback={<div>Loading...</div>}><LazyComponent /></Suspense>```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); <LazyComponent />```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); <Suspense fallback={null}><LazyComponent /></Suspense>```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const LazyComponent = import('./LazyComponent'); <Suspense fallback={<div>Loading...</div>}><LazyComponent /></Suspense>```"
+          }
+        ],
+        "description": "`React.lazy` with `Suspense` enables code splitting with a fallback UI.",
+        "keywords": ["React", "React.lazy", "Suspense", "code splitting"]
+      },
+      {
+        "@type": "Question",
+        "position": 23,
+        "text": "Which code snippet correctly uses React's `useContext` hook to access a context value?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const value = useContext(MyContext);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const value = useContext(MyContext.Provider);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const value = useContext(MyContext.Consumer);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const value = MyContext.useContext();```"
+          }
+        ],
+        "description": "`useContext` directly accesses a context value from a created context.",
+        "keywords": ["React", "useContext", "context", "state sharing"]
+      },
+      {
+        "@type": "Question",
+        "position": 24,
+        "text": "Which code snippet correctly optimizes a functional component to prevent unnecessary re-renders using `React.memo`?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyComponent = React.memo(function MyComponent(props) { return <div>{props.name}</div>; })```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.memo(function MyComponent() { return <div>Hello</div>; })```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.memo(() => { return <div>{props.name}</div>; })```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.memo(function MyComponent(props) { return <div>{props.name}</div>; }, (prev, next) => true);```"
+          }
+        ],
+        "description": "`React.memo` optimizes by memoizing the component based on prop changes.",
+        "keywords": ["React", "React.memo", "optimization", "re-rendering"]
+      },
+      {
+        "@type": "Question",
+        "position": 25,
+        "text": "Which code snippet correctly implements a context provider in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyContext = React.createContext(); const MyProvider = ({ children }) => { const value = 'Hello'; return <MyContext.Provider value={value}>{children}</MyContext.Provider>; };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyContext = React.createContext(); const MyProvider = ({ children }) => { const value = 'Hello'; return <MyContext value={value}>{children}</MyContext>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyProvider = ({ children }) => { const value = 'Hello'; return <MyContext.Provider>{children}</MyContext.Provider>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyProvider = ({ children }) => { const value = 'Hello'; return <MyContext.Provider value={value}>Hello</MyContext.Provider>; };```"
+          }
+        ],
+        "description": "A context provider shares a value with child components using `<Provider>`.",
+        "keywords": ["React", "context", "provider", "state sharing"]
+      },
+      {
+        "@type": "Question",
+        "position": 26,
+        "text": "Which code snippet correctly uses the `useEffect` hook to run a side effect only on component mount?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```useEffect(() => { console.log('Component mounted'); }, []);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { console.log('Component mounted'); });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { console.log('Component mounted'); }, [dependencies]);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { console.log('Component mounted'); }, null);```"
+          }
+        ],
+        "description": "An empty dependency array ensures `useEffect` runs only once on mount.",
+        "keywords": ["React", "useEffect", "mount", "side effect"]
+      },
+      {
+        "@type": "Question",
+        "position": 27,
+        "text": "Which code snippet correctly creates a custom hook to track the window size?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```function useWindowSize() { const [size, setSize] = useState({ width: window.innerWidth, height: window.innerHeight }); useEffect(() => { const handleResize = () => { setSize({ width: window.innerWidth, height: window.innerHeight }); }; window.addEventListener('resize', handleResize); return () => window.removeEventListener('resize', handleResize); }, []); return size; }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```function useWindowSize() { const size = useState({ width: window.innerWidth, height: window.innerHeight }); return size; }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```function useWindowSize() { const [size, setSize] = useState({ width: window.innerWidth, height: window.innerHeight }); return size; }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```function useWindowSize() { const size = useState(window.innerWidth); return size; }```"
+          }
+        ],
+        "description": "A custom hook tracks window size with `useState` and `useEffect` for resize events.",
+        "keywords": ["React", "custom hook", "window size", "useEffect"]
+      },
+      {
+        "@type": "Question",
+        "position": 28,
+        "text": "Which code snippet correctly uses the `useReducer` hook to manage state in a component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const [state, dispatch] = useReducer(reducer, initialState);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const [state, setState] = useReducer(reducer, initialState);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const [state, dispatch] = useState(reducer, initialState);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const [state, dispatch] = useReducer(reducer, state);```"
+          }
+        ],
+        "description": "`useReducer` pairs with a reducer and initial state for complex state logic.",
+        "keywords": ["React", "useReducer", "state management", "hooks"]
+      },
+      {
+        "@type": "Question",
+        "position": 29,
+        "text": "Which code snippet correctly implements a higher-order component (HOC) to wrap a given component and add a loading state?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```function withLoading(Component) { return function LoadingHOC(props) { const [loading, setLoading] = useState(true); useEffect(() => { const timer = setTimeout(() => { setLoading(false); }, 2000); return () => clearTimeout(timer); }, []); return loading ? <div>Loading...</div> : <Component {...props} />; }; }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```function withLoading(Component) { return function LoadingHOC(props) { const loading = useState(true); return loading ? <div>Loading...</div> : <Component {...props} />; }; }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```function withLoading(Component) { return function LoadingHOC(props) { const [loading, setLoading] = useState(false); return loading ? <div>Loading...</div> : <Component {...props} />; }; }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```function withLoading(Component) { return function LoadingHOC(props) { const loading = true; return loading ? <div>Loading...</div> : <Component {...props} />; }; }```"
+          }
+        ],
+        "description": "An HOC adds a loading state with `useState` and `useEffect` for delayed rendering.",
+        "keywords": ["React", "HOC", "loading state", "optimization"]
+      },
+      {
+        "@type": "Question",
+        "position": 30,
+        "text": "Which code snippet correctly uses the `useLayoutEffect` hook to perform a DOM operation after the component has rendered?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```useLayoutEffect(() => { console.log('DOM updated'); }, []);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```useLayoutEffect(() => { console.log('DOM updated'); });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { console.log('DOM updated'); }, []);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { console.log('DOM updated'); }, [dependencies]);```"
+          }
+        ],
+        "description": "`useLayoutEffect` runs synchronously after render, ideal for DOM updates.",
+        "keywords": ["React", "useLayoutEffect", "DOM", "hooks"]
+      },
+      {
+        "@type": "Question",
+        "position": 31,
+        "text": "Which code snippet correctly implements `React.PureComponent` to optimize rendering in a class component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```class MyComponent extends React.PureComponent { render() { return <div>{this.props.value}</div>; } }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```class MyComponent extends React.Component { shouldComponentUpdate(nextProps) { return nextProps.value !== this.props.value; } render() { return <div>{this.props.value}</div>; } }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```class MyComponent extends React.Component { render() { return <div>{this.props.value}</div>; } }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```class MyComponent extends React.PureComponent { shouldComponentUpdate(nextProps) { return nextProps.value !== this.props.value; } render() { return <div>{this.props.value}</div>; } }```"
+          }
+        ],
+        "description": "`PureComponent` optimizes by shallowly comparing props to prevent re-renders.",
+        "keywords": [
+          "React",
+          "PureComponent",
+          "optimization",
+          "class component"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 32,
+        "text": "Which code snippet correctly implements server-side rendering (SSR) with React and ReactDOM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```import ReactDOMServer from 'react-dom/server'; const html = ReactDOMServer.renderToString(<App />);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```import ReactDOM from 'react-dom'; const html = ReactDOM.renderToString(<App />);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```import ReactDOM from 'react-dom/server'; const html = ReactDOM.renderToString(<App />);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```import ReactDOMServer from 'react-dom'; const html = ReactDOMServer.renderToString(<App />);```"
+          }
+        ],
+        "description": "`ReactDOMServer.renderToString` from `'react-dom/server'` enables SSR.",
+        "keywords": ["React", "SSR", "server-side rendering", "ReactDOMServer"]
+      },
+      {
+        "@type": "Question",
+        "position": 33,
+        "text": "Which code snippet correctly uses the `React.Suspense` for error boundary handling in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```import { Suspense } from 'react'; <Suspense fallback={<div>Loading...</div>}><MyComponent /></Suspense>```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```import { Suspense } from 'react'; <Suspense fallback={<div>Loading...</div>} error={<div>Error occurred</div>}><MyComponent /></Suspense>```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```import { Suspense, ErrorBoundary } from 'react'; <ErrorBoundary><Suspense fallback={<div>Loading...</div>}><MyComponent /></Suspense></ErrorBoundary>```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```import { Suspense } from 'react'; <Suspense fallback={<div>Loading...</div>} catch={<div>Error occurred</div>}><MyComponent /></Suspense>```"
+          }
+        ],
+        "description": "`Suspense` handles lazy loading, not errors; error boundaries are separate.",
+        "keywords": ["React", "Suspense", "lazy loading", "error handling"]
+      },
+      {
+        "@type": "Question",
+        "position": 34,
+        "text": "Which code snippet correctly uses the `useCallback` hook to prevent unnecessary re-renders when passing a function as a prop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const memoizedFunction = useCallback(() => { console.log('Action'); }, []);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const memoizedFunction = useCallback(() => { console.log('Action'); }, [dependencies]);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const memoizedFunction = useMemo(() => { console.log('Action'); }, []);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const memoizedFunction = useCallback(console.log('Action'), []);```"
+          }
+        ],
+        "description": "`useCallback` memoizes a function, preventing re-creation on renders.",
+        "keywords": ["React", "useCallback", "optimization", "props"]
+      },
+      {
+        "@type": "Question",
+        "position": 35,
+        "text": "Which code snippet correctly handles the rendering of lists with keys in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const listItems = items.map(item => <li key={item.id}>{item.name}</li>);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const listItems = items.map((item, index) => <li key={index}>{item.name}</li>);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const listItems = items.map(item => <li>{item.name}</li>);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const listItems = items.map((item, index) => <div key={item.id}>{item.name}</div>);```"
+          }
+        ],
+        "description": "Using a unique `id` as a key ensures efficient list rendering in React.",
+        "keywords": ["React", "list rendering", "keys", "optimization"]
+      },
+      {
+        "@type": "Question",
+        "position": 36,
+        "text": "Which code snippet correctly implements React Context to share a theme value across components?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const ThemeContext = React.createContext(); const ThemeProvider = ({ children }) => { const [theme, setTheme] = useState('light'); return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>; };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const ThemeContext = React.createContext(); const ThemeProvider = ({ children }) => { const [theme, setTheme] = useState('light'); return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const ThemeContext = React.createContext(); const ThemeProvider = ({ children }) => { const [theme, setTheme] = 'light'; return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const ThemeContext = React.createContext(); const ThemeProvider = ({ children }) => { return <ThemeContext.Provider value={{ theme: 'light' }}>{children}</ThemeContext.Provider>; };```"
+          }
+        ],
+        "description": "Context with `useState` shares dynamic theme values across components.",
+        "keywords": ["React", "context", "theme", "state sharing"]
+      },
+      {
+        "@type": "Question",
+        "position": 37,
+        "text": "Which code snippet correctly implements code splitting with `React.lazy` and `Suspense`?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); <Suspense fallback={<div>Loading...</div>}><LazyComponent /></Suspense>```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); <Suspense fallback={<div>Loading...</div>}>{<LazyComponent />}</Suspense>```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); <Suspense fallback={<div>Loading...</div>}>{<LazyComponent />}</Suspense>```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); <Suspense><div>Loading...</div><LazyComponent /></Suspense>```"
+          }
+        ],
+        "description": "`React.lazy` and `Suspense` together enable efficient code splitting.",
+        "keywords": ["React", "React.lazy", "Suspense", "code splitting"]
+      },
+      {
+        "@type": "Question",
+        "position": 38,
+        "text": "Which code snippet correctly uses `useEffect` to run a side effect after every render?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```useEffect(() => { console.log('Component rendered'); });```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { console.log('Component rendered'); }, [dependencies]);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { console.log('Component rendered'); }, {});```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { console.log('Component rendered'); }, []);```"
+          }
+        ],
+        "description": "No dependency array in `useEffect` triggers the effect after every render.",
+        "keywords": ["React", "useEffect", "side effect", "render"]
+      },
+      {
+        "@type": "Question",
+        "position": 39,
+        "text": "Which code snippet correctly implements an uncontrolled component in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const inputRef = useRef(); <input ref={inputRef} />;```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const [value, setValue] = useState(''); <input value={value} onChange={(e) => setValue(e.target.value)} />;```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const inputRef = useRef(); <input value={inputRef.current.value} />;```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const [value, setValue] = useState(''); <input ref={inputRef} onChange={(e) => setValue(e.target.value)} />;```"
+          }
+        ],
+        "description": "Uncontrolled components use refs to manage DOM elements directly.",
+        "keywords": ["React", "uncontrolled component", "useRef", "forms"]
+      },
+
+      {
+        "@type": "Question",
+        "position": 40,
+        "text": "Which code snippet correctly uses `React.memo` to prevent unnecessary re-renders in a functional component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyComponent = React.memo(({ value }) => <div>{value}</div>);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.memo((props) => <div>{props.value}</div>);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.memo(({ value }) => { return <div>{value}</div>; });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = ({ value }) => <div>{value}</div>;```"
+          }
+        ],
+        "description": "`React.memo` optimizes rendering by memoizing a functional component based on prop changes.",
+        "keywords": ["React", "React.memo", "optimization", "re-rendering"]
+      },
+      {
+        "@type": "Question",
+        "position": 41,
+        "text": "Which code snippet correctly handles context with `useReducer`?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const reducer = (state, action) => { switch (action.type) { case 'increment': return { count: state.count + 1 }; default: return state; } }; const [state, dispatch] = useReducer(reducer, { count: 0 });```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const reducer = (state, action) => { switch (action) { case 'increment': return { count: state.count + 1 }; default: return state; } }; const [state, dispatch] = useReducer(reducer, { count: 0 });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const reducer = (state, action) => { switch (action) { case 'increment': return { count: state.count + 1 }; } default: return state; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const [state, dispatch] = useContext(reducer, { count: 0 });```"
+          }
+        ],
+        "description": "`useReducer` with a proper switch statement manages state with action types.",
+        "keywords": ["React", "useReducer", "context", "state management"]
+      },
+      {
+        "@type": "Question",
+        "position": 42,
+        "text": "Which code snippet correctly uses `React.forwardRef` to pass refs to a child component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyComponent = React.forwardRef((props, ref) => <div ref={ref}>{props.children}</div>);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.forwardRef((props) => <div ref={ref}>{props.children}</div>);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.forwardRef((ref, props) => <div ref={ref}>{props.children}</div>);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.forwardRef((props, ref) => <div>{props.children}</div>);```"
+          }
+        ],
+        "description": "`forwardRef` passes a ref correctly to a child component with the right parameter order.",
+        "keywords": ["React", "forwardRef", "refs", "child component"]
+      },
+      {
+        "@type": "Question",
+        "position": 43,
+        "text": "Which code snippet correctly handles state initialization with `useReducer` and actions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const initialState = { count: 0 }; const reducer = (state, action) => { switch (action.type) { case 'increment': return { count: state.count + 1 }; default: return state; } }; const [state, dispatch] = useReducer(reducer, initialState);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const initialState = { count: 0 }; const reducer = (state, action) => { switch (action.type) { case 'increment': return { count: state.count + 1 }; } }; const [state, dispatch] = useReducer(reducer, initialState);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const reducer = (state, action) => { switch (action.type) { case 'increment': return { count: state.count + 1 }; } }; const [state, dispatch] = useReducer(reducer, { count: 0 });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const initialState = { count: 0 }; const [state, dispatch] = useReducer(reducer, initialState);```"
+          }
+        ],
+        "description": "Proper `useReducer` setup includes an initial state and a reducer with action handling.",
+        "keywords": ["React", "useReducer", "state initialization", "actions"]
+      },
+      {
+        "@type": "Question",
+        "position": 44,
+        "text": "Which code snippet correctly uses `React.lazy` to load a component dynamically and handle errors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); const MyComponent = () => ( <Suspense fallback={<div>Loading...</div>}><LazyComponent /></Suspense> );```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); const MyComponent = () => ( <Suspense><div>Loading...</div><LazyComponent /></Suspense> );```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); const MyComponent = () => ( <Suspense fallback={<div>Loading...</div>}><LazyComponent /></Suspense> );```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); <Suspense fallback={<div>Loading...</div>}><LazyComponent /></Suspense>```"
+          }
+        ],
+        "description": "`React.lazy` with `Suspense` in a component handles dynamic loading correctly.",
+        "keywords": ["React", "React.lazy", "Suspense", "dynamic loading"]
+      },
+      {
+        "@type": "Question",
+        "position": 45,
+        "text": "Which code snippet correctly updates state asynchronously with `setState` in a React class component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```this.setState((prevState) => ({ count: prevState.count + 1 }));```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```this.setState({ count: this.state.count + 1 });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```this.setState((prevState) => this.state.count + 1);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```this.setState({ count: prevState.count + 1 });```"
+          }
+        ],
+        "description": "Using the functional update form ensures safe asynchronous state updates.",
+        "keywords": ["React", "setState", "class component", "async update"]
+      },
+      {
+        "@type": "Question",
+        "position": 46,
+        "text": "Which code snippet correctly handles context with `useContext` and a custom hook?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const useTheme = () => useContext(ThemeContext); const ThemedComponent = () => { const theme = useTheme(); return <div>{theme}</div>; };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const useTheme = () => { const theme = useContext(ThemeContext); return theme; }; const ThemedComponent = () => { return <div>{useTheme()}</div>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const useTheme = () => ThemeContext; const ThemedComponent = () => { return <div>{useTheme()}</div>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const useTheme = () => useContext(ThemeContext); const ThemedComponent = () => { const theme = useTheme(); return <span>{theme}</span>; };```"
+          }
+        ],
+        "description": "A custom hook with `useContext` simplifies context access in components.",
+        "keywords": ["React", "useContext", "custom hook", "context"]
+      },
+      {
+        "@type": "Question",
+        "position": 47,
+        "text": "Which code snippet correctly uses `useRef` to store a previous value of a prop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const prevValueRef = useRef(); useEffect(() => { prevValueRef.current = value; }, [value]);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const prevValueRef = useRef(); useEffect(() => { prevValueRef.current = value; }, []);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const prevValueRef = useRef(value); useEffect(() => { prevValueRef.current = value; }, []);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const prevValueRef = useRef(value); useEffect(() => { prevValueRef.current = value; }, [value]);```"
+          }
+        ],
+        "description": "`useRef` with `useEffect` tracks the previous prop value on updates.",
+        "keywords": ["React", "useRef", "previous value", "hooks"]
+      },
+      {
+        "@type": "Question",
+        "position": 48,
+        "text": "Which code snippet correctly handles event delegation in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const handleClick = (event) => { if (event.target.matches('.item')) { console.log('Item clicked'); } }; <div onClick={handleClick}><div className='item'>Item 1</div></div>```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const handleClick = (event) => { if (event.target.matches('.item')) { console.log('Item clicked'); } }; <div><div className='item'>Item 1</div></div>```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const handleClick = (event) => { if (event.target.matches('.item')) { alert('Item clicked'); } }; <div onClick={handleClick}><div className='item'>Item 1</div></div>```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const handleClick = (event) => { console.log('Item clicked'); }; <div><div className='item' onClick={handleClick}>Item 1</div></div>```"
+          }
+        ],
+        "description": "Event delegation uses a parent handler to manage child events efficiently.",
+        "keywords": [
+          "React",
+          "event delegation",
+          "event handling",
+          "optimization"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 49,
+        "text": "Which code snippet correctly uses `useImperativeHandle` to expose a custom function to a parent component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyComponent = React.forwardRef((props, ref) => { useImperativeHandle(ref, () => ({ customFunction: () => { console.log('Custom function called'); } })); return <div>Component</div>; });```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.forwardRef((props, ref) => { useImperativeHandle(ref, () => { customFunction: () => { console.log('Custom function called'); } }); return <div>Component</div>; });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.forwardRef((props, ref) => { useImperativeHandle(ref, { customFunction: () => { console.log('Custom function called'); } }); return <div>Component</div>; });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.forwardRef((props, ref) => { useImperativeHandle(ref, () => console.log('Custom function called')); return <div>Component</div>; });```"
+          }
+        ],
+        "description": "`useImperativeHandle` exposes custom methods to a parent via a ref.",
+        "keywords": ["React", "useImperativeHandle", "forwardRef", "refs"]
+      },
+      {
+        "@type": "Question",
+        "position": 50,
+        "text": "Which code snippet correctly implements React Router's `useNavigate` hook to redirect after a form submission?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const navigate = useNavigate(); const handleSubmit = () => { navigate('/success'); }; <form onSubmit={handleSubmit}>...</form>```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const navigate = useNavigate(); const handleSubmit = (e) => { e.preventDefault(); navigate('/success'); }; <form onSubmit={handleSubmit}>...</form>```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const navigate = useNavigate(); const handleSubmit = () => { e.preventDefault(); navigate('/success'); }; <form onSubmit={handleSubmit}>...</form>```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const navigate = useNavigate(); const handleSubmit = () => { return navigate('/success'); }; <form onSubmit={handleSubmit}>...</form>```"
+          }
+        ],
+        "description": "`useNavigate` redirects programmatically, correctly used here without `preventDefault` for simplicity.",
+        "keywords": ["React", "React Router", "useNavigate", "form submission"]
+      },
+      {
+        "@type": "Question",
+        "position": 51,
+        "text": "Which code snippet correctly implements a `useEffect` hook to handle dynamic cleanup when a component is unmounted, and optimizes rendering performance using `useMemo`?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyComponent = () => { const [count, setCount] = useState(0); useEffect(() => { const handleResize = () => { console.log('Window resized'); }; window.addEventListener('resize', handleResize); return () => { window.removeEventListener('resize', handleResize); }; }, []); const memoizedValue = useMemo(() => count * 2, [count]); return ( <div> <p>Count: {count}</p> <p>Memoized Value: {memoizedValue}</p> <button onClick={() => setCount(count + 1)}>Increment</button> </div> ); };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = () => { const [count, setCount] = useState(0); useEffect(() => { const handleResize = () => { console.log('Window resized'); }; window.addEventListener('resize', handleResize); return () => {}; }, []); const memoizedValue = useMemo(() => count * 2, [count]); return ( <div> <p>Count: {count}</p> <p>Memoized Value: {memoizedValue}</p> <button onClick={() => setCount(count + 1)}>Increment</button> </div> ); };```"
+          }
+        ],
+        "description": "`useEffect` cleans up event listeners, and `useMemo` optimizes computed values.",
+        "keywords": ["React", "useEffect", "useMemo", "cleanup"]
+      },
+      {
+        "@type": "Question",
+        "position": 52,
+        "text": "Which code snippet correctly implements React's `useImperativeHandle` hook to expose a custom method to a parent component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyComponent = React.forwardRef((props, ref) => { const localInputRef = useRef(null); useImperativeHandle(ref, () => ({ focus: () => { localInputRef.current.focus(); } })); return <input ref={localInputRef} />; }); const Parent = () => { const childRef = useRef(null); return ( <> <MyComponent ref={childRef} /> <button onClick={() => childRef.current.focus()}>Focus Input</button> </> ); }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.forwardRef((props, ref) => { const localInputRef = useRef(null); useImperativeHandle(ref, () => ({ reset: () => { localInputRef.current.value = ''; } })); return <input ref={localInputRef} />; }); const Parent = () => { const childRef = useRef(null); return ( <> <MyComponent ref={childRef} /> <button onClick={() => childRef.current.reset()}>Reset Input</button> </> ); }```"
+          }
+        ],
+        "description": "`useImperativeHandle` exposes a `focus` method to the parent via a ref.",
+        "keywords": [
+          "React",
+          "useImperativeHandle",
+          "forwardRef",
+          "custom method"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 53,
+        "text": "Which code snippet correctly optimizes re-renders in a component using `React.memo` with a custom comparison function?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyComponent = React.memo(({ value }) => { console.log('Rendered'); return <div>{value}</div>; }, (prevProps, nextProps) => prevProps.value === nextProps.value); function Parent() { const [value, setValue] = useState(0); return ( <div> <MyComponent value={value} /> <button onClick={() => setValue(value + 1)}>Increment</button> </div> ); }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.memo(({ value }) => { console.log('Rendered'); return <div>{value}</div>; }, (prevProps, nextProps) => { return nextProps.value !== prevProps.value; }); function Parent() { const [value, setValue] = useState(0); return ( <div> <MyComponent value={value} /> <button onClick={() => setValue(value + 1)}>Increment</button> </div> ); }```"
+          }
+        ],
+        "description": "`React.memo` with a comparison function optimizes re-renders based on prop equality.",
+        "keywords": ["React", "React.memo", "optimization", "comparison"]
+      },
+      {
+        "@type": "Question",
+        "position": 54,
+        "text": "Which code snippet correctly implements an advanced custom hook for handling a form with validation in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```function useForm(initialState, validate) { const [values, setValues] = useState(initialState); const [errors, setErrors] = useState({}); const handleChange = (e) => { setValues({ ...values, [e.target.name]: e.target.value }); }; const handleSubmit = (e) => { e.preventDefault(); const validationErrors = validate(values); if (Object.keys(validationErrors).length === 0) { console.log('Form submitted', values); } else { setErrors(validationErrors); } }; return { values, errors, handleChange, handleSubmit }; } function validate(values) { let errors = {}; if (!values.email) { errors.email = 'Email is required'; } return errors; } const Form = () => { const { values, errors, handleChange, handleSubmit } = useForm({ email: '' }, validate); return ( <form onSubmit={handleSubmit}> <input type=\"email\" name=\"email\" value={values.email} onChange={handleChange} /> {errors.email && <span>{errors.email}</span>} <button type=\"submit\">Submit</button> </form> ); }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```function useForm(initialState) { const [values, setValues] = useState(initialState); const handleChange = (e) => { setValues({ ...values, [e.target.name]: e.target.value }); }; const handleSubmit = (e) => { e.preventDefault(); console.log('Form submitted', values); }; return { values, handleChange, handleSubmit }; } const Form = () => { const { values, handleChange, handleSubmit } = useForm({ email: '' }); return ( <form onSubmit={handleSubmit}> <input type=\"email\" name=\"email\" value={values.email} onChange={handleChange} /> <button type=\"submit\">Submit</button> </form> ); }```"
+          }
+        ],
+        "description": "A custom form hook with validation manages inputs and errors effectively.",
+        "keywords": ["React", "custom hook", "form handling", "validation"]
+      },
+      {
+        "@type": "Question",
+        "position": 55,
+        "text": "Which code snippet correctly handles performance optimization using `React.lazy` with `Suspense` for large components?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); function App() { return ( <Suspense fallback={<div>Loading...</div>}> <LazyComponent /> </Suspense> ); }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); function App() { return ( <Suspense fallback={<div>Loading...</div>}> <LazyComponent /> </Suspense> ); }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const LazyComponent = React.lazy(() => import('./LazyComponent')); function App() { return ( <div> <LazyComponent /> </div> ); }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```function App() { return ( <Suspense fallback={<div>Loading...</div>}> <div>Lazy Loaded Component</div> </Suspense> ); }```"
+          }
+        ],
+        "description": "`React.lazy` and `Suspense` optimize performance by lazy-loading large components.",
+        "keywords": ["React", "React.lazy", "Suspense", "performance"]
+      },
+      {
+        "@type": "Question",
+        "position": 56,
+        "text": "Which code snippet correctly uses `React.forwardRef` to pass a ref to a child component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyComponent = React.forwardRef((props, ref) => { return <div ref={ref}>{props.children}</div>; });```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.forwardRef((ref, props) => { return <div ref={ref}>{props.children}</div>; });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.forwardRef((props) => { return <div>{props.children}</div>; });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.forwardRef((ref) => { return <div ref={ref}></div>; });```"
+          }
+        ],
+        "description": "`forwardRef` ensures a ref is passed correctly to a child component.",
+        "keywords": ["React", "forwardRef", "refs", "child component"]
+      },
+      {
+        "@type": "Question",
+        "position": 57,
+        "text": "Which code snippet correctly implements `useReducer` with an action object to manage state in a React function component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const [state, dispatch] = useReducer((state, action) => { switch(action.type) { case 'increment': return { count: state.count + 1 }; case 'decrement': return { count: state.count - 1 }; default: return state; } }, { count: 0 });```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const [state, dispatch] = useReducer((state, action) => { if(action === 'increment') return { count: state.count + 1 }; return state; }, { count: 0 });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const [state, dispatch] = useReducer((state, action) => { if(action.type === 'increment') return { count: state.count + 1 }; return state; }, { count: 0 });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const [state, dispatch] = useReducer((state) => { return { count: state.count + 1 }; }, { count: 0 });```"
+          }
+        ],
+        "description": "`useReducer` with action types manages complex state transitions.",
+        "keywords": ["React", "useReducer", "state management", "actions"]
+      },
+      {
+        "@type": "Question",
+        "position": 58,
+        "text": "Which code snippet correctly uses `useLayoutEffect` instead of `useEffect` to ensure layout changes are applied before the DOM is painted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```useLayoutEffect(() => { // DOM updates here }, []);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { // DOM updates here }, []);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useLayoutEffect(() => { setState(true); }, [state]);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useLayoutEffect(() => { // DOM updates here }, [state]);```"
+          }
+        ],
+        "description": "`useLayoutEffect` ensures synchronous DOM updates before painting.",
+        "keywords": ["React", "useLayoutEffect", "DOM", "layout"]
+      },
+      {
+        "@type": "Question",
+        "position": 59,
+        "text": "Which code snippet correctly handles async data fetching in React with proper error handling using `useEffect`?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```useEffect(() => { const fetchData = async () => { try { const response = await fetch(url); const data = await response.json(); setData(data); } catch (error) { setError(error); } }; fetchData(); }, []);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { fetch(url).then(response => response.json()).then(data => setData(data)); }, []);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { const fetchData = async () => { const response = await fetch(url); const data = await response.json(); setData(data); }; fetchData(); }, [url]);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { const fetchData = async () => { const response = fetch(url); const data = await response.json(); setData(data); }; fetchData(); }, []);```"
+          }
+        ],
+        "description": "Async data fetching with try-catch in `useEffect` handles errors robustly.",
+        "keywords": ["React", "useEffect", "data fetching", "error handling"]
+      },
+      {
+        "@type": "Question",
+        "position": 60,
+        "text": "Which code snippet correctly implements context in React to manage a global state with a provider and consumer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyContext = React.createContext(); const MyProvider = ({ children }) => { const [state, setState] = useState(0); return <MyContext.Provider value={{ state, setState }}>{children}</MyContext.Provider>; }; const MyConsumer = () => { const { state, setState } = useContext(MyContext); return <div>{state}</div>; };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyContext = React.createContext(); const MyProvider = ({ children }) => { const [state, setState] = useState(0); return <MyContext.Provider value={state}>{children}</MyContext.Provider>; }; const MyConsumer = () => { const state = useContext(MyContext); return <div>{state}</div>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyContext = React.createContext(); const MyProvider = ({ children }) => { return <MyContext.Provider value={{}}>{children}</MyContext.Provider>; }; const MyConsumer = () => { const { state } = useContext(MyContext); return <div>{state}</div>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyContext = React.createContext(); const MyProvider = ({ children }) => { const [state, setState] = useState(0); return <MyContext.Provider value={setState}>{children}</MyContext.Provider>; }; const MyConsumer = () => { const setState = useContext(MyContext); return <div>{setState}</div>; };```"
+          }
+        ],
+        "description": "Context with a provider and consumer manages global state dynamically.",
+        "keywords": ["React", "context", "global state", "useContext"]
+      },
+      {
+        "@type": "Question",
+        "position": 61,
+        "text": "Which code snippet correctly uses the `React.PureComponent` to optimize performance by preventing unnecessary re-renders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```class MyComponent extends React.PureComponent { render() { return <div>{this.props.value}</div>; } };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```class MyComponent extends React.Component { shouldComponentUpdate(nextProps) { return nextProps.value !== this.props.value; } render() { return <div>{this.props.value}</div>; } }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```class MyComponent extends React.PureComponent { shouldComponentUpdate(nextProps) { return nextProps.value !== this.props.value; } render() { return <div>{this.props.value}</div>; } }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.memo(({ value }) => { return <div>{value}</div>; });```"
+          }
+        ],
+        "description": "`PureComponent` prevents re-renders with shallow prop comparisons.",
+        "keywords": [
+          "React",
+          "PureComponent",
+          "optimization",
+          "class component"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 62,
+        "text": "Which code snippet demonstrates correct usage of `useReducer` to manage complex state logic within a functional component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const initialState = { count: 0 }; const reducer = (state, action) => { switch (action.type) { case 'increment': return { count: state.count + 1 }; case 'decrement': return { count: state.count - 1 }; default: return state; } }; const MyComponent = () => { const [state, dispatch] = useReducer(reducer, initialState); return <div>{state.count}</div>; };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const initialState = { count: 0 }; const reducer = (state, action) => { return { count: state.count + action.value }; }; const MyComponent = () => { const [state, dispatch] = useReducer(reducer, initialState); return <div>{state.count}</div>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const reducer = (state, action) => { return { count: state.count + action }; }; const MyComponent = () => { const [state, dispatch] = useReducer(reducer, 0); return <div>{state}</div>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = () => { const [state, setState] = useReducer(reducer, initialState); return <div>{state.count}</div>; };```"
+          }
+        ],
+        "description": "`useReducer` manages complex state with multiple action types.",
+        "keywords": [
+          "React",
+          "useReducer",
+          "complex state",
+          "functional component"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 63,
+        "text": "Which code snippet correctly demonstrates how to implement `getDerivedStateFromProps` to update state based on prop changes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```class MyComponent extends React.Component { static getDerivedStateFromProps(nextProps, nextState) { if (nextProps.value !== nextState.value) { return { value: nextProps.value }; } return null; } render() { return <div>{this.state.value}</div>; } }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```class MyComponent extends React.Component { static getDerivedStateFromProps(nextProps, nextState) { return { value: nextProps.value }; } render() { return <div>{this.state.value}</div>; } }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```class MyComponent extends React.Component { static getDerivedStateFromProps(nextProps, nextState) { if (nextProps.value === this.state.value) { return null; } return { value: nextProps.value }; } render() { return <div>{this.state.value}</div>; } }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```class MyComponent extends React.Component { static getDerivedStateFromProps(nextProps) { return { value: nextProps.value }; } render() { return <div>{this.state.value}</div>; } }```"
+          }
+        ],
+        "description": "`getDerivedStateFromProps` updates state conditionally based on prop changes.",
+        "keywords": [
+          "React",
+          "getDerivedStateFromProps",
+          "state update",
+          "class component"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 64,
+        "text": "Which code snippet demonstrates how to use `useLayoutEffect` to synchronously update the DOM after all DOM mutations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```useLayoutEffect(() => { document.getElementById('myElement').style.color = 'red'; }, [dependency]);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { document.getElementById('myElement').style.color = 'red'; }, [dependency]);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useLayoutEffect(() => { document.getElementById('myElement').style.color = 'red'; });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { document.getElementById('myElement').style.color = 'red'; }, []);```"
+          }
+        ],
+        "description": "`useLayoutEffect` with a dependency ensures synchronous DOM updates.",
+        "keywords": ["React", "useLayoutEffect", "DOM update", "synchronous"]
+      },
+      {
+        "@type": "Question",
+        "position": 65,
+        "text": "Which code snippet demonstrates the correct usage of `forwardRef` to forward a ref to a child component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyComponent = React.forwardRef((props, ref) => { return <div ref={ref}>{props.children}</div>; });```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = (props, ref) => { return <div ref={ref}>{props.children}</div>; }; const ForwardedComponent = React.forwardRef(MyComponent);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = React.forwardRef((ref) => { return <div ref={ref}>Hello</div>; });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = (props) => { return <div ref={props.innerRef}>{props.children}</div>; };```"
+          }
+        ],
+        "description": "`forwardRef` correctly forwards a ref to a child component's DOM element.",
+        "keywords": ["React", "forwardRef", "refs", "child component"]
+      },
+      {
+        "@type": "Question",
+        "position": 66,
+        "text": "Which code snippet demonstrates the correct usage of `useEffect` with an empty dependency array to simulate `componentDidMount`?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```useEffect(() => { console.log('Mounted'); }, []);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { console.log('Mounted'); });```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { console.log('Mounted'); }, [value]);```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```useEffect(() => { return () => { console.log('Unmounted'); }; }, []);```"
+          }
+        ],
+        "description": "An empty dependency array mimics `componentDidMount` behavior.",
+        "keywords": ["React", "useEffect", "componentDidMount", "hooks"]
+      },
+      {
+        "@type": "Question",
+        "position": 67,
+        "text": "Which code snippet demonstrates the correct way to handle an error boundary in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```class ErrorBoundary extends React.Component { constructor(props) { super(props); this.state = { hasError: false }; } static getDerivedStateFromError(error) { return { hasError: true }; } componentDidCatch(error, info) { console.log(error, info); } render() { if (this.state.hasError) { return <div>Something went wrong</div>; } return this.props.children; } }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```class ErrorBoundary extends React.Component { constructor(props) { super(props); this.state = { hasError: false }; } componentDidCatch(error, info) { console.log(error, info); } render() { if (this.state.hasError) { return <div>Something went wrong</div>; } return this.props.children; } }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```class ErrorBoundary extends React.Component { constructor(props) { super(props); this.state = { hasError: false }; } static getDerivedStateFromError(error) { return { hasError: true }; } render() { return this.props.children; } }```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```class ErrorBoundary extends React.Component { constructor(props) { super(props); this.state = { hasError: false }; } static getDerivedStateFromError(error) { return { hasError: true }; } render() { if (this.state.hasError) { return <div>Something went wrong</div>; } return null; } }```"
+          }
+        ],
+        "description": "Error boundaries use lifecycle methods to catch and handle errors.",
+        "keywords": [
+          "React",
+          "error boundary",
+          "class component",
+          "error handling"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 68,
+        "text": "Which code snippet demonstrates correct usage of `useContext` with dynamic context values that change across the app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const MyContext = React.createContext(); const MyComponent = () => { const contextValue = useContext(MyContext); return <div>{contextValue}</div>; }; const App = () => { const [value, setValue] = useState('initial'); return <MyContext.Provider value={value}><MyComponent /></MyContext.Provider>; };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyContext = React.createContext(); const MyComponent = () => { const contextValue = useContext(MyContext); return <div>{contextValue}</div>; }; const App = () => { return <MyContext.Provider value={'initial'}><MyComponent /></MyContext.Provider>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyContext = React.createContext(); const MyComponent = () => { const contextValue = useContext(MyContext); return <div>{contextValue}</div>; }; const App = () => { const value = 'initial'; return <MyContext.Provider value={value}><MyComponent /></MyContext.Provider>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const MyContext = React.createContext(); const MyComponent = () => { const contextValue = useContext(MyContext); return <div>{contextValue}</div>; }; const App = () => { return <MyContext.Provider value={'initial'}><MyComponent /></MyContext.Provider>; };```"
+          }
+        ],
+        "description": "`useContext` with dynamic state provides changing context values.",
+        "keywords": ["React", "useContext", "dynamic context", "state"]
+      },
+      {
+        "@type": "Question",
+        "position": 69,
+        "text": "Which code snippet demonstrates correct usage of `React.createContext` and `useContext` to handle theming across an app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const ThemeContext = React.createContext(); const ThemeProvider = ({ children }) => { const [theme, setTheme] = useState('light'); return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>; }; const MyComponent = () => { const { theme } = useContext(ThemeContext); return <div className={theme}>Theme: {theme}</div>; };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const ThemeContext = React.createContext(); const ThemeProvider = ({ children }) => { const [theme, setTheme] = useState('light'); return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>; }; const MyComponent = () => { const theme = useContext(ThemeContext); return <div className={theme}>Theme: {theme}</div>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const ThemeContext = React.createContext(); const ThemeProvider = ({ children }) => { const [theme, setTheme] = useState('light'); return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>; }; const MyComponent = () => { const { theme } = useContext(ThemeContext); return <div>Theme: {theme}</div>; };```"
+          },
+          {
+            "@type": "Answer",
+            "text": "```const ThemeContext = React.createContext(); const ThemeProvider = ({ children }) => { const [theme, setTheme] = useState('light'); return <ThemeContext.Provider value={setTheme}>{children}</ThemeContext.Provider>; }; const MyComponent = () => { const { theme } = useContext(ThemeContext); return <div>{theme}</div>; };```"
+          }
+        ],
+        "description": "Context manages theming with dynamic values and proper consumer usage.",
+        "keywords": ["React", "createContext", "useContext", "theming"]
+      },
+      {
+        "@type": "Question",
+        "position": 70,
+        "text": "How would you update a nested state object in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const [state, setState] = useState({ user: { name: 'John' } }); const updateName = (newName) => { setState(prevState => ({ ...prevState, user: { ...prevState.user, name: newName } })); };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const [state, setState] = useState({ user: { name: 'John' } }); const updateName = (newName) => { setState({ user: { name: newName } }); };```"
+          }
+        ],
+        "description": "Spread operators ensure immutable updates to nested state objects.",
+        "keywords": ["React", "nested state", "useState", "immutability"]
+      },
+      {
+        "@type": "Question",
+        "position": 71,
+        "text": "What is the correct way to bind an event handler in a class component?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```class MyComponent extends React.Component { constructor() { super(); this.handleClick = this.handleClick.bind(this); } handleClick() { console.log('Clicked'); } render() { return <button onClick={this.handleClick}>Click me</button>; } }```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```class MyComponent extends React.Component { handleClick() { console.log('Clicked'); } render() { return <button onClick={this.handleClick}>Click me</button>; } }```"
+          }
+        ],
+        "description": "Binding in the constructor ensures the event handler has the correct `this` context.",
+        "keywords": ["React", "event handler", "class component", "binding"]
+      },
+      {
+        "@type": "Question",
+        "position": 72,
+        "text": "How do you pass a dynamic key to an object in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const [key, setKey] = useState('name'); const obj = { [key]: 'John' };```"
+        },
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "```const obj = { key: 'value' };```" },
+          { "@type": "Answer", "text": "```const obj = { key: value };```" },
+          { "@type": "Answer", "text": "```const obj = { \"key\": value };```" }
+        ],
+        "description": "Computed property names (`[key]`) allow dynamic keys in objects.",
+        "keywords": ["React", "dynamic key", "object", "state"]
+      },
+      {
+        "@type": "Question",
+        "position": 73,
+        "text": "How do you handle multiple form inputs in React using one state?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const [form, setForm] = useState({ name: '', email: '' }); const handleChange = (e) => { const { name, value } = e.target; setForm(prev => ({ ...prev, [name]: value })); };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const [name, setName] = useState(''); const [email, setEmail] = useState(''); const handleChange = (e) => { if (e.target.name === 'name') setName(e.target.value); else setEmail(e.target.value); };```"
+          }
+        ],
+        "description": "A single state object with dynamic keys manages multiple form inputs.",
+        "keywords": ["React", "form inputs", "useState", "dynamic keys"]
+      },
+      {
+        "@type": "Question",
+        "position": 74,
+        "text": "How do you conditionally render a component based on state?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const [isVisible, setIsVisible] = useState(false); return isVisible ? <div>Visible</div> : null;```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const [isVisible, setIsVisible] = useState(false); return isVisible && <div>Visible</div>;```"
+          }
+        ],
+        "description": "A ternary operator provides clear conditional rendering logic.",
+        "keywords": ["React", "conditional rendering", "useState", "ternary"]
+      },
+      {
+        "@type": "Question",
+        "position": 75,
+        "text": "How do you update state based on previous state in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const [count, setCount] = useState(0); const increment = () => setCount(prevCount => prevCount + 1);```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const [count, setCount] = useState(0); const increment = () => setCount(count + 1);```"
+          }
+        ],
+        "description": "Functional updates ensure state updates reflect the latest value.",
+        "keywords": ["React", "useState", "previous state", "update"]
+      },
+      {
+        "@type": "Question",
+        "position": 76,
+        "text": "How do you fetch data on component mount using React's hooks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```import { useEffect, useState } from 'react'; const MyComponent = () => { const [data, setData] = useState([]); useEffect(() => { fetch('/api/data').then(res => res.json()).then(data => setData(data)); }, []); return <div>{data.length}</div>; };```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const MyComponent = () => { const [data, setData] = useState([]); useEffect(() => { fetch('/api/data').then(res => res.json()).then(data => setData(data)); }); return <div>{data.length}</div>; };```"
+          }
+        ],
+        "description": "`useEffect` with an empty array fetches data once on mount.",
+        "keywords": ["React", "useEffect", "data fetching", "component mount"]
+      },
+      {
+        "@type": "Question",
+        "position": 77,
+        "text": "How would you create a controlled input field in React?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "```const [inputValue, setInputValue] = useState(''); const handleChange = (e) => setInputValue(e.target.value); return <input value={inputValue} onChange={handleChange} />;```"
+        },
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "```const handleChange = (e) => inputValue = e.target.value; return <input value={inputValue} onChange={handleChange} />;```"
+          }
+        ],
+        "description": "A controlled input ties its value to state with an onChange handler.",
+        "keywords": ["React", "controlled input", "useState", "forms"]
+      }
+    ],
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.projectschool.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Interview",
+          "item": "https://www.projectschool.dev/interview"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Interview Correct Code",
+          "item": "https://www.projectschool.dev/interview/interview-correct-code/:slug"
+        }
+      ]
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.projectschool.dev/interview/interview-correct-code/:slug",
+      "validFrom": "2024-01-01"
+    }
+  }
+}

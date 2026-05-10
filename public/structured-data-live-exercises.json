@@ -1,0 +1,225 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWorkSeries",
+  "name": "Live Projects Catalog",
+  "description": "A collection of hands-on React-based programming projects from Project School, designed to enhance practical coding skills through real-world applications and exercises.",
+  "url": "https://www.projectschool.dev/exercises/Live/Live",
+  "datePublished": "2023-01-01",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Project School",
+    "url": "https://www.projectschool.dev",
+    "email": "support@projectschool.dev",
+    "logo": "https://www.projectschool.dev/pslogosmall.webp"
+  },
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "name": "Basic Android React-Native App with Google Login",
+      "description": "A simple and minimalistic Android app built with React-Native and Expo, featuring Google Sign-In, a basic home screen, a user profile page displaying the user's photo and name, and a logout button to return to the home screen.",
+      "url": "https://www.projectschool.dev/exercises/Live/Basic-Android-React-Native-App-with-Google-Login",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React Native", "Expo", "Google Sign-In", "Android"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons1.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Interactive Power BI Bar Chart",
+      "description": "This project involves creating an interactive Power BI-style bar chart visual using React.js and Chart.js, where user data is segmented by age group with cross-filtering functionality.",
+      "url": "https://www.projectschool.dev/exercises/Live/Interactive-Power-BI-Bar-Chart",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React.js", "Chart.js", "Power BI", "Data Visualization"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons2.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Activity Management Dashboard",
+      "description": "A robust React application featuring a dashboard with detailed insights into activity specifics, historical records, user claims, and rules, built with Material-UI for a modern UI.",
+      "url": "https://www.projectschool.dev/exercises/Live/Activity-Management-Dashboard",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "Material-UI", "Dashboard", "Activity Management"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons3.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Construction Cost Calculator",
+      "description": "A user-friendly React application to estimate construction costs based on plot size, floors, construction type, and materials, using Formik and Yup for form management and validation.",
+      "url": "https://www.projectschool.dev/exercises/Live/Construction-Cost-Calculator",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "Formik", "Yup", "Cost Estimation"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons4.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "React Firebase Application with ML and Payments",
+      "description": "A React app utilizing Firebase for authentication and storage, Google Analytics for tracking, Google ML for classification, and Stripe for payments.",
+      "url": "https://www.projectschool.dev/exercises/Live/React-Firebase-Application-with-ML-and-Payments",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "Firebase", "Stripe", "Google ML"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons5.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Deploy Your React App to GoDaddy",
+      "description": "This task outlines the steps to deploy your React application to a GoDaddy hosting account, covering building the app, uploading files, and configuring the domain.",
+      "url": "https://www.projectschool.dev/exercises/Live/Deploying-React-Website-on-GoDaddy",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "GoDaddy", "Web Hosting", "Deployment"],
+      "educationalLevel": "Intermediate",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons7.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Building a React App with Contentful Integration for Content Sharing",
+      "description": "A content-sharing app built with React and Contentful, allowing users to share various types of content with real-time updates and a responsive interface.",
+      "url": "https://www.projectschool.dev/exercises/Live/App-with-Contentful-Integration",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "Contentful", "Content Management", "SPA"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons8.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Integrate Google Calendar API into a React Website",
+      "description": "A step-by-step guide to integrating the Google Calendar API into a React application for displaying and managing calendar events.",
+      "url": "https://www.projectschool.dev/exercises/Live/Google-Calendar-API-Integration",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "Google Calendar API", "Authentication", "Events"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons9.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Simple Business Website",
+      "description": "A React web application featuring a product catalog, contact form, and customer reviews section, built with reusable components and modern practices.",
+      "url": "https://www.projectschool.dev/exercises/Live/Simple-Business-Website",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "Business Website", "Contact Form", "Reviews"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons10.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Build a Portfolio Website with Admin Panel",
+      "description": "A portfolio website built with React, Express.js, and MongoDB, featuring an admin panel with JWT authentication for managing projects.",
+      "url": "https://www.projectschool.dev/exercises/Live/Build-a-Portfolio-Website-with-Admin-Panel",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "Express.js", "MongoDB", "JWT"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons11.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "VideoSense Live Monitoring",
+      "description": "A React-based web application for real-time monitoring of CCTV video feeds, supporting multiple streams with a user-friendly interface.",
+      "url": "https://www.projectschool.dev/exercises/Live/VideoSense-Live-Monitoring",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "Video.js", "Live Streaming", "CCTV"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons12.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Payroll Application Development",
+      "description": "A React and Node.js web platform for managing employee payment processing, tailored to a single country's tax laws with a dashboard and payroll form.",
+      "url": "https://www.projectschool.dev/exercises/Live/Payroll-Application-Development",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "Node.js", "Payroll", "Tax Compliance"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons13.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Therapist Calendar App",
+      "description": "A responsive React calendar app for scheduling therapy appointments, featuring date and time selection, local storage, and email notifications.",
+      "url": "https://www.projectschool.dev/exercises/Live/Therapist-Calendar-App",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "Calendar", "Scheduling", "EmailJS"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons14.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "E-Commerce Store",
+      "description": "A simple React e-commerce store with product listings, a shopping cart, search and filter functionality, and a review system.",
+      "url": "https://www.projectschool.dev/exercises/Live/e-commerce-shop",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "E-Commerce", "Shopping Cart", "Reviews"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons15.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "QR & GPS Tracker",
+      "description": "A React web app combining QR code scanning and real-time geolocation tracking, ideal for navigation or event check-ins.",
+      "url": "https://www.projectschool.dev/exercises/Live/QR-GPS-Tracker",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "QR Code", "Geolocation", "Rspack"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons16.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "ZipImage Extractor",
+      "description": "A React app that extracts images from uploaded .zip files and displays them in a grid with hover-to-enlarge functionality and a modal popup.",
+      "url": "https://www.projectschool.dev/exercises/Live/ZipImage-Extractor",
+      "encodingFormat": "application/javascript",
+      "keywords": ["React", "JSZip", "File Handling", "UI Design"],
+      "educationalLevel": "Beginner",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons17.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "English-Terms-Learning",
+      "description": "English Terms Learning App helps beginners improve vocabulary through quizzes, feedback, Firebase authentication, MongoDB storage, and customizable multiple-choice tests.",
+      "url": "https://www.projectschool.dev/exercises/Live/English-Terms-Learning",
+      "encodingFormat": "application/javascript",
+      "keywords": [
+        "React",
+        "Firebase",
+        "Express js",
+        "Mongo DB",
+        "mongoose",
+        "backend"
+      ],
+      "educationalLevel": "Advanced",
+      "thumbnailUrl": "https://www.projectschool.dev/images/livelessons18.webp"
+    }
+  ],
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.projectschool.dev"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Exercises",
+        "item": "https://www.projectschool.dev/exercises"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Live Projects Catalog",
+        "item": "https://www.projectschool.dev/exercises/livelessons"
+      }
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.projectschool.dev/exercises/livelessons",
+    "validFrom": "2024-01-01"
+  }
+}

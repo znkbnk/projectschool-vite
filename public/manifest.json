@@ -1,0 +1,25 @@
+{
+  "short_name": "Learn React",
+  "name": "Learn React",
+  "icons": [
+    {
+      "src": "pslogosmallico.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "pslogosmall.webp",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "pslogo.webp",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "www.projectschool.dev",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,808 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Questions",
+  "name": "React Interview Questions and Answers",
+  "description": "A comprehensive collection of React interview questions and answers to help developers prepare for technical interviews and deepen their understanding of React concepts.",
+  "url": "https://www.projectschool.dev/interview/interview-questions",
+  "inLanguage": "en",
+  "educationalLevel": "Beginner to Advanced",
+  "datePublished": "2025-03-03",
+  "provider": {
+    "@type": "EducationalOrganization",
+    "name": "Project School",
+    "url": "https://www.projectschool.dev",
+    "email": "support@projectschool.dev",
+    "logo": "https://www.projectschool.dev/pslogosmall.webp"
+  },
+  "audience": [
+    { "@type": "Audience", "audienceType": "Beginner" },
+    { "@type": "Audience", "audienceType": "Intermediate" },
+    { "@type": "Audience", "audienceType": "Advanced" }
+  ],
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "React is a JavaScript library for building user interfaces, particularly single-page applications, by creating reusable UI components."
+      },
+      "description": "Understand what React is and how it is used to build user interfaces in modern web development. React allows for reusable components and efficient rendering.",
+      "keywords": [
+        "React",
+        "JavaScript",
+        "UI components",
+        "single-page applications"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What are the main features of React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Key features include a virtual DOM for efficient rendering, unidirectional data flow, component-based architecture, and support for declarative UI creation."
+      },
+      "description": "Explore the main features of React, including virtual DOM, unidirectional data flow, and component-based architecture.",
+      "keywords": [
+        "React features",
+        "virtual DOM",
+        "data flow",
+        "component-based architecture"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What are functional components?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Functional components are simple JavaScript functions that return React elements. They can use hooks to manage state and lifecycle methods."
+      },
+      "description": "Learn about functional components in React, how they simplify component creation, and how hooks allow them to manage state and lifecycle.",
+      "keywords": [
+        "functional components",
+        "React hooks",
+        "state management",
+        "React lifecycle"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What are class components?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Class components are ES6 classes that extend React's Component class. They include lifecycle methods and manage state using this.state."
+      },
+      "description": "Class components in React are ES6 classes that manage state and lifecycle methods, providing more advanced functionality.",
+      "keywords": [
+        "class components",
+        "React",
+        "ES6 classes",
+        "React lifecycle"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is JSX?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JSX stands for JavaScript XML and allows you to write HTML-like syntax within JavaScript. It is then compiled into regular JavaScript."
+      },
+      "description": "JSX lets you write HTML-like syntax inside JavaScript, making React code more readable and easier to write. Learn how JSX works.",
+      "keywords": ["JSX", "JavaScript XML", "React", "HTML-like syntax"]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the virtual DOM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The virtual DOM is a lightweight copy of the real DOM that React uses to determine which parts of the UI need updating."
+      },
+      "description": "Learn about the virtual DOM in React and how it improves performance by minimizing direct manipulation of the real DOM.",
+      "keywords": ["virtual DOM", "React", "DOM optimization", "UI updates"]
+    },
+    {
+      "@type": "Question",
+      "name": "What are props in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Props are short for properties and are used to pass data from a parent component to a child component. They are read-only."
+      },
+      "description": "In React, props allow you to pass data from parent to child components. Learn how props work and how to use them in your React apps.",
+      "keywords": [
+        "React props",
+        "data passing",
+        "React components",
+        "parent-child communication"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is state in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "State is a built-in object in components that holds data that can change over time, driving re-renders of the UI."
+      },
+      "description": "State in React manages data that changes over time and triggers re-renders. Understand how state works in React components.",
+      "keywords": [
+        "React state",
+        "state management",
+        "React components",
+        "UI re-renders"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What are hooks in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hooks are functions introduced in React 16.8 that allow functional components to manage state and lifecycle methods."
+      },
+      "description": "React hooks enable functional components to manage state and lifecycle methods, making them more powerful and reusable.",
+      "keywords": [
+        "React hooks",
+        "state management",
+        "lifecycle methods",
+        "functional components"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the purpose of useState?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The useState hook is used to add state to functional components, allowing them to store and update data dynamically."
+      },
+      "description": "The useState hook adds state to functional components, enabling dynamic data updates in your React applications.",
+      "keywords": [
+        "useState",
+        "React hooks",
+        "state management",
+        "functional components"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the useEffect hook in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The useEffect hook in React is used to handle side effects like data fetching, DOM manipulation, or setting up subscriptions within functional components, making it an essential tool for managing component lifecycle behaviors."
+      },
+      "description": "Discover how the useEffect hook in React is used to handle side effects such as data fetching and DOM manipulation within functional components.",
+      "keywords": [
+        "useEffect",
+        "React hook",
+        "side effects",
+        "React data fetching",
+        "React DOM manipulation",
+        "functional components"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between state and props in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In React, state refers to a mutable data structure managed within a component, which can change over time, while props are immutable properties passed down from a parent component to a child, helping facilitate component communication."
+      },
+      "description": "Learn the key differences between state and props in React, and understand how they affect component communication and data flow in React applications.",
+      "keywords": [
+        "state vs props",
+        "React state",
+        "React props",
+        "React component communication",
+        "React data flow"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What does lifting state up mean in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lifting state up in React means moving shared state to the nearest common ancestor of components that need access to it, enabling better state management and data flow between sibling components."
+      },
+      "description": "Learn about lifting state up in React, a technique to improve state management and facilitate data sharing between sibling components.",
+      "keywords": [
+        "lifting state up",
+        "React state management",
+        "React component data sharing",
+        "React state flow"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is a controlled component in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A controlled component in React is a form element whose value is managed by React's state, ensuring the UI is always in sync with the state and offering greater control over form behavior."
+      },
+      "description": "Understand what controlled components are in React and how they offer better control over form elements by syncing their value with the component state.",
+      "keywords": [
+        "controlled component",
+        "React form",
+        "React state",
+        "React input handling"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is an uncontrolled component in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An uncontrolled component in React is a form element that manages its own state internally, using refs to directly interact with the DOM without React controlling the value."
+      },
+      "description": "Learn about uncontrolled components in React, where form elements manage their own state internally without React's direct control over their values.",
+      "keywords": [
+        "uncontrolled component",
+        "React form",
+        "React refs",
+        "React input behavior"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is React Router and how does it work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "React Router is a library that enables routing in React applications, allowing developers to create dynamic navigation and switch between different views or pages based on URL changes, improving user experience."
+      },
+      "description": "Discover how React Router allows for dynamic navigation and routing in React applications, enhancing the user experience with page transitions.",
+      "keywords": [
+        "React Router",
+        "React navigation",
+        "React routing",
+        "dynamic page transitions",
+        "React SPA"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is Redux?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Redux is a state management library that centralizes the application's state in a single store and uses actions to modify it, making state predictable and easier to debug in large applications."
+      },
+      "description": "Learn about Redux, a state management library that centralizes application state in a single store, making state predictable and improving debugging in React apps.",
+      "keywords": [
+        "Redux",
+        "state management",
+        "React Redux",
+        "centralized store",
+        "React debugging"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is a React lifecycle method?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lifecycle methods are special functions in class components that run during different stages of a component's existence, such as mounting, updating, and unmounting."
+      },
+      "description": "Understand React lifecycle methods and how they are used to manage the behavior of class components during different lifecycle stages, including mounting, updating, and unmounting.",
+      "keywords": [
+        "React lifecycle methods",
+        "React class component",
+        "React mounting",
+        "React updating",
+        "React unmounting"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What are pure components in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pure components are components that avoid re-rendering if their props and state have not changed, improving performance by reducing unnecessary renders."
+      },
+      "description": "Learn about pure components in React and how they improve performance by preventing unnecessary re-renders when props and state remain unchanged.",
+      "keywords": [
+        "pure components",
+        "React performance",
+        "React optimization",
+        "React re-renders"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is memoization in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Memoization is a technique to optimize performance by caching the results of expensive computations and reusing them if inputs don't change, helping React avoid unnecessary renders."
+      },
+      "description": "Explore memoization in React, a technique used to cache the results of computations and avoid redundant renders, improving app performance.",
+      "keywords": [
+        "memoization",
+        "React performance",
+        "React optimization",
+        "React rendering",
+        "React caching"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What are React portals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "React portals allow you to render a component's output into a DOM node outside its parent component hierarchy, enabling more flexible and efficient UI rendering."
+      },
+      "description": "Learn about React portals, a feature that allows rendering components outside the parent component hierarchy for more flexible UI design.",
+      "keywords": [
+        "React portals",
+        "React advanced rendering",
+        "React UI design",
+        "React component hierarchy"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What are synthetic events in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Synthetic events are React's cross-browser wrapper around native browser events, ensuring consistent behavior and better event handling across different platforms and browsers."
+      },
+      "description": "Discover how synthetic events in React help handle events consistently across browsers, simplifying cross-platform development.",
+      "keywords": [
+        "synthetic events",
+        "React event handling",
+        "React cross-browser",
+        "React platform consistency"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is React Context?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "React Context provides a way to share data globally across the component tree without having to pass props at every level, making it easier to manage state in large applications."
+      },
+      "description": "Learn about React Context, a feature that allows for easy data sharing across the component tree without prop drilling.",
+      "keywords": [
+        "React Context",
+        "React data sharing",
+        "React state management",
+        "prop drilling"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is reconciliation in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reconciliation is the process React uses to compare the virtual DOM with the real DOM and update only the changed parts, ensuring efficient rendering and improved performance."
+      },
+      "description": "Understand how React's reconciliation process optimizes DOM updates by comparing the virtual and real DOM, leading to better performance.",
+      "keywords": [
+        "React reconciliation",
+        "React virtual DOM",
+        "efficient DOM updates",
+        "React performance optimization"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the significance of keys in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In React, keys are unique identifiers for elements in a list, helping React identify which items have changed, are added, or are removed, improving performance during re-renders."
+      },
+      "description": "Learn why keys are essential in React, helping to efficiently track and update elements in a list to improve re-render performance.",
+      "keywords": [
+        "React keys",
+        "React performance",
+        "list rendering in React",
+        "React element updates"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between imperative and declarative programming in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Imperative programming specifies how to do something step-by-step, while declarative programming in React focuses on describing the desired UI, letting React handle the implementation details."
+      },
+      "description": "Explore the difference between imperative and declarative programming in React, and understand how declarative code simplifies UI development.",
+      "keywords": [
+        "imperative vs declarative",
+        "React programming styles",
+        "React coding practices",
+        "declarative UI"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is server-side rendering (SSR)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Server-side rendering (SSR) is the process of rendering React components on the server and sending the fully rendered HTML to the browser, improving performance, SEO, and initial page load times."
+      },
+      "description": "Learn about server-side rendering (SSR) in React, a technique that improves performance and SEO by rendering HTML on the server before sending it to the browser.",
+      "keywords": [
+        "server-side rendering",
+        "React SSR",
+        "React performance",
+        "React SEO optimization"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is static site generation (SSG)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Static site generation (SSG) generates static HTML files during build time, providing faster load times and improved performance compared to server-side rendering by pre-rendering content ahead of time."
+      },
+      "description": "Discover static site generation (SSG) and how it improves website performance by generating static HTML files at build time, leading to faster load times.",
+      "keywords": [
+        "static site generation",
+        "React SSG",
+        "React performance",
+        "React build time optimization"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is hydration in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hydration is the process where React attaches event listeners to pre-rendered HTML generated by SSR or SSG, making it interactive and allowing it to become a fully functional React app."
+      },
+      "description": "Learn about hydration in React, where pre-rendered HTML from SSR or SSG becomes interactive, enabling React features like event handling.",
+      "keywords": [
+        "React hydration",
+        "React SSR",
+        "React SSG",
+        "interactive React app",
+        "React rendering process"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is lazy loading in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lazy loading in React is a performance optimization technique where components or data are loaded only when needed, reducing the initial load time and improving the overall performance of the application."
+      },
+      "description": "Explore lazy loading in React, a technique to load components or data only when necessary, enhancing the performance and user experience of React apps.",
+      "keywords": [
+        "lazy loading",
+        "React performance",
+        "React optimization",
+        "component loading",
+        "React app performance"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What are error boundaries in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Error boundaries are components that catch JavaScript errors in their child components and display a fallback UI instead of crashing the entire app."
+      },
+      "description": "Learn how error boundaries in React help catch errors in child components and prevent app crashes by displaying fallback UI.",
+      "keywords": [
+        "error boundaries",
+        "React error handling",
+        "React fallback UI",
+        "JavaScript errors"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between useEffect and useLayoutEffect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The useEffect hook runs after the browser has painted, while useLayoutEffect runs before the paint, useful for DOM measurements or modifications."
+      },
+      "description": "Discover the key differences between useEffect and useLayoutEffect in React and when to use each for optimal performance.",
+      "keywords": [
+        "useEffect",
+        "useLayoutEffect",
+        "React hooks",
+        "React performance",
+        "React DOM manipulation"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the use of PropTypes in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PropTypes is a library for runtime type-checking of props in React, ensuring components receive the expected types of data, helping with debugging."
+      },
+      "description": "Learn about PropTypes in React, a library for runtime type-checking that helps ensure props are passed correctly and aids in debugging.",
+      "keywords": [
+        "PropTypes",
+        "React props",
+        "React type checking",
+        "React debugging"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is React Fiber?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "React Fiber is a reimplementation of React's reconciliation algorithm that improves rendering performance, scheduling, and responsiveness in React apps."
+      },
+      "description": "Understand React Fiber, a new reconciliation algorithm that improves the performance and scheduling of React's rendering process.",
+      "keywords": [
+        "React Fiber",
+        "React rendering",
+        "React performance",
+        "React reconciliation"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a single-page application (SPA) and a multi-page application (MPA)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SPAs dynamically update the content without reloading the page, while MPAs load new pages from the server each time the user navigates to a new page."
+      },
+      "description": "Learn the differences between SPAs and MPAs, including their behavior, navigation, and performance characteristics in modern web development.",
+      "keywords": [
+        "SPA",
+        "MPA",
+        "single-page applications",
+        "multi-page applications",
+        "web development"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the use of React.StrictMode?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "React.StrictMode is a development tool that highlights potential issues, such as unsafe lifecycles or deprecated APIs, during development without affecting the production build."
+      },
+      "description": "Learn about React.StrictMode, a tool that helps developers identify potential issues in their React code during development.",
+      "keywords": [
+        "React.StrictMode",
+        "React debugging",
+        "React development tool",
+        "deprecated APIs"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the purpose of React's Concurrent Mode?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Concurrent Mode allows React to render components in the background without blocking the main thread, improving the responsiveness and user experience of the app."
+      },
+      "description": "Explore React's Concurrent Mode, which helps React render components without blocking the main thread for smoother user experiences.",
+      "keywords": [
+        "React Concurrent Mode",
+        "React performance",
+        "React rendering",
+        "React responsiveness"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between React.memo and useMemo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "React.memo optimizes re-rendering of entire components, while useMemo optimizes specific values or computations within a component to prevent unnecessary recalculations."
+      },
+      "description": "Learn the difference between React.memo and useMemo and how each can help optimize rendering and performance in your React app.",
+      "keywords": [
+        "React.memo",
+        "useMemo",
+        "React performance",
+        "React optimization",
+        "React re-renders"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is suspense in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Suspense is a feature in React for handling asynchronous operations, such as lazy-loading components, by displaying a fallback UI while waiting for content to load."
+      },
+      "description": "Learn how Suspense in React allows developers to manage asynchronous operations, like lazy loading, by showing fallback content during loading.",
+      "keywords": [
+        "React Suspense",
+        "React asynchronous",
+        "lazy loading",
+        "React UI fallback"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is component composition in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Component composition is the practice of building complex UIs by combining smaller, reusable components, promoting modular and maintainable code."
+      },
+      "description": "Understand component composition in React, where complex UIs are built by combining smaller, reusable components for better modularity and maintainability.",
+      "keywords": [
+        "React component composition",
+        "React UI design",
+        "reusable components",
+        "React modularity"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What are higher-order components (HOCs) in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HOCs are functions that take a component as input and return an enhanced component, used for reusing logic across multiple components."
+      },
+      "description": "Learn about higher-order components (HOCs) in React, functions that enhance components by reusing logic across multiple components.",
+      "keywords": [
+        "higher-order components",
+        "React HOC",
+        "reusable logic",
+        "React components"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between controlled and uncontrolled components?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Controlled components rely on React's state for value management, while uncontrolled components manage their own state internally."
+      },
+      "description": "Explore the difference between controlled and uncontrolled components in React, including how state management differs between the two.",
+      "keywords": [
+        "controlled components",
+        "uncontrolled components",
+        "React forms",
+        "React state management"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is React's useRef hook used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The useRef hook creates a reference to access DOM elements or persist mutable values across renders without causing re-renders."
+      },
+      "description": "Learn about React's useRef hook, which allows you to access DOM elements and persist values across renders without causing re-renders.",
+      "keywords": [
+        "useRef",
+        "React hooks",
+        "DOM access",
+        "mutable values",
+        "React re-renders"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the purpose of React's forwardRef?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "React's forwardRef allows parent components to pass a ref to child components, enabling direct access to the child's DOM node."
+      },
+      "description": "Discover React's forwardRef, a method that allows parent components to pass refs to child components for direct DOM access.",
+      "keywords": [
+        "React forwardRef",
+        "React refs",
+        "passing refs",
+        "React child components"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What are render props in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Render props is a pattern where a component receives a function as a prop to determine how it should render its output."
+      },
+      "description": "Understand the render props pattern in React, where components receive a function as a prop to dynamically determine how to render content.",
+      "keywords": [
+        "render props",
+        "React patterns",
+        "dynamic rendering",
+        "React components"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between default props and prop types?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Default props define fallback values for props, while prop types validate the type and presence of props passed to a component."
+      },
+      "description": "Learn the difference between default props and prop types in React, including how each serves a unique role in handling component props.",
+      "keywords": [
+        "default props",
+        "prop types",
+        "React props",
+        "React validation"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is context API in React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Context API is a way to manage global data, like theme or authentication, without prop-drilling through every component in the tree."
+      },
+      "description": "Learn about React's Context API, a feature that allows you to manage global data like themes and authentication without prop-drilling.",
+      "keywords": [
+        "Context API",
+        "React global data",
+        "prop-drilling",
+        "React state management"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is shallow rendering in React testing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shallow rendering is a testing technique where only a single component is rendered without rendering its child components."
+      },
+      "description": "Explore shallow rendering in React testing, a technique that renders a single component for isolated unit tests without child components.",
+      "keywords": [
+        "shallow rendering",
+        "React testing",
+        "unit tests",
+        "React components"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between functional and class components?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Functional components are simpler and use hooks for state and lifecycle methods, while class components use ES6 classes and have a more complex API."
+      },
+      "description": "Understand the differences between functional and class components in React, including their syntax, hooks, and lifecycle methods.",
+      "keywords": [
+        "functional components",
+        "class components",
+        "React hooks",
+        "React lifecycle"
+      ]
+    },
+    {
+      "@type": "Question",
+      "name": "What is the purpose of a React key?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A React key is used to uniquely identify elements in a list, helping React efficiently track changes and re-render only the affected items."
+      },
+      "description": "Learn about the purpose of React keys, used to uniquely identify elements in lists and optimize re-rendering for efficient updates.",
+      "keywords": [
+        "React key",
+        "React list rendering",
+        "React re-rendering",
+        "efficient updates"
+      ]
+    }
+  ],
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.projectschool.dev"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Interview",
+        "item": "https://www.projectschool.dev/interview"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Interview Questions",
+        "item": "https://www.projectschool.dev/interview/interview-questions"
+      }
+    ]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.projectschool.dev/interview/interview-questions",
+    "validFrom": "2024-01-01"
+  }
+}

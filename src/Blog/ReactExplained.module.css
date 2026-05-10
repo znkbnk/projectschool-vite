@@ -1,0 +1,85 @@
+/* ReactExplained.module */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 10rem;
+}
+
+.carousel {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+
+.cardContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.nav {
+  color: #8B5CF6;
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transform: translateY(-50%);
+}
+
+.nav.left {
+  left: -4rem;
+}
+
+.nav.right {
+  right: -4rem;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 16rem;
+  }
+
+  .nav {
+    font-size: 3rem;
+  }
+
+  .nav.left {
+    left: -2rem;
+  }
+
+  .nav.right {
+    right: -2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    width: 80%;
+    height: 45vh;
+  }
+
+  .nav {
+    font-size: 2.5rem;
+  }
+
+  .nav.left {
+    left: -1.5rem;
+  }
+
+  .nav.right {
+    right: -1.5rem;
+  }
+
+  .container {
+    padding-bottom: 8rem;
+  }
+}

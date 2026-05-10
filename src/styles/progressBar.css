@@ -1,0 +1,55 @@
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.stages {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff; /* White text */
+  background-color: #1c1c1c; /* Dark grey bubble */
+  border: 2px solid #333; /* Subtle border */
+  transition: all 0.3s ease-in-out;
+}
+
+.stage.completed {
+  background-color: #00c853; /* Vibrant green for completed */
+  border-color: #00e676; /* Subtle glow effect */
+  color: #000; /* Black text for contrast */
+  box-shadow: 0 0 8px rgba(0, 200, 83, 0.8); /* Soft glow */
+}
+
+
+
+
+.stage:hover {
+  transform: translateY(-5px);
+  background-color: #444; /* Slight hover pop */
+  border-color: #555;
+}
+
+
+
+.stage.completed:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(0, 255, 110, 1);
+}

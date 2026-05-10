@@ -1,0 +1,195 @@
+/* blog.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.blog-cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.cards-flex a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-flex a:visited {
+  color: inherit;
+}
+
+.card-container {
+  width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  transform: scale(0.9);
+}
+
+.card-container:hover {
+  transform: scale(1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-category {
+  padding: 15px 20px;
+  font-weight: 700;
+  position: relative;
+}
+
+.card-category::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 20px;
+  width: 100px;
+  height: 5px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.card-category::before {
+  content: "\00BB";
+  position: absolute;
+  right: 20px;
+  bottom: -10px;
+  font-size: 3rem;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.card-container:hover .card-category::after {
+  left: 280px;
+  opacity: 0;
+}
+
+.card-container:hover .card-category::before {
+  opacity: 1;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-title-blogs {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-extract {
+  color: #808080;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card-date {
+  font-size: 0.875rem;
+  text-align: right;
+  color: #666;
+}
+
+.card-thumb {
+  width: 30%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.card-container.React {
+  border-left: 8px solid #4ec9d4;
+}
+
+.card-container.React .card-title-blogs {
+  color: #4ec9d4; /* React category title color */
+}
+
+.card-container.React .card-category,
+.card-title-blogs {
+  color: #4ec9d4;
+}
+
+.card-container.React .card-category::after {
+  background-color: #4ec9d4;
+}
+
+.card-container.JavaScript {
+  border-left: 8px solid #fdcc0d;
+}
+.card-container.JavaScript .card-title-blogs {
+  color: #fdcc0d; /* JavaScript category title color */
+}
+
+.card-container.JavaScript .card-category,
+.card-title-blogs {
+  color: #fdcc0d;
+}
+
+.card-container.JavaScript .card-category::after {
+  background-color: #fdcc0d;
+}
+
+.card-container.Info {
+  border-left: 8px solid #727272;
+}
+
+.card-container.Info .card-category,
+.card-title-blogs {
+  color: #727272;
+}
+.card-container:not(.React):not(.JavaScript) .card-title-blogs {
+  color: #727272; /* Default title color for other categories */
+}
+
+.card-container.Info .card-category::after {
+  background-color: #727272;
+}
+
+/* Add these styles to your articles.css file */
+
+/* Style for unordered lists */
+
+@media (max-width: 640px) {
+  .card-container {
+    width: 100%;
+  }
+
+  .card-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-content {
+    text-align: center;
+  }
+
+  .card-thumb {
+    width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,211 @@
+.container {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  flex-direction: column;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  width: 23rem;
+  height: 23rem;
+  perspective: 500px;
+  transform-style: preserve-3d;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform:
+    rotateY(calc(var(--offset) * 50deg))
+    scaleY(calc(1 + var(--abs-offset) * -0.4))
+    translateZ(calc(var(--abs-offset) * -30rem))
+    translateX(calc(var(--direction) * -5rem));
+  filter: blur(calc(var(--abs-offset) * 1rem));
+  transition: all 0.3s ease-out;
+}
+
+.nav {
+  color: #8B5CF6;
+  font-size: 5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+  user-select: none;
+  background: unset;
+  border: unset;
+  transition: color 0.3s ease;
+}
+
+.nav.left {
+  left: -5rem;
+}
+
+.nav.right {
+  right: -5rem;
+}
+
+/* ============================
+   START SCREEN STYLES
+   ============================ */
+.startContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.startCard {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.startCard h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.introText {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  max-width: 500px;
+}
+
+.introDetails {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1.05rem;
+  color: #ccc;
+}
+
+.startBtn {
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.startBtn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 768px) {
+  .carousel {
+    height: 18rem;
+  }
+
+  .nav {
+    font-size: 4rem;
+  }
+
+  .nav.left {
+    left: -3rem;
+  }
+
+  .nav.right {
+    right: -3rem;
+  }
+
+  .startCard {
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    width: 80%;
+    height: 50vh;
+  }
+
+  .nav {
+    font-size: 3rem;
+  }
+
+  .nav.left {
+    left: -2rem;
+  }
+
+  .nav.right {
+    right: -2rem;
+  }
+
+  .startCard {
+    padding: 20px 15px;
+  }
+
+  .introText {
+    font-size: 1rem;
+  }
+
+  .startBtn {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .carousel {
+    width: 80%;
+    height: 80vh;
+  }
+
+  .nav {
+    font-size: 3rem;
+  }
+
+  .nav.left {
+    left: -2rem;
+  }
+
+  .nav.right {
+    right: -2rem;
+  }
+
+  .container {
+    padding-bottom: 10rem;
+  }
+}

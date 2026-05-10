@@ -1,0 +1,32 @@
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 25px;
+}
+
+.inputContainer {
+    position: relative; 
+}
+
+.searchInput {
+    align-items: center;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 192, 203, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.377);
+    width: 100%; 
+}
+
+.clearIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%); 
+    cursor: pointer;
+    color: #ffffff; 
+    font-size: 1.2rem; 
+}

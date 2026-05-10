@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.projectschool.dev/</loc>
+    <lastmod>2025-12-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Exercises -->
+  <url>
+    <loc>https://www.projectschool.dev/exercises/reactlessons</loc>
+    <lastmod>2025-12-03T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.projectschool.dev/exercises/livelessons</loc>
+    <lastmod>2025-12-03T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.projectschool.dev/exercises/workshoplist</loc>
+    <lastmod>2025-12-03T00:00:00+00:00</lastmod>
+  </url>
+
+  <!-- Interview -->
+  <url>
+    <loc>https://www.projectschool.dev/interview/interview-questions</loc>
+    <lastmod>2025-12-03T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.projectschool.dev/interview/interview-tasks</loc>
+    <lastmod>2025-12-03T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.projectschool.dev/interview/interview-code-quiz</loc>
+    <lastmod>2025-12-03T00:00:00+00:00</lastmod>
+  </url>
+
+  <!-- Guides -->
+  <url><loc>https://www.projectschool.dev/guides</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+  <url><loc>https://www.projectschool.dev/guides/reactintro</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+  <url><loc>https://www.projectschool.dev/guides/usestate</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+  <url><loc>https://www.projectschool.dev/guides/useeffect</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+  <url><loc>https://www.projectschool.dev/guides/stateeffect</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+  <url><loc>https://www.projectschool.dev/guides/usecontext</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+  <url><loc>https://www.projectschool.dev/guides/usereducer</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+  <url><loc>https://www.projectschool.dev/guides/reactrouter</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+  <url><loc>https://www.projectschool.dev/guides/datafetching</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+
+  <!-- Blogs: devessentials -->
+ <!-- Blogs: devessentials -->
+<url><loc>https://www.projectschool.dev/blogs/devessentials/how-to-create-authentication-guard-component</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/insighttrack-empowering-your-digital-presence</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/mastering-javascript-pagination</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/going-live-with-stripe-in-your-react-project</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/guide-to-implementing-git-in-visual-studio-code</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/eaddrinuse-error</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/how-to-run-a-react-frontend-and-nodejs-backend-simultaneously-with-one-command</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/how-to-test-webhooks-using-stripe-cli</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/a-comprehensive-guide-to-proptypes-in-react</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/the-end-of-create-react-app-and-what-to-use-next</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/building-a-chatgpt-powered-react-app-with-rspack</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/setting-up-stripe-payments-in-react-the-ultimate-guide</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/how-to-go-live-with-your-chrome-extension-using-react-and-rspack</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/react-interview-guide-2025-part-1</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/file-uploads-in-react-with-nodejs-and-multer</loc><lastmod>2026-03-28T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/react-context-api-vs-zustand-when-to-use-what</loc><lastmod>2026-03-28T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/react-error-boundaries-graceful-failure-handling</loc><lastmod>2026-03-28T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/deploying-a-mern-stack-app-netlify-render-mongodb-atlas</loc><lastmod>2026-03-28T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/building-a-chatgpt-powered-support-widget-in-react</loc><lastmod>2026-04-01T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/generating-images-with-ai-in-react-using-fal-ai</loc><lastmod>2026-04-05T00:00:00+00:00</lastmod></url>
+<url><loc>https://www.projectschool.dev/blogs/devessentials/react-supabase-build-a-full-stack-app-without-a-custom-backend</loc><lastmod>2026-04-10T00:00:00+00:00</lastmod></url>
+
+  <!-- Blogs: reactexplained -->
+  <url><loc>https://www.projectschool.dev/blogs/reactexplained</loc><lastmod>2025-12-03T00:00:00+00:00</lastmod></url>
+
+</urlset>

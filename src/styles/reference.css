@@ -1,0 +1,77 @@
+/* ES6Cheatsheet.css */
+
+.cheatsheet-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.categories-grid {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(400px, 1fr)
+  ); /* Use auto-fill to fill space with 400px cards */
+  gap: 1.5rem;
+  margin: 1.5rem;
+}
+
+.reference-card {
+  position: relative;
+  background: #151515;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  animation: cardAppear 0.6s ease backwards;
+}
+
+.drag-icon {
+  cursor: grab;
+}
+
+.close-icon {
+  cursor: pointer;
+}
+
+.drag-icon:active {
+  cursor: grabbing;
+}
+
+.drag-icon:hover {
+  cursor: grab; /* Keep the grab cursor on hover as well */
+}
+
+.reference-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.reference-header .icons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.reference-content {
+  padding: 1rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}

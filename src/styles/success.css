@@ -1,0 +1,106 @@
+.success-container {
+  text-align: center;
+  padding: 40px 0;
+  background: #000000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-text {
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+i.checkmark {
+  color: #9ABC66;
+  font-size: 100px;
+  line-height: 200px;
+  margin-left: -15px;
+}
+
+.success-card {
+  background: rgb(0, 0, 0);
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  max-width: 500px;
+  width: 90%;
+}
+
+.icon-container {
+  border-radius: 200px;
+  height: 200px;
+  width: 200px;
+  background: #F8FAF5;
+  margin: 0 auto 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancel-container {
+  text-align: center;
+  padding: 40px 0;
+  background: #000000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancel-checkmark {
+  color: #cc3419;
+  font-size: 100px;
+  line-height: 200px;
+  margin-left: -15px;
+}
+
+.cancel-card {
+  background: rgb(0, 0, 0);
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  max-width: 500px;
+  width: 90%;
+}
+
+.cancel-icon-container {
+  border-radius: 200px;
+  height: 200px;
+  width: 200px;
+  background: #faa4a4;
+  margin: 0 auto 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* New button style – matches your modern dark aesthetic */
+.home-button {
+  margin-top: 20px;
+  padding: 14px 32px;
+  background: #61dafb;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(97, 218, 251, 0.4);
+}
+
+.home-button:hover {
+  background: #4cc9f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(97, 218, 251, 0.6);
+}
+
+.home-button:active {
+  transform: translateY(0);
+}

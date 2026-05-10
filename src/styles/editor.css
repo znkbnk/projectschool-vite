@@ -1,0 +1,499 @@
+.editor-container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.text-window::-webkit-scrollbar {
+  width: 8px;
+}
+
+.text-window::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.text-window::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  max-width: 70%;
+  height: 100%;
+  background-color: #000000;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  container-type: inline-size;
+  container-name: task-panel;
+}
+
+
+
+/* Custom Resizer Handle */
+.resizer {
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+  cursor: col-resize;
+  position: relative;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.resizer::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(99, 102, 241, 0.6) 20%,
+    rgba(99, 102, 241, 0.8) 50%,
+    rgba(99, 102, 241, 0.6) 80%,
+    transparent 100%
+  );
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.resizer:hover {
+  background: linear-gradient(180deg, #1e1e3f 0%, #1a2744 50%, #1e1e3f 100%);
+}
+
+.resizer:hover::before {
+  height: 60px;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(129, 140, 248, 0.8) 20%,
+    rgba(129, 140, 248, 1) 50%,
+    rgba(129, 140, 248, 0.8) 80%,
+    transparent 100%
+  );
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+}
+
+.resizer:active::before {
+  height: 80px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(167, 139, 250, 0.9) 20%,
+    rgba(167, 139, 250, 1) 50%,
+    rgba(167, 139, 250, 0.9) 80%,
+    transparent 100%
+  );
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.7);
+}
+
+/* Prevent text selection while dragging */
+.editor-container.resizing {
+  user-select: none;
+  cursor: col-resize;
+}
+
+.editor-container.resizing iframe {
+  pointer-events: none;
+}
+
+.task {
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+}
+
+.task-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  margin-top: auto;
+  flex-wrap: nowrap;
+}
+
+/* Iframe now flexes to fill remaining space */
+.editor-container iframe {
+  flex: 1;
+  min-width: 300px;
+  height: 100%;
+}
+
+.iframe-skeleton {
+  display: flex;
+  flex: 1;
+  min-width: 300px;
+  height: 100%;
+  background: #1c1c1c;
+  overflow: hidden;
+}
+
+.skeleton-sidebar {
+  width: 160px;
+  background: #161616;
+  border-right: 1px solid #2a2a2a;
+  padding: 12px 8px;
+  flex-shrink: 0;
+}
+
+.skeleton-file-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.skeleton-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #2a2a2a;
+}
+
+.skeleton-tabs {
+  height: 36px;
+  background: #1c1c1c;
+  border-bottom: 1px solid #2a2a2a;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+}
+
+.skeleton-tab {
+  width: 80px;
+  height: 18px;
+  background: #2a2a2a;
+  border-radius: 3px;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-code {
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-preview {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.skeleton-preview-bar {
+  height: 36px;
+  background: #161616;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.skeleton-preview-content {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-line {
+  height: 12px;
+  background: #2a2a2a;
+  border-radius: 3px;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-line.w-30 {
+  width: 30%;
+}
+.skeleton-line.w-40 {
+  width: 40%;
+}
+.skeleton-line.w-45 {
+  width: 45%;
+}
+.skeleton-line.w-50 {
+  width: 50%;
+}
+.skeleton-line.w-55 {
+  width: 55%;
+}
+.skeleton-line.w-60 {
+  width: 60%;
+}
+.skeleton-line.w-65 {
+  width: 65%;
+}
+.skeleton-line.w-70 {
+  width: 70%;
+}
+.skeleton-line.w-75 {
+  width: 75%;
+}
+.skeleton-line.w-80 {
+  width: 80%;
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.text-window {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  padding-left: 15px;
+}
+
+.text-window p {
+  font-weight: 800;
+  word-wrap: break-word;
+  text-align: start;
+}
+
+.text-window h1 {
+  text-align: center;
+}
+.text-window h3 {
+  margin: 20px 0;
+}
+
+.text-window h1,
+.text-window h3,
+.text-window h4 {
+  padding: 10px;
+  word-wrap: break-word;
+}
+.section p {
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.section ul {
+  list-style-type: disc;
+  padding: 0 10px 0 25px;
+}
+
+.section ul li {
+  margin-bottom: 8px;
+}
+
+.task-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem 1rem;
+  margin-top: 1rem;
+}
+
+.prerequisites {
+  margin-top: 20px;
+}
+
+.prerequisite-button {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.prerequisite-button:hover {
+  background-color: #0056b3;
+}
+
+.prerequisite-button:focus {
+  outline: none;
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.checkbox-container label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.checkbox-container ul {
+  margin: 1rem;
+}
+
+.checkbox-container input[type="checkbox"] + label {
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.checkbox-container input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+}
+
+.checkbox-container input[type="checkbox"]:checked + label::before {
+  background-color: #2adf12;
+}
+
+.step-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.step-title-container h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.checkbox-container input[type="checkbox"] + label {
+  display: inline-block;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .task-container {
+    min-width: 200px;
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .task-button-container {
+    padding: 1rem 0.75rem;
+    gap: 0.6rem;
+  }
+
+  .button-84 {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+    border-radius: 10px;
+  }
+
+  .button-84 .btn-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .task-buttons {
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .button-28 {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.8rem;
+    border-radius: 8px;
+  }
+
+  .button-28.previous::before,
+  .button-28.next::after {
+    font-size: 0.9rem;
+  }
+
+  .resizer {
+    width: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .task-button-container {
+    padding: 0.875rem 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .button-84 {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+    gap: 0.5rem;
+  }
+
+  .task-buttons {
+    gap: 0.4rem;
+    padding: 0.6rem 0.5rem;
+  }
+
+  .button-28 {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .button-28.previous::before {
+    margin-right: 0.25rem;
+  }
+
+  .button-28.next::after {
+    margin-left: 0.25rem;
+  }
+
+  .resizer {
+    width: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-84,
+  .button-28,
+  .button-84 .btn-icon,
+  .button-28::before,
+  .button-28::after,
+  .resizer,
+  .resizer::before {
+    transition: none;
+  }
+
+  .button-84:hover,
+  .button-28:hover {
+    transform: none;
+  }
+}

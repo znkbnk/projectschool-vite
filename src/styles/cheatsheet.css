@@ -1,0 +1,820 @@
+/* ============================================
+   CHEATSHEET POPUP - Premium Theme Matching Guides
+   ============================================ */
+
+/* Theme Variables */
+:root {
+  --bg-primary: #080808;
+  --bg-secondary: #0d0d0d;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.4);
+  --accent-blue: #61dafb;
+  --accent-pink: #fb61d4;
+  --accent-pink-dark: #d800a2;
+  --gradient-pink: linear-gradient(135deg, #fb61d4, #d800a2);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(251, 97, 212, 0.3);
+  --glow-pink: 0 0 60px rgba(251, 97, 212, 0.15);
+}
+
+/* ============================================
+   OVERLAY - Full screen backdrop
+   ============================================ */
+
+.cheatsheet-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+/* ============================================
+   POPUP CONTAINER - Centered with inset + margin
+   ============================================ */
+
+.cheatsheet-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90%;
+  max-width: 800px;
+  height: fit-content;
+  max-height: 85vh;
+  background: var(--bg-primary);
+  border-radius: 24px;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  z-index: 1001;
+}
+
+/* Gradient accent line at top */
+.cheatsheet-popup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-pink);
+  z-index: 1;
+  animation: gradientSlide 3s ease infinite;
+  background-size: 200% 100%;
+}
+
+@keyframes gradientSlide {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.cheatsheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.cheatsheet-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--gradient-pink);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.title-icon {
+  font-size: 1.3rem;
+}
+
+.cheatsheet-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cheatsheet-close-btn:hover {
+  background: rgba(251, 97, 212, 0.1);
+  border-color: var(--accent-pink);
+  color: var(--accent-pink);
+  transform: rotate(90deg);
+}
+
+/* ============================================
+   CONTENT AREA
+   ============================================ */
+
+.cheatsheet-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+/* Custom scrollbar */
+.cheatsheet-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cheatsheet-content::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.cheatsheet-content::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cheatsheet-content::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+.cheatsheet-text {
+  width: 100%;
+}
+
+/* ============================================
+   SECTION STYLING
+   ============================================ */
+
+.cheatsheet-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cheatsheet-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Section Title */
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-pink);
+  border-radius: 2px;
+}
+
+/* Section Subtitle */
+.section-subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--accent-blue);
+  margin: 0 0 1rem 0;
+}
+
+/* Section Text */
+.section-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 1rem 0;
+}
+
+.section-more-text {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+/* ============================================
+   LIST STYLING - Premium Checkmarks
+   ============================================ */
+
+.cheatsheet-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.cheatsheet-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: all 0.2s ease;
+}
+
+.cheatsheet-list li:last-child {
+  border-bottom: none;
+}
+
+.cheatsheet-list li:hover {
+  padding-left: 0.5rem;
+  background: rgba(251, 97, 212, 0.03);
+  border-radius: 8px;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  padding-right: 0.5rem;
+}
+
+.cheatsheet-list li::before {
+  content: "✓";
+  color: var(--accent-pink);
+  font-weight: bold;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(251, 97, 212, 0.15);
+  border-radius: 5px;
+  font-size: 0.7rem;
+  margin-top: 0.1rem;
+  box-shadow: 0 2px 8px rgba(251, 97, 212, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cheatsheet-list li:hover::before {
+  background: var(--gradient-pink);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(251, 97, 212, 0.4);
+}
+
+/* Style inline code in list items */
+.cheatsheet-list li code {
+  background: var(--bg-card);
+  color: var(--accent-pink);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 0.85em;
+  border: 1px solid var(--border-subtle);
+}
+
+/* ============================================
+   IMAGE STYLING
+   ============================================ */
+
+.cheatsheet-image-wrapper {
+  margin: 1.5rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s ease;
+}
+
+.cheatsheet-image-wrapper:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cheatsheet-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.cheatsheet-image-wrapper:hover .cheatsheet-image {
+  transform: scale(1.02);
+}
+
+/* ============================================
+   CODE CONTAINER - Premium Style
+   ============================================ */
+
+.cheatsheet-code-container {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg-card);
+  margin: 1.5rem 0;
+  border: 1px solid var(--border-subtle);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.cheatsheet-code-container:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+/* Gradient accent line at top */
+.cheatsheet-code-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-pink);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+/* Code Header */
+.code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.25rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.code-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* macOS style dots */
+.code-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.code-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.code-dot:hover {
+  transform: scale(1.15);
+}
+
+.code-dot.red {
+  background: #ff5f56;
+  box-shadow: 0 0 10px rgba(255, 95, 86, 0.5);
+}
+
+.code-dot.red:hover {
+  box-shadow: 0 0 15px rgba(255, 95, 86, 0.8);
+}
+
+.code-dot.yellow {
+  background: #ffbd2e;
+  box-shadow: 0 0 10px rgba(255, 189, 46, 0.5);
+}
+
+.code-dot.yellow:hover {
+  box-shadow: 0 0 15px rgba(255, 189, 46, 0.8);
+}
+
+.code-dot.green {
+  background: #27ca40;
+  box-shadow: 0 0 10px rgba(39, 202, 64, 0.5);
+}
+
+.code-dot.green:hover {
+  box-shadow: 0 0 15px rgba(39, 202, 64, 0.8);
+}
+
+/* Language badge */
+.code-language {
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s ease;
+}
+
+.code-language:hover {
+  border-color: var(--accent-pink);
+  color: var(--accent-pink);
+}
+
+/* Code content */
+.code-content {
+  background: var(--bg-primary);
+  overflow-x: auto;
+}
+
+/* Custom scrollbar for code */
+.code-content::-webkit-scrollbar {
+  height: 8px;
+}
+
+.code-content::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 0 0 16px 16px;
+}
+
+.code-content::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+}
+
+.code-content::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+/* Copy button */
+.code-copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.code-copy-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.code-copy-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-pink);
+  transform: translateY(-2px);
+}
+
+.code-copy-btn:hover::before {
+  opacity: 0.1;
+}
+
+.code-copy-btn.copied {
+  color: #27ca40;
+  background: rgba(39, 202, 64, 0.1);
+  border-color: rgba(39, 202, 64, 0.5);
+  box-shadow: 0 0 20px rgba(39, 202, 64, 0.3);
+}
+
+.code-copy-btn.copied::before {
+  opacity: 0;
+}
+
+/* Copy icons */
+.copy-icon,
+.check-icon {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* SyntaxHighlighter overrides */
+.cheatsheet-code-container pre {
+  margin: 0 !important;
+  padding: 1.5rem 1.25rem !important;
+  font-family: "SF Mono", "Fira Code", "Consolas", "Monaco", monospace !important;
+  font-size: clamp(12px, 1.5vw, 14px) !important;
+  line-height: 1.7 !important;
+  background: transparent !important;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.cheatsheet-code-container code {
+  font-family: inherit !important;
+  background: transparent !important;
+}
+
+/* ============================================
+   SYNTAX HIGHLIGHTING COLORS
+   ============================================ */
+
+.cheatsheet-code-container .hljs-keyword,
+.cheatsheet-code-container .hljs-selector-tag,
+.cheatsheet-code-container .hljs-literal {
+  color: var(--accent-pink);
+}
+
+.cheatsheet-code-container .hljs-string,
+.cheatsheet-code-container .hljs-title,
+.cheatsheet-code-container .hljs-name,
+.cheatsheet-code-container .hljs-attribute {
+  color: #f1fa8c;
+}
+
+.cheatsheet-code-container .hljs-function,
+.cheatsheet-code-container .hljs-built_in,
+.cheatsheet-code-container .hljs-class .hljs-title {
+  color: var(--accent-blue);
+}
+
+.cheatsheet-code-container .hljs-comment,
+.cheatsheet-code-container .hljs-quote {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.cheatsheet-code-container .hljs-number,
+.cheatsheet-code-container .hljs-regexp {
+  color: #bd93f9;
+}
+
+.cheatsheet-code-container .hljs-tag {
+  color: var(--accent-pink-dark);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.cheatsheet-footer {
+  padding: 1.25rem 2rem;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cheatsheet-close-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--gradient-pink);
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 10px;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cheatsheet-close-button:hover {
+  transform: translateY(-3px);
+}
+
+.cheatsheet-close-button:active {
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+  .cheatsheet-popup {
+    width: 94%;
+    max-height: 90vh;
+    border-radius: 20px;
+  }
+
+  .cheatsheet-header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .cheatsheet-title {
+    font-size: 1.25rem;
+  }
+
+  .cheatsheet-content {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .code-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .code-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .code-dots {
+    gap: 6px;
+  }
+
+  .code-language {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .code-copy-btn span {
+    display: none;
+  }
+
+  .code-copy-btn {
+    padding: 0.45rem 0.65rem;
+  }
+
+  .cheatsheet-code-container pre {
+    font-size: clamp(11px, 1.5vw, 13px) !important;
+    padding: 1.25rem 1rem !important;
+  }
+
+  .cheatsheet-footer {
+    padding: 1rem 1.5rem;
+  }
+
+  .cheatsheet-close-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cheatsheet-popup {
+    width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+  }
+
+  .cheatsheet-popup::before {
+    border-radius: 0;
+  }
+
+  .cheatsheet-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .cheatsheet-title {
+    font-size: 1.1rem;
+    gap: 0.5rem;
+  }
+
+  .title-icon {
+    font-size: 1.1rem;
+  }
+
+  .cheatsheet-close-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cheatsheet-content {
+    padding: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .section-title::after {
+    width: 50px;
+    height: 2px;
+  }
+
+  .cheatsheet-list li {
+    font-size: 0.9rem;
+    gap: 0.75rem;
+  }
+
+  .cheatsheet-list li::before {
+    width: 18px;
+    height: 18px;
+    font-size: 0.65rem;
+  }
+
+  .code-header {
+    padding: 0.6rem 0.85rem;
+  }
+
+  .code-dot {
+    width: 9px;
+    height: 9px;
+  }
+
+  .code-dots {
+    gap: 5px;
+  }
+
+  .cheatsheet-code-container pre {
+    font-size: clamp(10px, 1.5vw, 12px) !important;
+    padding: 1rem 0.85rem !important;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .cheatsheet-overlay,
+  .cheatsheet-popup,
+  .cheatsheet-code-container,
+  .code-copy-btn,
+  .code-dot,
+  .cheatsheet-list li,
+  .cheatsheet-close-btn,
+  .cheatsheet-close-button,
+  .cheatsheet-image {
+    transition: none;
+    animation: none;
+  }
+
+  .cheatsheet-popup::before {
+    animation: none;
+  }
+
+  .cheatsheet-code-container:hover,
+  .cheatsheet-close-btn:hover {
+    transform: none;
+  }
+}
+
+.cheatsheet-close-btn:focus-visible,
+.cheatsheet-close-button:focus-visible,
+.code-copy-btn:focus-visible {
+  outline: 2px solid var(--accent-pink);
+  outline-offset: 3px;
+}
+
+@media (prefers-contrast: high) {
+  .cheatsheet-popup,
+  .cheatsheet-code-container {
+    border-width: 2px;
+  }
+
+  .code-header {
+    border-width: 2px;
+  }
+
+  .cheatsheet-list li {
+    border-width: 2px;
+  }
+}

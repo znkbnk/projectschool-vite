@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      window.__PRERENDER__ =
+        navigator.userAgent === "ReactSnap" ||
+        navigator.userAgent.indexOf("HeadlessChrome") !== -1;
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff6b9d" />
+
+    <title>Learn React by Building 60+ Real Projects | Project School</title>
+    <meta
+      name="description"
+      content="Learn React by building 60+ real projects. Master hooks, routing, APIs, and full-stack development through hands-on practice, not passive videos."
+    />
+
+    <!--
+      PRECONNECT — max 4, only origins the page will definitely hit immediately.
+      firebaseapp.com removed (flagged as unused by Lighthouse).
+      projectschool-48842.firebaseapp.com removed (same — Firebase auth iframe
+      loads it lazily, preconnecting doesn't help and wastes a slot).
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://apis.google.com" />
+    <link rel="preconnect" href="https://www.googleapis.com" />
+
+    <!-- DNS prefetch for origins we'll need later but not immediately -->
+    <link rel="dns-prefetch" href="https://firebaseapp.com" />
+    <link
+      rel="dns-prefetch"
+      href="https://projectschool-48842.firebaseapp.com"
+    />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://firestore.googleapis.com" />
+    <link rel="dns-prefetch" href="https://identitytoolkit.googleapis.com" />
+
+    <!--
+      PRELOAD CRITICAL IMAGES
+      longBacroundTop is the LCP element — must be highest priority.
+      pslogo is above the fold on desktop.
+      pslogosmall is the mobile navbar logo — only preload on small screens.
+      NOTE: these hashed filenames change on each build. After every
+      `npm run build`, update these hrefs to match the new hashes in
+      /static/media/. You can automate this with a postbuild script.
+    -->
+    <link
+      rel="preload"
+      href="/static/media/longBacroundTop.webp"
+      as="image"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="/static/media/pslogo.webp"
+      as="image"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="/static/media/pslogosmall.webp"
+      as="image"
+      type="image/webp"
+      media="(max-width: 480px)"
+    />
+
+    <!--
+      FONTS — single combined request, non-blocking.
+      One preload covers both families. Duplicate Playfair preload removed.
+    -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="learn react, react tutorial, react projects, react course, react hooks, learn react online"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Learn React by Building 60+ Real Projects | Project School"
+    />
+    <meta
+      property="og:description"
+      content="Learn React by building 60+ real projects. Master hooks, routing, APIs, and full-stack development through hands-on practice."
+    />
+    <meta
+      property="og:image"
+      content="https://www.projectschool.dev/images/pslogosmall.webp"
+    />
+    <meta property="og:url" content="https://www.projectschool.dev" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Project School" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Learn React by Building 60+ Real Projects | Project School"
+    />
+    <meta
+      name="twitter:description"
+      content="Learn React by building 60+ real projects. Hands-on practice, not passive videos."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.projectschool.dev/images/pslogosmall.webp"
+    />
+
+    <!-- Icons -->
+    <link rel="icon" href="/pslogosmallico.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!--
+      CRITICAL CSS — inlined so the page renders instantly without waiting
+      for the external stylesheet. Covers the above-the-fold shell:
+      dark background, body font, loading spinner, and navbar height.
+      Keep this minimal — everything else loads from the stylesheet.
+    -->
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        background: #080808;
+        height: 100%;
+      }
+      body {
+        font-family:
+          "Lato",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: #080808;
+        color: #fff;
+        min-height: 100vh;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      :root {
+        --navbar-height: 50px;
+      }
+      .loading-placeholder {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #080808;
+      }
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+        border-top-color: #61dafb;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /*
+        Navbar critical styles — prevents layout shift while JS loads.
+        The full navbar CSS is in the main stylesheet but these rules
+        stop the page jumping when the nav renders.
+      */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--navbar-height);
+        z-index: 9999;
+        background: rgba(8, 8, 8, 0.85);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      /*
+        Hero background — rendered as a CSS background-image so the
+        browser doesn't discover it from HTML. We preload it above.
+        Adding fetchpriority via a <link rel=preload> is the correct
+        way to prioritise CSS background images (Lighthouse Image 3 fix).
+      */
+      .hero-background-image {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        opacity: 0.35;
+        z-index: 0;
+      }
+    </style>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div id="root">
+      <div class="loading-placeholder">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev",
+        "logo": "https://www.projectschool.dev/images/logowebp.webp",
+        "description": "Learn React by building 60+ real projects. Master hooks, routing, APIs, and full-stack development through hands-on practice.",
+        "sameAs": ["https://instagram.com/reactlessons"]
+      }
+    </script>
+
+    <!--
+      RENDER KEEP-ALIVE — pings the backend the moment the page loads
+      so Render wakes up before Firebase auth tries to call subscription-status.
+      Completely silent — errors are swallowed.
+    -->
+    <script>
+  window.addEventListener("load", function () {
+    const apiUrl = import.meta.env.VITE_API_URL;
+    if (apiUrl) {
+      fetch(apiUrl + "/health", {
+        method: "GET",
+        credentials: "omit",
+      }).catch(() => {});
+    }
+  });
+</script>
+
+    <!-- Deferred Analytics -->
+    <script>
+      window.addEventListener("load", function () {
+        var s = document.createElement("script");
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-7L2NMEJKB6";
+        s.async = true;
+        document.head.appendChild(s);
+        s.onload = function () {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-7L2NMEJKB6");
+        };
+      });
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

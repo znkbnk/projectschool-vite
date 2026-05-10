@@ -1,0 +1,913 @@
+/* --------------------------------------------------------------
+   src/styles/LearningPathSection.css
+   -------------------------------------------------------------- */
+
+.learning-path-section {
+  width: 100%;
+  top: 100px;
+  max-width: 100%;
+  background: transparent;
+  position: relative;
+
+}
+
+/* ---------- Header & Progress ---------- */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+.section-header h1 {
+  font-size: 60px;
+  font-weight: 600;
+  background: linear-gradient(var(--finish-fill), var(--fill));
+  background-clip: text;
+  color: transparent;
+}
+.section-header p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 40px;
+}
+
+/* progress bar */
+.learning-phase-progress-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.learning-phase-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.learning-phase-progress-labels span {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.learning-phase-progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.learning-phase-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+.learning-phase-progress-status {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------- Grid (intro → phase → check) ---------- */
+.phases-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* consistent vertical spacing */
+  max-width: 1400px;
+  margin: 0 auto 80px;
+}
+
+/* ---------- PHASE CARD (unchanged) ---------- */
+.learning-phase-card {
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.learning-phase-card.completed {
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+.phase-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 8px;
+}
+.completed-badge {
+  background: rgba(34, 197, 94, 0.5);
+}
+
+.phase-header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.phase-icon {
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.phase-icon.from-blue-500 {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+.phase-icon.from-purple-500 {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+}
+.phase-icon.from-orange-500 {
+  background: linear-gradient(135deg, #f97316, #ef4444);
+}
+.phase-icon.from-green-500 {
+  background: linear-gradient(135deg, #22c55e, #10b981);
+}
+
+.phase-info .phase-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.phase-title {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.phase-description {
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}
+
+.phase-courses {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+.course-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Make entire course-item clickable */
+.course-item.clickable {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.course-item.clickable:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.course-item.clickable:active {
+  transform: translateY(0);
+}
+
+/* Optional: subtle arrow on hover */
+.course-item.clickable::after {
+  content: "→";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.course-item.clickable:hover::after {
+  opacity: 1;
+}
+.course-star {
+  margin-top: 2px;
+  flex-shrink: 0;
+  transition: fill 0.3s ease;
+}
+.course-title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+.course-desc {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.course-meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.phase-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 16px;
+}
+.stat-item {
+  text-align: center;
+}
+.stat-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+.stat-label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: capitalize;
+}
+
+.phase-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.phase-duration {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.phase-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.phase-btn.active {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+}
+
+/* ---------- INTRO (before phase) - REFINED ---------- */
+.phase-intro {
+  padding: 24px; /* Match phase-card padding */
+  background: rgba(255, 255, 255, 0.04); /* Slightly lighter than phase cards */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px; /* Match phase-card radius */
+  backdrop-filter: blur(10px); /* Match phase-card blur */
+  position: relative; /* For consistent shadow behavior */
+  transition: all 0.3s ease; /* Match phase-card transition */
+}
+
+.phase-intro:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle hover like phase cards */
+}
+
+.phase-intro .intro-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: -8px -8px 16px -8px; /* Negative margin to create "header" effect */
+  padding: 12px 16px; /* Consistent with phase-header */
+  background: rgba(255, 255, 255, 0.08); /* Subtle background */
+  border-radius: 12px 12px 0 0; /* Rounded top corners */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.phase-intro .intro-header h3 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem); /* Match phase-title size */
+  font-weight: 700;
+  margin: 0;
+  color: #fff; /* Solid white instead of gradient for contrast */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Subtle depth */
+  flex: 1;
+}
+
+.phase-intro p {
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6; /* Better readability */
+  margin: 0;
+  padding: 0 4px; /* Tiny inner padding for breathing room */
+}
+
+.phase-intro p strong {
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(
+    135deg,
+    rgba(61, 34, 87, 0.3),
+    rgba(148, 47, 97, 0.3)
+  ); /* Subtle highlight */
+  padding: 0 2px;
+  border-radius: 4px;
+}
+
+/* ---------- CHECK (after phase) - REFINED ---------- */
+.phase-check {
+  padding: 24px; /* Match phase-card padding */
+  background: rgba(255, 255, 255, 0.04); /* Same as intro */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px; /* Match phase-card radius */
+  backdrop-filter: blur(10px);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.phase-check:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.phase-check .check-question {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Slightly larger gap for icon prominence */
+  font-size: clamp(1rem, 1.2vw, 1.1rem); /* Slightly larger for emphasis */
+  color: #fff;
+  font-weight: 500; /* Medium weight for question */
+  margin-bottom: 20px; /* More space before buttons */
+  padding: 8px 12px; /* Subtle padding around question */
+  background: rgba(255, 255, 255, 0.05); /* Light background for question */
+  border-radius: 8px;
+  border-left: 3px solid #22c55e; /* Green accent line */
+}
+
+.phase-check .check-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center buttons for balance */
+}
+
+.check-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Consistent with phase-btn */
+  padding: 12px 20px; /* Match phase-btn padding */
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px; /* Match phase-btn radius */
+  transition: all 0.3s ease;
+  flex: 1; /* Equal width buttons */
+  min-width: 140px; /* Minimum width for consistency */
+  justify-content: center;
+  border: 1px solid; /* Ensure all buttons have borders */
+}
+
+.check-btn.primary {
+  background: rgba(255, 255, 255, 0.15); /* Slightly more prominent */
+  color: #fff;
+  border-color: currentColor; /* Use the phase color */
+  font-weight: 700; /* Bolder for primary action */
+}
+
+.check-btn.primary:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.check-btn.secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.check-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Special styling for the reset button */
+.check-btn.secondary[onclick*="reset"] {
+  border-color: #ef4444; /* Red accent for reset */
+  color: #fca5a5; /* Light red text */
+}
+
+.check-btn.secondary[onclick*="reset"]:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border-color: #ef4444;
+}
+.terms-input {
+  width: 20px;
+  height: 20px;
+  margin-top: 0.1rem;
+  accent-color: var(--accent-pink);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.terms-links a {
+  color: var(--accent-pink);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.terms-links a:hover {
+  color: var(--accent-pink-dark);
+  text-decoration: underline;
+}
+
+/* ---------- RESPONSIVE - REFINED ---------- */
+@media (max-width: 768px) {
+  .phases-grid {
+    gap: 24px;
+  }
+
+  .learning-phase-card,
+  .phase-intro,
+  .phase-check {
+    padding: 20px; /* Slightly reduced but consistent */
+  }
+
+  .phase-intro .intro-header {
+    margin: -6px -6px 12px -6px;
+    padding: 10px 14px;
+  }
+
+  .phase-intro .intro-header h3 {
+    font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  }
+
+  .phase-intro p {
+    font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  }
+
+  .phase-check .check-question {
+    font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+    gap: 10px;
+    padding: 6px 10px;
+  }
+
+  .check-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .check-btn {
+    padding: 12px 16px; /* Maintain good touch targets */
+    min-width: auto; /* Full width on mobile */
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .learning-phase-card,
+  .phase-intro,
+  .phase-check {
+    padding: 16px;
+    border-radius: 12px; /* Slightly smaller radius */
+  }
+
+  .phase-intro .intro-header {
+    margin: -4px -4px 10px -4px;
+    padding: 8px 12px;
+  }
+
+  .phase-intro .intro-header h3 {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  }
+
+  .phase-intro p {
+    font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+    line-height: 1.5;
+  }
+
+  .phase-check .check-question {
+    margin-bottom: 16px;
+    padding: 6px 8px;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+  }
+
+  .check-btn {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+  .contact-modal {
+    padding: 20px;
+  }
+  .contact-btn {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Ensure buttons look good when wrapped */
+@media (max-width: 768px) {
+  .check-actions {
+    justify-content: stretch;
+  }
+
+  .check-btn {
+    justify-content: center;
+  }
+}
+
+/* Fix for course-details (you mentioned it was missing) */
+.course-details {
+  flex: 1;
+}
+
+.course-title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Visual consistency for all cards */
+.phase-intro,
+.phase-check,
+.learning-phase-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.phase-intro:hover,
+.phase-check:hover,
+.learning-phase-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Reset Modal */
+.reset-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.reset-modal {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.reset-modal h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.reset-modal p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 12px;
+}
+
+.reset-modal ul {
+  text-align: left;
+  margin: 12px 0;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.reset-modal ul li {
+  margin-bottom: 6px;
+}
+
+.reset-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 12px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.reset-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.reset-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.reset-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-btn.danger {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+}
+
+.reset-btn.danger:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+.reset-btn.danger:disabled {
+  background: rgba(239, 68, 68, 0.5);
+  cursor: not-allowed;
+}
+
+.reset-btn.secondary {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.reset-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* --------------------------------------------------------------
+   CONTACT MODAL – same style as reset modal
+-------------------------------------------------------------- */
+.contact-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.contact-modal {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 28px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.contact-modal h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.contact-modal p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-btn svg {
+  flex-shrink: 0;
+}
+
+.contact-close-btn {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* ---------- JOURNEY INFO & CTA (unchanged) ---------- */
+.journey-info {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+.journey-info h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+}
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: 32px;
+}
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.step-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+.step-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.step-item p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+.journey-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mastery-list {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.mastery-list h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.mastery-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mastery-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+.investment-info {
+  padding: 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.2),
+    rgba(236, 72, 153, 0.2)
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+.investment-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.investment-hours {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+.investment-info p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 60px;
+}
+.cta-button {
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  border-radius: 999px;
+  border: none;
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(168, 85, 247, 0.4);
+  transition: all 0.3s ease;
+}
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(168, 85, 247, 0.5);
+}
+.cta-section p {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* keep the old course-meta (you had it twice) */
+.course-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+.course-meta span {
+  display: inline-block;
+}
+.course-meta span:last-child {
+  color: #10b981;
+}

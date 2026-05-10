@@ -1,0 +1,219 @@
+/* ============================================
+   LOCKED OVERLAY - Premium Project Cards
+   ============================================ */
+
+.locked-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 8, 8, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: inherit;
+  cursor: default;
+  transition: background 0.3s ease;
+}
+
+.lessons-card:hover .locked-overlay {
+  background: rgba(8, 8, 8, 0.75);
+}
+
+.locked-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.locked-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(251, 97, 212, 0.1);
+  border: 1px solid rgba(251, 97, 212, 0.25);
+  color: #fb61d4;
+  transition: all 0.3s ease;
+}
+
+.lessons-card:hover .locked-icon {
+  background: rgba(251, 97, 212, 0.15);
+  border-color: rgba(251, 97, 212, 0.4);
+  transform: scale(1.05);
+}
+
+.locked-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.locked-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.4rem;
+  background: linear-gradient(135deg, #fb61d4, #d800a2);
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 0.25rem;
+}
+
+.locked-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(251, 97, 212, 0.35);
+}
+
+.locked-cta-button:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   ACCESS INFO BANNER (shown at top of page)
+   ============================================ */
+
+.access-info-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(251, 97, 212, 0.06);
+  border: 1px solid rgba(251, 97, 212, 0.15);
+  border-radius: 100px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.access-info-icon {
+  font-size: 1.1rem;
+}
+
+.access-info-banner strong {
+  color: #fb61d4;
+}
+
+.access-info-cta {
+  color: #fb61d4;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-left: 0.25rem;
+}
+
+.access-info-cta:hover {
+  color: #ff85e0;
+  text-decoration: underline;
+}
+
+/* ============================================
+   LOCKED CARD STATE
+   ============================================ */
+
+.lessons-card.is-locked {
+  position: relative;
+  overflow: hidden; /* THIS is what stops the image escaping */
+}
+
+.guide-card-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  /* Match whatever height your normal GuidesCard image uses */
+  max-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guide-card-image-wrapper img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  object-position: center;
+  /* Blur the image behind the overlay for a cleaner look */
+  filter: blur(3px) brightness(0.4);
+}
+
+.lessons-card.is-locked .lessons-card-body {
+  filter: blur(3px) brightness(0.4);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Make the overlay clickable but not the blurred content behind it */
+.lessons-card.is-locked .locked-overlay {
+  pointer-events: auto;
+}
+
+.lessons-card.is-locked .lessons-card-body {
+  pointer-events: none;
+}
+
+
+/* ============================================
+   exercises-card locked state
+   ============================================ */
+
+.exercises-card.is-locked {
+  position: relative;
+  overflow: hidden; /* stops overlay and image escaping */
+  cursor: default;
+}
+
+/* Blur and dim the content behind the overlay */
+.exercises-card.is-locked .exercises-card__body {
+  filter: blur(3px) brightness(0.35);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Keep the image from scaling on hover for locked cards */
+.exercises-card.is-locked:hover .exercises-card__image {
+  transform: none;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .access-info-banner {
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+    margin: 1rem 1rem 0;
+    border-radius: 12px;
+  }
+
+  .locked-cta-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .locked-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .locked-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}

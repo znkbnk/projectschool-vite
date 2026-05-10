@@ -1,0 +1,7052 @@
+import lesson1 from "../images/livelessons1.webp";
+import lesson2 from "../images/livelessons2.webp";
+import lesson3 from "../images/livelessons3.webp";
+import lesson4 from "../images/livelessons4.webp";
+import lesson5 from "../images/livelessons5.webp";
+import lesson6 from "../images/livelessons6.webp";
+import lesson7 from "../images/livelessons7.webp";
+import lesson8 from "../images/livelessons8.webp";
+import lesson9 from "../images/livelessons9.webp";
+import lesson10 from "../images/livelessons10.webp";
+import lesson11 from "../images/livelessons11.webp";
+import lesson12 from "../images/livelessons12.webp";
+import lesson13 from "../images/livelessons13.webp";
+import lesson14 from "../images/livelessons14.webp";
+import lesson15 from "../images/livelessons15.webp";
+import lesson16 from "../images/livelessons16.webp";
+import lesson17 from "../images/livelessons17.webp";
+import lesson18 from "../images/livelessons18.webp";
+import lesson19 from "../images/livelessons19.webp";
+import lesson20 from "../images/livelessons20.webp";
+import lesson21 from "../images/livelessons21.webp";
+
+export const LiveLessonsData = [
+  {
+    taskId: "Basic-Android-React-Native-App-with-Google-Login",
+    taskTitle: "Basic Android React-Native App with Google Login",
+    introduction:
+      "A simple and minimalistic Android app built with React-Native and Expo, featuring Google Sign-In, a basic home screen, a user profile page displaying the user's photo and name, and a logout button to return to the home screen.",
+    task: {
+      taskDescription:
+        "I'm looking for a simple and minimalistic Android app developed using React-Native and Expo. The app should have a Google login button, a basic home screen, a user profile page, and a logout button.",
+      platform: "Freelancer",
+      requirements: [
+        "Google Sign-In functionality",
+        "User profile page displaying profile picture and full name",
+        "Basic home screen",
+        "Logout button functionality",
+        "The app should be simple and minimalistic",
+        "The app must run smoothly on emulator",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Set Up the Project",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Install Expo CLI",
+            descriptions: [
+              "Open your terminal.",
+              "Run the command to install Expo globally.",
+            ],
+          },
+          {
+            subtitleDescription: "Create a New Expo Project",
+            descriptions: [
+              "Use the terminal to create a new project using the Expo command.",
+              "Choose a blank template for simplicity.",
+            ],
+          },
+          {
+            subtitleDescription: "Navigate into Your Project",
+            descriptions: [
+              "Once the project is created, navigate into the project directory.",
+            ],
+          },
+          {
+            subtitleDescription: "Start the Development Server",
+            descriptions: [
+              "Run the project using Expo, which will open a browser with options for testing on an emulator or device.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Install Dependencies",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Install AsyncStorage",
+            descriptions: [
+              "This will allow you to store user information locally.",
+              "Follow the command to install AsyncStorage using your package manager.",
+            ],
+          },
+          {
+            subtitleDescription: "Install Expo Google Authentication",
+            descriptions: [
+              "Install Expo's Google authentication package. This will handle Google login.",
+            ],
+          },
+          {
+            subtitleDescription: "Install WebBrowser",
+            descriptions: [
+              "WebBrowser from Expo helps complete the authentication process in the background.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Set Up Basic Project Structure",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create components Folder",
+            descriptions: [
+              "Inside the 'components' folder, you'll create two main components: one for the home screen and another for the profile screen.",
+            ],
+          },
+          {
+            subtitleDescription: "Create styles Folder",
+            descriptions: [
+              "Create a folder called 'styles' for managing your app's styles separately from the logic.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Create the Home Screen Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create a New JavaScript File",
+            descriptions: [
+              "Inside the 'components' folder, create a new file for the HomeScreen component.",
+            ],
+          },
+          {
+            subtitleDescription: "Design the Home Screen",
+            descriptions: [
+              "Structure the screen to have a simple 'Welcome' message and a button for Google Sign-In.",
+              "Add a condition to disable the button until the Google login process is ready.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Create the Profile Screen Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create a New JavaScript File",
+            descriptions: [
+              "Inside the 'components' folder, create a new file for the ProfileScreen component.",
+            ],
+          },
+          {
+            subtitleDescription: "Design the Profile Screen",
+            descriptions: [
+              "This screen will display the user's Google profile picture, name, and email.",
+              "Add a logout button that will clear the user's data and return them to the home screen.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Handle Authentication in App.js",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Import Authentication Libraries",
+            descriptions: [
+              "Import the necessary Expo libraries for Google sign-in and AsyncStorage for saving user information.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Google Sign-In",
+            descriptions: [
+              "Set up the logic to request authentication from Google.",
+              "Once the user signs in successfully, fetch their profile information using Google's user info API.",
+            ],
+          },
+          {
+            subtitleDescription: "Manage State",
+            descriptions: [
+              "Use React's state management to control whether the app shows the home screen or the profile screen.",
+              "Store the authenticated user's data in state and also save it to AsyncStorage so that the session persists.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Logout",
+            descriptions: [
+              "Implement a function to clear user data from both the app's state and AsyncStorage when the logout button is pressed.",
+            ],
+          },
+          {
+            subtitleDescription: "Switch Between Screens",
+            descriptions: [
+              "If the user is authenticated, render the profile screen; otherwise, show the home screen.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Move Styles to a Separate File",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create a styles.js File",
+            descriptions: [
+              "Inside the 'styles' folder, create a JavaScript file for your app's styles.",
+            ],
+          },
+          {
+            subtitleDescription: "Define Styles in the New File",
+            descriptions: [
+              "Write out the styles for both screens: container styles, text styles, button styles, and image styles.",
+              "This will ensure your components are visually structured and cleanly styled.",
+            ],
+          },
+          {
+            subtitleDescription: "Import Styles into Components",
+            descriptions: [
+              "Import the styles from the styles.js file into both the HomeScreen and ProfileScreen components.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Run and Test the App",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Run the App",
+            descriptions: [
+              "Use Expo to start your app and open it in an emulator or on your phone.",
+            ],
+          },
+          {
+            subtitleDescription: "Test the Google Login",
+            descriptions: [
+              "On the home screen, click the Google Sign-In button to see the available accounts for login.",
+              "Once logged in, check that the profile screen displays the user's name, email, and profile picture.",
+            ],
+          },
+          {
+            subtitleDescription: "Test Logout",
+            descriptions: [
+              "Ensure that pressing the logout button returns you to the home screen and clears the stored user information.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Debug and Fine-Tune",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Fix Any Errors",
+            descriptions: [
+              "If there are any issues with login, styling, or navigation, review the code for typos or incorrect logic.",
+              "Ensure the Google OAuth client ID is correctly configured.",
+            ],
+          },
+          {
+            subtitleDescription: "Fine-Tune Styles",
+            descriptions: [
+              "Adjust padding, margins, font sizes, or colors to fit the minimalistic design you want.",
+              "Ensure the layout works well on both small and large screen sizes.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 10: Deploy or Share the App",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create a Build",
+            descriptions: [
+              "If you're ready to share your app, follow Expo's guide to build an APK for Android or publish the app to Expo's platform.",
+            ],
+          },
+          {
+            subtitleDescription: "Share the Source Code",
+            descriptions: [
+              "Once you're happy with the result, share the source code with collaborators or save it to a repository.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/ztq35d?view=editor&module=%2Fsrc%2FApp.js",
+img: lesson1,    videoLink: "",
+  },
+
+  {
+    taskId: "Interactive-Power-BI-Bar-Chart",
+    taskTitle: "Interactive Power BI Bar Chart",
+    introduction:
+      "This project involves creating an interactive Power BI-style bar chart visual using React.js and Chart.js, where user data is segmented by age group. The bar chart will include cross-filtering functionality, allowing users to click on any bar to filter the dataset by the corresponding age group, dynamically updating the chart in response.",
+    task: {
+      taskDescription:
+        "I'm looking for a skilled developer to create an interactive Power BI bar chart visual using React.js. The project will focus on displaying user data, specifically segmented by age group.",
+      platform: "Freelancer",
+      requirements: [
+        "Display user data segmented by age group in a bar chart.",
+        "Enable users to click on bars to filter data by the selected age group.",
+        "Properly categorize and display user counts for different age groups (e.g., 18-24, 25-34, etc.).",
+        "Ensure the chart dynamically updates when a bar is clicked and reflects filtered results.",
+        "Create a responsive and intuitive chart interface for easy interaction.",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Set Up a React Application",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Ensure Node.js is installed on your machine. You can download it from nodejs.org.",
+              "Open your terminal/command prompt and run the following command to create a new React project: 'npx create-react-app powerbi-bar-chart'",
+              "Once the project is created, navigate into your project folder: 'cd powerbi-bar-chart'",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Install Required Libraries",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Install 'react-chartjs-2' and 'chart.js': These libraries will help you implement the bar chart. Install them using npm: 'npm install react-chartjs-2 chart.js'",
+              "After installation, check package.json to ensure both react-chartjs-2 and chart.js are listed under dependencies.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Prepare the Data for the Bar Chart",
+        titleDescription:
+          "Before you visualize anything, determine where your user data is coming from. In this case, you'll likely have an array of user information with age values. If the data comes from an API, think about how you'll fetch it and structure it. If you're using mock data, make sure it represents actual user distribution across age groups.",
+        sections: [
+          {
+            subtitleDescription: "Segment Users by Age Group",
+            descriptions: [
+              "Identify your age groups. Common segments might be 18-24, 25-34, 35-44, 45-54, 55-64, and 65+.",
+              "For each age group, count how many users fall within that range. If the data comes from an API, you'll need to process this by iterating over the data and sorting users into these groups.",
+            ],
+          },
+          {
+            subtitleDescription: "Prepare Data for the Chart",
+            descriptions: [
+              "Your chart will need two main pieces of information: the labels (which will be the age groups) and the data (which is the count of users in each age group).",
+              "Organize your data so that for each label (age group), you have a corresponding data point (user count). The structure of your data must be clear before you start setting up the chart.",
+            ],
+          },
+          {
+            subtitleDescription: "Plan Data Filtering",
+            descriptions: [
+              "You'll need to filter user data based on interactions with the chart (i.e., clicking on a bar). Think about how the click action will filter the data.",
+              "For each age group clicked, all other data points should either be hidden or grayed out, showing only the selected group.",
+            ],
+          },
+          {
+            subtitleDescription: "Mock Your Data (if necessary)",
+            descriptions: [
+              "If you don't have real data yet, prepare a mock dataset of users segmented by age groups. For testing, you can create static arrays representing user counts in each age group.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Configure Chart.js in React",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Understand How Chart.js Works",
+            descriptions: [
+              "Chart.js is a JavaScript library that generates charts using HTML <canvas>. Since you are using React, you'll use react-chartjs-2, a wrapper around Chart.js to work natively with React components.",
+              "In a bar chart, you need to configure both the axes (X-axis for age groups, Y-axis for user counts) and the bars (each representing the user count for the corresponding age group).",
+            ],
+          },
+          {
+            subtitleDescription: "Install and Register Chart.js Components",
+            descriptions: [
+              "The bar chart will rely on specific Chart.js components such as scales (for the X and Y axes), tooltips (for showing data when hovering over bars), and bar elements (for the bars themselves).",
+              "You will need to register these components in your React project to ensure that Chart.js knows what type of chart you are building and how to render it.",
+            ],
+          },
+          {
+            subtitleDescription: "Define the Chart Layout",
+            descriptions: [
+              "You will need to define the layout for your chart. This includes labels (age groups), datasets (user counts), and styling options (like bar color, size, and spacing).",
+              "Plan how your chart will look.",
+              "What will the X-axis represent? (In this case, age groups.)",
+              "What will the Y-axis represent? (In this case, user counts.)",
+              "How will you style the bars? Think about the default color scheme for unfiltered data, and another scheme for filtered data.",
+              "Do you want to show grid lines, tooltips, or a legend? These features add interactivity but can also be optional depending on your design.",
+            ],
+          },
+          {
+            subtitleDescription: "Plan Event Handling for Clicks",
+            descriptions: [
+              "Each bar in the chart should be clickable, which will trigger the filtering of data.",
+              "When a bar is clicked, determine how you will capture which bar was clicked (using Chart.js's event system).",
+              "Define how you'll filter the dataset based on the clicked bar.",
+              "Ensure that clicking a bar dynamically updates the visual to show the filtered data.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up Chart Options",
+            descriptions: [
+              "Plan how you will configure options",
+              "Responsiveness: Your chart should resize properly on different screen sizes.",
+              "Animations: Decide if you want animations when rendering the chart or updating it.",
+              "Interactions: Will you display tooltips or change the appearance when the user hovers over a bar?",
+              "Click Handling: Ensure the chart handles click events effectively to trigger the filtering.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Implement State Management for Filtering",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Determine How to Manage State",
+            descriptions: [
+              "You'll need to manage two main pieces of state.",
+              "The initial dataset: This represents all users across all age groups.",
+              "The filtered dataset: This will update dynamically when a user clicks on a bar to filter data for the selected age group.",
+              "Think about how you will set up the initial state. In React, you can manage state using the useState hook. You'll want to set the initial dataset in state and then allow it to update dynamically when the user interacts with the chart.",
+            ],
+          },
+          {
+            subtitleDescription: "Plan the Click Event Handler",
+            descriptions: [
+              "When the user clicks on a bar, the click handler will: capture the index of the clicked bar. Chart.js provides an event object that you can use to identify which bar was clicked (based on its index).",
+              "Use the index to find the corresponding age group.",
+              "Filter the data: You'll need to update the dataset, setting all other age groups to zero (or hide them entirely), while showing only the data for the clicked age group.",
+              "Update the state with the new, filtered dataset.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle the Chart Update",
+            descriptions: [
+              "Once the state updates with the filtered data, the chart will need to re-render to reflect the changes. In React, this happens automatically when state changes, so you don't have to worry about manually re-rendering the chart.",
+              "Ensure that the chart re-renders smoothly without losing the interactive capabilities (e.g., further clicks on different bars should continue to update the chart).",
+            ],
+          },
+          {
+            subtitleDescription: "Decide What Happens After Filtering",
+            descriptions: [
+              "After filtering, do you want to allow the user to reset the chart to show all data again? If yes, plan how the user will reset the filter (e.g., clicking outside the chart or providing a 'Reset' button).",
+              "You might also want to think about what happens if the user clicks the same bar twice. Will this re-apply the filter, or will it remove the filter and show the full dataset again?",
+            ],
+          },
+          {
+            subtitleDescription: "Test the Filtered State",
+            descriptions: [
+              "Click multiple bars to ensure only one age group is highlighted at a time.",
+              "Ensure that the filtering works correctly across all age groups.",
+              "Handle edge cases like clicking on the same bar repeatedly or trying to click outside the chart.",
+            ],
+          },
+          {
+            subtitleDescription: "Optimize for Performance",
+            descriptions: [
+              "If your dataset is large, consider optimizing the way the chart updates. This could involve reducing unnecessary re-renders or simplifying the state changes when the user interacts with the chart.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Style the Chart",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Choose Colors for the Bars",
+            descriptions: [
+              "You can define two sets of colors—one for unfiltered data and another for filtered data. Decide how the bars will look when they are clicked and filtered.",
+            ],
+          },
+          {
+            subtitleDescription: "Ensure Responsiveness",
+            descriptions: [
+              "Plan for making the chart responsive so that it adjusts to different screen sizes, providing a seamless user experience.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Test the Application",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Run Your App",
+            descriptions: [
+              "In your terminal, run the React app using: 'npm start'",
+              "This will start a local development server and open your app in the browser.",
+            ],
+          },
+          {
+            subtitleDescription: "Test the Chart",
+            descriptions: [
+              "Click on different bars and ensure that the data filters correctly based on the age group selected. Check the console (DevTools) for any errors.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Refine and Optimize",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Handle Edge Cases",
+            descriptions: [
+              "What happens if a user clicks the same bar multiple times?",
+              "Should the user be able to reset the filter and see the full dataset again? Plan for how this might work.",
+            ],
+          },
+          {
+            subtitleDescription: "Optimize Rendering",
+            descriptions: [
+              "If the chart becomes complex or data-heavy, consider optimizing the rendering process to ensure smooth performance.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Integrate with Power BI (Optional)",
+        titleDescription:
+          "If you plan to embed this React app in Power BI or integrate it into a Power BI report.",
+        sections: [
+          {
+            subtitleDescription: "Set Up Power BI Embedded",
+            descriptions: [
+              "Use Microsoft Power BI Embedded SDK to embed your React app into Power BI.",
+            ],
+          },
+          {
+            subtitleDescription: "Configure Cross-Filtering with Power BI",
+            descriptions: [
+              "Plan how you will handle cross-filtering across other visuals in Power BI using JavaScript.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/jf4vrt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson2,    videoLink: "",
+  },
+
+  {
+    taskId: "Activity-Management-Dashboard",
+    taskTitle: "Activity Management Dashboard",
+    introduction:
+      "The Activity Management Dashboard is a robust React application designed to provide users with a comprehensive overview of various activities. Featuring detailed insights into activity specifics, historical records, user claims, and associated rules, this dashboard leverages Material-UI components to deliver a modern and responsive user interface. The modular architecture allows for seamless integration of future enhancements, ensuring an adaptable solution for activity management.",
+    task: {
+      taskDescription:
+        "I need to create an activity page using React+MaterialUI. I already have a figma document that includes simple pages such as activity details, activity records, user claim records, activity rules, etc. ,You can use simulated data to bind data to the page, and I will interface it later. You only need to complete the static page.",
+      platform: "Freelancer",
+      requirements: [
+        "Components for Activity Details, Records, Claims, and Rules",
+        "Use of simulated data for static content",
+        "Responsive design using Material-UI",
+        "Navigation between components (if applicable)",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Set Up the React Environment",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create a New React App",
+            descriptions: [
+              "Open a terminal, navigate to your preferred directory, and run: 'npx create-react-app activity-page'.",
+              "This command creates the initial project structure with all the necessary dependencies to build a React application.",
+            ],
+          },
+          {
+            subtitleDescription: "Navigate into the Project",
+            descriptions: [
+              "Once the app is created, move into the project directory: 'cd activity-page'.",
+            ],
+          },
+          {
+            subtitleDescription: "Install Material-UI",
+            descriptions: [
+              "Install the required Material-UI packages: 'npm install @mui/material @emotion/react @emotion/styled'.",
+              "Material-UI (MUI) is a component library used to build modern UI elements quickly.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Create the Components Folder",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Inside the 'src' folder, create a new folder called 'components'. This will be used to store all the individual component files.",
+              "React applications are modular, and each part of the UI (like activity details, activity records) will be separated into reusable components.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Create the ActivityDetails Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create the File",
+            descriptions: [
+              "Inside the 'components' folder, create a new file called ActivityDetails.js.",
+            ],
+          },
+          {
+            subtitleDescription: "Structure the Component",
+            descriptions: [
+              "Import React and necessary Material-UI components like 'Card', 'Typography'.",
+              "Use a 'Card' from Material-UI to display activity details.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Dummy Data",
+            descriptions: [
+              "Inside 'ActivityDetails', define and display static (simulated) data like the name of the activity, description, and dates.",
+            ],
+          },
+          {
+            subtitleDescription: "Return JSX",
+            descriptions: [
+              "Write the JSX structure that uses Material-UI components.",
+              "Use a 'Card' to wrap the content.",
+              "Inside the 'Card', use 'Typography' components to display the activity name and description.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Create the ActivityRecords Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create the File",
+            descriptions: [
+              "Inside the 'components' folder, create a new file called ActivityRecords.js.",
+            ],
+          },
+          {
+            subtitleDescription: "Simulate Data",
+            descriptions: [
+              "Define some static data (e.g., an array of record objects) inside the component. These records could represent actions taken by users.",
+            ],
+          },
+          {
+            subtitleDescription: "Use Material-UI List Components",
+            descriptions: [
+              "Use Material-UI's 'List' and 'ListItem' components to display the records.",
+              "For each record, use 'ListItem' to create individual list elements.",
+            ],
+          },
+          {
+            subtitleDescription: "Map Over the Data",
+            descriptions: [
+              "Use JavaScript's 'map()' function to iterate over the array of records and dynamically create a list of records to display.",
+            ],
+          },
+          {
+            subtitleDescription: "Return JSX",
+            descriptions: [
+              "In the JSX, use a 'List' component and render each record inside 'ListItem'.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Create the UserClaimRecords Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create the File",
+            descriptions: [
+              "Inside the 'components' folder, create a new file called UserClaimRecords.js.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Dummy Claim Data",
+            descriptions: [
+              "Define some claim records (static data) inside the component. Each record could represent a user claim, with details like the user name and the date of the claim.",
+            ],
+          },
+          {
+            subtitleDescription: "Use Material-UI for Layout",
+            descriptions: [
+              "Use 'Card' and 'List' components to create a layout similar to ActivityRecords.",
+            ],
+          },
+          {
+            subtitleDescription: "Map Through Claim Records",
+            descriptions: [
+              "Iterate over the static data using the 'map()' function, rendering each user claim as a list item.",
+            ],
+          },
+          {
+            subtitleDescription: "Return JSX",
+            descriptions: [
+              "Write the JSX structure using 'List' and 'ListItem' components to display each claim.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Create the ActivityRules Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create the File",
+            descriptions: [
+              "Inside the 'components' folder, create a new file called ActivityRules.js.",
+            ],
+          },
+          {
+            subtitleDescription: "Define Static Rules",
+            descriptions: [
+              "Define an array of rules for the activity as static data. Each rule can be a simple string or an object (if you want to add more info).",
+            ],
+          },
+          {
+            subtitleDescription: "Display Rules Using a List",
+            descriptions: [
+              "Use Material-UI's 'List' and 'ListItem' to display the rules in a list format.",
+            ],
+          },
+          {
+            subtitleDescription: "Map Through Rules",
+            descriptions: [
+              "Use the 'map()' function to iterate over the rules array and dynamically render each rule.",
+            ],
+          },
+          {
+            subtitleDescription: "Return JSX",
+            descriptions: [
+              "Write the JSX using Material-UI components like 'Typography' for headings and 'List' for displaying rules.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Main App.js Integration",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Organize Imports",
+            descriptions: [
+              "Open App.js and import the four components you've created: ActivityDetails, ActivityRecords, UserClaimRecords, and ActivityRules.",
+            ],
+          },
+          {
+            subtitleDescription: "Pass Data via Props (Optional)",
+            descriptions: [
+              "Although for now, you're using static data inside the components, consider refactoring later to pass data via props from App.js.",
+            ],
+          },
+          {
+            subtitleDescription: "Layout the Page",
+            descriptions: [
+              "Use Material-UI's 'Container' or 'Box' to structure the layout of the page. Inside the container, render the four components in order.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Basic Styling",
+            descriptions: [
+              "Apply some basic styling to organize the layout (e.g., margins, padding) using the 'sx' prop in Material-UI.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Create a Simulated Data File (Optional)",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create data.js",
+            descriptions: [
+              "Instead of writing static data inside each component, you can create a data.js file in the 'src' folder where all the simulated data (activity details, records, claims, rules) will be stored.",
+            ],
+          },
+          {
+            subtitleDescription: "Export Data",
+            descriptions: [
+              "Define the data as JavaScript objects/arrays and export them for use in other files.",
+            ],
+          },
+          {
+            subtitleDescription: "Import and Use Data",
+            descriptions: [
+              "In the components (ActivityDetails, ActivityRecords, etc.), import the data from data.js and pass it via props or use it directly inside the component.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Run the Application",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Start the App",
+            descriptions: [
+              "In your terminal, run the following command to start the development server: 'npm start'.",
+            ],
+          },
+          {
+            subtitleDescription: "View the Page",
+            descriptions: [
+              "Open a browser and go to http://localhost:3000 to see your static activity page with all four components rendered.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/j37fnh?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson3,    videoLink: "",
+  },
+  {
+    taskId: "Construction-Cost-Calculator",
+    taskTitle: "Construction Cost Calculator",
+    introduction:
+      "The Construction Cost Calculator is a user-friendly React application designed to help users estimate construction costs based on key parameters such as plot size, number of floors, construction type, and materials. By utilizing Formik for form management and Yup for validation, the application ensures accurate input and a seamless user experience.",
+    task: {
+      taskDescription:
+        "This project involves building a web application that allows users to input various parameters related to construction and receive an estimated cost along with a detailed breakdown.",
+      platform: "Freelancer",
+      projectName: "House Construction Cost Calculator Website",
+      biddingEnds: "Saturday, October 19, 2024",
+      requirements: [
+        "React for the front-end framework",
+        "Formik for form management",
+        "Yup for form validation",
+        "Basic knowledge of CSS for styling",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Set Up the React Project",
+        titleDescription: "Setting up the initial project structure.",
+        sections: [
+          {
+            subtitleDescription: "Create a new React app",
+            descriptions: [
+              "Use Create React App to scaffold a new project.",
+              "Run `npx create-react-app construction-cost-calculator`.",
+              "Navigate to the project directory using `cd construction-cost-calculator`.",
+            ],
+          },
+          {
+            subtitleDescription: "Install dependencies",
+            descriptions: [
+              "Install 'Formik' for form management using `npm install formik`.",
+              "Install 'Yup' for validation using `npm install yup`.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Create the App Component",
+        titleDescription: "Set up the main application component.",
+        sections: [
+          {
+            subtitleDescription: "Define the App component",
+            descriptions: [
+              "Create a new file named `App.js` in the `src` folder.",
+              "Import necessary components and styles.",
+              "Define the main layout, including a 'header' and 'footer'.",
+            ],
+          },
+          {
+            subtitleDescription: "Render the ConstructionCalculator component",
+            descriptions: [
+              "Import the 'ConstructionCalculator' component into `App.js`.",
+              "Use the component within the main return statement.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Create the ConstructionCalculator Component",
+        titleDescription: "Manage cost calculations and user interactions.",
+        sections: [
+          {
+            subtitleDescription: "Define the state and functions",
+            descriptions: [
+              "In `ConstructionCalculator.js`, import React and 'useState' from React.",
+              "Initialize state variables using 'useState' to hold the following values:",
+              "`materialCost` (initially set to 0): to track the cost of materials.",
+              "`laborCost` (initially set to 0): to track the cost of labor.",
+              "`permitCost` (initially set to 0): to track the cost of permits.",
+              "`miscCost` (initially set to 0): for any miscellaneous expenses.",
+              "`totalCost` (initially set to 0): to calculate the total cost based on inputs.",
+            ],
+          },
+          {
+            subtitleDescription: "Implement the handleFormSubmit function",
+            descriptions: [
+              "Create a function named `handleFormSubmit` that takes the 'form' values as arguments.",
+              "Inside the function, extract values for materials, labor, permits, and miscellaneous costs from the form input.",
+              "Convert the input values to numbers using `parseFloat` to ensure accurate calculations.",
+              "Calculate the total cost as follows:",
+              "`totalCost = materialCost + laborCost + permitCost + miscCost`.",
+              "Use the `setTotalCost` function to update the total cost in state.",
+            ],
+          },
+          {
+            subtitleDescription: "Render the user interface",
+            descriptions: [
+              "Return JSX that includes:",
+              "A header or title for the cost calculator.",
+              "An 'InputForm' component, passing necessary props such as state variables and the 'handleFormSubmit' function.",
+              "A 'CostBreakdown' component to display the breakdown of costs based on the state variables.",
+              "Ensure the 'CostBreakdown' component receives 'totalCost' and individual cost states (materialCost, laborCost, permitCost, miscCost) as props.",
+            ],
+          },
+          {
+            subtitleDescription: "Add input validation",
+            descriptions: [
+              "In `handleFormSubmit`, implement validation logic to ensure that all inputs are valid numbers.",
+              "Check if any input is negative or not a number, and provide feedback to the user (e.g., alert or error message).",
+              "If validation fails, prevent the calculation from proceeding.",
+            ],
+          },
+        ],
+      },
+
+      {
+        stepTitle: "Step 4: Implement the InputForm Component",
+        titleDescription:
+          "Create a form to gather user input for cost calculations.",
+        sections: [
+          {
+            subtitleDescription: "Set up the InputForm structure",
+            descriptions: [
+              "Create a new file named `InputForm.js` in the components directory.",
+              "Import React, the `useFormik` hook from 'Formik', and `Yup` for validation.",
+              "Define the `InputForm` functional component, accepting an `onSubmit` prop to handle form submission.",
+            ],
+          },
+          {
+            subtitleDescription: "Initialize Formik",
+            descriptions: [
+              "Use `useFormik` to manage form state and validation:",
+              "Set `initialValues` to include: `plotSize`, `floors`, `constructionType`, `material`, and `location`.",
+              "Define the `validationSchema` using `Yup` to ensure `plotSize`, `floors`, and `location` are required fields, and `floors` must be at least 1.",
+            ],
+          },
+          {
+            subtitleDescription: "Create input fields",
+            descriptions: [
+              "Render a form element using JSX and set its `onSubmit` to `formik.handleSubmit`:",
+              "Plot Size: Add a number input for `plotSize`. Bind its value to `formik.values.plotSize` and handle changes with `formik.handleChange`.",
+              "Number of Floors: Add a number input for `floors`, also binding its value and change handler to Formik.",
+              "Construction Type: Create a select input for `constructionType` with options for 'Standard' and 'Luxury', binding it to Formik.",
+              "Material: Create a select input for `material` with options for 'Brick' and 'Wood', binding it to Formik.",
+              "Location: Add a text input for `location`, binding its value and change handler to Formik.",
+            ],
+          },
+          {
+            subtitleDescription: "Add error handling",
+            descriptions: [
+              "Display error messages for required fields:",
+              "For each input field, check if there are validation errors using `formik.errors`. If an error exists, display it below the corresponding input field.",
+            ],
+          },
+          {
+            subtitleDescription: "Add a submit button",
+            descriptions: [
+              "Include a button of type 'submit' with the text 'Calculate Cost'.",
+              "When the button is clicked, it triggers the form submission via `formik.handleSubmit`, which will call the `onSubmit` function passed in as a prop with the form values.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Create the CostBreakdown Component",
+        titleDescription: "Display the cost breakdown.",
+        sections: [
+          {
+            subtitleDescription: "Define the CostBreakdown component",
+            descriptions: [
+              "Create a new file named `CostBreakdown.js` in the `src/components` folder.",
+              "Accept 'totalCost' and breakdown as props.",
+              "Render the estimated total cost and breakdown categories.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Style the Application",
+        titleDescription: "Enhance the UI.",
+        sections: [
+          {
+            subtitleDescription: "Add CSS styles",
+            descriptions: [
+              "Create a CSS file for each component.",
+              "Style the header, footer, and form elements for better user experience.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Test the Application",
+        titleDescription: "Ensure functionality.",
+        sections: [
+          {
+            subtitleDescription: "Run and verify",
+            descriptions: [
+              "Start the application using `npm start`.",
+              "Test each form input for validation and calculation accuracy.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Debugging",
+        titleDescription: "Fix any issues.",
+        sections: [
+          {
+            subtitleDescription: "Identify and resolve bugs",
+            descriptions: [
+              "Check for console errors and warnings.",
+              "Fix any issues with state management or rendering.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Deployment",
+        titleDescription: "Deploy the application.",
+        sections: [
+          {
+            subtitleDescription: "Prepare for production",
+            descriptions: [
+              "Build the application using `npm run build`.",
+              "Choose a hosting service like Vercel or Netlify for deployment.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 10: Maintenance",
+        titleDescription: "Ensure ongoing functionality.",
+        sections: [
+          {
+            subtitleDescription: "Monitor and update",
+            descriptions: [
+              "Regularly check for updates to dependencies.",
+              "Fix any bugs reported by users.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/r4fphm?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson4  },
+  {
+    taskId: "React-Firebase-Application-with-ML-and-Payments",
+    taskTitle: "React Firebase Application with ML and Payments",
+    introduction:
+      "This project involves building a robust React application that utilizes Firebase for user authentication, Firestore for data storage, and Firebase Storage for managing media files. Additionally, it incorporates Google Analytics for tracking user behavior, Google ML for content classification, and Stripe for secure payment processing, providing a comprehensive solution for modern web applications.",
+    task: {
+      taskDescription:
+        "We're looking for a skilled individual to integrate Firebase, Google Analytics, and Stripe services into our project.",
+      platform: "Freelancer",
+      projectName: "Firebase Integration with React Native App",
+      biddingEnds: "Sunday, October 27, 2024",
+      requirements: [
+        "Implement Firebase Auth for user authentication",
+        "Set up Firestore for data storage",
+        "Use Firebase Storage for media",
+        "Integrate Google Analytics for user insights",
+        "Implement Google ML for content classification",
+        "Set up Stripe for payments",
+        "Integrate Ads resources",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Set Up Your React Project",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create a New React Application",
+            descriptions: [
+              "Open your terminal or command prompt.",
+              "Run the command: npx create-react-app your-app-name",
+              "Navigate into your project directory: cd your-app-name",
+            ],
+          },
+          {
+            subtitleDescription: "Install Necessary Packages",
+            descriptions: [
+              "Install Firebase and Stripe libraries using npm:",
+              "npm install firebase @stripe/react-stripe-js @stripe/stripe-js",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Create and Configure Firebase Project",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Sign In to Firebase Console",
+            descriptions: [
+              "Go to the Firebase Console and create a new project.",
+            ],
+          },
+          {
+            subtitleDescription: "Add a Web App to Your Firebase Project",
+            descriptions: [
+              "Click on the web icon (</>) to register your web app.",
+              "Follow the prompts to give your app a nickname and optionally set up Firebase Hosting.",
+              "Copy the Firebase configuration object for later use.",
+            ],
+          },
+          {
+            subtitleDescription: "Enable Authentication",
+            descriptions: [
+              "In the Firebase Console, navigate to the Authentication section.",
+              "Enable email/password authentication or other providers as needed.",
+              "Check the option to allow users to register for email/password.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Set Up Firestore Database",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create Firestore Database",
+            descriptions: [
+              "Navigate to the Firestore Database section in Firebase Console.",
+              "Click 'Create database' and choose your security rules.",
+              "Start in test mode for development or production mode for security.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up Firestore Rules",
+            descriptions: [
+              "Define your Firestore rules according to your app's needs.",
+              "Start with basic rules for development and refine them later.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Set Up Firebase Storage",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Enable Firebase Storage",
+            descriptions: [
+              "Navigate to the Storage section in the Firebase Console.",
+              "Click 'Get Started' to enable Firebase Storage.",
+              "Adjust the storage rules based on your application's needs.",
+            ],
+          },
+          {
+            subtitleDescription: "Configure Storage Rules",
+            descriptions: [
+              "Set rules to control access to stored media files.",
+              "Make sure to test access levels during development.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Enable Google Analytics",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Enable Analytics for Your Project",
+            descriptions: [
+              "In the Firebase Console, navigate to the Analytics section.",
+              "Click 'Get Started' to enable Google Analytics for your project.",
+              "Configure settings and get your tracking ID.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Tracking Code to Your React App",
+            descriptions: [
+              "Implement the Google Analytics tracking script in your app.",
+              "Use event tracking to log user interactions (page views, clicks).",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Set Up Google Cloud for Machine Learning (ML)",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create a Google Cloud Project",
+            descriptions: [
+              "Go to the Google Cloud Console and create a new project.",
+              "Link it to your Firebase project.",
+            ],
+          },
+          {
+            subtitleDescription: "Enable Google ML Services",
+            descriptions: [
+              "Navigate to the API Library in Google Cloud Console.",
+              "Enable the necessary ML APIs (e.g., Cloud Vision, AutoML).",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up Authentication",
+            descriptions: [
+              "Create service account credentials for secure API access.",
+              "Generate a JSON key for the service account.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Set Up Stripe for Payments",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create a Stripe Account",
+            descriptions: [
+              "Go to the Stripe website and sign up for an account.",
+              "Log in to the Stripe Dashboard.",
+            ],
+          },
+          {
+            subtitleDescription: "Create a Product or Service",
+            descriptions: [
+              "In the Stripe Dashboard, navigate to 'Products' and click 'Add Product'.",
+              "Fill in product details and save.",
+            ],
+          },
+          {
+            subtitleDescription: "Get Stripe API Keys",
+            descriptions: [
+              "Navigate to 'Developers' > 'API keys' in your Stripe Dashboard.",
+              "Copy your publishable and secret API keys.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Integrate Everything in Your React App",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Import Firebase Configuration",
+            descriptions: [
+              "Create a new file (e.g., firebase.js) in your src directory.",
+              "Paste the Firebase configuration object and initialize Firebase services.",
+            ],
+          },
+          {
+            subtitleDescription: "Implement Authentication",
+            descriptions: [
+              "Create user registration and login components.",
+              "Use Firebase Authentication methods to handle user actions.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up Firestore Integration",
+            descriptions: [
+              "Create functions to add, retrieve, update, and delete data from Firestore.",
+              "Implement these functions in your components as needed.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Testing and Deployment",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Test Each Functionality Individually",
+            descriptions: [
+              "Test authentication by creating and logging in users.",
+              "Verify data storage and retrieval from Firestore.",
+              "Check that media uploads work with Firebase Storage.",
+            ],
+          },
+          {
+            subtitleDescription: "Deploy Your Application",
+            descriptions: [
+              "Choose a hosting service (like Vercel, Netlify, or Firebase Hosting).",
+              "Follow the deployment guidelines to deploy your React application.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 10: Review and Iterate",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Gather Feedback from Users",
+            descriptions: [
+              "Encourage users to provide feedback on their experience.",
+              "Consider implementing feedback forms or surveys.",
+            ],
+          },
+          {
+            subtitleDescription: "Iterate Based on Feedback",
+            descriptions: [
+              "Use feedback to make improvements and iterate on your application.",
+              "Add new features or optimize existing ones as needed.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl: "https://codesandbox.io/embed/szg3f3?view=editor",
+img: lesson5,    videoLink: "",
+  },
+  {
+    taskId: "Payroll-Application-Development",
+    taskTitle: "Payroll Application Development",
+    introduction:
+      "The Payroll Application is a user-friendly web platform built with React that enables businesses to efficiently manage employee payment processing. It features a dashboard for viewing employee lists, a payroll form for processing payments, and is designed to comply with specific country tax laws, ensuring accurate and streamlined payroll management.",
+    task: {
+      taskDescription:
+        "I'm seeking a developer experienced with React and Node.js to create a payroll application. The main focus of the application will be handling employee payment processing.",
+      platform: "Freelancer",
+      projectName: "Payroll Application Development on React & Node.js",
+      biddingEnds: "2024-11-02",
+      requirements: [
+        "Design and implement an intuitive interface with React",
+        "Build a robust server-side application with Node.js",
+        "Create functionalities specifically for processing employee payments",
+        "Tailor the application for a single country's tax laws",
+        "Support payment via check",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Project Setup",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Frontend",
+            descriptions: [
+              "Set up a new React project using Create React App (or Vite for faster builds).",
+              "Install dependencies like React Router (for page routing) and Axios (for API requests).",
+            ],
+          },
+          {
+            subtitleDescription: "Backend",
+            descriptions: [
+              "Set up a Node.js server with Express.",
+              "Use a MongoDB or PostgreSQL database to store employee data, payment history, and other necessary information.",
+              "Add necessary packages for handling data validation, authorization, and payment processing.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Frontend (React)",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription:
+              "Setting Up the React Project and Dependencies",
+            descriptions: [
+              "Start by creating a React project. Install dependencies like React Router for managing page navigation and Axios for API calls.",
+              "Organize the project's folder structure into components (e.g., components/EmployeeList, components/PayrollForm), pages (e.g., pages/Dashboard, pages/EmployeeDetails), and services (e.g., services/api.js to handle API calls).",
+            ],
+          },
+          {
+            subtitleDescription: "Routing with React Router",
+            descriptions: [
+              "Set up React Router to manage the app's routes, including paths for different views like the Employee List, Employee Details, and Payroll Form.",
+              "Configure a layout to allow for easy navigation between these main pages.",
+            ],
+          },
+          {
+            subtitleDescription: "Component Design",
+            descriptions: [
+              "Employee List: Design this to display all employees in a list or table format. Each row should include employee details and actions like viewing more information or processing payroll.",
+              "Employee Details: Design a detailed view for each employee, displaying personal info (e.g., name, position, salary), historical payroll data, and options for updating details or initiating payroll processing.",
+              "Payroll Form: Create a form for payroll managers to input payment details, adjust for deductions, and specify the payment method (e.g., 'check'). Include field validation (e.g., amounts should not be negative).",
+              "Dashboard: Design a dashboard showing metrics like total payroll processed, pending payments, and a summary of recent payroll activity.",
+            ],
+          },
+          {
+            subtitleDescription: "API Integration",
+            descriptions: [
+              "Use Axios to handle API requests for each component. For example, when loading the Employee List, make an API call to retrieve all employees.",
+              "Structure all API calls within a 'services/api.js' file to centralize them, making the app modular and easy to maintain.",
+            ],
+          },
+          {
+            subtitleDescription: "Styling and UX",
+            descriptions: [
+              "Prioritize a clean, intuitive UI that makes it easy for payroll administrators to navigate through employee records and initiate payroll.",
+              "Implement basic form validation for accurate data entry and responsive design for different screen sizes.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Backend (Node.js + Express)",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Initial Setup and Middleware Configuration",
+            descriptions: [
+              "Create a new Node.js project and set up an Express server. Install middleware like 'body-parser' to 'parse' incoming requests and 'cors' for handling cross-origin requests.",
+              "Create a base route (e.g., /api) where all API endpoints will reside, helping to organize the application's structure.",
+            ],
+          },
+          {
+            subtitleDescription: "Database Setup and Integration",
+            descriptions: [
+              "Choose a database that fits the needs of your payroll application, such as MongoDB or PostgreSQL, to handle the storage of employee data and payroll records",
+              "Establish a connection between the server and the database. Organize models for each key entity: Employee for storing employee details and Payment for managing payroll history.",
+            ],
+          },
+          {
+            subtitleDescription: "API Endpoints Design",
+            descriptions: [
+              "Employee Management: Design endpoints for CRUD operations. The app needs the ability to create new employee records, read and display employee details, update employee information, and delete employees if needed.",
+              "Payroll Processing: Create an endpoint for payroll processing where the admin can initiate a payment. This will handle data validation, check payment methods, calculate the employee's net pay after tax deductions, and save the transaction to the database.",
+              "Tax Calculation: Integrate a helper function within the payroll endpoint to calculate taxes based on the country's tax regulations. This function should be flexible in case tax rules need adjustments later.",
+              "Report Generation: Set up a reporting endpoint that generates summaries for compliance, showing processed payrolls, deductions, and net payments within specific date ranges.",
+            ],
+          },
+          {
+            subtitleDescription: "Error Handling and Validation",
+            descriptions: [
+              "Implement validation for each endpoint to prevent incorrect data submissions. Ensure that salaries are positive numbers and that tax rates do not exceed limits.",
+              "Add structured error handling across routes. Return user-friendly error messages that the frontend can display.",
+            ],
+          },
+          {
+            subtitleDescription: "Authorization and Security",
+            descriptions: [
+              "Implement basic security measures like route protection. Only authorized users (e.g., payroll managers) should access payroll processing endpoints.",
+              "If user authentication is needed, add an authentication layer (JWT or sessions) to secure endpoints and sensitive data.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Database Schema and Tax Calculation",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Employee Schema",
+            descriptions: [
+              "Define fields to capture each employee's essential details: name, employee ID, salary, position, department, and payment method (e.g., check).",
+              "Include fields for tax details, such as a 'tax rate' specific to the employee's earnings bracket and payment preferences.",
+            ],
+          },
+          {
+            subtitleDescription: "Payment Schema",
+            descriptions: [
+              "Define fields to store details of each payment, such as employee ID, gross amount, tax deducted, net amount, payment date, and payment method.",
+              "Ensure that each payment is linked to the relevant employee by storing a reference to the employee's ID.",
+            ],
+          },
+          {
+            subtitleDescription: "Implementing the Tax Calculation",
+            descriptions: [
+              "Design a flexible tax calculation function that can be easily adjusted for future tax rate changes or other payroll policies.",
+              "Use a standard tax rate based on the specific country's rules. Calculate the employee's tax amount during payroll processing by applying this rate to their gross salary.",
+              "Ensure that the tax calculation is accurate and can handle different income brackets if your tax model is progressive.",
+            ],
+          },
+          {
+            subtitleDescription: "Data Validation and Consistency Checks",
+            descriptions: [
+              "Implement validation checks in the database schema to ensure that only valid data is saved.",
+              "Enforce unique constraints where necessary, ensuring employee IDs are unique.",
+            ],
+          },
+          {
+            subtitleDescription: "Testing the Database Structure and Functions",
+            descriptions: [
+              "Test each part of the payroll functionality, particularly the tax calculation and payment processing.",
+              "Verify that all data is stored and retrieved accurately, ensuring application updates records properly.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Testing & Deployment",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Testing",
+            descriptions: [
+              "Use Jest/React Testing Library for frontend tests.",
+              "Employ Mocha/Chai for backend testing.",
+              "Utilize Postman or Swagger to test API endpoints.",
+            ],
+          },
+          {
+            subtitleDescription: "Deployment",
+            descriptions: [
+              "Frontend: Deploy using services like Vercel or Netlify.",
+              "Backend: Deploy using Heroku, DigitalOcean, or AWS.",
+              "Database: Set up a managed database instance in the cloud.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Hard",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/fgvp8z?view=editor&module=%2Fsrc%2FApp.js",
+img: lesson6,    videoLink: "",
+  },
+
+  {
+    taskId: "Deploying-React-Website-on-GoDaddy",
+    taskTitle: "Deploy Your React App to GoDaddy",
+    introduction:
+      "This task outlines the steps to deploy your React application to a GoDaddy hosting account.",
+    task: {
+      taskDescription:
+        "I require assistance with deploying my already built React website on my GoDaddy hosting account. The domain name has been set up.",
+      platform: "Freelancer",
+      projectName: "Deploying React Website on GoDaddy",
+      biddingEnds: "Friday, November 8, 2024",
+      requirements: [
+        "A GoDaddy hosting account",
+        "A domain name set up with GoDaddy",
+        "React application built with npm",
+        "Basic knowledge of web hosting and file management",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Build Your React Application",
+        titleDescription: "Create an optimized build of your React app.",
+        sections: [
+          {
+            subtitleDescription: "Navigate to Your React App Directory",
+            descriptions: [
+              "Open your terminal or command prompt and navigate to the root directory of your React application.",
+              "Run: cd path/to/your/react-app",
+            ],
+          },
+          {
+            subtitleDescription: "Build the Application",
+            descriptions: [
+              "Run the following command to create an optimized production build of your React app.",
+              "This will generate a build folder containing the static files needed for deployment.",
+              "Run: npm run build",
+              "This command will create a build directory in your project folder.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Prepare Your GoDaddy Account",
+        titleDescription: "Get your GoDaddy hosting account ready.",
+        sections: [
+          {
+            subtitleDescription: "Log In to Your GoDaddy Account",
+            descriptions: ["Go to GoDaddy.com and log in to your account."],
+          },
+          {
+            subtitleDescription: "Access Your Hosting Dashboard",
+            descriptions: [
+              "Click on your username in the top right corner, and select My Products.",
+              "Under Web Hosting, click on Manage next to the hosting account you want to use.",
+            ],
+          },
+          {
+            subtitleDescription: "Open cPanel",
+            descriptions: [
+              "In your hosting dashboard, look for the cPanel option and click on it.",
+              "This will take you to the cPanel interface.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Upload Your Build Files to GoDaddy",
+        titleDescription: "Transfer your build files to your hosting account.",
+        sections: [
+          {
+            subtitleDescription: "Open the File Manager",
+            descriptions: [
+              "In cPanel, find the File Manager tool and click on it.",
+            ],
+          },
+          {
+            subtitleDescription: "Navigate to the Root Directory",
+            descriptions: [
+              "Navigate to the public_html directory or a subfolder depending on your domain setup.",
+              "If you're using the main domain, upload your files to public_html.",
+            ],
+          },
+          {
+            subtitleDescription: "Upload the Build Files",
+            descriptions: [
+              "Click on the Upload option in the top menu.",
+              "Upload all files from the build directory created in Step 1.",
+              "You can drag and drop the files or click Choose File to select them.",
+            ],
+          },
+          {
+            subtitleDescription: "Extract if Necessary",
+            descriptions: [
+              "If you zipped your build files, upload the zip file and then extract it in cPanel.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Configure Your Domain Settings (if necessary)",
+        titleDescription: "Ensure your domain points to the right directory.",
+        sections: [
+          {
+            subtitleDescription: "Check Your Domain Settings",
+            descriptions: [
+              "Make sure that your domain is pointing to the correct directory.",
+              "GoDaddy usually does this automatically, but it's good to confirm.",
+            ],
+          },
+          {
+            subtitleDescription: "Setup Redirects (if applicable)",
+            descriptions: [
+              "If you want to redirect traffic from www to non-www or vice versa, set this up using the Redirects option in cPanel.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Test Your Website",
+        titleDescription: "Verify that your website is functioning correctly.",
+        sections: [
+          {
+            subtitleDescription: "Access Your Domain",
+            descriptions: [
+              "Open a web browser and go to your domain (e.g., http://yourdomain.com).",
+            ],
+          },
+          {
+            subtitleDescription: "Check Functionality",
+            descriptions: [
+              "Ensure all aspects of your React application are working as expected.",
+              "Look for any broken links or missing assets.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Troubleshooting Tips",
+        titleDescription: "Common issues and how to fix them.",
+        sections: [
+          {
+            subtitleDescription: "404 Errors",
+            descriptions: [
+              "If encountering 404 errors when navigating routes, create a .htaccess file in your public_html folder.",
+              "Add the following lines to redirect all requests to index.html:",
+              "RewriteEngine On",
+              "RewriteBase /",
+              "RewriteRule ^index\\.html$ - [L]",
+              "RewriteCond %{REQUEST_FILENAME} !-f",
+              "RewriteCond %{REQUEST_FILENAME} !-d",
+              "RewriteRule . /index.html [L]",
+            ],
+          },
+          {
+            subtitleDescription: "Caching Issues",
+            descriptions: [
+              "If you face caching issues, clear your browser cache or test your site in incognito mode.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Finalize Your Setup",
+        titleDescription: "Ensure your site is secure and ready for users.",
+        sections: [
+          {
+            subtitleDescription: "SSL Certificate",
+            descriptions: [
+              "Consider setting up an SSL certificate for security.",
+              "GoDaddy usually provides a free SSL certificate for your domain.",
+              "Enable this through the hosting dashboard.",
+            ],
+          },
+          {
+            subtitleDescription: "Monitor Your Website",
+            descriptions: [
+              "After deployment, monitor your website for any performance issues or bugs that may arise.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Medium",
+    authorIndex: 0,
+    prerequisites: ["Basic understanding of React and web hosting"],
+    completed: false,
+    codesandboxUrl: "/notavailable",
+img: lesson7,    videoLink: "",
+  },
+  {
+    taskId: "App-with-Contentful-Integration",
+    taskTitle:
+      "Building a React App with Contentful Integration for Content Sharing",
+    introduction:
+      "This project is a content-sharing app built with React and Contentful, allowing users to share various types of content. It utilizes Contentful for dynamic content management, providing real-time updates and seamless interactions with different media types. The app's responsive and user-friendly interface is powered by modern web technologies like React, ensuring a smooth experience for users to explore and engage with content.",
+    task: {
+      taskDescription:
+        "I'm looking for a skilled frontend developer to help me create a single page application (SPA) using React. The primary purpose of this application is to serve as a blog/content sharing platform.",
+      platform: "Freelancer",
+      projectName: "React SPA Development for Blog",
+      biddingEnds: "Synday, November 16, 2024",
+      requirements: [
+        "Knowledge of React",
+        "Experience with Contentful CMS",
+        "Ability to work with API integrations",
+        "Familiarity with asynchronous programming (Promises, async/await)",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Project Setup",
+        titleDescription:
+          "Initialize a new React app and install necessary dependencies.",
+        sections: [
+          {
+            subtitleDescription: "Initialize the project",
+            descriptions: [
+              "Use create-react-app or your preferred setup to initialize the project.",
+              "Ensure you have Node.js installed and then run `npx create-react-app your-app-name` to set up the project.",
+            ],
+          },
+          {
+            subtitleDescription: "Install necessary dependencies",
+            descriptions: [
+              "React Router for routing: `npm install react-router-dom`",
+              "Framer Motion for animations: `npm install framer-motion` (optional)",
+              "Axios for making API calls: `npm install axios` (if you plan to fetch external data)",
+            ],
+          },
+          {
+            subtitleDescription: "Add content management service",
+            descriptions: [
+              "Install Contentful SDK or a similar service to manage blog content: `npm install contentful`",
+              "Make sure to set up a Contentful account and get the necessary credentials.",
+            ],
+          },
+          {
+            subtitleDescription: "Install styling and notifications",
+            descriptions: [
+              "Install Styled-components for theming: `npm install styled-components` (optional)",
+              "Install React-Toastify for notifications: `npm install react-toastify` (optional)",
+            ],
+          },
+        ],
+      },
+
+      {
+        stepTitle: "Step 2: Create Components",
+        titleDescription:
+          "Create the necessary components for your React app, each with specific functionality.",
+        sections: [
+          {
+            subtitleDescription: "Header Component",
+            descriptions: [
+              "Purpose: This component will be used across all pages and will display the site's navigation links, logo, and theme toggle button.",
+              "Tasks:",
+              "Create a functional component Header inside src/components.",
+              "Include the app's logo or title (e.g., 'React Blog App').",
+              "Add navigation links to Home, Login, and other pages.",
+              "Add a theme toggle button to switch between light and dark themes.",
+              "Implement a useContext hook to handle theme switching with context.",
+            ],
+          },
+          {
+            subtitleDescription: "PostList Component",
+            descriptions: [
+              "Purpose: This component will fetch and display a list of blog posts from the Contentful API.",
+              "Tasks:",
+              "Create a functional component PostList inside src/components.",
+              "State management:",
+              "  - Use useState and useEffect to manage posts, loading status, and errors.",
+              "  - Example state variables: posts (stores the list of posts), loading (tracks loading state), error (tracks fetch errors).",
+              "Fetching Posts:",
+              "  - Use useEffect to fetch posts from the Contentful API on mount.",
+              "  - Display a loading spinner while fetching posts.",
+              "  - Show an error message if the fetch fails.",
+              "Display Posts:",
+              "  - Loop over the posts and display: title, short description, tags/categories, and a link to the post detail page.",
+              "Search Bar:",
+              "  - Implement a simple search bar to filter posts by title or tags.",
+              "Pagination:",
+              "  - Limit the number of posts per page (e.g., 5 or 10).",
+              "  - Add pagination controls to navigate through pages.",
+            ],
+          },
+          {
+            subtitleDescription: "PostDetail Component",
+            descriptions: [
+              "Purpose: This component displays the detailed content of a single post, including the post's title, content, and comments.",
+              "Tasks:",
+              "Create a PostDetail component inside src/pages.",
+              "Fetch the post data:",
+              "  - Use the useParams hook from react-router-dom to get the post ID from the URL (/post/:id).",
+              "  - Fetch the post data from Contentful using the ID.",
+              "Display Post Details:",
+              "  - Display the full title, content, and tags/categories.",
+              "Add Comments Section:",
+              "  - Display comments related to the post.",
+              "  - Allow users to add comments.",
+              "  - (Optional) Store comments locally or send them to a backend API.",
+            ],
+          },
+          {
+            subtitleDescription: "CommentSection Component",
+            descriptions: [
+              "Purpose: This component will handle the display of comments for each post and allow users to submit new comments.",
+              "Tasks:",
+              "Create a functional component CommentSection.",
+              "Include:",
+              "  - A text area for users to input their comment.",
+              "  - A submit button to add the comment.",
+              "  - A list of existing comments, either fetched from Contentful or stored locally.",
+              "  - (Optional) Implement validation to ensure the comment is not empty.",
+              "  - Add animations or transitions when a new comment is added using Framer Motion.",
+            ],
+          },
+          {
+            subtitleDescription: "Login Component",
+            descriptions: [
+              "Purpose: This component will handle user authentication, allowing users to log in.",
+              "Tasks:",
+              "Create a Login component inside src/pages.",
+              "Include fields for username and password.",
+              "On form submission, validate the credentials (mock the backend if needed).",
+              "If login is successful, store the user's authentication status in localStorage or a state management solution like Redux.",
+              "Redirect the user to the homepage or post page upon successful login.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Set Up Routing",
+        titleDescription:
+          "Set up React Router for navigation between pages in your app.",
+        sections: [
+          {
+            subtitleDescription: "Configure Routes",
+            descriptions: [
+              "Set up React Router to handle navigation between pages.",
+              "Tasks:",
+              "  - Install React Router: `npm install react-router-dom`.",
+              "  - In your App.js, import the necessary components from react-router-dom.",
+              "  - Create routes for the following pages:",
+            ],
+          },
+          {
+            subtitleDescription: "Home Page Route",
+            descriptions: [
+              "A route for the home page (/):",
+              "  - Displays the PostList component.",
+              "  - Use <Route path='/' component={PostList} /> for the home route.",
+            ],
+          },
+          {
+            subtitleDescription: "Post Detail Page Route",
+            descriptions: [
+              "A route for the post detail page (/post/:id):",
+              "  - Displays the PostDetail component.",
+              "  - Use <Route path='/post/:id' component={PostDetail} /> to show individual post details.",
+            ],
+          },
+          {
+            subtitleDescription: "Login Page Route",
+            descriptions: [
+              "A route for the login page (/login):",
+              "  - Displays the Login component.",
+              "  - Use <Route path='/login' component={Login} /> for the login route.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Authentication",
+        titleDescription:
+          "Set up a login mechanism to manage user authentication.",
+        sections: [
+          {
+            subtitleDescription: "Create Login Form",
+            descriptions: [
+              "Create a login form where users can enter their credentials.",
+              "Include fields for username and password.",
+            ],
+          },
+          {
+            subtitleDescription: "Authenticate User",
+            descriptions: [
+              "Authenticate the user using mock data or real authentication methods.",
+              "If using mock data, compare entered credentials to predefined values.",
+              "For real authentication, connect to a backend API to verify the user's credentials.",
+            ],
+          },
+          {
+            subtitleDescription: "Update Login Status",
+            descriptions: [
+              "On successful login, update the `isLoggedIn` state.",
+              "Persist the login status in localStorage to keep the user logged in even after page reload.",
+            ],
+          },
+          {
+            subtitleDescription: "Conditionally Render Components",
+            descriptions: [
+              "Conditionally render the Home and PostDetail components based on the login status.",
+              "  - If the user is logged in, render the Home page and PostDetail page.",
+              "  - If the user is not logged in, redirect to the Login page.",
+            ],
+          },
+          {
+            subtitleDescription: "Implement Logout Feature",
+            descriptions: [
+              "Implement a logout feature to clear the login status.",
+              "  - On logout, remove the login status from localStorage.",
+              "  - Redirect the user to the Login page.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Theme Management",
+        titleDescription: "Set up a light/dark theme toggle for the app.",
+        sections: [
+          {
+            subtitleDescription: "Create ThemeProvider Component",
+            descriptions: [
+              "Create a ThemeProvider component with context to manage the theme state.",
+              "This component will handle the logic for toggling between light and dark themes.",
+            ],
+          },
+          {
+            subtitleDescription: "Pass Theme to the App",
+            descriptions: [
+              "Pass the theme to the app through the context provider.",
+              "Update the styles dynamically based on the selected theme, e.g., using styled-components or CSS variables.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Data Storage (Optional)",
+        titleDescription:
+          "Set up data storage to manage posts and comments, either using a CMS like Contentful or local storage.",
+        sections: [
+          {
+            subtitleDescription: "Using a CMS (e.g., Contentful)",
+            descriptions: [
+              "Set up an API client to fetch posts and comments.",
+              "Add necessary fields in Contentful such as post title, content, tags, and comments.",
+            ],
+          },
+          {
+            subtitleDescription: "Using Local Storage",
+            descriptions: [
+              "Store the posts, tags, and comments in local storage or simulate a mock API for development purposes.",
+            ],
+          },
+        ],
+      },
+
+      {
+        stepTitle: "Step 7: Styling and Layout",
+        titleDescription:
+          "Style the app and create a responsive layout for both mobile and desktop views.",
+        sections: [
+          {
+            subtitleDescription: "Style the App",
+            descriptions: [
+              "Style the header, post list, and individual posts using CSS or CSS-in-JS.",
+              "Apply consistent and modern design elements across the app.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Animations",
+            descriptions: [
+              "Use Framer Motion or other animation libraries to add transitions and animations to components.",
+              "Consider animations for interactions such as button clicks or post transitions.",
+            ],
+          },
+          {
+            subtitleDescription: "Create a Responsive Layout",
+            descriptions: [
+              "Create a responsive layout that adjusts for both mobile and desktop views.",
+              "Ensure that key components, such as the header and post list, are mobile-friendly.",
+            ],
+          },
+          {
+            subtitleDescription: "Style the Login Page",
+            descriptions: [
+              "Style the login page to make it look polished and user-friendly.",
+              "Ensure that the form is easy to use and looks consistent with the rest of the app.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Testing and Debugging",
+        titleDescription:
+          "Test the app functionality to ensure everything is working as expected.",
+        sections: [
+          {
+            subtitleDescription: "Test Routing",
+            descriptions: [
+              "Ensure that routing works correctly between pages, including the home page, post details, and login page.",
+            ],
+          },
+          {
+            subtitleDescription: "Test Login Functionality",
+            descriptions: [
+              "Check that the login functionality and authentication flow are working as expected.",
+              "Ensure users can log in, maintain their session, and access protected pages.",
+            ],
+          },
+          {
+            subtitleDescription: "Test Comment Section",
+            descriptions: [
+              "Verify that the comment section is working and comments persist as expected.",
+              "Ensure comments are being displayed and added correctly, and handle edge cases like empty comments.",
+            ],
+          },
+          {
+            subtitleDescription: "Test Theme Switching",
+            descriptions: [
+              "Test theme switching functionality and ensure it applies correctly across all components.",
+              "Check that both light and dark themes are applied consistently throughout the app.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Steps for Integrating Contentful into a React Project",
+        titleDescription:
+          "Integrate Contentful as a headless CMS into your React app to manage and display dynamic content.",
+        sections: [
+          {
+            subtitleDescription: "Set Up a Contentful Account",
+            descriptions: [
+              "Sign up for a free Contentful account at Contentful.",
+              "Create a new space (project) where you will store your content.",
+            ],
+          },
+          {
+            subtitleDescription: "Create a Content Model",
+            descriptions: [
+              "In the Contentful dashboard, go to the 'Content Model' section.",
+              "Define the structure for the content you want to manage, like a blog model with fields for title, body, images, etc.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Content to Your Space",
+            descriptions: [
+              "Go to the 'Content' section in Contentful and start adding entries based on the models you created.",
+              "For example, add blog posts with title, content, images, and other relevant fields.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up Contentful in Your React Project",
+            descriptions: [
+              "Install the Contentful SDK in your React project to fetch content from Contentful.",
+              "Set up a service file to manage API calls to Contentful using your Space ID and Access Token.",
+            ],
+          },
+          {
+            subtitleDescription: "Fetch Content in React",
+            descriptions: [
+              "Use the Contentful API to request content, specifying which content type (e.g., blog posts) you want to retrieve.",
+            ],
+          },
+          {
+            subtitleDescription: "Display the Content",
+            descriptions: [
+              "Map through the fetched content and dynamically render information such as blog post titles, body content, and images.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Dynamic Updates",
+            descriptions: [
+              "Contentful allows dynamic content updates. When content is updated in Contentful, your React app will display the latest content on refresh or via a pull request.",
+            ],
+          },
+          {
+            subtitleDescription: "Manage and Update Content",
+            descriptions: [
+              "Return to the Contentful dashboard to update existing content or add new entries like blog posts, changing text, or images.",
+            ],
+          },
+          {
+            subtitleDescription: "Optimize Performance",
+            descriptions: [
+              "Use caching and pagination to optimize content fetching, especially with large amounts of content.",
+              "Consider lazy-loading images or using CDNs to speed up content delivery.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/n6ysqk?view=editor&module=%2Fsrc%2FApp.js",
+img: lesson8,    videoLink: "",
+  },
+
+  {
+    taskId: "Google-Calendar-API-Integration",
+    taskTitle: "Integrate Google Calendar API into a React Website",
+    introduction:
+      "This task will guide you step-by-step through integrating the Google Calendar API into a React application. By the end, your app will display and manage calendar events effectively.",
+    task: {
+      taskDescription:
+        "We are seeking an experienced developer to integrate Google Calendar API into our existing multi-tenant web application. Our application is built using React.js, Node.js, and we have already implemented Google Single Sign-On (SSO). The goal of this project is to enable seamless calendar functionalities directly within our application to enhance user experience and improve scheduling capabilities.",
+      platform: "Upwork.com",
+      projectName:
+        "Google Calendar API Integration in Multi-Tenant Web Application",
+      biddingEnds: "N/A",
+      requirements: [
+        "Basic React knowledge",
+        "Google Cloud Console account",
+        "Familiarity with REST APIs",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Set Up Google Cloud Project",
+        titleDescription:
+          "Configure your Google Cloud project and enable the Calendar API.",
+        sections: [
+          {
+            subtitleDescription: "Create a new Google Cloud project.",
+            descriptions: [
+              "Log into the Google Cloud Console.",
+              "Click on 'Create Project' and provide a suitable name.",
+              "Save the project and proceed to API setup.",
+            ],
+          },
+          {
+            subtitleDescription: "Enable the Google Calendar API.",
+            descriptions: [
+              "Navigate to 'API & Services > Library' in the console.",
+              "Search for 'Google Calendar API' and click 'Enable'.",
+              "Ensure the API is activated successfully in your project.",
+            ],
+          },
+          {
+            subtitleDescription: "Set up the OAuth consent screen.",
+            descriptions: [
+              "Go to 'API & Services > OAuth Consent Screen'.",
+              "Fill out the app name, user support email, and authorized domains.",
+              "Select the required API scopes for your application.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Create API Credentials",
+        titleDescription:
+          "Generate OAuth credentials to authenticate and access Google Calendar API.",
+        sections: [
+          {
+            subtitleDescription: "Create OAuth 2.0 credentials.",
+            descriptions: [
+              "Go to 'API & Services > Credentials'.",
+              "Click 'Create Credentials' and choose 'OAuth 2.0 Client IDs'.",
+              "Set the application type to 'Web Application'.",
+            ],
+          },
+          {
+            subtitleDescription: "Set up authorized origins and redirect URIs.",
+            descriptions: [
+              "Add 'http://localhost:3000' for development in 'Authorized JavaScript origins'.",
+              "Specify a redirect URI to handle OAuth responses.",
+              "Save the credentials and note the Client ID and Client Secret.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Install Required Libraries",
+        titleDescription:
+          "Set up dependencies for the Google Calendar API in your React project.",
+        sections: [
+          {
+            subtitleDescription: "Install required libraries.",
+            descriptions: [
+              "Install `gapi-script` or `googleapis` for API access.",
+              "Add `react-google-login` for managing Google authentication.",
+              "Ensure all libraries are compatible with your React version.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Initialize Google API Client",
+        titleDescription:
+          "Initialize the Google API client to handle user authentication.",
+        sections: [
+          {
+            subtitleDescription: "Configure the API client in your React app.",
+            descriptions: [
+              "Import the required modules from installed libraries.",
+              "Initialize the API client with the Client ID and required scopes.",
+              "Create an authentication function to sign in users.",
+            ],
+          },
+          {
+            subtitleDescription: "Add a Google login button.",
+            descriptions: [
+              "Integrate a login button in your React component.",
+              "Trigger Google OAuth login flow when the button is clicked.",
+              "Handle authentication responses and store tokens securely.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Fetch Calendar Events",
+        titleDescription: "Retrieve calendar events using the Calendar API.",
+        sections: [
+          {
+            subtitleDescription: "Use the API to list events.",
+            descriptions: [
+              "Fetch available calendars for the authenticated user.",
+              "Use the `events.list` endpoint to get upcoming events.",
+              "Display events in a styled calendar component.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Enable Event Management",
+        titleDescription:
+          "Add, edit, and delete calendar events through the API.",
+        sections: [
+          {
+            subtitleDescription: "Implement event addition.",
+            descriptions: [
+              "Create a form for users to input event details.",
+              "Use the `events.insert` endpoint to add events to the calendar.",
+              "Handle the API responses and update the UI accordingly.",
+            ],
+          },
+          {
+            subtitleDescription: "Enable editing and deletion of events.",
+            descriptions: [
+              "Allow users to select and modify existing events.",
+              "Use the `events.update` and `events.delete` endpoints.",
+              "Refresh the displayed calendar events after changes.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Add Real-Time Updates",
+        titleDescription: "Ensure the calendar syncs changes in real-time.",
+        sections: [
+          {
+            subtitleDescription:
+              "Use webhooks or polling for real-time updates.",
+            descriptions: [
+              "Implement the `watch` method from the API to detect changes.",
+              "Set up a server to receive webhook notifications.",
+              "Update the React app dynamically based on received data.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Style the Calendar UI",
+        titleDescription:
+          "Design a user-friendly interface for displaying calendar events.",
+        sections: [
+          {
+            subtitleDescription: "Customize the calendar UI.",
+            descriptions: [
+              "Use libraries like `react-big-calendar` or `fullcalendar`.",
+              "Integrate fetched events into the calendar.",
+              "Ensure the design is responsive and visually appealing.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Test the Application",
+        titleDescription: "Ensure all features function as expected.",
+        sections: [
+          {
+            subtitleDescription: "Validate each feature thoroughly.",
+            descriptions: [
+              "Test the authentication process for multiple scenarios.",
+              "Verify event addition, editing, and deletion functionalities.",
+              "Ensure the app remains responsive and error-free.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 10: Deploy the App",
+        titleDescription:
+          "Deploy the app to a live environment and monitor performance.",
+        sections: [
+          {
+            subtitleDescription: "Prepare the app for deployment.",
+            descriptions: [
+              "Update authorized redirect URIs for production.",
+              "Host the app on platforms like Vercel or Netlify.",
+              "Monitor API usage and handle errors gracefully.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/7f5vdp?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson9,    videoLink: "",
+  },
+  {
+    taskId: "Simple-Business-Website",
+    taskTitle: "Simple Business Website",
+    introduction:
+      "This React web application showcases a product catalog, a contact form for customer inquiries, and a customer reviews section, offering a seamless and professional user experience. It is built with reusable components, modern practices, and thoroughly tested for reliability.",
+    task: {
+      taskDescription:
+        "I'm looking for a skilled web developer to create a simple yet effective business website.",
+      platform: "Freelancer.com",
+      projectName: "Simple Business Website Development",
+      biddingEnds: "Friday, November 29, 2024",
+      requirements: [
+        "Contact Form: A simple form for customers to reach us.",
+        "Product Catalog: An organized display of our products.",
+        "Customer Reviews: A section dedicated to showcasing customer feedback and testimonials.",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Plan and Outline the Project",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Define the Purpose",
+            descriptions: [
+              "The website will display product information, customer reviews, and a contact form.",
+            ],
+          },
+          {
+            subtitleDescription: "Features Breakdown",
+            descriptions: [
+              "Product catalog: Showcase products with images, descriptions, and prices.",
+              "Customer reviews: Display user feedback with ratings.",
+              "Contact form: Allow users to send inquiries.",
+            ],
+          },
+          {
+            subtitleDescription: "Wireframe the Layout",
+            descriptions: [
+              "Sketch a simple design or use tools like Figma to decide the placement of each component.",
+            ],
+          },
+          {
+            subtitleDescription: "Decide the Tech Stack",
+            descriptions: [
+              "Use React for the frontend, React Router for navigation, styled-components for styling, and mock data for products and reviews.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Set Up the Project",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Initialize React App",
+            descriptions: [
+              "Create the project folder using create-react-app or vite.",
+            ],
+          },
+          {
+            subtitleDescription: "Install Required Dependencies",
+            descriptions: [
+              "React Router: For managing routing between different pages (e.g., catalog, reviews, contact form). 'npm install react-router-dom'",
+              "Axios: For handling HTTP requests, such as submitting the contact form data or fetching product and review data. 'npm install axios'",
+              "React Bootstrap (Optional): If you want to use pre-built UI components for styling. 'npm install react-bootstrap bootstrap'",
+              "React Testing Library: For writing unit and integration tests. 'npm install --save-dev @testing-library/react @testing-library/jest-dom @testing-library/user-event'",
+              "'styled-components' for styling.",
+              "'react-toastify' for notifications.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up File Structure",
+            descriptions: [
+              "Create folders for 'components', 'pages', 'data', 'utils', and 'assets'.",
+              "Add subfolders inside components for 'ContactForm', 'ProductCatalog', and 'CustomerReviews'.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Configure Routing",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Use react-router-dom to define routes.",
+            descriptions: [
+              "Home page (/)",
+              "Product catalog (/products)",
+              "Customer reviews (/reviews)",
+              "Contact form (/contact)",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Build Contact Form Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create the Component File",
+            descriptions: ["ContactForm.js"],
+          },
+          {
+            subtitleDescription: "Plan the Form Structure",
+            descriptions: ["Fields: Name, Email, Message.", "Buttons: Submit."],
+          },
+          {
+            subtitleDescription: "Use State for Form Values",
+            descriptions: [
+              "Create 'name', 'email', and 'message' state variables using 'useState'.",
+              "Bind 'value' and 'onChange' to inputs.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Form Validation",
+            descriptions: [
+              "Write a 'validateForm' function (imported from src/utils/validateForm.js) to check",
+              "Name is not empty.",
+              "Email is valid.",
+              "Message is not empty.",
+              "Return errors if validation fails.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Form Submission",
+            descriptions: [
+              "Add a 'handleSubmit' function.",
+              "Prevent default form submission behavior.",
+              "Validate form data.",
+              "Show a success message using 'react-toastify' if valid.",
+            ],
+          },
+          {
+            subtitleDescription: "Manage Success/Error Messages",
+            descriptions: [
+              "Use 'react-toastify' to show success or error messages.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Accessibility Features",
+            descriptions: [
+              "Use 'aria-label' attributes for input fields.",
+              "Add 'aria-live' for success/error messages.",
+              "",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Define Product Catalog Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create the Component File",
+            descriptions: ["ProductCatalog.js"],
+          },
+          {
+            subtitleDescription: "Plan the Catalog Structure",
+            descriptions: [
+              "Display products in a grid.",
+              "Show: Image, Name, Description, Price.",
+            ],
+          },
+          {
+            subtitleDescription: "Import Product Data",
+            descriptions: ["Use mock data from src/data/products.js."],
+          },
+          {
+            subtitleDescription: "Use State for Product Data",
+            descriptions: ["Load 'products' into state using 'useState'"],
+          },
+          {
+            subtitleDescription: "Map Through Products",
+            descriptions: [
+              "Use 'products.map()' to create a card for each product.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Conditional Rendering",
+            descriptions: [
+              "If no products exist, display a 'No Products Available' message.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Filter/Sorting Logic (Optional)",
+            descriptions: [
+              "Create a dropdown for sorting (e.g., by price or name).",
+              "Use a 'useState' variable for the selected filter.",
+              "Apply sorting logic to the products array before rendering.",
+            ],
+          },
+          {
+            subtitleDescription: "Make It Responsive",
+            descriptions: [
+              "Use 'styled-components' or CSS grid for a flexible layout.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Create Customer Reviews Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create the Component File",
+            descriptions: ["CustomerReviews.js"],
+          },
+          {
+            subtitleDescription: "Plan the Reviews Structure",
+            descriptions: [
+              "Display reviews in a card layout.",
+              "Show: Customer Name, Message, Rating.",
+            ],
+          },
+          {
+            subtitleDescription: "Import Review Data",
+            descriptions: ["Use mock data from src/data/reviews.js."],
+          },
+          {
+            subtitleDescription: "Map Through Reviews",
+            descriptions: ["Use 'reviews.map()' to render each review."],
+          },
+          {
+            subtitleDescription: "Add State for Reviews",
+            descriptions: ["Use 'useState' to manage the reviews."],
+          },
+          {
+            subtitleDescription: "Add Pagination (Optional)",
+            descriptions: [
+              "Display a limited number of reviews (e.g., 5 per page).",
+              "Use 'useState' for the current page.",
+              "Add Next/Previous buttons to navigate pages.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Accessibility Features",
+            descriptions: [
+              "Use semantic elements like <blockquote> for reviews.",
+              "Add 'aria-label' to rating stars.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Build Home Page Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create the Component File",
+            descriptions: ["src/pages/Home.js"],
+          },
+          {
+            subtitleDescription: "Plan the Layout",
+            descriptions: [
+              "Add a banner or welcome message.",
+              "Include links or buttons to navigate to:",
+              "Product Catalog",
+              "Customer Reviews",
+              "Contact Form",
+            ],
+          },
+          {
+            subtitleDescription: "Use React Router for Navigation",
+            descriptions: [
+              "Import 'Link' from 'react-router-dom'",
+              "Add 'Link' components to navigate between pages.",
+            ],
+          },
+          {
+            subtitleDescription: "Style the Page",
+            descriptions: [
+              "Add a hero section with a call-to-action.",
+              "Use styled-components for spacing and layout.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Create Utilities and Hooks",
+        titleDescription: "Define 'validateForm' Utility",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Create a file: src/utils/validateForm.js.",
+              "Write a function to validate:",
+              "Name: Check for non-empty value.",
+              "Email: Use regex for valid email format.",
+              "Message: Check for non-empty value.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Define App Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Set Up Routing",
+            descriptions: [
+              "Import 'BrowserRouter', 'Routes', and 'Route' from 'react-router-dom'.",
+            ],
+          },
+          {
+            subtitleDescription: "Define routes for",
+            descriptions: [
+              "Home (/)",
+              "Products (/products)",
+              "Reviews (/reviews)",
+              "Contact (/contact)",
+            ],
+          },
+          {
+            subtitleDescription: "Add Navigation",
+            descriptions: [
+              "Create a navigation bar using <Link> for each route.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Toast Notifications",
+            descriptions: [
+              "Import ToastContainer from react-toastify.",
+              "Place <ToastContainer /> inside App.js.",
+            ],
+          },
+          {
+            subtitleDescription: "Global Styling",
+            descriptions: [
+              "Import a CSS reset file or normalize.css.",
+              "Use global styles for consistent fonts, colors, and spacing.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 10: Style the Components",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Use styled-components to style",
+            descriptions: [
+              "Layouts (grid for the catalog, cards for reviews).",
+              "Form elements (input fields, buttons).",
+            ],
+          },
+          {
+            subtitleDescription: "Ensure styles are responsive",
+            descriptions: [
+              "Add media queries to adjust layouts for mobile and tablet screens.",
+              "Add hover effects to buttons and product cards for better user interaction.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 11: Test Each Component",
+        titleDescription: "Test code included in solution.",
+        sections: [
+          {
+            subtitleDescription: "Install Required Dependencies",
+            descriptions: [
+              "@testing-library/react: For rendering and interacting with React components.",
+              "@testing-library/jest-dom: For additional matchers like .toBeInTheDocument().",
+              "@testing-library/user-event: For simulating user interactions.",
+            ],
+          },
+          {
+            subtitleDescription: "Verify Jest Configuration",
+            descriptions: [
+              "React apps created with create-react-app come pre-configured with Jest. If using a different setup, ensure Jest is configured in package.json or a jest.config.js file.",
+            ],
+          },
+          {
+            subtitleDescription: "Run Tests Locally",
+            descriptions: ["'npm test'"],
+          },
+          {
+            subtitleDescription: "Check Code Coverage",
+            descriptions: [
+              "'npm test -- --coverage'",
+              "Check the generated coverage report in the coverage/ folder.",
+            ],
+          },
+          {
+            subtitleDescription: "Debug Failing Tests",
+            descriptions: [
+              "Use console.log or the debug() method from React Testing Library to inspect the DOM.",
+            ],
+          },
+          {
+            subtitleDescription: "Automate Tests",
+            descriptions: [
+              "Integrate tests into your CI/CD pipeline (e.g., GitHub Actions, CircleCI).",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 12: Optimize for SEO",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Use react-helmet to add meta tags for:",
+            descriptions: [
+              "Title",
+              "Description",
+              "Open Graph tags for better sharing on social media.",
+              "Set unique titles for each page.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/7dykyd?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson10,    videoLink: "",
+  },
+  {
+    taskId: "Build-a-Portfolio-Website-with-Admin-Panel",
+    taskTitle: "Build a Portfolio Website with Admin Panel",
+    introduction:
+      "In this task, you will build a portfolio website that allows the user to showcase projects and manage content via an admin panel. You'll implement secure authentication using JWT and handle backend logic for managing projects with MongoDB and Express.js. On the frontend, you'll create an intuitive UI with React.",
+    task: {
+      taskDescription:
+        "This task involves building a portfolio website. The frontend will be built using React, while the backend will use Express.js for routing and MongoDB for data storage. You'll implement JWT authentication to secure the admin panel and handle CRUD operations for projects.",
+      platform: "Freelancer",
+      projectName:
+        "HTML, CSS, Bootstraps, Js, React, PHP , Portfolio website with admin",
+      biddingEnds: "Friday, December 13, 2024",
+      requirements: [
+        "Frontend: React for the user interface and routing.",
+        "Backend: Express.js for handling API requests and MongoDB for storing portfolio data.",
+        "Authentication: JWT (JSON Web Tokens) for secure authentication between the frontend and backend.",
+        "Database: MongoDB to store data related to projects and admin users.",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Folder Structure",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "/backend folder contains",
+            descriptions: [
+              "/models: MongoDB schemas (e.g., User, Project).",
+              "/routes: Express routes (e.g., authentication, project management).",
+              "/controllers: Functions that handle the business logic for each route (e.g., login, add/edit project).",
+              "/middleware: Authentication middleware to protect admin routes.",
+              "/config: Configuration for database and environment variables.",
+              "server.js: Main entry point to set up the Express server.",
+            ],
+          },
+          {
+            subtitleDescription: "/frontend folder contains",
+            descriptions: [
+              "/components: React components for the user interface (e.g., ProjectCard, AdminDashboard).",
+              "/pages: React components representing different pages (e.g., HomePage, AdminLoginPage, AdminDashboard).",
+              "/hooks: Custom hooks to manage logic like fetching data or managing authentication.",
+              "/services: Axios or Fetch requests for interacting with the backend.",
+              "/assets: Images, icons, and static assets.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Backend (Express + MongoDB)",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Set Up Express Server",
+            descriptions: [
+              "Initialize a Node.js project and install Express.",
+              "Set up an Express server to handle HTTP requests.",
+              "Define the port and basic routes for the backend (e.g., /login, /projects).",
+            ],
+          },
+          {
+            subtitleDescription: "Database Setup",
+            descriptions: [
+              "Set up MongoDB and connect the Express server to the database using Mongoose (or the native MongoDB driver).",
+              "Define the MongoDB URI in environment variables to keep it secure.",
+            ],
+          },
+          {
+            subtitleDescription: "Models (Database Schemas)",
+            descriptions: [
+              "Create a User model that stores the admin's credentials (username and password). Passwords should be hashed using a hashing algorithm like bcrypt before storing.",
+            ],
+          },
+          {
+            subtitleDescription:
+              "Project Model: Create a Project model with fields like",
+            descriptions: [
+              "title: Name of the project.",
+              "description: A detailed explanation of the project.",
+              "image: A URL for the project image.",
+              "date: Date the project was added/updated.",
+            ],
+          },
+          {
+            subtitleDescription: "Authentication (JWT)",
+            descriptions: [
+              "Create a POST route for login (/login)",
+              "Validate the provided username and password against the database.",
+              "If valid, generate a JWT token and send it back to the frontend.",
+              "Set up middleware to protect routes that require authentication (e.g., creating, editing, or deleting projects).",
+              "Ensure that only users with a valid JWT can access admin routes.",
+              "Create a function to verify the JWT token on protected routes and allow access only if the token is valid.",
+            ],
+          },
+          {
+            subtitleDescription: "Project Management Routes",
+            descriptions: [
+              "GET /projects: Fetch all projects from the database",
+              "Return the list of projects in the response.",
+              "POST /projects: Create a new project.",
+              "Ensure the user is authenticated before adding a project.",
+              "Receive data (title, description, image) from the frontend and save it in the database.",
+              "PUT /projects/:id: Update an existing project.",
+              "Ensure the user is authenticated before updating a project.",
+              "Find the project by ID and update the necessary fields.",
+              "DELETE /projects/:id: Delete a project.",
+              "Ensure the user is authenticated before allowing project deletion.",
+              "Find the project by ID and remove it from the database.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Frontend (React)",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Portfolio Pages",
+            descriptions: [
+              "Home Page: Fetch the list of projects from the backend and display them in a grid or list.",
+              "Each project should have a Project Card that shows the project title, description, and image.",
+              "Display projects dynamically by mapping over the project data fetched from the backend.",
+              "Project Card Component: A reusable component that accepts title, description, and image as props and renders the details for a project.",
+              "Style the card to make it visually appealing (responsive design for mobile and desktop views).",
+            ],
+          },
+          {
+            subtitleDescription: "Project Card Component",
+            descriptions: [
+              "A reusable component that accepts title, description, and image as props and renders the details for a project.",
+              "Style the card to make it visually appealing (responsive design for mobile and desktop views).",
+            ],
+          },
+          {
+            subtitleDescription: "Admin Panel (Protected Route)",
+            descriptions: [
+              "Admin Login Page: Create a login form with fields for username and password.",
+              "When the form is submitted, send the credentials to the backend's /login route.",
+              "On success, store the JWT token in localStorage (or sessionStorage).",
+              "If authentication fails, display an error message.",
+              "Admin Dashboard: Create a dashboard where the admin can see all projects.",
+              "Implement buttons to add, edit, or delete projects.",
+              "Use protected routes to ensure only authenticated users can access the admin dashboard.",
+              "Project Management Form: Create a form for adding or editing projects. The form should include fields for project title, description, and image URL.",
+              "Use controlled components to manage form state and validate inputs before submitting.",
+              "On submission, send the data to the appropriate backend route (POST /projects for adding, PUT /projects/:id for editing).",
+            ],
+          },
+          {
+            subtitleDescription: "Protected Routes",
+            descriptions: [
+              "Use React Router to set up different routes for the home page, admin login page, and admin dashboard.",
+              "Protected Routes: Ensure the admin dashboard is protected. If the user is not authenticated (no JWT token in localStorage), redirect them to the login page.",
+              "Redirect after Login: After the admin logs in, redirect them to the dashboard or another protected page.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Authentication (JWT)",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Backend Authentication",
+            descriptions: [
+              "On successful login, generate a JWT token containing the user's ID and send it to the frontend.",
+              "Set a secret key on the backend that is used to sign the JWT token. Store this secret securely (e.g., in environment variables).",
+            ],
+          },
+          {
+            subtitleDescription: "Frontend JWT Storage",
+            descriptions: [
+              "Store the JWT token in localStorage or sessionStorage to persist the user's login state.",
+              "When making requests to the backend (e.g., for fetching projects or adding a project), include the JWT token in the Authorization header (Bearer <token>).",
+            ],
+          },
+          {
+            subtitleDescription: "Verifying JWT Token",
+            descriptions: [
+              "Use middleware on the backend to verify the JWT token for protected routes (e.g., creating/editing/deleting projects).",
+              "If the token is invalid or missing, respond with an error message and a 401 Unauthorized status code.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Backend Logic",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Creating and Editing Projects",
+            descriptions: [
+              "In the backend, ensure that only authenticated users can create or modify projects. Use the JWT token in the request header to verify the user's identity.",
+              "On receiving the project data, validate it (e.g., check if the title is not empty) and store it in the MongoDB database.",
+              "If updating an existing project, ensure the correct project ID is used and modify the project fields as needed.",
+            ],
+          },
+          {
+            subtitleDescription: "Deleting Projects",
+            descriptions: [
+              "Implement the logic to remove a project by its ID from the MongoDB database.",
+              "Confirm that the user is authenticated before allowing this action.",
+            ],
+          },
+          {
+            subtitleDescription: "Fetching Projects",
+            descriptions: [
+              "Create an endpoint that retrieves all projects stored in the MongoDB database.",
+              "Send the project data to the frontend in a structured format (e.g., an array of project objects).",
+              "",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Frontend Logic",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "React State Management",
+            descriptions: [
+              "Use React's useState to manage state for user login and project data.",
+              "Manage the state for form inputs (e.g., project title, description) using controlled components.",
+              "Use useEffect to fetch project data when the component mounts (e.g., fetch projects for the home page or admin dashboard).",
+            ],
+          },
+          {
+            subtitleDescription: "Making API Requests",
+            descriptions: [
+              "Use Axios or the Fetch API to send HTTP requests to the backend:",
+              "GET /projects: Fetch project data to display on the homepage.",
+              "POST /projects: Send form data to add a new project.",
+              "PUT /projects/:id: Send form data to update an existing project.",
+              "DELETE /projects/:id: Delete a project from the portfolio.",
+            ],
+          },
+          {
+            subtitleDescription: "JWT Handling",
+            descriptions: [
+              "On successful login, store the JWT token in localStorage and use it for authentication in subsequent requests.",
+              "If the JWT token is not found or is invalid, redirect the user to the login page.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Deployment",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Backend Deployment",
+            descriptions: [
+              "Deploy the backend API on a cloud platform like Heroku, DigitalOcean, or AWS.",
+              "Ensure the environment variables (like MongoDB URI and JWT secret) are set correctly in the deployment environment.",
+            ],
+          },
+          {
+            subtitleDescription: "Frontend Deployment",
+            descriptions: [
+              "Deploy the frontend React app using platforms like Netlify, Vercel, or GitHub Pages.",
+              "Ensure all environment variables are configured correctly for deployment.",
+              "Connect the frontend to the deployed backend API, making sure the frontend is able to make requests to the correct URL.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Admin Panel Features",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Admin Login",
+            descriptions: [
+              "Ensure that the login form sends the user's credentials to the backend for authentication.",
+              "Upon successful login, store the JWT token and redirect the user to the admin dashboard.",
+            ],
+          },
+          {
+            subtitleDescription: "Admin Dashboard",
+            descriptions: [
+              "Display a list of projects with options to add, edit, or delete.",
+              "Protect the dashboard with authentication to ensure only the admin has access.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Responsive Design",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Use CSS frameworks (e.g., Bootstrap or Tailwind CSS) for a responsive layout.",
+              "Ensure the portfolio is mobile-friendly by using media queries to adjust the layout for small screens.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 10: Future Features",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Contact Form: Add a contact form where users can send messages to the admin.",
+              "Blog Section: Implement a blog feature with CRUD (Create, Read, Update, Delete) functionality in the admin panel.",
+              "File Upload: Implement file upload functionality to upload images for projects. Store images in the server or use a cloud service like AWS S3.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/q4fzz3?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson11  },
+  {
+    taskId: "VideoSense-Live-Monitoring",
+    taskTitle: "VideoSense Live Monitoring",
+    introduction:
+      "VideoSense Live Monitoring is a React-based web application designed for real-time monitoring of CCTV video feeds. It allows users to stream live video from multiple sources, providing seamless and efficient monitoring with an easy-to-use interface.",
+    task: {
+      taskDescription:
+        "I need a skilled developer to create a mobile app for our CCTV video playback and configuration platform, Video Sense. The app will primarily enable real-time monitoring of live video feeds and associated functionalities. Only the web app dashboard frontend development is required as per the final UX design shared, with the backend APIs provided by us.",
+      platform: "Freelancer",
+      projectName: "Mobile App Development for Video Sense",
+      biddingEnds: "Saturday, 18 of January, 2025",
+      requirements: [
+        "React.js: To build the user interface and manage state.",
+        "Video.js: To handle video playback and support streaming formats like HLS.",
+        "Axios: To fetch video stream data from the backend API.",
+        "API Endpoints: Provide an API that returns the list of available video streams, including URLs in a compatible format (e.g., HLS .m3u8 links).",
+        "CORS Configuration: Ensure the server allows cross-origin requests from the frontend for video streaming.",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Important Notes: ",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "API Setup: Make sure you already have your backend API that provides a list of stream URLs. The backend API should be set up to return data in a JSON format like { 'streams': ['stream1_url', 'stream2_url', ...] }.",
+              "CORS Issues: Ensure that CORS headers are correctly configured on your API server to allow requests from your React app's domain, especially if the video streams are hosted on external servers.",
+              "Video Format: Confirm that the video streams are in a supported format (e.g., .m3u8 for HLS) and are accessible by your app. If you're using a different format (e.g., .mp4), make sure it's compatible with video.js.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Set Up Your React Project",
+        titleDescription: "Create a New React Application",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Open your terminal and run the following command to create a new React app: 'npx create-react-app video-monitoring'",
+              "Navigate into the newly created project folder: 'cd video-monitoring'",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Install Dependencies",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Install video.js for handling video playback",
+            descriptions: [
+              "Run the following command to install video.js: 'npm install video.js'",
+            ],
+          },
+          {
+            subtitleDescription:
+              " Install axios for making HTTP requests to the API",
+            descriptions: [
+              "Run this command to install axios: 'npm install axios'",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Set Up API Integration",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription:
+              "Create the API logic to fetch the stream URLs.",
+            descriptions: [
+              "You need to create an API helper file (e.g., api.js) where you will use axios to fetch stream URLs from your server.",
+              "Make sure your backend API is already set up to serve the stream URLs at the endpoint (/api/streams) and is functioning correctly.",
+              "Ensure the backend API is properly configured to return an array of stream URLs. These URLs could be links to .m3u8 files or other video streaming formats.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Create the VideoPlayer Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Create a new folder named components in the src folder of your React project.",
+              "Inside the components folder, create a new file for the video player component (e.g., VideoPlayer.js).",
+              "This component will be responsible for rendering the video player using video.js and handling the provided video stream URL.",
+            ],
+          },
+          {
+            subtitleDescription: "Inside the VideoPlayer component:",
+            descriptions: [
+              "Initialize a video.js player on the video element.",
+              "Use the passed stream URL (url) as the source for the video player.",
+              "Make sure to handle the cleanup when the component unmounts to dispose of the video player and prevent memory leaks.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Set Up the LiveMonitoringPage Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription:
+              "Create a page (e.g., LiveMonitoringPage.js) inside the pages folder.",
+            descriptions: [
+              "This page will be responsible for fetching the stream URLs from your backend API and rendering the VideoPlayer components with those URLs.",
+            ],
+          },
+          {
+            subtitleDescription: "In the LiveMonitoringPage:",
+            descriptions: [
+              "Use the useState and useEffect hooks to manage and fetch the list of stream URLs from your backend.",
+              "Pass each stream URL to the VideoPlayer component to render the live video feed.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Connect the Components in the Main Application",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "In the App.js file, import the LiveMonitoringPage component.",
+              "Render the LiveMonitoringPage inside your App component to display the live video monitoring interface.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Ensure Correct API and Video Format",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Make sure that the backend API /api/streams is correctly implemented and accessible. This API should return a list of valid video stream URLs (such as .m3u8 links).",
+              "Verify that the video stream URLs are in a format supported by video.js (e.g., .m3u8 for HLS streams).",
+              "Ensure that the video stream sources are correctly set up in the backend and are publicly accessible or configured for your application to access.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Test and Debug",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Run the application locally using: 'npm start'",
+              "Make sure the application can fetch the stream URLs from the API and render the video player with the corresponding video feed.",
+              "Debug any issues related to fetching the stream URLs or displaying the video player (e.g., CORS issues, invalid video formats, etc.).",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 10: Deployment",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "When the development is complete, deploy your application to a web server or a hosting platform (e.g., Vercel, Netlify, AWS, etc.).",
+              "Ensure that the API is accessible in the production environment, and your video streams are available for users to view.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/ymkqpv?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson12  },
+  {
+    taskId: "Total-Compensation-Calculator",
+    taskTitle: "Total Compensation Calculator",
+    introduction:
+      "This project is a Total Compensation Calculator built with React, allowing users to input their salary, bonuses, benefits, RSUs, and ESPP contributions. It calculates the total compensation, displays a breakdown with a pie chart, and provides a detailed monthly compensation table with pagination and salary raise projections over a given date range.",
+    task: {
+      taskDescription:
+        "We are seeking a skilled frontend developer to create a clone of this compensation calculator: mytc.is using React and TypeScript (all client side). The project will involve building a user-friendly interface and ensuring code logic matches exactly mytc.is using tests! ",
+      platform: "https://www.upwork.com/",
+      projectName:
+        "Frontend Developer Needed for Compensation Calculator Clone",
+      requirements: ["React", "Chart.js", "Accounting"],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Set up the React Project",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Initialize a new React project using create-react-app.",
+              "Install necessary dependencies, such as 'react-chartjs-2' and 'chart.js' for the pie chart, and 'react-icons' for the info tooltips.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Create CompensationForm Component",
+        titleDescription: "CompensationForm .js",
+        sections: [
+          {
+            subtitleDescription: "Set up state variables for the form fields",
+            descriptions: [
+              "Use 'useState' hooks for each field (e.g., baseSalary, bonusRate, foodAllowance, etc.).",
+              "Create a 'setError' state variable for displaying error messages if the user provides invalid input.",
+            ],
+          },
+          {
+            subtitleDescription: "Build the form structure",
+            descriptions: [
+              "For each compensation field (base salary, bonus rate, etc.), create an HTML <label> and corresponding <input> for data entry.",
+              "Use type='number' for numeric inputs like salary, bonus rate, and allowances to ensure users input numbers.",
+              "Use type='month' for start and end date fields so that the user can select a month and year.",
+            ],
+          },
+          {
+            subtitleDescription: "Create a validation function",
+            descriptions: [
+              "Check if all fields have been filled in. If any are missing, set an error message.",
+              "Ensure that the values are positive numbers (e.g., check for baseSalary > 0, bonusRate >= 0).",
+              "If validation fails, prevent form submission and display the error message.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle form submission",
+            descriptions: [
+              "When the user clicks the submit button, run the 'handleSubmit' function.",
+              "Inside 'handleSubmit', validate the form data. If valid, create an object (compensationData) that holds all the form values.",
+              "Call the 'onSubmit' function (passed as a prop from the parent component), passing 'compensationData' to it.",
+            ],
+          },
+          {
+            subtitleDescription: "Info tooltip (optional)",
+            descriptions: [
+              "Create a small information tooltip next to each input field. When the user hovers over the icon (e.g., using react-icons), show a brief description of the field (e.g., 'Enter your basic monthly salary before bonuses').",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Create TotalCompensationResult Component",
+        titleDescription: "TotalCompensationResult.js",
+        sections: [
+          {
+            subtitleDescription: "Props and state setup",
+            descriptions: [
+              "Accept 'totalCompensation', 'breakdown', and 'compensationData' as props from the parent component (App).",
+              "Destructure these props to extract data such as base salary, bonus rate, and RSUs, which will be displayed in the breakdown and chart.",
+            ],
+          },
+          {
+            subtitleDescription: "Generate pie chart data",
+            descriptions: [
+              "Use Chart.js (through react-chartjs-2) to display a pie chart. Prepare the 'chartData' object, which contains labels (e.g., 'Salary', 'Bonus', 'RSUs', 'ESPP') and 'datasets' containing the 'breakdown' array.",
+              "Set the background colors and hover effects for each pie slice.",
+            ],
+          },
+          {
+            subtitleDescription: "Configure chart options",
+            descriptions: [
+              "Customize the chart to display the total breakdown with tooltips showing the breakdown values.",
+              "Use a callback function in the tooltip configuration to display the label and value in a readable format (e.g., 'Salary: 12,000').",
+            ],
+          },
+          {
+            subtitleDescription: "Generate the date range",
+            descriptions: [
+              "Use the start and end dates from 'compensationData' to create an array of months between the two dates.",
+              "Create a function (generateDateRange) that loops through the start and end dates, adding each month to an array.",
+            ],
+          },
+          {
+            subtitleDescription: "Calculate monthly data",
+            descriptions: [
+              "For each month, calculate the salary and benefits based on the form values. Ensure the base salary increases according to the expected salary raise.",
+              "Create an object for each month that includes: Base salary, Salary after raises, Bonus, Benefits, RSU Grants, SPP, Total compensation for that month.",
+            ],
+          },
+          {
+            subtitleDescription: "Render a table",
+            descriptions: [
+              "Map over the generated data and render a row for each month in the table.",
+              "Display all the compensation details (e.g., salary, bonus, RSUs, ESPP) in the respective columns.",
+            ],
+          },
+          {
+            subtitleDescription: "Pagination setup",
+            descriptions: [
+              "Create state variables to manage the current page (currentPage).",
+              "Calculate the total number of pages based on the number of rows in the data (totalPages).",
+              "Display 5 items per page (itemsPerPage), and create pagination controls (Previous, Next) to navigate between pages.",
+            ],
+          },
+          {
+            subtitleDescription: "Pagination logic",
+            descriptions: [
+              "When the user clicks the 'Previous' or 'Next' button, update the 'currentPage' state.",
+              "Slice the data to display only the items corresponding to the current page, using the 'currentPage' and 'itemsPerPage'.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Create the App.js Component",
+        titleDescription: "App.js",
+        sections: [
+          {
+            subtitleDescription: "Set up the App.js file",
+            descriptions: [
+              "This is the parent component that will manage state and handle data flow.",
+              "Create the initial App.js file, where you will define state for the total compensation, breakdown, and the compensation data.",
+            ],
+          },
+          {
+            subtitleDescription: "Use useState to create variables for:",
+            descriptions: [
+              "'totalCompensation': To store the calculated total compensation.",
+              "'breakdown': To store the compensation breakdown for the pie chart.",
+              "'compensationData': To store all the form data for potential updates.",
+            ],
+          },
+          {
+            subtitleDescription: "Render child components",
+            descriptions: [
+              "Render the CompensationForm component to collect user input.",
+              "Pass the handleFormSubmit function to CompensationForm to handle form submissions.",
+              "Conditionally render the TotalCompensationResult component to display the calculated results once the form is submitted.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Add the calculateTotalCompensation Functionality",
+        titleDescription: "App.js",
+        sections: [
+          {
+            subtitleDescription: "Extract form data",
+            descriptions: [
+              "Inside App.js, create the calculateTotalCompensation function after App.js is set up.",
+              "This function will accept the data from CompensationForm (passed as an object with values like baseSalary, bonusRate, etc.).",
+            ],
+          },
+          {
+            subtitleDescription: "Convert data to numbers",
+            descriptions: [
+              "Use Number() to convert all form inputs to numbers to avoid errors in calculations.",
+              "Example: const baseSalaryNumber = Number(baseSalary);",
+            ],
+          },
+          {
+            subtitleDescription: "Perform the calculations",
+            descriptions: [
+              "Annual Base Salary: Multiply baseSalary by 12 to calculate the yearly base salary.",
+              "Annual Bonus: Calculate the bonus as a percentage of the annual base salary.",
+              "Total Salary: Add the annual base salary, bonus, food allowance, and benefits to calculate the total salary.",
+              "Annual ESPP: Multiply espp by 12 to get the total ESPP contribution for the year.",
+              "RSU Grants: Add rsuGrants to the total compensation.",
+            ],
+          },
+          {
+            subtitleDescription: "Create a breakdown for the pie chart",
+            descriptions: [
+              "Create an array with the values to display in the pie chart (e.g., total salary, bonus amount, RSU grants, ESPP contribution).",
+            ],
+          },
+          {
+            subtitleDescription: "Return an object containing:",
+            descriptions: [
+              "'totalCompensation': The sum of all calculated values.",
+              "'breakdown': The array to be used for the pie chart.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Integrate the Components",
+        titleDescription: "App.js",
+        sections: [
+          {
+            subtitleDescription: "Define 'handleFormSubmit' function",
+            descriptions: [
+              "This function will call 'calculateTotalCompensation' with the form data when the user submits the form.",
+              "The results (total compensation and breakdown) will be set in the state using 'setTotalCompensation' and 'setBreakdown'.",
+            ],
+          },
+          {
+            subtitleDescription: "Pass data between components",
+            descriptions: [
+              "Pass the 'handleFormSubmit' function as a prop to the CompensationForm component.",
+              "After the form is submitted, pass the 'totalCompensation', 'breakdown', and 'compensationData' to 'TotalCompensationResult' for displaying the results.",
+            ],
+          },
+          {
+            subtitleDescription: "Test the integration",
+            descriptions: [
+              "After submission, check that the data flows correctly from CompensationForm to App.js and then to TotalCompensationResult.",
+              "Ensure the total compensation and pie chart update accordingly.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Style the Components",
+        titleDescription: "index.css",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Add CSS styles for the form and result display, ensuring a clean and professional layout.",
+              "Style the pie chart, tables, and pagination controls to make the user interface user-friendly.",
+              "Include responsive design to ensure the calculator works well on both desktop and mobile devices.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Test the Application",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Test the form validation to ensure that invalid or incomplete data is not submitted.",
+              "Test the total compensation calculation and ensure the results are accurate.",
+              "Verify that the pie chart is correctly rendered with the breakdown data.",
+              "Test pagination to ensure that the compensation details table can be navigated correctly.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Steps to Improve the Total Compensation Calculator",
+        titleDescription: "Leve Up",
+        sections: [
+          {
+            subtitleDescription: "Implement Multi-Currency Support",
+            descriptions: [
+              "Add a dropdown to select the desired currency (e.g., USD, EUR, GBP).",
+              "Integrate a currency conversion API (e.g., Open Exchange Rates or XE) to fetch real-time exchange rates.",
+              "Modify the calculation logic to factor in currency conversion based on the selected currency.",
+              "Update the UI to display the selected currency symbol alongside the values.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Date Range for RSU Vesting",
+            descriptions: [
+              "Add start and end date fields for RSU grants in the form.",
+              "Enable users to specify the percentage or number of shares vested per year/month.",
+              "Update the calculation logic to distribute RSU values across the vesting period.",
+              "Display a breakdown of RSU contributions over the date range in the results table.",
+            ],
+          },
+          {
+            subtitleDescription: "Enhance ESPP Calculations",
+            descriptions: [
+              "Add input fields to capture the ESPP discount rate and market price.",
+              "Implement options to calculate ESPP based on: Minimum price during the purchase period; Market price at purchase time minus the discount. ",
+            ],
+          },
+          {
+            subtitleDescription: "Add Date Range for Salary Rises",
+            descriptions: [
+              "Add start and end date fields for expected salary raises in the form.",
+              "Allow users to input different raise percentages for multiple date ranges.",
+              "Update the calculation logic to apply raises incrementally across the specified periods.",
+              "Display the salary progression over time in the results table.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 10: Deploy the Application",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Once the application is fully functional and tested, deploy it to a hosting platform like Netlify or Vercel.",
+              "Ensure that the app is accessible and works seamlessly in a production environment.",
+              "Contact the client to review the final product and make any necessary adjustments.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/rhqqk8?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson13,    videoLink: "",
+  },
+  {
+    taskId: "Therapist-Calendar-App",
+    taskTitle: "Therapist Calendar App",
+    introduction:
+      "A modern and user-friendly ( responsive ) calendar app built with React, designed to help clients schedule and manage their therapy appointments. Users can select dates, choose available time slots, and track upcoming sessions, with all appointments securely saved in local storage. The app also includes email notifications to confirm appointments, ensuring clients stay updated.",
+    task: {
+      taskDescription:
+        "I'm seeking a seasoned developer with expertise in React and Next.js to assist in integrating a Calendar/Calendly code into our platform marketplace for therapists.",
+      platform: "Freelancer",
+      projectName: "Calendar Integration in Therapist Marketplace",
+      biddingEnds: "Friday, 7 of February, 2025",
+      requirements: [
+        "React",
+        "UI/UX design understanding",
+        "Calendar Intergration",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Set up a React Project",
+        titleDescription:
+          "First, create a new React project (if you don't already have one)",
+        sections: [
+          {
+            subtitleDescription: "In your Terminal type:",
+            descriptions: [
+              "npx create-react-app therapist-scheduler",
+              "cd therapist-scheduler",
+            ],
+          },
+          {
+            subtitleDescription: "Install Required Packages",
+            descriptions: ["date-fns", "lucide-react", "emailjs"],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Import React and Necessary Hooks",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Hooks",
+            descriptions: [
+              "'useState': For managing states like selected date, time slot, and appointments.",
+              "'useMemo': To memoize expensive calculations, such as generating the calendar days.",
+              "'useEffect': For side effects, like saving and loading appointments from localStorage.",
+            ],
+          },
+          {
+            subtitleDescription: "Icons from lucide-react",
+            descriptions: [
+              "Import the 'Clock', 'ChevronLeft', 'ChevronRight', 'CalendarIcon', and 'Check' components from 'lucide-react' to use as UI icons in the calendar and scheduler UI.",
+            ],
+          },
+          {
+            subtitleDescription: "Date Functions from date-fns",
+            descriptions: [
+              "Import specific date functions such as 'format', 'addMonths', 'subMonths', 'startOfMonth', 'endOfMonth', 'eachDayOfInterval', 'isSameMonth', 'isSameDay', and 'isToday' from the 'date-fns' library to handle date calculations and comparisons.",
+            ],
+          },
+          {
+            subtitleDescription: "emailjs-com for Sending Emails",
+            descriptions: [
+              "Import the emailjs-com package to send scheduling notifications or appointment confirmations via email.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 3: Define the TherapistScheduler component and its states",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Define the TherapistScheduler component.",
+            descriptions: ["Create a functional component TherapistScheduler."],
+          },
+          {
+            subtitleDescription: "Define state for the component.",
+            descriptions: [
+              "'selectedDate' state to store the currently selected date (use 'useState' with new Date() as the default value).",
+              "'currentMonth' state to store the currently displayed month (use 'useState' with new Date()).",
+              "'timeSlot' state to store the selected time slot (use 'useState' with an empty string '' as default).",
+              "'appointments' state to store all scheduled appointments (use 'useState' with an empty array [] as default).",
+              "'animatingMonth' state to manage the animation of the calendar month (use 'useState' with false as default).",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 4: Setup useEffect for loading appointments from localStorage",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Create a 'useEffect' hook to check if there are saved appointments in 'localStorage'.",
+              "If there are, update 'appointments' state with the parsed value from 'localStorage'.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 5: Setup useEffect for saving appointments to localStorage",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Create a 'useEffect' that listens for changes in 'appointments'.",
+              "Every time 'appointments' changes, store the updated appointments in 'localStorage'.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Define available time slots for scheduling",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Create an array 'availableSlots' containing all the available time slots for scheduling (e.g., '09:00 AM', '10:00 AM', etc.).",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Create a useMemo hook to calculate calendar days",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Define a 'calendarDays' variable that calculates all the days of the current month using 'startOfMonth', 'endOfMonth', and 'eachDayOfInterval'.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 8: Create a useMemo hook to filter selected date appointments",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Create 'selectedDateAppointments' to filter out appointments that match the 'selectedDate'. If no date is selected, return an empty array.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 9: Define the handlePrevMonth function to navigate to the previous month.",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Set 'animatingMonth' to 'true' to indicate that the month is changing.",
+              "Use 'setTimeout' to change the 'currentMonth' by subtracting one month using 'subMonths' after 300ms.",
+              "Set 'animatingMonth' to 'false' to indicate the end of the month change animation.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 10: Define the handleNextMonth function to navigate to the next month",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Similar to 'handlePrevMonth', but use 'addMonths' to move the 'currentMonth' forward by one month.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 11: Define the handleDateSelect function to select a date",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Update 'selectedDate' with the chosen date when a user clicks on a date cell in the calendar.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 12: Define the handleSchedule function to schedule an appointment.",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "First, check if both a date and time slot are selected. If not, show a notification with an error message and return early.",
+              "Check if the selected time slot is already taken on that day by filtering 'selectedDateAppointments'.",
+              "If the time slot is already taken, show a notification with an error message and return early.",
+              "If the time slot is available, create a new appointment object with the selected date and time.",
+              "Update the appointments state by adding the new appointment to the existing appointments.",
+              "Immediately save the updated appointments to localStorage.",
+              "Show a confirmation animation and a success notification.",
+              "Once a new appointment is scheduled, call the 'sendEmailNotification' function with the newly created appointment as an argument.",
+              "Clear the timeSlot state after scheduling the appointment.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 13: Send Email Notification on Appointment Scheduling",
+        titleDescription: "Use emailjs",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "To implement the fully functioning EmailJS feature in your project, refer to the 'Built With Me' section in Day 6 of the lessons. This section will walk you through the detailed process of integrating email notifications using EmailJS, ensuring your app can send emails automatically whenever an appointment is scheduled.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 14: Create showConfirmation function to show a confirmation animation",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Create a 'div' element for the confirmation animation and add it to the 'body'.",
+              "Set a 'setTimeout' to remove the confirmation element after 1500ms.",
+              "Show a success notification after the animation finishes.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 15: Create showNotification function to show a notification",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Create a 'div' for the notification and add it to the 'body'.",
+              "Add different classes based on the notification type (success/error).",
+              "Set a 'setTimeout' to remove the notification after 3000ms.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 16: Return the JSX structure of the component",
+        titleDescription: "Inside the return statement:",
+        sections: [
+          {
+            subtitleDescription:
+              "Wrap the Return in the Main Container (ultra-modern-scheduler)",
+            descriptions: [
+              "Create a 'div' with the class name 'ultra-modern-scheduler', which will hold the entire layout and structure of the scheduler.",
+            ],
+          },
+          {
+            subtitleDescription: "Create the Glass Effect for the Scheduler",
+            descriptions: [
+              "Inside the main 'div', create another 'div' with the class name 'scheduler-glass' to apply a glass-like effect for the design. This provides a modern aesthetic.",
+            ],
+          },
+          {
+            subtitleDescription: "Create the Header Section",
+            descriptions: [
+              "Define a 'header' with the class 'scheduler-header'.",
+              "Inside the header, add a 'div' with the class 'header-title' to hold the title and icon.",
+              "Place the 'CalendarIcon' from 'lucide-react' (with a size of 28) inside the 'header-title'.",
+              "Add a 'h1' with the text 'Schedule Your Session'.",
+              "Add another 'div' with the class 'current-date' to display the current month and year using the format(currentMonth, 'MMMM yyyy') method.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up the Content Section",
+            descriptions: [
+              "Inside the 'div' with the class 'scheduler-content', start with the 'calendar-section'.",
+              "Create a 'div' with the class 'calendar-navigation' to contain two buttons.",
+              "The first button will have the 'ChevronLeft' icon (to navigate to the previous month).",
+              "The second button will have the 'ChevronRight' icon (to navigate to the next month).",
+              "Each button should trigger the 'handlePrevMonth' and 'handleNextMonth' functions, respectively, when clicked.",
+            ],
+          },
+          {
+            subtitleDescription:
+              "Set Up the Calendar Grid for the Current Month",
+            descriptions: [
+              "Create a div with the class calendar-grid to hold the calendar days.",
+              "Inside it, create another div with the class weekdays.",
+              "Map over an array ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] to render each weekday name as a div element.",
+              "Inside the 'div' with the class 'days-grid', map over 'calendarDays' (an array of days for the current month) to render each day.",
+              "Each day will be displayed in a 'button' with the class 'day-cell'.",
+              "Add classes conditionally for styling.",
+              "If the day belongs to the current month, add the class 'other-month'.",
+              "If the day is selected, add the class 'selected'.",
+              "If the day is today, add the class 'today'.",
+              "If the day has an appointment, add the class 'has-appointment'.",
+              "Inside the 'button', render the day number using format(date, 'd').",
+              "Display an appointment indicator usingclass if the day has an appointment.",
+              "",
+            ],
+          },
+          {
+            subtitleDescription: "Create the Time Slots Section",
+            descriptions: [
+              "Create a 'div' with the class 'time-slots' to display available time slots for appointments.",
+              "Map over 'availableSlots' to render each time slot as a 'button'.",
+              "Add conditional classes like 'selected' for the selected time and 'booked' if the time slot is already taken for the selected date.",
+              "When a slot is clicked, update the 'timeSlot' state with the selected slot.",
+            ],
+          },
+          {
+            subtitleDescription: "Add the Schedule Appointment Button",
+            descriptions: [
+              "Below the time slots, add a 'button' with the class 'schedule-btn' to trigger the appointment scheduling.",
+              "Set the button to be disabled if no date or time slot is selected.",
+              "When clicked, trigger the 'handleSchedule' function to book the appointment and handle necessary validations.",
+            ],
+          },
+          {
+            subtitleDescription: "Create the Appointments Section",
+            descriptions: [
+              "After the calendar, create a section for displaying upcoming appointments.",
+              "Add a 'h2' with the title 'Upcoming Sessions'",
+              "Create a 'div' with the class 'appointments-grid'.",
+              "Map over the 'appointments' array to render each appointment as a card.",
+              "Inside each 'appointment-card', display: The appointment date formatted as format(new Date(appt.date), 'EEEE, MMM dd'); and the appointment time along with a 'Clock' icon.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/qgm3vt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson14,    videoLink: "",
+  },
+  {
+    taskId: "e-commerce-shop",
+    taskTitle: "E-Commerce Store",
+    introduction:
+      "This project is a simple e-commerce store built with React, featuring product listings, a shopping cart, search and filter functionality, and a review system. Users can browse products, add them to their cart, leave reviews, and filter products by category, all while enjoying a clean and responsive user interface.",
+    task: {
+      taskDescription:
+        "I'm looking for a skilled web developer with extensive experience in React to build a modern e-commerce website.",
+      platform: "Freelancer",
+      projectName: "Modern E-commerce Website Development in React",
+      biddingEnds: "Saturday, February 22, 2025",
+      requirements: [
+        "Shopping Cart: The website should have a fully functional shopping cart, enabling users to easily add, remove, and check out their chosen products.",
+        "User Reviews: I want to incorporate a user review system, allowing customers to leave feedback on their purchases and enhancing user interaction.",
+        "Product Filtering: Essential for a smooth shopping experience, the site needs a product filtering system to help users find what they are looking for quickly and easily.",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Set Up Your Development Environment",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Install Node.js and npm",
+            descriptions: [
+              "Download and install Node.js from nodejs.org. This will also install npm (Node Package Manager), which is essential for managing dependencies.",
+            ],
+          },
+          {
+            subtitleDescription: "Create a New React Project",
+            descriptions: [
+              "Open your terminal and run 'npx create-react-app ecommerce-store' to create a new React project.",
+              "Navigate into the project folder using 'cd ecommerce-store'.",
+            ],
+          },
+          {
+            subtitleDescription: "Install React Router",
+            descriptions: [
+              "React Router is used for navigation between pages. Install it by running 'npm install react-router-dom'.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Plan Your Application Structure",
+        titleDescription: "Identify Components",
+        sections: [
+          {
+            subtitleDescription: "Break down your app into smaller components",
+            descriptions: [
+              "App: The main component that holds everything together.",
+              "ProductList: Displays a list of products.",
+              "ShoppingCart: Shows the items added to the cart.",
+              "SearchFilter: Allows users to search and filter products.",
+              "ReviewPage: Lets users leave reviews for products.",
+            ],
+          },
+          {
+            subtitleDescription: "Create a Folder Structure",
+            descriptions: [
+              "Inside the 'src' folder, create a 'components' folder to store all your components.",
+              "Create separate files for each component (e.g., ProductList.js, ShoppingCart.js, etc.).",
+              "Create a 'data' folder to store your products.json file.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Build the App Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Set Up the App Structure",
+            descriptions: [
+              "Open the App.js file. This is the main component that will hold all the other components together.",
+              "Import the necessary components (ProductList, ShoppingCart, SearchFilter, ReviewPage) and React Router elements (Routes, Route, Link).",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up State Management",
+            descriptions: [
+              "Use the useState hook to create two pieces of state.",
+              "cart: An array to store the items added to the shopping cart.",
+              "filteredProducts: An array to store the list of products after applying search and filter.",
+            ],
+          },
+          {
+            subtitleDescription: "Create Functions for Cart and Filtering",
+            descriptions: [
+              "Write a function addToCart to add products to the cart.",
+              "Check if the product already exists in the cart.",
+              "If it exists, increase its quantity.",
+              "If it doesn't exist, add it to the cart with a quantity of 1.",
+              "Write a function removeFromCart to remove products from the cart based on their ID.",
+              "Write a function handleSearch to filter products based on the search term entered by the user.",
+              "Write a function handleFilter to filter products based on the selected category (e.g., All, Clothing, Electronics).",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up Routing",
+            descriptions: [
+              "Use the Routes and Route components from React Router to define the routes for your app.",
+              "/: Display the ProductList component.",
+              "/cart: Display the ShoppingCart component.",
+              "/leave-review/:productId: Display the ReviewPage component for a specific product.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Navigation Links (instead of Navbar)",
+            descriptions: [
+              "Use the Link component to create navigation links in the app.",
+              "A link to the home page (/).",
+              "A link  to the shopping cart (/cart) that also displays the number of items in the cart.",
+            ],
+          },
+          {
+            subtitleDescription: "Pass Props to Child Components",
+            descriptions: [
+              "Pass the necessary state and functions as props to the child components.",
+              "Pass filteredProducts and addToCart to the ProductList component.",
+              "Pass cart and removeFromCart to the ShoppingCart component.",
+              "Pass handleSearch and handleFilter to the SearchFilter component.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Build the ProductList Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Display the List of Products",
+            descriptions: [
+              "Use the 'products' array passed as a prop to map through and display each product.",
+              "For each product, display its image, name, price, and a button to add it to the cart.",
+            ],
+          },
+          {
+            subtitleDescription: "Fetch and Display Reviews",
+            descriptions: [
+              "For each product, fetch its reviews from 'localStorage' (as we do not use backend) using the product ID.",
+              "If reviews exist, display them below the product details.",
+              "If no reviews exist, display a message like 'No reviews yet.'",
+            ],
+          },
+          {
+            subtitleDescription: "Add a 'Leave a Review' Button",
+            descriptions: [
+              "Add a button that navigates to the ReviewPage for the specific product using React Router's Link component.",
+              "Pass the product ID as a URL parameter (e.g., /leave-review/1).",
+            ],
+          },
+          {
+            subtitleDescription: "Style the Product Cards",
+            descriptions: [
+              "Use CSS to style the product cards, ensuring they look clean and organized.",
+              "Make sure the layout is responsive so it looks good on both desktop and mobile devices.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Build the ShoppingCart Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Display the Cart Items",
+            descriptions: [
+              "Use the 'cart' array passed as a prop to map through and display each item in the cart.",
+              "For each item, display its name, price, quantity, and a button to remove it from the cart.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Empty Cart",
+            descriptions: [
+              "If the cart is empty, display a message like 'Your cart is empty.'",
+            ],
+          },
+          {
+            subtitleDescription: "Calculate Total Price (Optional):",
+            descriptions: [
+              "If you want to add a total price calculation, iterate through the cart items and sum up their prices multiplied by their quantities.",
+            ],
+          },
+          {
+            subtitleDescription: "Style the Cart",
+            descriptions: [
+              "Use CSS to style the cart items and ensure the layout is user-friendly.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Build the SearchFilter Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Add a Search Input",
+            descriptions: [
+              "Create an input field where users can type to search for products by name.",
+              "Use the 'onSearch' function passed as a prop to filter the products as the user types.",
+            ],
+          },
+          {
+            subtitleDescription: "Add a Category Filter Dropdown",
+            descriptions: [
+              "Create a dropdown menu with categories like 'All', 'Clothing', 'Electronics', and 'Footwear'.",
+              "Use the 'onFilter' function passed as a prop to filter the products based on the selected category.",
+            ],
+          },
+          {
+            subtitleDescription: "Style the Search and Filter Section",
+            descriptions: [
+              "Use CSS to style the input field and dropdown menu so they look cohesive and easy to use.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Build the ReviewPage Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create a Review Form",
+            descriptions: [
+              "Add input fields for the user's name, rating (1-5), and comment.",
+              "Use the useState hook to manage the form data.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Form Submission",
+            descriptions: [
+              "When the form is submitted, save the review to 'localStorage' using the product ID as the key.",
+              "After saving the review, navigate back to the home page using React Router's useNavigate hook.",
+            ],
+          },
+          {
+            subtitleDescription: "Validate User Input",
+            descriptions: [
+              "Ensure the user enters a valid name, rating (between 1 and 5), and comment before submitting the form.",
+            ],
+          },
+          {
+            subtitleDescription: "Style the Review Form",
+            descriptions: [
+              "Use CSS to style the form and make it visually appealing.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Create the JSON File",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Set Up the JSON Structure",
+            descriptions: [
+              "Start with an array [] to hold all the products.",
+              "Each product will be an object {} inside the array.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Product Data",
+            descriptions: [
+              "Include the 'id', 'name', 'price', 'image',  and 'category' fields.",
+            ],
+          },
+          {
+            subtitleDescription: "Validate the JSON File",
+            descriptions: [
+              "Ensure all brackets {}, [], and commas , are properly placed.",
+              "Use an online JSON validator to check for any syntax errors.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Test Your Application",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Test Functionality",
+            descriptions: [
+              "Add products to the cart and ensure they appear correctly.",
+              "Test the search and filter functionality.",
+              "Leave reviews and verify they are saved and displayed.",
+            ],
+          },
+          {
+            subtitleDescription: "Debug Issues",
+            descriptions: [
+              "Use browser developer tools to debug any issues with state, props, or routing.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 10: Additional Tips",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Understand Props and State",
+            descriptions: [
+              "Learn how to pass data between components using props and manage dynamic data using state.",
+              "Use React hooks like useState and useEffect to manage state and side effects.",
+            ],
+          },
+          {
+            subtitleDescription: "Practice Component Composition",
+            descriptions: [
+              "Break down your app into smaller, reusable components.",
+              "Compose these components together to build complex UIs.",
+            ],
+          },
+          {
+            subtitleDescription: "Learn React Router Basics",
+            descriptions: [
+              "Understand how to set up routes and navigate between pages.",
+              "Use React Router hooks like useHistory and useParams for more advanced routing.",
+            ],
+          },
+          {
+            subtitleDescription: "Use LocalStorage for Persistence",
+            descriptions: [
+              "Learn how to store and retrieve data from localStorage to persist reviews and cart items.",
+              "Use JSON.stringify and JSON.parse to convert data to and from JSON format.",
+            ],
+          },
+          {
+            subtitleDescription: "Experiment with Styling",
+            descriptions: [
+              "Try using CSS frameworks like Bootstrap or Tailwind CSS to make styling easier(or harder :)).",
+              "Explore CSS-in-JS libraries like styled-components for more dynamic styling.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/zgd485?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson15,    videoLink: "",
+  },
+
+  {
+    taskId: "QR-GPS-Tracker",
+    taskTitle: "QR & GPS Tracker",
+    introduction:
+      "In this guide, you'll build Scan & Track, a web application that combines QR code scanning and real-time geolocation tracking. Users can scan QR codes to retrieve location-based information and view their current coordinates, making it perfect for navigation, event check-ins, or any scenario where location and QR codes are needed.",
+    task: {
+      taskDescription:
+        "We are looking for an experienced app developer to build a QR code-based food & drink ordering system designed for golf courses. The app will allow players to order refreshments directly to their location on the course, whether at a specific hole or from their golf cart.",
+      platform: "Freelancer",
+      projectName: "QR-based Golf Course Refreshment App",
+      biddingEnds: "Monday, march 2, 2025",
+
+      requirements: ["Node.js", "Rspack", "react-geolocated", "html5-qrcode"],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Set Up the Project with Rspack",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Install Node.js and npm",
+            descriptions: [
+              "Download and install Node.js from nodejs.org. This will also install npm (Node Package Manager).",
+              "Verify the installation by running 'node -v' and 'npm -v' in your terminal. You should see the installed versions.",
+            ],
+          },
+          {
+            subtitleDescription: "Create a New Project",
+            descriptions: [
+              "Open your terminal and run the following command to create a new project with Rspack: 'npm create rspack@latest app-name'",
+              "After the project is created, go to your project folder: 'cd app-name'.",
+              "Now install the project dependencies by running: 'npm install'.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Install Required Dependencies",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Install 'Babel' for React support",
+            descriptions: [
+              "'npm install @babel/core @babel/preset-env @babel/preset-react babel-loader --save-dev'.",
+            ],
+          },
+          {
+            subtitleDescription: "Install 'React' and 'ReactDOM'",
+            descriptions: ["'npm install react react-dom'."],
+          },
+          {
+            subtitleDescription: "Install 'react-geolocated' for geolocation",
+            descriptions: ["'npm install react-geolocated'."],
+          },
+          {
+            subtitleDescription: "Install 'html5-qrcode' for QR code scanning",
+            descriptions: ["'npm install html5-qrcode'."],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Create the LocationTracker Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create the File",
+            descriptions: [
+              "Inside the src/components/ folder, create a new file named LocationTracker.js.",
+            ],
+          },
+          {
+            subtitleDescription: "Import Required Dependencies",
+            descriptions: [
+              "At the top of the file, import React and the useGeolocated hook from the react-geolocated library.",
+            ],
+          },
+          {
+            subtitleDescription: "Define the Component",
+            descriptions: [
+              "Create a functional component named LocationTracker.",
+            ],
+          },
+          {
+            subtitleDescription: "Use the 'useGeolocated' Hook",
+            descriptions: [
+              "Call the useGeolocated hook inside the component.",
+              "Pass a configuration object to the hook with the following properties:",
+              "'positionOptions': This is an object that specifies options for geolocation. Set 'enableHighAccuracy' to 'true' to ensure the most accurate location data is retrieved.",
+              "'userDecisionTimeout': This is a number (in milliseconds) that determines how long the hook should wait for the user to allow or deny geolocation access. Set this to 5000 (5 seconds).",
+            ],
+          },
+          {
+            subtitleDescription: "Destructure the Hook's Return Values",
+            descriptions: [
+              "Destructure the following properties from the 'useGeolocated' hook:",
+              "'coords': Contains the latitude and longitude of the user.",
+              "'isGeolocationAvailable': A boolean that checks if the browser supports geolocation.",
+              "'isGeolocationEnabled': A boolean that checks if the user has enabled geolocation.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Conditional Rendering",
+            descriptions: [
+              "If 'isGeolocationAvailable' is 'false', display a message like: Your 'browser does not support Geolocation.'",
+              "If 'isGeolocationEnabled' is 'false', display a message like: 'Geolocation is not enabled.'",
+              "If 'coords' is 'null' (meaning the location is still being fetched), display a message like: 'Getting location...'",
+            ],
+          },
+          {
+            subtitleDescription: "Display the Location",
+            descriptions: [
+              "Once the coordinates are available, display the latitude and longitude in a user-friendly format (e.g., 'Latitude: [value], Longitude: [value]').",
+            ],
+          },
+          {
+            subtitleDescription: "Export the Component",
+            descriptions: [
+              "Export the LocationTracker component as the default export so it can be used in other files.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Create the QRScanner Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Create the File",
+            descriptions: [
+              "Inside the src/components/ folder, create a new file named QRScanner.js.",
+            ],
+          },
+          {
+            subtitleDescription: "Import Required Dependencies",
+            descriptions: [
+              "At the top of the file, import React, 'useEffect', and 'useRef' from React.",
+              "Import the 'Html5QrcodeScanner' class from the 'html5-qrcode' library.",
+            ],
+          },
+          {
+            subtitleDescription: "Define the Component",
+            descriptions: [
+              "Create a functional component named QRScanner that accepts a prop called 'onScan'. This prop will be a callback function to handle scanned data.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up a Reference for the Scanner",
+            descriptions: [
+              "Use the 'useRef' hook to create a reference. This will be used to attach the QR scanner to a specific HTML element.",
+            ],
+          },
+          {
+            subtitleDescription: "Initialize the QR Scanner",
+            descriptions: [
+              "Use the useEffect hook to initialize the QR scanner when the component mounts.",
+              "Create a new instance of 'Html5QrcodeScanner' and configure it with the following options:",
+              "Set the frames per second (fps) to 10.",
+              "Set the size of the scanning box (e.g., 250x250 pixels).",
+              "Attach the scanner to the HTML element referenced by the 'useRef' hook.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Scanned Data",
+            descriptions: [
+              "Pass a callback function to the 'render' method of the 'Html5QrcodeScanner' instance.",
+              "When a QR code is successfully scanned, call the 'onScan' prop with the scanned data.",
+              "Stop the scanner after a successful scan using the 'clear' method.",
+            ],
+          },
+          {
+            subtitleDescription: "Clean Up the Scanner",
+            descriptions: [
+              "Use the 'useEffect' cleanup function to stop the scanner when the component unmounts.",
+            ],
+          },
+          {
+            subtitleDescription: "Render the Scanner",
+            descriptions: [
+              "Return a 'div' element with an ID (e.g., qr-scanner) and attach the 'useRef' reference to it.",
+            ],
+          },
+          {
+            subtitleDescription: "Export the Component",
+            descriptions: [
+              "Export the QRScanner component as the default export so it can be used in other files.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Create the App Component",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Import Required Dependencies",
+            descriptions: [
+              "At the top of the file, import React and the 'useState' hook from React.",
+              "Import the 'QRScanner' and 'LocationTracker' components from their respective files.",
+            ],
+          },
+          {
+            subtitleDescription: "Define the Component",
+            descriptions: ["Create a functional component named App."],
+          },
+          {
+            subtitleDescription: "Set Up State for Scanned Data",
+            descriptions: [
+              "Use the 'useState' hook to create a state variable called 'scannedLocation'. Initialize it to null.",
+            ],
+          },
+          {
+            subtitleDescription: "Create a Callback Function for Scanned Data",
+            descriptions: [
+              "Define a function called handleScan that takes the scanned data as an argument.",
+              "Update the scannedLocation state with the scanned data.",
+            ],
+          },
+          {
+            subtitleDescription: "Render the Components",
+            descriptions: [
+              "Render a div element with a class name (e.g., main-container).",
+              "Add a heading (e.g., 'QR Scanner').",
+              "Render the 'QRScanner' component and pass the 'handleScan' function as the 'onScan' prop.",
+              "Conditionally render the 'LocationTracker' component only if 'scannedLocation' is not 'null'.",
+              "Display the scanned location data (e.g., 'Scanned Location: [value]') if available.",
+            ],
+          },
+          {
+            subtitleDescription: "Export the Component",
+            descriptions: [
+              "Export the App component as the default export so it can be used as the main entry point for the application.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Run the Development Server",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Start the development server",
+            descriptions: ["Use this command in your terminal: 'npm run dev'."],
+          },
+        ],
+      },
+      {
+        stepTitle: "Steps to Create a QR Code Using a QR Code Generator",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Choose a QR Code Generator",
+            descriptions: [
+              "Go to an online QR code generator like 'QRCode Monkey', 'QR Code Generator', or 'QRStuff'.",
+            ],
+          },
+          {
+            subtitleDescription: "Enter the Data",
+            descriptions: [
+              "Select the type of data you want to encode (e.g., URL, text, or location coordinates).",
+              "Enter the data in the input field.",
+              "If encoding a location, enter latitude and longitude in the format: latitude,longitude (e.g., 37.7749,-122.4194).",
+            ],
+          },
+          {
+            subtitleDescription: "Customize the QR Code (Optional)",
+            descriptions: [
+              "Adjust the size of the QR code.",
+              "Change the color or add a logo if the generator allows it.",
+            ],
+          },
+          {
+            subtitleDescription: "Generate the QR Code",
+            descriptions: ["Click the 'Generate' or 'Create QR Code' button."],
+          },
+          {
+            subtitleDescription: "Download the QR Code",
+            descriptions: [
+              "Download the QR code image in your preferred format (e.g., PNG or SVG).",
+            ],
+          },
+          {
+            subtitleDescription: "Test the QR Code",
+            descriptions: [
+              "Use a QR code scanner app on your phone or the QR scanner you built to ensure the QR code works.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/y289f8?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson16,    videoLink: "",
+  },
+  {
+    taskId: "ZipImage-Extractor",
+    taskTitle: "ZipImage Extractor",
+    introduction:
+      "In this project, we'll build a ZipImage Extractor, a React app that allows users to upload a .zip file, automatically extract images from it, and display them in a beautiful grid layout. Users can hover over images to enlarge them and view them in their original size with a sleek modal popup. This project is perfect for learning file handling, state management, and modern UI design!",
+    task: {
+      taskDescription:
+        "I have a React Native app built with Expo. Right now, users have to manually unzip files before sharing them with the app. I want to remove that step so that users can share a .zip file directly with the app, and the app will handle the unzipping automatically.",
+      platform: "Freelancer",
+      projectName: "Enhancing File Sharing in React Native App",
+      biddingEnds: "Friday, 7th of March, 2025",
+      requirements: ["React", "Rspack", "JSZip"],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Set Up the Project",
+        titleDescription:
+          "Create a new React project using Rspack and install the necessary dependencies.",
+        sections: [
+          {
+            subtitleDescription: "Create a New Project",
+            descriptions: [
+              "Open your terminal and run the following command to create a new project with Rspack: 'npx create-rspack@latest app-name'",
+            ],
+          },
+          {
+            subtitleDescription: "Navigate to the Project Folder",
+            descriptions: [
+              "After the project is created, go to your project folder by running: 'npm install'",
+            ],
+          },
+          {
+            subtitleDescription: "Install Dependencies",
+            descriptions: [
+              "Install the project dependencies by running: 'npm install'",
+              "Install the jszip library to handle .zip files: npm install jszip",
+            ],
+          },
+          {
+            subtitleDescription: "Start the Development Server",
+            descriptions: [
+              "Run the following command to start the development server: 'npm run dev'",
+              "In your browser navigate to: 'http://localhost:8080/'",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Implement All useState Hooks",
+        titleDescription: "Set up all the state variables needed for the app.",
+        sections: [
+          {
+            subtitleDescription: "Import useState",
+            descriptions: [
+              "At the top of your React component file, import 'useState' from 'react'.",
+            ],
+          },
+          {
+            subtitleDescription: "Create State for the Uploaded File",
+            descriptions: [
+              "Add a state variable to store the uploaded .zip file.",
+            ],
+          },
+          {
+            subtitleDescription: "Create State for Extracted Files",
+            descriptions: [
+              "Add a state variable to store the extracted images.",
+            ],
+          },
+          {
+            subtitleDescription: "Create State for the Enlarged Image",
+            descriptions: ["Add a state variable to store the enlarged image."],
+          },
+          {
+            subtitleDescription: "Create State for Loading",
+            descriptions: [
+              "Add a state variable to handle the loading state during file extraction.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Create the File Upload Feature",
+        titleDescription:
+          "Allow users to upload a .zip file and store it in the app's state.",
+        sections: [
+          {
+            subtitleDescription: "Define a handleUpload Function",
+            descriptions: [
+              "Create a function called 'handleUpload' that takes an 'event' parameter. This function will handle the file upload.",
+              "Inside the function, create a variable called 'file' and set it to event.target.files[0]. This grabs the first file the user uploads.",
+            ],
+          },
+          {
+            subtitleDescription: "Check if a File Exists",
+            descriptions: [
+              "Use an 'if' statement to check if the 'file' exists. This ensures the app doesn't crash if the user cancels the file upload.",
+              "If the file exists, update the state using 'setZipFile(file)'. This stores the uploaded file in the app's state so we can use it later.",
+            ],
+          },
+          {
+            subtitleDescription: "Store the Filename",
+            descriptions: [
+              "Optionally, store the filename in the state using 'setFilename(file.name)'. This can be useful for displaying the name of the uploaded file to the user.",
+            ],
+          },
+          {
+            subtitleDescription: "Add a File Input Element",
+            descriptions: [
+              "In your React component, add an <input> element with type='file'. This creates a file upload button.",
+              "Set the accept attribute to .zip so only .zip files can be uploaded.",
+              "Add an onChange event handler and set it to handleUpload. This ensures the handleUpload function runs when the user selects a file.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Extract Files from the .zip",
+        titleDescription:
+          "Extract images from the uploaded .zip file and store them in the app's state.",
+        sections: [
+          {
+            subtitleDescription: "Define a handleExtract Function",
+            descriptions: [
+              "Create a function called 'handleExtract'. This function will handle the extraction process.",
+              "Inside the function, check if 'zipFile' exists in the state. If it doesn't, stop the function using 'return'.",
+            ],
+          },
+          {
+            subtitleDescription: "Load the .zip File",
+            descriptions: [
+              "Create a new instance of 'JSZip' and use 'zip.loadAsync(zipFile)' to load the uploaded .zip file. This gives us access to the files inside the .zip.",
+            ],
+          },
+          {
+            subtitleDescription: "Loop Through the Files",
+            descriptions: [
+              "Use the forEach method to loop through each file in the .zip. For each file, check if it's a directory using 'zipEntry.dir'. Skip directories since we only want files.",
+            ],
+          },
+          {
+            subtitleDescription: "Extract Image Files",
+            descriptions: [
+              "For each file, use 'zipEntry.async('blob')' to convert it into a 'Blob' object. A 'Blob' is a way to represent file data in JavaScript.",
+              "Check if the file is an image by looking at its MIME type (e.g., image/jpeg, image/png) or its file extension (e.g., .jpg, .png, .webp).",
+            ],
+          },
+          {
+            subtitleDescription: "Store Extracted Images",
+            descriptions: [
+              "Convert the 'Blob' object into a URL using 'URL.createObjectURL()'. This creates a temporary URL that we can use to display the image.",
+              "Store the image URL and its filename in an array.",
+            ],
+          },
+          {
+            subtitleDescription: "Update the State",
+            descriptions: [
+              "Use 'setExtractedFiles()' to store the array of extracted images in the app's state. This allows us to display the images in the next step.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Display Extracted Images",
+        titleDescription:
+          "Render the extracted images in a grid layout and add hover effects.",
+        sections: [
+          {
+            subtitleDescription: "Create a Grid Layout",
+            descriptions: [
+              "Use CSS Flexbox or Grid to create a responsive grid layout for the images. This ensures the images are displayed neatly in rows and columns.",
+            ],
+          },
+          {
+            subtitleDescription: "Render the Images",
+            descriptions: [
+              "Use the 'map' method to loop through the 'extractedFiles' array in the state.",
+              "For each image, render an <img> element with the 'src' attribute set to the image URL.",
+              "Set a fixed size for the images (e.g., 200x300 pixels) using CSS.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Hover Effects",
+            descriptions: [
+              "Use CSS to create a hover effect that shows an 'Enlarge' button over each image.",
+              "Position the button in the center of the image using 'position: absolute' and 'transform: translate(-50%, -50%)'.",
+              "Use 'opacity' and 'transition' to make the button fade in smoothly when the user hovers over the image.",
+            ],
+          },
+          {
+            subtitleDescription: "Style the Images",
+            descriptions: [
+              "Add a border, shadow, or rounded corners to the images to make them look more polished.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Build the Return Statement (JSX)",
+        titleDescription:
+          "Create the structure of the app using JSX, including the file upload section, image gallery, and modal for enlarged images.",
+        sections: [
+          {
+            subtitleDescription: "Create the App Container",
+            descriptions: [
+              "Wrap the entire app in a <div> with a class name like 'app-container'. This will act as the main container for all the content.",
+            ],
+          },
+          {
+            subtitleDescription: "Add a Title",
+            descriptions: [
+              "Add an <h1> element with the title of the app, e.g., Zip File Image Extractor.",
+            ],
+          },
+          {
+            subtitleDescription: "Create the Upload Section",
+            descriptions: [
+              "Add a <div> with a class name like 'upload-section' to hold the file input and extract button.",
+              "Add a <div> with a class name like 'file-input-container' to wrap the file input.",
+              "Add a <label> element to display the name of the uploaded file (use the 'fileName' state variable).",
+              "Add an <input> element with type='file' and accept='.zip' to allow users to upload .zip files. Set the 'onChange' event handler to 'handleUpload'.",
+              "Add a <button> element for the 'Extract Images' action. Set the 'onClick' event handler to 'handleExtract' and disable the button if no file is uploaded or if extraction is in progress ('isExtracting' state).",
+            ],
+          },
+          {
+            subtitleDescription: "Add a Loading Spinner",
+            descriptions: [
+              "Conditionally render a loading spinner (e.g., a <div> with a class name like 'loading-spinner') if 'isExtracting' is 'true'.",
+            ],
+          },
+          {
+            subtitleDescription: "Create the Image Gallery",
+            descriptions: [
+              "Conditionally render the image gallery if 'extractedFiles' has items (extractedFiles.length > 0).",
+              "Add an <h2> element for the gallery title, e.g., Extracted Images.",
+              "Create a <div> with a class name like 'image-grid' to hold the images.",
+              "Use the 'map' method to loop through 'extractedFiles' and render each image.",
+              "Wrap each image in a <div> with a class name like 'image-card'.",
+              "Add an <img> element with the 'src' attribute set to the image URL and the 'alt' attribute set to the image name.",
+              "Add a <div> with a class name like 'enlarge-btn-container' to hold the 'Enlarge' button.",
+              "Add a <button> element with the 'onClick' event handler set to 'handleEnlarge' to allow users to enlarge the image.",
+            ],
+          },
+        ],
+      },
+
+      {
+        stepTitle: "Step 7: Add the Enlarge Feature",
+        titleDescription:
+          "Allow users to view images in their original size by clicking an 'Enlarge' button.",
+        sections: [
+          {
+            subtitleDescription: "Create a Modal",
+            descriptions: [
+              "Use React's 'useState' to create a state variable called 'enlargedImage'. This will store the image that the user wants to enlarge.",
+              "When the 'Enlarge' button is clicked, update 'enlargedImage' with the selected image.",
+            ],
+          },
+          {
+            subtitleDescription: "Display the Modal",
+            descriptions: [
+              "Use an 'if' statement to check if 'enlargedImage' exists. If it does, render the modal.",
+              "Use a fixed position (position: fixed) to center the modal on the screen.",
+              "Add a semi-transparent background to the modal to highlight the enlarged image.",
+            ],
+          },
+          {
+            subtitleDescription: "Render the Enlarged Image",
+            descriptions: [
+              "Inside the modal, render an <img> element with the 'src' attribute set to the URL of the enlarged image.",
+              "Use CSS to ensure the image fits within the modal while maintaining its aspect ratio.",
+            ],
+          },
+          {
+            subtitleDescription: "Close the Modal",
+            descriptions: [
+              "Add a click event to the modal background to close the modal when the user clicks outside the image.",
+              "Reset 'enlargedImage' to null when the modal is closed.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Smooth Transitions",
+            descriptions: [
+              "Use CSS transitions to animate the opening and closing of the modal.",
+              "For example, fade in the modal and scale up the image for a polished effect.",
+            ],
+          },
+        ],
+      },
+
+      {
+        stepTitle: "Step 8: Style the App",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Add Glassmorphism Effect",
+            descriptions: [
+              "Use CSS properties like 'background-color: rgba(255, 255, 255, 0.8)' and 'backdrop-filter: blur(10px)' to create a frosted glass effect for buttons and containers.",
+            ],
+          },
+          {
+            subtitleDescription: "Modern Shadows",
+            descriptions: [
+              "Add subtle shadows using 'box-shadow' to give depth to buttons and images.",
+            ],
+          },
+          {
+            subtitleDescription: "Responsive Layout",
+            descriptions: [
+              "Use CSS Flexbox or Grid to create a responsive layout for the image grid.",
+            ],
+          },
+          {
+            subtitleDescription: "Smooth Transitions",
+            descriptions: [
+              "Add CSS transitions for hover effects and button interactions to make the app feel polished.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Test the App",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Upload a .zip File",
+            descriptions: [
+              "Test the app by uploading a .zip file containing images.",
+            ],
+          },
+          {
+            subtitleDescription: "Check Image Extraction",
+            descriptions: [
+              "Ensure the images are extracted and displayed correctly.",
+            ],
+          },
+          {
+            subtitleDescription: "Test the Enlarge Feature",
+            descriptions: [
+              "Verify that clicking the 'Enlarge' button opens the modal and displays the image in its original size.",
+            ],
+          },
+          {
+            subtitleDescription: "Responsive Design",
+            descriptions: [
+              "Test the app on different screen sizes to ensure it looks good on both desktop and mobile.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 10: Optional Enhancements",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Error Handling",
+            descriptions: [
+              "Add error messages for invalid file types or corrupted .zip files.",
+            ],
+          },
+          {
+            subtitleDescription: "Loading State",
+            descriptions: ["Show a loading spinner while extracting files."],
+          },
+          {
+            subtitleDescription: "Drag-and-Drop Upload",
+            descriptions: [
+              "Allow users to drag and drop .zip files into the app.",
+            ],
+          },
+          {
+            subtitleDescription: "Image Filters",
+            descriptions: [
+              "Add filters (e.g., grayscale, sepia) to the images.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/jztp3r?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson17,    videoLink: "",
+  },
+  {
+    taskId: "English-Terms-Learning",
+    taskTitle: "The English Terms Learning App",
+    introduction:
+      "The English Terms Learning App is a web-based educational tool designed to help beginner students improve their English vocabulary and comprehension through interactive quizzes and immediate feedback, utilizing Firebase for secure user authentication and MongoDB for efficient storage and retrieval of questions. It offers customizable tests with varying question counts, randomly shuffled multiple-choice questions, and clear explanations for incorrect answers, fostering an engaging and supportive learning environment for language development.",
+    task: {
+      taskDescription:
+        "Development of a web-based application for interactive training of technical vocabulary and knowledge. The app allows users to learn and test terms and definitions in German. The data (terms, questions, answers) will be stored in a database and dynamically provided for tests.",
+      platform: "Freelancer",
+      projectName: "Web App Vocabulary and Knowledge Trainer",
+      biddingEnds: "Friday, 14th of March, 2025",
+      requirements: [
+        "React (Frontend)",
+        "Firebase (Authentication)",
+        "MongoDB (Storing questions)",
+        "Node.js/Express (Backend for MongoDB interaction)",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Understand the Project Structure and Goals",
+        titleDescription:
+          "Create a web app where users can sign in, add questions, take tests, and see their results.",
+        sections: [
+          {
+            subtitleDescription: "Auth",
+            descriptions: [
+              "Handles user sign-in using email/password or Google.",
+            ],
+          },
+          {
+            subtitleDescription: "QuestionForm",
+            descriptions: [
+              "Allows users to add new questions to the database.",
+            ],
+          },
+          {
+            subtitleDescription: "TestSelection",
+            descriptions: [
+              "Lets users input their name and choose the number of questions for the test.",
+            ],
+          },
+          {
+            subtitleDescription: "Test",
+            descriptions: [
+              "Displays questions one by one for the user to answer.",
+            ],
+          },
+          {
+            subtitleDescription: "Results",
+            descriptions: [
+              "Shows the test results, including score, time taken, and incorrect answers.",
+            ],
+          },
+          {
+            subtitleDescription: "App",
+            descriptions: [
+              "The main component that ties everything together with routing and state management.",
+            ],
+          },
+          {
+            subtitleDescription: "Backend",
+            descriptions: [
+              "A simple Express server with MongoDB to store questions.",
+            ],
+          },
+          {
+            subtitleDescription: "Seed",
+            descriptions: [
+              "Creates sample questions for your MongoDB database",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Set Up the Development Environment",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Ensure Node.js and npm are installed on your computer.",
+              "Create a new project directory (e.g., english-terms-test-app).",
+              "Initialize a new Node.js project by running npm init -y in the terminal.",
+              "Install Rspack CLI globally or locally (npm install @rspack/cli @rspack/core --save-dev).",
+              "Initialize a Git repository for version control (optional but recommended).",
+            ],
+          },
+          {
+            subtitleDescription: "Configure Rspack for React Development",
+            descriptions: [
+              "Install 'React' and 'ReactDOM' (npm install react react-dom).",
+              "Install 'react-refresh' for hot reloading (npm install --save-dev react-refresh).",
+            ],
+          },
+          {
+            subtitleDescription: "Install dependencies (Frontend)",
+            descriptions: [
+              "Change directory to your applications name (cd english-terms-test-app).",
+              "Install frontend dependencies (npm install firebase axios react-router-dom).",
+            ],
+          },
+          {
+            subtitleDescription: "Install dependencies (Backend)",
+            descriptions: [
+              "Create a backend fodler in your root.",
+              "Then go to that folder (cd backend).",
+              "Create a package.json file (npm init -y).",
+              "Install backend dependencies (npm install firebase axios react-router-dom).",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Set Up Firebase for Authentication",
+        titleDescription:
+          "Firebase will handle user authentication (e.g., email/password or Google sign-in).",
+        sections: [
+          {
+            subtitleDescription: "Create a Firebase Project",
+            descriptions: [
+              "Go to the Firebase website (firebase.google.com) and sign in with your Google account.",
+              "Click “Add Project,” give it a name (e.g., english-test-app), and follow the steps to create the project.",
+              "Once created, you'll be taken to the Firebase Console.",
+            ],
+          },
+          {
+            subtitleDescription: "Enable Authentication",
+            descriptions: [
+              "In the Firebase Console, go to the “Authentication” section in the sidebar.",
+              "Click “Get Started” and enable the following sign-in methods: Email/Password, Google",
+              "Save your changes.",
+            ],
+          },
+          {
+            subtitleDescription: "Get Firebase Configuration",
+            descriptions: [
+              "In the Firebase Console, go to “Project Settings” (gear icon at the top left).",
+              "Under “Your apps,” click the web icon (</>).",
+              "Register your app by giving it a name (e.g., english-test-app).",
+              "Firebase will provide a configuration object with keys like 'apiKey', 'authDomain', etc. Save this for the next step.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Firebase to Your React App",
+            descriptions: [
+              "In your project, create a file src/firebase.js.",
+              "Set up Firebase by adding the configuration object and initializing Firebase Authentication.",
+              "Export the authentication object so you can use it in your app.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Set Up the MongoDB",
+        titleDescription:
+          "We need MongoDB in this project to store and manage 'questions' persistently, ensuring they are available for retrieval and use in 'tests' across sessions.",
+        sections: [
+          {
+            subtitleDescription: "Sign Up for MongoDB Atlas",
+            descriptions: [
+              "Go to the MongoDB Atlas website.",
+              "Click on 'Try Free' or 'Start Free'.",
+              "Create an account using your email address or sign up with Google, GitHub, or Apple.",
+            ],
+          },
+          {
+            subtitleDescription: "Create a New Project",
+            descriptions: [
+              "After signing in, you'll be prompted to create a new project.",
+              "Give your project a name (e.g., 'test-english-db') and click Next.",
+            ],
+          },
+          {
+            subtitleDescription: "Create a Free Cluster",
+            descriptions: [
+              "In your project, click Build a Cluster.",
+              "Select the FREE tier (M0 cluster).",
+              "Choose your preferred cloud provider (AWS, Google Cloud, or Azure) and region (select a region closest to your location for better performance).",
+              "Leave the default settings for the free tier and click Create Cluster.",
+            ],
+          },
+          {
+            subtitleDescription: "Wait for the Cluster to Deploy",
+            descriptions: [
+              "It may take a few minutes for the cluster to be provisioned. You'll see a notification once it's ready.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up Database Access",
+            descriptions: [
+              "Once the cluster is ready, go to the Database Access tab under Security.",
+              "Click Add New Database User.",
+              "Choose a username and password, or use Autogenerate Secure Password.",
+              "Assign the user appropriate privileges (for testing, you can use Read and write to any database).",
+              "Click Add User.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up Network Access",
+            descriptions: [
+              "Go to the Network Access tab under Security.",
+              "Click Add IP Address.",
+              "To allow access from anywhere, enter 0.0.0.0/0 (not recommended for production but fine for testing).",
+              "Alternatively, you can add your current IP address for better security.",
+              "Click Confirm.",
+            ],
+          },
+          {
+            subtitleDescription: "Connect to Your Cluster",
+            descriptions: [
+              "Go to the Database tab and click Connect.",
+              "Choose a connection method:",
+              "MongoDB Shell: Use the MongoDB command-line tool.",
+              "MongoDB Compass: Use the MongoDB GUI tool.",
+              "Application: Get the connection string for your application (e.g., Node.js, Python, etc.).",
+              "Follow the instructions provided to connect to your cluster.",
+              "Copy the connection string provided.  It will look something like this: (mongodb+srv://<username>:<password>@cluster0...)",
+              "Replace <username> with your database username.",
+              "Replace <password> with your database password.",
+              "Replace <dbname> with the name of the database you want to connect to (e.g., test-english-db).",
+            ],
+          },
+          {
+            subtitleDescription: "Create or Edit the .env File",
+            descriptions: [
+              "In your backend directory, create a file named .env.",
+              "Add the MONGO_URI variable and paste your modified connection string: (MONGO_URI=mongodb+srv://myUser:myPassword@cluster0...)",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Set Up the Backend",
+        titleDescription:
+          "You'll need a backend to store and retrieve questions from MongoDB.",
+        sections: [
+          {
+            subtitleDescription: "Set Up MongoDB Connection",
+            descriptions: [
+              "In the backend folder, create a file called server.js.",
+              "Configure MongoDB by connecting to your local MongoDB instance or MongoDB Atlas using the connection string.",
+              "Use Mongoose to simplify MongoDB interactions.",
+            ],
+          },
+          {
+            subtitleDescription: "Define a Question Schema",
+            descriptions: [
+              "In server.js, create a Mongoose schema for questions with fields like:",
+              "Question text.",
+              "Correct answer.",
+              "Incorrect answers (an array).",
+              "Explanation.",
+              "Create a Mongoose model for questions.",
+            ],
+          },
+          {
+            subtitleDescription: "Create API Endpoints",
+            descriptions: [
+              "Set up Express routes to:",
+              "Get all questions (GET /questions).",
+              "Add a new question (POST /questions).",
+              "Use Express middleware to handle CORS and JSON parsing.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Build the Authentication Component (Auth)",
+        titleDescription:
+          "Allow users to sign in using email/password or Google, and update the app's user state upon successful authentication.",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: ["Create a src/components/Auth.jsx file."],
+          },
+          {
+            subtitleDescription: "Plan the component",
+            descriptions: [
+              "Design a form to handle user authentication with two methods (email/password and Google sign-in), and manage errors.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up State",
+            descriptions: [
+              "Initialize state variables to track the email input, password input, and any error messages that occur during sign-in attempts.",
+            ],
+          },
+          {
+            subtitleDescription: "Prepare Firebase Imports",
+            descriptions: [
+              "Ensure Firebase authentication methods (for email/password and Google sign-in) and the auth object are available from a Firebase config file.",
+            ],
+          },
+          {
+            subtitleDescription: "Create Email Sign-In Function",
+            descriptions: [
+              "Write an async function to sign in using Firebase's email/password method; clear errors before attempting, update the user state on success, or set an error message on failure.",
+            ],
+          },
+          {
+            subtitleDescription: "Create Google Sign-In Function",
+            descriptions: [
+              "Write an async function to sign in using Firebase's Google popup method; clear errors before attempting, update the user state on success, or set an error on failure.",
+            ],
+          },
+          {
+            subtitleDescription: "Build the UI Container",
+            descriptions: [
+              "Create a container div with a class for styling, and add a heading (e.g., “Sign In”) to guide the user.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Input Fields",
+            descriptions: [
+              "Include two input fields: one for email (type 'email') and one for password (type 'password'), with placeholders to indicate expected input.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Sign-In Buttons",
+            descriptions: [
+              "Include two buttons: one for email/password sign-in and one for Google sign-in, each tied to its respective function.",
+            ],
+          },
+          {
+            subtitleDescription: "Display Errors",
+            descriptions: [
+              "Add a conditional paragraph element to display error messages if the sign-in fails, styled to stand out (e.g., red text).",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Input Changes",
+            descriptions: [
+              "Attach event handlers to the email and password inputs to update their respective state values as the user types.",
+            ],
+          },
+          {
+            subtitleDescription: "Ensure Prop Handling",
+            descriptions: [
+              "Receive a setUser function as a prop from the parent component to update the app's user state after successful authentication.",
+            ],
+          },
+          {
+            subtitleDescription: "Test Email Sign-In",
+            descriptions: [
+              "Try signing in with correct and incorrect email/password combinations to verify success and error handling.",
+            ],
+          },
+          {
+            subtitleDescription: "Test Google Sign-In",
+            descriptions: [
+              "Test the Google sign-in to ensure the popup works and the user state updates correctly.",
+            ],
+          },
+          {
+            subtitleDescription: "Debug Issues",
+            descriptions: [
+              "Check the console for any errors during sign-in attempts and ensure error messages display properly to the user.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Create the Question Form Component (QuestionForm)",
+        titleDescription:
+          "Allow users to add new questions to the backend database for use in tests.",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: ["Create a src/components/QuestionForm.jsx file."],
+          },
+
+          {
+            subtitleDescription: "Plan the Component",
+            descriptions: [
+              "Create a form to collect question details (text, correct answer, three incorrect answers, explanation) and submit them to the backend via an API request.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up State",
+            descriptions: [
+              "Initialize state for question text, correct answer, an array of three incorrect answers, explanation, and a success message flag (to show after submission).",
+            ],
+          },
+          {
+            subtitleDescription: "Prepare Axios for API Calls",
+            descriptions: [
+              "Ensure Axios is available to send POST requests to the backend server running at a specified URL (e.g., localhost:5000).",
+            ],
+          },
+          {
+            subtitleDescription: "Build the UI Container",
+            descriptions: [
+              "Create a container div with a class for styling, and add a heading (e.g., “Add New Question”) to guide the user.",
+            ],
+          },
+          {
+            subtitleDescription: "Create the Form Structure",
+            descriptions: [
+              "Add a form element with a submit handler, containing labeled inputs for all fields and a submit button.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Question Text Input",
+            descriptions: [
+              "Include a labeled text input for the question text with a placeholder (e.g., “Enter the question text”) and mark it as required.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Correct Answer Input",
+            descriptions: [
+              "Include a labeled text input for the correct answer with a placeholder (e.g., “Enter the correct answer”) and mark it as required.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Incorrect Answer Inputs",
+            descriptions: [
+              "Include three labeled text inputs for incorrect answers, each with a placeholder (e.g., “Enter incorrect answer 1”), dynamically rendered from the array and marked as required.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Explanation Textarea",
+            descriptions: [
+              "Include a labeled textarea for the explanation with a placeholder (e.g., “Enter explanation for the correct answer”) and mark it as required.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Form Submission",
+            descriptions: [
+              "Create an async function to prevent default form submission, send the form data to the backend via a POST request, reset all inputs, and show a temporary success message.",
+            ],
+          },
+          {
+            subtitleDescription: "Manage Success Message Timeout",
+            descriptions: [
+              "Set a 3-second timeout to hide the success message after it appears, giving the user feedback without cluttering the UI.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Input Changes",
+            descriptions: [
+              "Attach event handlers to update state for question text, correct answer, and explanation; for incorrect answers, update the specific index in the array.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Success Feedback",
+            descriptions: [
+              "Conditionally display a success message (e.g., “Question added successfully!”) when the submission succeeds, styled to be noticeable.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Implement the Results Component (Results)",
+        titleDescription:
+          "Display the user's test results, including score, percentage, time taken, incorrect answers, and an option to retake the test.",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: ["Create a src/components/Results.js file."],
+          },
+          {
+            subtitleDescription: "Plan the Component",
+            descriptions: [
+              "Present test results clearly, showing overall performance metrics and details of incorrect answers, with a button to retake the test.",
+            ],
+          },
+          {
+            subtitleDescription: "Extract Props",
+            descriptions: [
+              "Receive results (score, total questions, incorrect answers, time taken) and a retake function as props from the parent component.",
+            ],
+          },
+          {
+            subtitleDescription: "Calculate Score Percentage",
+            descriptions: [
+              "Compute the percentage by dividing the score by the total number of questions and multiplying by 100, rounded to two decimal places.",
+            ],
+          },
+          {
+            subtitleDescription: "Convert Time Taken",
+            descriptions: [
+              "Convert the time taken (in seconds) into minutes and seconds for a user-friendly display (e.g., “2m 30s”).",
+            ],
+          },
+          {
+            subtitleDescription: "Build the UI Container",
+            descriptions: [
+              "Create a container div with a class for styling, and add a heading (e.g., “Test Results”) to indicate the purpose.",
+            ],
+          },
+          {
+            subtitleDescription: "Display Overall Metrics",
+            descriptions: [
+              "Add paragraphs to show the score (e.g., “Score: 8/10”), percentage (e.g., “Percentage: 80%”), and time taken, each with styled spans for emphasis.",
+            ],
+          },
+          {
+            subtitleDescription: "Show Incorrect Answers",
+            descriptions: [
+              "Conditionally render a section for incorrect answers if any exist; include a subheading (e.g., “Incorrect Answers”) to organize the content.",
+            ],
+          },
+          {
+            subtitleDescription: "List Incorrect Details",
+            descriptions: [
+              "For each incorrect answer, display the question text, user's selected answer, correct answer, and explanation (if available), in a structured format.",
+            ],
+          },
+          {
+            subtitleDescription: "Style Incorrect Answers",
+            descriptions: [
+              "Use bold labels for clarity (e.g., “Question:”, “Your Answer:”) and apply classes to differentiate the user's answer and the correct answer visually.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Retake Button",
+            descriptions: [
+              "Include a button labeled “Take Another Test” that triggers the retake function passed as a prop.",
+            ],
+          },
+          {
+            subtitleDescription: "Ensure Accessibility",
+            descriptions: [
+              "Use semantic HTML (e.g., headings, paragraphs) to make the results screen readable for screen readers.",
+            ],
+          },
+
+          {
+            subtitleDescription: "Test Retake Functionality",
+            descriptions: [
+              "Click the retake button and confirm it triggers the appropriate action in the parent component (e.g., resetting the test).",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Create the Test Component (Test)",
+        titleDescription:
+          "Present a quiz interface where users answer questions one by one, track their progress, and end the test with results.",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: ["Create a src/components/Test.jsx file."],
+          },
+          {
+            subtitleDescription: "Plan the Component",
+            descriptions: [
+              "Display questions sequentially, allow answer selection with immediate feedback, show explanations for incorrect answers, and end the test when complete.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up State",
+            descriptions: [
+              "Initialize state for questions (array), current question index, score, incorrect answers (array), start time, selected answer, explanation visibility, and loading status.",
+            ],
+          },
+          {
+            subtitleDescription: "Prepare Axios for Fetching",
+            descriptions: [
+              "Ensure Axios is set up to fetch questions from the backend API (e.g., localhost:5000/questions) when the component mounts.",
+            ],
+          },
+          {
+            subtitleDescription: "Fetch Questions on Mount",
+            descriptions: [
+              "Use an effect to fetch questions, shuffle them, and select the specified number (based on props); update the questions state and toggle loading status.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Answer Selection",
+            descriptions: [
+              "Create a function to handle answer clicks; compare the selected answer with the correct one, update score if correct, or log incorrect answers and show an explanation.",
+            ],
+          },
+          {
+            subtitleDescription: "Manage Correct Answer Flow",
+            descriptions: [
+              "If the answer is correct, increment the score and automatically move to the next question after a 1-second delay to allow feedback.",
+            ],
+          },
+          {
+            subtitleDescription: "Manage Incorrect Answer Flow",
+            descriptions: [
+              "If the answer is incorrect, add the question and selected answer to the incorrect answers array, and show the correct answer with an explanation.",
+            ],
+          },
+          {
+            subtitleDescription: "Control Question Navigation",
+            descriptions: [
+              "Create a function to move to the next question or end the test if all questions are answered, calculating the total time taken (in seconds) at the end.",
+            ],
+          },
+          {
+            subtitleDescription: "Build the UI Container",
+            descriptions: [
+              "Add a container div with a class for styling, and include a heading showing the current question number and total (e.g., “Question 1/10”).",
+            ],
+          },
+          {
+            subtitleDescription: "Display Question and Options",
+            descriptions: [
+              "Show the current question text and a list of shuffled answer options (correct and incorrect mixed) as buttons, with dynamic styling for correct/incorrect states.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Explanation Section",
+            descriptions: [
+              "Conditionally render an explanation section when an incorrect answer is selected, showing the correct answer and explanation with a “Next Question” button.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Loading and Empty States",
+            descriptions: [
+              "Display a loading message while fetching questions; show a message if no questions are available (e.g., “No questions available. Please add some questions first.”).",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 10: Build the Test Selection Component (TestSelection)",
+        titleDescription:
+          "Allow users to enter their name and select the number of questions before starting a test.",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: ["Create a src/components/TestSelection.js file."],
+          },
+          {
+            subtitleDescription: "Plan the Component",
+            descriptions: [
+              "Create a form to collect the user's name and desired number of questions, validate the input, and trigger the test start.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up State",
+            descriptions: [
+              "Initialize state for the user's name, number of questions (default to 10), and an error message for validation feedback.",
+            ],
+          },
+          {
+            subtitleDescription: "Build the UI Container",
+            descriptions: [
+              "Create a container div with a class for styling, and add a heading (e.g., “Start a Test”) to guide the user.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Name Input",
+            descriptions: [
+              "Include a labeled text input for the user's name with a placeholder (e.g., “Enter your name”) to prompt input.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Questions Dropdown",
+            descriptions: [
+              "Include a labeled dropdown for selecting the number of questions, with options (e.g., 10, 20, 30, 50), defaulting to the initial state value.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Start Button",
+            descriptions: [
+              "Include a button labeled “Start Test” to trigger the test initiation process.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Name Input Changes",
+            descriptions: [
+              "Attach an event handler to update the name state as the user types into the input field.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Dropdown Changes",
+            descriptions: [
+              "Attach an event handler to update the number of questions state when the user selects a different option.",
+            ],
+          },
+          {
+            subtitleDescription: "Validate on Submission",
+            descriptions: [
+              "Create a function to check if the name is provided (not empty after trimming); if valid, call the start test function; otherwise, set an error message.",
+            ],
+          },
+          {
+            subtitleDescription: "Display Error Message",
+            descriptions: [
+              "Conditionally show an error message (e.g., “Please enter your name”) if the name is empty, styled to be noticeable (e.g., red text).",
+            ],
+          },
+          {
+            subtitleDescription: "Ensure Prop Handling",
+            descriptions: [
+              "Receive a startTest function as a prop to initiate the test with the name and number of questions.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 11: Tie Everything Together in the App Component (App)",
+        titleDescription:
+          "Serve as the root component, managing authentication, state, routing, and navigation for the entire app.",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: ["Open the src/App.jsx file."],
+          },
+          {
+            subtitleDescription: "Plan the Component",
+            descriptions: [
+              "Manage the app's state (user, test progress, results), set up routing, and provide navigation with conditional UI elements.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up State",
+            descriptions: [
+              "Initialize state for the user (null initially), test started status (boolean), results (null initially), name (string), and number of questions (default to 10).",
+            ],
+          },
+          {
+            subtitleDescription: "Monitor Authentication",
+            descriptions: [
+              "Use an effect to listen for authentication state changes with Firebase's onAuthStateChanged, updating the user state and cleaning up the listener on unmount.",
+            ],
+          },
+          {
+            subtitleDescription: "Define Start Test Function",
+            descriptions: [
+              "Create a function to set the name, number of questions, and test started status when the user begins a test.",
+            ],
+          },
+          {
+            subtitleDescription: "Define End Test Function",
+            descriptions: [
+              "Create a function to save test results and reset the test started status when the test completes.",
+            ],
+          },
+          {
+            subtitleDescription: "Define Logout Function",
+            descriptions: [
+              "Create a function to sign out using Firebase's signOut, then reset all state (user, test status, results, name, questions) to initial values.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up Routing",
+            descriptions: [
+              "Use React Router to define routes: / for the main flow (TestSelection → Test → Results) and /add-question for the QuestionForm.",
+            ],
+          },
+          {
+            subtitleDescription: "Design the Header",
+            descriptions: [
+              "Add a header with the app title; when logged in, include a “Add New Question” link (to /add-question, hidden during test/results) and a “Logout” button.",
+            ],
+          },
+          {
+            subtitleDescription: "Structure the Layout",
+            descriptions: [
+              "Wrap content in a container div; render Auth if not logged in, otherwise render routes; add a footer with a dynamic copyright year.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Conditional Rendering",
+            descriptions: [
+              "In the main route, show Results if results exist, Test if a test is active, or TestSelection otherwise, passing necessary props to each.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 12: Test the App",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription: "Run Both Servers",
+            descriptions: [
+              "Start the backend server by running these commands: 'cd backend' then 'npm run dev'.",
+              "Start the frontend development server by running these commands: 'cd ..' and then 'npm run dev'.",
+            ],
+          },
+          {
+            subtitleDescription: "Test Each Feature",
+            descriptions: [
+              "Open your browser and go to http://localhost:8080.",
+              "Test the login functionality with email/password and Google sign-in.",
+              "Add some sample questions using the question form.",
+              "Start a test, answer questions, and check the results.",
+              "Ensure the results are not saved after refreshing the page.",
+            ],
+          },
+          {
+            subtitleDescription: "Debug Issues",
+            descriptions: [
+              "If something doesn't work, check the browser console (right-click > Inspect > Console) for errors.",
+              "Check the terminal running the backend for MongoDB or API errors.",
+              "Use console.log statements to debug your React components.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Bonus Step: Create the seedQuestions.js File",
+        titleDescription:
+          "This script populates your database with sample questions",
+        sections: [
+          {
+            subtitleDescription: "Create a New File",
+            descriptions: [
+              "In your backend folder, create a new file called seedQuestions.js.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Required Dependencies",
+            descriptions: [
+              "At the top of the file, import the 'mongoose' and 'dotenv' packages to connect to MongoDB and load environment variables.",
+              "Use require('mongoose') to import Mongoose for database operations.",
+              "Use require('dotenv').config() to load environment variables from the .env file.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up the MongoDB Connection",
+            descriptions: [
+              "Define a constant MONGO_URI to store the MongoDB connection string from the .env file.",
+              "Use process.env.MONGO_URI to access the connection string.",
+            ],
+          },
+          {
+            subtitleDescription: "Define the Question Schema",
+            descriptions: [
+              "Create a Mongoose schema for the questions using 'mongoose.Schema'.",
+              "Define the schema with four fields:",
+              "'questionText': A string to store the question text.",
+              "'correctAnswer': A string to store the correct answer.",
+              "'incorrectAnswers': An array of strings to store three incorrect answer options.",
+              "'explanation': A string to store an explanation for the correct answer.",
+              "Create a Mongoose model named Question based on this schema using mongoose.model('Question', questionSchema).",
+            ],
+          },
+          {
+            subtitleDescription: "Create Sample Questions",
+            descriptions: [
+              "Define an array called sampleQuestions to hold 10 sample questions.",
+              "Each question should be an object with the following properties:",
+              "'questionText': The question (e.g., What is the English word for 'gato'?).",
+              "'correctAnswer': The correct answer (e.g., cat).",
+              "'incorrectAnswers': An array of three incorrect answers (e.g., [dog, bird, fish]).",
+              "'explanation': A beginner-friendly explanation (e.g., 'In English, 'gato' is translated as 'cat'. It is a common household pet.').",
+              "Add 10 questions tailored for beginner English learners, focusing on simple vocabulary (e.g., animals, colors, greetings, opposites) and basic concepts (e.g., numbers, days of the week).",
+            ],
+          },
+          {
+            subtitleDescription: "Create a Function to Seed the Database",
+            descriptions: [
+              "Define an asynchronous function called seedQuestions to handle the database operations.",
+              "Connect to MongoDB using mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true }).",
+              "Log a message to confirm the connection (e.g., 'Connected to MongoDB').",
+              "Optionally clear existing questions in the database using Question.deleteMany({}) (you can skip this if you don't want to clear existing data).",
+              "Insert the sampleQuestions array into the database using Question.insertMany(sampleQuestions).",
+              "Log a message to confirm the insertion (e.g., 'Inserted 10 sample questions').",
+              "Close the MongoDB connection using mongoose.connection.close() and log a confirmation message (e.g., 'Disconnected from MongoDB').",
+              "Wrap the operations in a try/catch block to handle errors.",
+              "If an error occurs, log it (e.g., 'Error seeding questions:') and close the connection.",
+            ],
+          },
+          {
+            subtitleDescription: "Run the Seeding Function",
+            descriptions: [
+              "At the bottom of the file, call the seedQuestions function to execute the seeding process when the script runs.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/fwpvh3?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson18,    videoLink: "",
+  },
+  {
+    taskId: "ebay-lister",
+    taskTitle: "eBay Lister App",
+    introduction:
+      "The eBay Lister app is a React-based tool that enables users to create and preview product listings with customizable templates, offering features like inline text editing, image uploads, and a modern design with vibrant gradients and smooth hover effects. It provides a seamless experience for designing e-commerce listings with dynamic UI rendering and efficient state management.",
+    task: {
+      taskDescription:
+        "I'm wanting to build a tool which will allow eBay sellers to fill a template and generate HTML. Similar to Inkfrog, finest design etc. but with basic functionality so it's not expensive for the user.",
+      platform: "Freelancer",
+      projectName: "eBay HTML Listing Generator",
+      biddingEnds: "Sunday, 29th of March, 2025",
+      requirements: [
+        "Node.js",
+        "Rspack and React Dependencies",
+        "Modern Web Browser",
+        "Code Editor",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Set Up the React Project with Rspack",
+        titleDescription:
+          "Create a new React project using Rspack to start building the app.",
+        sections: [
+          {
+            subtitleDescription: "",
+            descriptions: [
+              "Open your terminal and ensure Node.js is installed by running 'node -v'. If it's not installed, download and install it from the official Node.js website (version 16 or higher is recommended).",
+              "In the terminal, run npm create rspack@latest ebay-lister to create a new Rspack project named 'ebay-lister'. When prompted, choose the 'React' template to set up a basic React project.",
+              "Navigate into the project folder by running 'cd ebay-lister'.",
+              "Start the development server by running 'npm start'. This will launch the app on 'localhost:8080' (or another port if 8080 is in use). Open your browser to verify it's running.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Define the Templates and Initial State",
+        titleDescription:
+          "Set up the basic structure of the app, including the templates and state to manage the listing data.",
+        sections: [
+          [
+            {
+              subtitleDescription: "Importing Dependencies",
+              descriptions: [
+                "In App.js, import React.",
+                "Import the 'useState' hook from 'react' to manage state.",
+                "Import the 'useMemo' hook from 'react' to optimize performance.",
+              ],
+            },
+            {
+              subtitleDescription: "Creating the Templates Array",
+              descriptions: [
+                "Create a constant array called TEMPLATES outside the App component.",
+                "Define the first template: 'Modern Store Template' with 'id': 1, a 'name', and a 'layout' property.",
+                "Define the second template: 'Baby Store Template' with 'id': 2, a 'name', and a 'layout' property.",
+              ],
+            },
+            {
+              subtitleDescription: "Initializing the Listing State",
+              descriptions: [
+                "Inside the App component, use the 'useState' hook to create a state variable called 'listing'.",
+                "Set 'title' as an empty string for the listing title.",
+                "Set 'bannerImage' as 'null' for the banner image file.",
+                "Set 'bannerText' to 'GET UP TO 50% OFF' as the initial banner text.",
+                "Set 'images' as an empty array to store uploaded images.",
+                "Set 'imageCaptions' as an array of four empty strings ['', '', '', ''] to support up to 4 captions.",
+                "Set 'template' to the first template in TEMPLATES as the initial template.",
+              ],
+            },
+            {
+              subtitleDescription: "Additional Listing Properties",
+              descriptions: [
+                "Set 'description' as an empty string for the listing description.",
+                "Set 'profile' as an object with 'shipping' and 'warranty' properties, both initialized as empty strings.",
+                "Set 'storeName' to 'STORE LOGO' as the initial store name.",
+                "Set 'navLinks' to an array of strings ['SAVE IT', 'SHARE', 'SEND US'] for navigation links.",
+              ],
+            },
+            {
+              subtitleDescription: "Managing Additional States",
+              descriptions: [
+                "Use the 'useState' hook to create a state variable called 'savedListings', initialized as an empty array.",
+                "Use the 'useState' hook to create a state variable called 'defaultTemplate', initialized as null.",
+                "Use the 'useState' hook to create a state variable called 'editingField', initialized as null to track the edited field.",
+              ],
+            },
+          ],
+        ],
+      },
+      {
+        stepTitle: "Step 3: Create Functions to Handle Form Inputs",
+        titleDescription:
+          "Build functions to update the state when users interact with the form.",
+        sections: [
+          {
+            subtitleDescription: "Handling Text Input Changes",
+            descriptions: [
+              "Create a function called 'handleChange' to manage text input changes (e.g., for 'title' and 'description').",
+              "The function takes an event (e) and extracts the 'name' and 'value' from 'e.target'.",
+              "Update the 'listing' state by spreading the previous state and setting the field with the matching 'name' to the new 'value'.",
+            ],
+          },
+          {
+            subtitleDescription: "Updating Profile Fields",
+            descriptions: [
+              "Create a function called 'handleProfileChange' to handle changes to 'profile' fields ('shipping' and 'warranty').",
+              "The function takes an event (e) and extracts the 'name' and 'value' from 'e.target'.",
+              "Update 'listing.profile' by spreading the previous 'profile' object and setting the field with the matching 'name' to the new 'value'.",
+            ],
+          },
+          {
+            subtitleDescription: "Uploading Banner Images",
+            descriptions: [
+              "Create a function called 'handleBannerImageUpload' to handle banner image uploads.",
+              "The function takes an event (e) and gets the first file from 'e.target.files'.",
+              "Update 'listing.bannerImage' by setting it to the uploaded file.",
+            ],
+          },
+          {
+            subtitleDescription: "Managing Multiple Image Uploads",
+            descriptions: [
+              "Create a function called 'handleImageUpload' to handle multiple image uploads.",
+              "Determine the maximum number of images allowed: 3 for 'Modern Store' template, 4 for 'Baby Store' template.",
+              "Take the uploaded files from 'e.target.files' and convert them to an array.",
+              "Limit the number of new images to the remaining slots based on the template's maximum.",
+              "Update 'listing.images' by spreading the previous images and adding the new ones, ensuring the total doesn't exceed the maximum.",
+            ],
+          },
+          {
+            subtitleDescription: "Removing Images and Captions",
+            descriptions: [
+              "Create a function called 'removeImage' to remove an image from the list.",
+              "The function takes an 'index' and updates 'listing.images' by filtering out the image at that index.",
+              "Update 'listing.imageCaptions' by resetting the caption at the given 'index' to an empty string.",
+            ],
+          },
+          {
+            subtitleDescription: "Updating Image Captions",
+            descriptions: [
+              "Create a function called 'handleCaptionChange' to update image captions.",
+              "The function takes an 'index' and a 'value'.",
+              "Update 'listing.imageCaptions' by mapping over the captions and setting the caption at the given 'index' to the new 'value'.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 4: Create a Function to Handle Inline Editing in the Preview",
+        titleDescription:
+          "Allow users to edit text directly in the preview iframe and update the state accordingly.",
+        sections: [
+          {
+            subtitleDescription: "Handling Preview Edits",
+            descriptions: [
+              "Create a function called 'handlePreviewEdit' to handle edits made in the preview.",
+              "The function takes a 'field' (the name of the field being edited) and a 'value' (the new value).",
+              "Inside the function, handle updates based on the field name.",
+            ],
+          },
+          {
+            subtitleDescription: "Updating Specific Fields",
+            descriptions: [
+              "If the field is 'bannerText', update 'listing.bannerText' with the new value.",
+              "If the field is 'description', update 'listing.description' with the new value.",
+              "If the field is 'storeName', update 'listing.storeName' with the new value.",
+            ],
+          },
+          {
+            subtitleDescription: "Updating Navigation Links",
+            descriptions: [
+              "If the field starts with 'nav' (e.g., 'nav1', 'nav2', 'nav3'), extract the index from the field name.",
+              "Update 'listing.navLinks' by mapping over the links and setting the link at the extracted index to the new value.",
+            ],
+          },
+          {
+            subtitleDescription: "Updating Captions and Other Fields",
+            descriptions: [
+              "If the field starts with 'caption' (e.g., 'caption-0'), extract the index from the field name.",
+              "Call 'handleCaptionChange' with the extracted index and the new value.",
+              "For any other field (like 'title'), update the 'listing' state directly with the field name and new value.",
+              "After updating the state, set 'editingField' to null to indicate that editing is complete.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Generate the HTML for the Templates",
+        titleDescription:
+          "Create a dynamic HTML string for the preview iframe based on the current state and template.",
+        sections: [
+          {
+            subtitleDescription: "Optimizing HTML Generation",
+            descriptions: [
+              "Use the 'useMemo' hook to create a variable called 'generatedHTML'.",
+              "This hook ensures the HTML is only regenerated when the 'listing' state changes, improving performance.",
+              "Inside 'useMemo', destructure necessary properties from 'listing' (e.g., 'title', 'bannerImage', 'images', etc.).",
+            ],
+          },
+          {
+            subtitleDescription: "Preparing Image Data",
+            descriptions: [
+              "Create a variable called 'bannerImageSrc' to store the URL of the banner image using 'URL.createObjectURL' if a banner image exists.",
+              "Create a variable called 'imageGrid' to generate the HTML for the image grid.",
+              "Map over the 'images' array to create a <div> for each image with a class of 'image-item', containing an image container with the image and a <p> for the caption with a 'data-field' attribute for editing.",
+            ],
+          },
+          {
+            subtitleDescription: "Generating Modern Store Template (id: 1)",
+            descriptions: [
+              "Use an if-else statement to generate different HTML based on 'template.id'.",
+              "For 'Modern Store Template' (id: 1), create an HTML string with a <div> using the 'modern-template' class.",
+              "Add a header <div> with the 'storeName' and a 'data-field' attribute for editing.",
+              "Add a banner <div> with the banner image (or a placeholder) and a banner text <div> with 'bannerText' and a 'data-field' attribute.",
+              "Add the 'imageGrid' for the images.",
+              "Add an <h2> for the 'title' with a 'data-field' attribute.",
+              "Add a description <div> with the 'description' and a 'data-field' attribute.",
+              "Add a profile <div> with the 'shipping' and 'warranty' info.",
+            ],
+          },
+          {
+            subtitleDescription: "Generating Baby Store Template (id: 2)",
+            descriptions: [
+              "For 'Baby Store Template' (id: 2), create an HTML string with a <div> using the 'baby-template' class.",
+              "Add a header <div> with a store name <div> and a navigation links <div> containing <a> tags for each 'navLinks' item with 'data-field' attributes.",
+              "Add the 'imageGrid' for the images.",
+              "Add an <h2> for the 'title' with a 'data-field' attribute.",
+              "Add a description <div> with the 'description' and a 'data-field' attribute.",
+              "Add a profile <div> with the 'shipping' and 'warranty' info.",
+            ],
+          },
+          {
+            subtitleDescription: "Adding Inline Editing Functionality",
+            descriptions: [
+              "In both templates, include a <script> tag in the <head> that adds a click event listener to handle inline editing.",
+              "When a field with a 'data-field' attribute is clicked, open a prompt with the current text.",
+              "If a new value is entered, update the text and send a message to the parent window with the field and new value.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Set Up the Preview Iframe Communication",
+        titleDescription:
+          "Enable communication between the preview iframe and the main app to update the state when text is edited.",
+        sections: [
+          {
+            subtitleDescription: "Setting Up Message Listener",
+            descriptions: [
+              "Use the 'useEffect' hook to set up a message listener for updates from the iframe.",
+              "This hook runs when the component mounts and cleans up when it unmounts.",
+            ],
+          },
+          {
+            subtitleDescription: "Handling Incoming Messages",
+            descriptions: [
+              "Inside 'useEffect', create a function called 'handleMessage' that takes an event (e).",
+              "Check if the event data contains a 'field' and 'value'.",
+              "If so, call 'handlePreviewEdit' with those 'field' and 'value' values.",
+            ],
+          },
+          {
+            subtitleDescription: "Adding and Cleaning Up Event Listener",
+            descriptions: [
+              "Add the 'handleMessage' function as an event listener for the 'message' event on the 'window' object.",
+              "Return a cleanup function from 'useEffect' that removes the event listener when the component unmounts.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle:
+          "Step 7: Create Functions to Save Listings and Set Default Template",
+        titleDescription:
+          "Allow users to save listings and set a default template.",
+        sections: [
+          {
+            subtitleDescription: "Saving the Current Listing",
+            descriptions: [
+              "Create a function called 'saveListing' to save the current listing.",
+              "Check if the 'savedListings' array has fewer than 10 items.",
+              "If true, update 'savedListings' by spreading the previous listings and adding the current 'listing' with a unique id (using 'Date.now()').",
+              "Show an alert saying 'Listing saved!'.",
+            ],
+          },
+          {
+            subtitleDescription: "Handling Listing Limit",
+            descriptions: [
+              "If the 'savedListings' array has 10 or more items, show an alert saying 'Max 10 listings reached!'.",
+            ],
+          },
+          {
+            subtitleDescription: "Saving the Default Template",
+            descriptions: [
+              "Create a function called 'saveDefaultTemplate' to set the current template as the default.",
+              "Update 'defaultTemplate' with the current 'listing.template'.",
+              "Show an alert saying 'Default template saved!'.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Build the UI for the App",
+        titleDescription:
+          "Render the form, preview, and saved listings in the UI.",
+        sections: [
+          {
+            subtitleDescription: "Structuring the App Component",
+            descriptions: [
+              "In the return statement of the 'App' component, create a <div> with a class of 'App' to contain the entire app.",
+              "Add an <h1> with the text 'eBay Lister' as the app title.",
+            ],
+          },
+          {
+            subtitleDescription: "Template Selection Section",
+            descriptions: [
+              "Create a <div> with a class of 'template-selection' for choosing templates.",
+              "Add an <h3> with the text 'Choose a Template'.",
+              "Add a <div> with a class of 'template-options' and map over the 'TEMPLATES' array to create a <button> for each template.",
+              "Set the button's 'className' to 'active' if 'listing.template.id' matches the template's 'id', and add an 'onClick' handler to update 'listing.template' and adjust the 'images' array to the template's image limit.",
+            ],
+          },
+          {
+            subtitleDescription: "Form Section Layout",
+            descriptions: [
+              "Create a <div> with a class of 'container' to hold the form and preview sections side by side.",
+              "Inside, add a <div> with a class of 'form-section'.",
+              "Add an <h2> with the text 'Create Listing'.",
+              "Add an <input> for 'title' with 'name' of 'title', 'placeholder' of 'Listing Title', 'value' of 'listing.title', and 'onChange' handler set to 'handleChange'.",
+            ],
+          },
+          {
+            subtitleDescription: "Modern Store Template Form Elements",
+            descriptions: [
+              "For 'Modern Store Template' (id: 1), add a <div> with a class of 'banner-upload' containing a <label> for 'Banner Image'.",
+              "Add an <input> of type 'file' with 'accept=\"image/*\"' and 'onChange' handler set to 'handleBannerImageUpload'.",
+              "If a 'bannerImage' exists, show a preview <img> and a <button> to remove it by setting 'listing.bannerImage' to null.",
+              "Add a <div> with a class of 'image-upload' containing a <label> for uploading images.",
+              "Add an <input> of type 'file' with 'multiple' and 'accept=\"image/*\"' and 'onChange' handler set to 'handleImageUpload'.",
+              "Below it, add a <div> with a class of 'image-list' and map over 'listing.images' to show each image with a caption <input> (using 'handleCaptionChange') and a <button> to remove it (using 'removeImage').",
+            ],
+          },
+          {
+            subtitleDescription: "Profile and Description Inputs",
+            descriptions: [
+              "Add an <h3> with the text 'Profile Blocks'.",
+              "Add an <input> for 'shipping' with 'name' of 'shipping', 'placeholder' of 'Shipping Info', 'value' of 'listing.profile.shipping', and 'onChange' handler set to 'handleProfileChange'.",
+              "Add an <input> for 'warranty' with 'name' of 'warranty', 'placeholder' of 'Warranty Info', 'value' of 'listing.profile.warranty', and 'onChange' handler set to 'handleProfileChange'.",
+              "Add a <textarea> for 'description' with 'name' of 'description', 'placeholder' of 'Main Description', 'value' of 'listing.description', and 'onChange' handler set to 'handleChange'.",
+            ],
+          },
+          {
+            subtitleDescription: "Action Buttons",
+            descriptions: [
+              "Add a <div> with a class of 'actions' containing three buttons.",
+              "Add a button to generate HTML that shows an alert with 'generatedHTML'.",
+              "Add a button to save the listing that calls 'saveListing'.",
+              "Add a button to set the default template that calls 'saveDefaultTemplate'.",
+            ],
+          },
+          {
+            subtitleDescription: "Preview Section Layout",
+            descriptions: [
+              "Add a <div> with a class of 'preview-section'.",
+              "Add an <h2> with the text 'Live Preview'.",
+              "Add an <iframe> with a 'title' of 'Listing Preview', 'srcDoc' set to 'generatedHTML', and a style of 'width: 100%; height: 600px'.",
+              "Add an <h3> to show the number of saved listings (e.g., 'Saved Listings (X/10)') using 'savedListings.length'.",
+              "Add a <ul> to list saved listings by mapping over 'savedListings' and creating an <li> for each, showing its 'title' (or 'Untitled' if empty).",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Style the App with CSS",
+        titleDescription:
+          "Add styles to make the app look modern and user-friendly.",
+        sections: [
+          {
+            subtitleDescription: "Importing Fonts and Base Styles",
+            descriptions: [
+              "In 'App.css', import a modern font like 'Poppins' from Google Fonts.",
+              "Style the 'body' and 'html' to center the app, set a gradient background, and enable vertical scrolling.",
+            ],
+          },
+          {
+            subtitleDescription: "Styling the App Container",
+            descriptions: [
+              "Style the '.App' container with a 'max-width', 'padding', white background, rounded corners, and a shadow.",
+              "Style the '.container' to use flexbox for a side-by-side layout of the form and preview sections.",
+            ],
+          },
+          {
+            subtitleDescription: "Styling Sections",
+            descriptions: [
+              "Style the '.form-section' and '.preview-section' with a light background, 'padding', rounded corners, and a shadow.",
+              "Style the headings ('h1', 'h2', 'h3') with appropriate font sizes, weights, and colors.",
+            ],
+          },
+          {
+            subtitleDescription: "Styling Form Elements",
+            descriptions: [
+              "Style the 'input', 'textarea', and 'select' elements with 'padding', rounded corners, a border, and a focus effect.",
+              "Style the 'button' elements with a gradient background, rounded corners, white text, and a hover effect that lifts the button.",
+              "Style the '.image-item' elements in the form with a white background, 'padding', rounded corners, and a hover effect.",
+            ],
+          },
+          {
+            subtitleDescription: "Styling Template Selection",
+            descriptions: [
+              "Style the '.template-options' buttons with a default background, rounded corners, and a hover effect.",
+              "Add an '.active' class for the selected template with a gradient background.",
+            ],
+          },
+          {
+            subtitleDescription: "Styling Saved Listings",
+            descriptions: [
+              "Style the saved listings '<li>' elements with a light background, 'padding', and rounded corners.",
+            ],
+          },
+          {
+            subtitleDescription: "Styling Modern Store Template",
+            descriptions: [
+              "Style the '.modern-template' and its child elements (header, banner, image grid, etc.) with a gradient background.",
+              "Add rounded corners, shadows, and hover effects to '.modern-template' child elements.",
+            ],
+          },
+          {
+            subtitleDescription: "Styling Baby Store Template",
+            descriptions: [
+              "Style the '.baby-template' and its child elements (header, nav links, image grid, etc.) with a different gradient background.",
+              "Add rounded corners, shadows, and hover effects for the navigation links in '.baby-template'.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 10: Test the App",
+        titleDescription: "Ensure everything works as expected.",
+        sections: [
+          {
+            subtitleDescription: "Launching the App",
+            descriptions: [
+              "Start the app with 'npm run dev' and open it in the browser.",
+            ],
+          },
+          {
+            subtitleDescription: "Testing Template Selection",
+            descriptions: [
+              "Test the template selection by switching between the 'Modern Store' and 'Baby Store' templates.",
+            ],
+          },
+          {
+            subtitleDescription: "Testing Form Inputs",
+            descriptions: [
+              "Test the form by entering a 'title'.",
+              "Upload a banner image (for 'Modern Store'), upload smaller images, add captions.",
+              "Fill in the 'profile' and 'description' fields.",
+            ],
+          },
+          {
+            subtitleDescription: "Testing Preview Updates",
+            descriptions: [
+              "Test the preview by clicking on editable fields (e.g., 'store name', 'nav links', 'title') and updating the text.",
+              "Verify that the state updates correctly.",
+            ],
+          },
+          {
+            subtitleDescription: "Testing Action Buttons",
+            descriptions: [
+              "Test the 'Generate HTML' button to see the generated HTML in an alert.",
+              "Test the 'Save Listing' button to save listings and ensure the saved listings list updates (up to 10).",
+              "Test the 'Set as Default Template' button to save the default template.",
+            ],
+          },
+          {
+            subtitleDescription: "Testing Layout and Styling",
+            descriptions: [
+              "Test the scrolling behavior when uploading multiple images to ensure the app is scrollable.",
+              "Test the styling to ensure the app looks modern with rounded corners, shadows, and hover effects.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/8l6lld?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson19,    videoLink: "",
+  },
+  {
+    taskId: "Gallery-App",
+    taskTitle: "Gallery App: Routing, Hooks & Analytics",
+    introduction:
+      "In this guide, you'll build an interactive art gallery app with React, implementing routing, Google Analytics tracking, and dynamic image overlays. Step-by-step, you'll create components like a responsive header, modal gallery, and checkout form while learning state management, event handling, and side effects.",
+    task: {
+      taskDescription:
+        "We require a web developer to create a basic website to showcase our string art portrait concept. The website will serve as a 'fake door' test, allowing us to gauge customer interest and willingness to pay.",
+      platform: "Freelancer",
+      projectName: "String Art Portraits Website Development",
+      biddingEnds: "Sunday, 112th of April, 2025",
+      requirements: [
+        " Include a prominent 'Buy Now' or 'Order Now' button.",
+        " Create a 'fake checkout' page that informs users the product is not yet available and offers an email signup for updates.",
+        " Implement basic event tracking to monitor clicks on the 'Buy Now' button (e.g., Google Analytics).",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Initialize Google Analytics in Your App",
+        titleDescription: "",
+        sections: [
+          {
+            subtitleDescription:
+              "We'll set up GA in index.js/main.jsx so it's ready for the whole app.",
+            descriptions: [
+              "In your project, go to src/index.js/main.jsx.",
+              "Initialize Google Analytics with your Measurement ID (G-XXXXXXXXXX).",
+            ],
+          },
+          {
+            subtitleDescription: "Go to Google Analytics",
+            descriptions: [
+              "Open your browser and go to analytics.google.com.",
+              "Sign in with your Google account (or create one if you don't have it).",
+            ],
+          },
+          {
+            subtitleDescription: "Create a New Property",
+            descriptions: [
+              "Click Admin (gear icon) in the bottom-left corner.",
+              "In the 'Account' column, click Create Account if you don't have one, or select an existing account.",
+              "In the 'Property' column, click Create Property.",
+            ],
+          },
+          {
+            subtitleDescription: "Fill in",
+            descriptions: [
+              "Property name: 'String Art Website' (or anything you like).",
+              "Reporting time zone: Choose your time zone.",
+              "Currency: Pick your currency (e.g., GBP).",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up a Data Stream",
+            descriptions: ["Choose Web (since this is a website)."],
+          },
+          {
+            subtitleDescription: "Enter",
+            descriptions: [
+              "Website URL: For now, use http://localhost:3000 (your local dev server). You can update this later when you deploy.",
+              "Stream name: 'String Art Stream' (or anything descriptive).",
+              "Click Create stream.",
+            ],
+          },
+          {
+            subtitleDescription: "Get Your Measurement ID",
+            descriptions: [
+              "After creating the stream, you'll see a 'Web stream details' page.",
+              "Look for the Measurement ID (it looks like G-XXXXXXXXXX).",
+              "Copy this ID and use it in your src/index.js/main.jsx file.",
+            ],
+          },
+          {
+            subtitleDescription: "Install react-ga4 in Your Project",
+            descriptions: [
+              "Go to your project folder.",
+              "Install the Library: 'npm install react-ga4'",
+              "After it installs, you'll see a success message in the terminal. If there's an error (e.g., 'npm not found'), make sure Node.js is installed.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Build the Core Components",
+        titleDescription: "App.js",
+        sections: [
+          {
+            subtitleDescription: "Import Dependencies",
+            descriptions: [
+              "Import 'React', 'Routes', and 'Route' from 'react-router-dom'.",
+              "Import 'Home', 'Checkout', 'Header', and 'Footer'.",
+            ],
+          },
+          {
+            subtitleDescription: "Create the App Component",
+            descriptions: [
+              "Define a function component named App.",
+              "Return a div with 'className' 'App' as the main container.",
+            ],
+          },
+          {
+            subtitleDescription: "Structure the Layout",
+            descriptions: [
+              "Add the Header component at the top.",
+              "Set up Routes component as a container for all route definitions.",
+              "Define a Route for path='/' that renders the Home component.",
+              "Define a Route for path='/checkout' that renders the Checkout component.",
+              "Add the Footer component at the bottom.",
+              "Export the App function as the default export.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Create Navigation Components",
+        titleDescription: "Header.js",
+        sections: [
+          {
+            subtitleDescription: "Import Dependencies",
+            descriptions: [
+              "Import 'React' from the react package.",
+              "Import 'Link' component from 'react-router-dom'.",
+            ],
+          },
+          {
+            subtitleDescription: "Create the Header Component",
+            descriptions: [
+              "Define a function component named Header.",
+              "Return a 'header' element with 'className' 'header'.",
+              "Add a div with 'className' 'container' inside the header.",
+            ],
+          },
+          {
+            subtitleDescription: "Build the Navigation Bar",
+            descriptions: [
+              "Create a nav element with 'className' 'navbar' inside the container.",
+              "Add a 'Link' to the home page ('/') with 'className' 'logo'.",
+              "Place the text 'String Art Portraits' inside the logo 'link'.",
+              "Add a registered trademark symbol with smaller font size using inline styling.",
+              "Create a second 'Link' to '/checkout' with classes 'btn' and 'btn-order'.",
+              "Place the text 'Order Now' inside the checkout link button.",
+              "Export the Header function as the default export.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Implement the Home Page",
+        titleDescription: "Home.js",
+        sections: [
+          {
+            subtitleDescription: "Import Dependencies",
+            descriptions: [
+              "Import 'React' from the 'react' package.",
+              "Import the 'ArtGallery' component from the components directory.",
+            ],
+          },
+          {
+            subtitleDescription: "Create the Home Component",
+            descriptions: [
+              "Define a function component named Home.",
+              "Return a 'div' element as a container.",
+              "Place the ArtGallery component inside the 'div'.",
+              "Export the Home function as the default export.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Build the Art Gallery Feature",
+        titleDescription: "ArtGallery.js",
+        sections: [
+          {
+            subtitleDescription: "Import Dependencies",
+            descriptions: [
+              "Import 'React', 'useState', 'useRef', and 'useEffect' from the react package.",
+              "Import 'FontAwesomeIcon' from '@fortawesome/react-fontawesome'.",
+              "Import specific icons (faPlusCircle, faChevronLeft, faChevronRight, faTimes).",
+              "Import 'useNavigate' hook from 'react-router-dom'.",
+              "Import 'ReactGA' for Google Analytics tracking.",
+            ],
+          },
+          {
+            subtitleDescription: "Initialize Hooks and State",
+            descriptions: [
+              "Create a Gallery function component.",
+              "Initialize the navigate function from 'useNavigate' hook.",
+              "Create a state variable 'currentImageIndex' with 'useState', set initial value to 'null'.",
+              "Create a state variable 'isOverlayVisible' with 'useState', set initial value to 'false'.",
+              "Initialize 'overlayRef' using useRef(null) for the image overlay container.",
+              "Initialize 'imgOverlayRefs' using useRef([]) for the hover effect elements.",
+            ],
+          },
+          {
+            subtitleDescription: "Define Image Data",
+            descriptions: [
+              "Create an images array containing objects with 'src', 'href', 'title', and 'price' properties for each gallery image.",
+            ],
+          },
+          {
+            subtitleDescription: "Implement Event Handlers",
+            descriptions: [
+              "Create 'handleBuyNow' function that tracks the click event and navigates to '/checkout'.",
+              "Create 'handleImageClick' function that prevents default behavior and updates state to show the overlay.",
+              "Create 'handleOverlayClick' function that checks if the click target is the overlay background and closes it if true.",
+              "Create 'handleNext' function that calculates the next index with modulo operation and updates state.",
+              "Create 'handlePrev' function that calculates the previous index with modulo operation and updates state.",
+              "Create 'handleExit' function that sets isOverlayVisible to false.",
+            ],
+          },
+          {
+            subtitleDescription: "Set Up Effects",
+            descriptions: [
+              "Implement 'useEffect' hook that adds mouseenter/mouseleave event listeners for image hover effects.",
+              "Include a cleanup function that removes all event listeners when component unmounts.",
+            ],
+          },
+          {
+            subtitleDescription: "Render Gallery Layout",
+            descriptions: [
+              "Return a section element with 'id' 'gallery'.",
+              "Add a 'div' with 'className' 'container'.",
+              "Add an 'h2' heading with the text 'String Art Portrait Gallery'.",
+              "Add a paragraph with 'className' 'gallery-description'.",
+              "Create a 'div' with id 'image-gallery'.",
+              "Add a 'div' with 'className' 'row'.",
+            ],
+          },
+          {
+            subtitleDescription: "Render Gallery Items",
+            descriptions: [
+              "Map through the images array to create individual gallery items.",
+              "For each image, create a 'div' with appropriate column classes.",
+              "Add an 'img-wrapper' 'div' to contain the image and overlay.",
+              "Place an anchor (a) tag with the image 'href'.",
+              "Add an 'img' element with the image source.",
+              "Create an 'img-overlay' div with click handler and reference.",
+              "Add the plus icon to the overlay.",
+              "Create an 'image-info' 'div' with 'title', 'price', and 'buy' button.",
+            ],
+          },
+          {
+            subtitleDescription: "Implement Image Overlay",
+            descriptions: [
+              "Conditionally render the image overlay when 'isOverlayVisible' is 'true'.",
+              "Add an overlay 'div' with reference and click handler.",
+              "Display the current image based on 'currentImageIndex'.",
+              "Add navigation buttons for previous and next actions.",
+              "Add a exit button to close the overlay.",
+              "Export the Gallery function as the default export.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Create the Checkout Page",
+        titleDescription: "Checkout.js",
+        sections: [
+          {
+            subtitleDescription: "Import Dependencies",
+            descriptions: [
+              "Import 'React' and 'useState' from the react package.",
+              "Import 'ReactGA' for Google Analytics tracking.",
+            ],
+          },
+          {
+            subtitleDescription: "Initialize State",
+            descriptions: [
+              "Create a function component named Checkout.",
+              "Create a state variable email with 'useState', set initial value to empty string.",
+              "Create a state variable submitted with 'useState', set initial value to 'false'.",
+            ],
+          },
+          {
+            subtitleDescription: "Implement Form Handler",
+            descriptions: [
+              "Create 'handleSubmit' function that prevents default form submission behavior.",
+              "Track the submission event with 'ReactGA.event()'.",
+              "Log the email to the console (in a real app, this would send data to a backend).",
+              "Set submitted state to true.",
+              "Reset email state to empty string.",
+            ],
+          },
+          {
+            subtitleDescription: "Render Page Layout",
+            descriptions: [
+              "Return a section element with 'className' 'checkout'.",
+              "Add a 'div' with 'className' 'checkout-container'.",
+              "Add an 'h1' heading with text 'Coming Soon!'.",
+              "Add a paragraph with 'className' 'subtitle' explaining the waitlist.",
+            ],
+          },
+          {
+            subtitleDescription: "Implement Conditional Content",
+            descriptions: [
+              "Use conditional rendering based on submitted state.",
+              "When true, display a success message 'div' with thank you text.",
+              "When false, display the email collection form.",
+            ],
+          },
+          {
+            subtitleDescription: "Build the Form",
+            descriptions: [
+              "Create a form with 'className' 'signup-form' and onSubmit handler.",
+              "Add a 'form-group' 'div' to contain the input.",
+              "Create an input field for email with value bound to email state.",
+              "Add 'onChange' handler to update email state.",
+              "Add a submit button with appropriate classes.",
+              "Add a privacy notice paragraph.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Benefits Section",
+            descriptions: [
+              "Create a benefits div with heading.",
+              "Add an unordered list with benefit items.",
+              "Export the Checkout function as the default export.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Create the Footer Component",
+        titleDescription: "Footer.js",
+        sections: [
+          {
+            subtitleDescription: "Import Dependencies",
+            descriptions: [
+              "Import 'React' from the react package.",
+              "Import 'Link' component from 'react-router-dom'.",
+            ],
+          },
+          {
+            subtitleDescription: "Create the Footer Component",
+            descriptions: [
+              "Define a function component named Footer.",
+              "Return a footer element with 'className' 'footer'.",
+              "Add a div with 'className' 'container'.",
+            ],
+          },
+          {
+            subtitleDescription: "Add Footer Content",
+            descriptions: [
+              "Add a paragraph element with copyright text.",
+              "Use new 'Date().getFullYear()' to dynamically display current year.",
+              "Add Link components to privacy policy and terms of service pages.",
+              "Apply inline styling to the links.",
+              "Export the Footer function as the default export.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/m9n8g7?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson20,    videoLink: "",
+  },
+  {
+    taskId: "Simple-Breathing-Exercise",
+    taskTitle: "Simple Breathing Exercise",
+    introduction:
+      "This lesson guides you through building an interactive breathing exercise web app using React, focusing on creating components, managing state, and styling a user-friendly interface. By following clear steps, you'll develop a functional tool to lead users through calming breath cycles.",
+    task: {
+      taskDescription:
+        "I'm looking for a skilled React Native developer to create a simple Android app for guided breathing exercises. The app should have basic features to help users practice breathing exercises easily.",
+      platform: "Freelancer",
+      projectName:
+        "Build a Simple Breathing Exercise App for Android (React Native)",
+      biddingEnds: "Sunday, 19th of April, 2025",
+      requirements: [
+        "Basic JavaScript Knowledge",
+        "Node.js Installed",
+        "Basic Understanding of HTML/CSS",
+      ],
+    },
+    steps: [
+      {
+        stepTitle: "Step 1: Setting Up the Project Foundation",
+        titleDescription:
+          "Kick off the adventure by creating a React project and organizing the workspace, like laying the groundwork for a digital zen garden.",
+        sections: [
+          {
+            subtitleDescription: "Initialize the React Environment",
+            descriptions: [
+              "Use RS Pack to generate a new project, setting up the essential files and tools needed to start coding.",
+              "Navigate to the project folder in the terminal, making it the home base for all development tasks.",
+              "Remove default files like App.test.js and logo.svg from the src folder to keep the workspace clean and focused.",
+            ],
+          },
+          {
+            subtitleDescription: "Organize the File Structure",
+            descriptions: [
+              "Create a components folder inside src to store reusable UI pieces, organizing the project like a tidy toolbox.",
+              "Set up an App.css file in src to hold all styling rules, acting as the app's visual designer.",
+              "Ensure the main App.js file is ready to serve as the central hub for the application logic.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 2: Building the Main App Component",
+        titleDescription:
+          "Create the App component to orchestrate the breathing exercise, managing settings and child components like a conductor of a symphony.",
+        sections: [
+          {
+            subtitleDescription: "Define the Component and Settings",
+            descriptions: [
+              "In App.js, create a functional component named App to act as the root, controlling the app's overall flow.",
+              "Define a 'defaultSettings' object with initial values for 'inhale' (4s), 'hold' (4s), 'exhale' (4s), and session duration (1 min) to establish the exercise's starting point.",
+              "Use a state hook to store settings, initializing it with saved values from local storage or 'defaultSettings' if none exist, preserving user preferences.",
+            ],
+          },
+          {
+            subtitleDescription: "Manage State and Storage",
+            descriptions: [
+              "Use a state hook to track whether the timer is running (true) or paused (false), controlling the exercise's play/pause state.",
+              "Use an effect hook to save settings to local storage whenever they change, ensuring preferences persist across page reloads.",
+              "Create a 'handleDurationChange' function to update the session duration in settings and pause the timer, syncing the app with user choices.",
+            ],
+          },
+          {
+            subtitleDescription: "Render the UI",
+            descriptions: [
+              "Return a 'div' with a class for styling, centering all content to create a clean layout.",
+              "Add an 'h1' element with 'Breathing Exercise' to welcome users and set a calming tone.",
+              "Render a 'DurationSelector' component, passing session duration and 'handleDurationChange' as props to let users pick session length.",
+              "Render a 'BreathingTimer' component, passing phase durations, session duration, timer status, and a function to update it, activating the core exercise.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 3: Crafting the Breathing Timer Component",
+        titleDescription:
+          "Build the BreathingTimer component to handle the breathing cycle, countdowns, and audio cues, acting as the heartbeat of the exercise.",
+        sections: [
+          {
+            subtitleDescription: "Set Up State and References",
+            descriptions: [
+              "Create a functional component named 'BreathingTimer' to manage phase transitions and timers.",
+              "Use a state hook to store the current phase (starting with 'inhale') to track whether the user should inhale, hold, or exhale.",
+              "Use a state hook for 'secondsLeft', initialized with the inhale duration, to count down each phase's time.",
+              "Use a state hook for 'totalSecondsLeft', set to session duration times 60, to track the entire session's remaining time.",
+              "Use a ref hook to store a 'timerRef' for the interval, allowing precise control over starting and stopping.",
+            ],
+          },
+          {
+            subtitleDescription: "Create Audio Feedback",
+            descriptions: [
+              "Define a 'playTone' function that takes the phase as input to play a unique sound for inhale, hold, or exhale.",
+              "In 'playTone', create a Web Audio API context to generate sound, like opening a mini music studio.",
+              "Set up an oscillator with a sine wave and connect it to a gain node to control volume.",
+              "Assign frequencies (523.25 Hz for inhale, 392 Hz for hold, 329.63 Hz for exhale) to differentiate phases.",
+              "Configure the gain to ramp up to 0.3 and fade out over 0.5 seconds, then start and stop the oscillator for a brief tone.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 4: Managing the Timer Logic",
+        titleDescription:
+          "Use an effect hook to drive the breathing cycle, updating phases and playing tones, like a metronome guiding the user's breath.",
+        sections: [
+          {
+            subtitleDescription: "Set Up the Timer Effect",
+            descriptions: [
+              "Use an effect hook to run the timer logic when 'isRunning' is true and 'totalSecondsLeft' is greater than zero.",
+              "Set an interval in 'timerRef' to execute every second, updating 'secondsLeft' and 'totalSecondsLeft'.",
+              "Reduce 'secondsLeft' by 1 each second, checking if it's time to switch phases when it reaches zero.",
+            ],
+          },
+          {
+            subtitleDescription: "Handle Phase Transitions",
+            descriptions: [
+              "If phase is 'inhale' and 'secondsLeft' is zero, set phase to 'hold,' reset 'secondsLeft' to hold duration, and play the hold tone.",
+              "If phase is 'hold' and 'secondsLeft' is zero, set phase to 'exhale,' reset 'secondsLeft' to exhale duration, and play the exhale tone.",
+              "If phase is 'exhale' and 'secondsLeft' is zero, set phase to 'inhale,' reset 'secondsLeft' to inhale duration, and play the inhale tone.",
+              "Decrease 'totalSecondsLeft' by 1 each second to track session progress.",
+            ],
+          },
+          {
+            subtitleDescription: "End and Clean Up",
+            descriptions: [
+              "If 'totalSecondsLeft' reaches zero, pause the timer, reset phase to 'inhale,' 'secondsLeft' to inhale duration, and 'totalSecondsLeft' to full session duration.",
+              "In the effect's cleanup, clear the interval in 'timerRef' to prevent it from running after the component unmounts.",
+              "Ensure the effect depends on 'isRunning', 'phaseDurations', 'sessionDuration', 'totalSecondsLeft', and phase to rerun when needed.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 5: Controlling the Timer",
+        titleDescription:
+          "Add functions to start, pause, and format the timer, giving users control over their breathing experience.",
+        sections: [
+          {
+            subtitleDescription: "Toggle the Timer",
+            descriptions: [
+              "Create a 'toggleTimer' function to flip the 'isRunning' state via a prop function, starting or pausing the exercise.",
+              "When starting, reset phase to 'inhale,' 'secondsLeft' to inhale duration, 'totalSecondsLeft' to full session duration, and play the inhale tone.",
+              "Ensure 'toggleTimer' is called when the user clicks the start/pause button, making control intuitive.",
+            ],
+          },
+          {
+            subtitleDescription: "Format Time and Messages",
+            descriptions: [
+              "Create a 'formatTime' function to convert seconds into a 'minutes:seconds' string, padding seconds with a zero if needed.",
+              "In 'formatTime', calculate minutes by dividing seconds by 60 and seconds by using the remainder, ensuring a clear display.",
+              "Create a 'getPhaseMessage' function to return instructions like 'Breathe in deeply' for inhale, 'Hold your breath' for hold, and 'Release slowly' for exhale.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 6: Rendering the Breathing Timer UI",
+        titleDescription:
+          "Design the BreathingTimer's visual elements to guide users through the exercise with clarity and style.",
+        sections: [
+          {
+            subtitleDescription: "Create the Main Container",
+            descriptions: [
+              "Return a 'div' with a class 'breathing-timer' to group all timer elements, setting the stage for the UI.",
+              "Ensure the container is styled to center its content, making the layout clean and focused.",
+              "Add classes to elements to apply phase-specific styles, enhancing visual feedback.",
+            ],
+          },
+          {
+            subtitleDescription: "Display the Breathing Circle",
+            descriptions: [
+              "Render a 'div' styled as a circle with a class 'breathing-circle' and a dynamic phase class (e.g., 'inhale').",
+              "Inside the circle, add a 'span' with class 'seconds' to show 'secondsLeft', making the countdown prominent.",
+              "Ensure the circle's styles change based on phase for visual distinction, like a mood ring for breathing.",
+            ],
+          },
+          {
+            subtitleDescription: "Show Phase Information",
+            descriptions: [
+              "Render an 'h2' element displaying the phase name, capitalizing the first letter and applying a phase class for styling.",
+              "Add a 'p' element with class 'instruction' showing the 'getPhaseMessage' result, guiding the user's actions.",
+              "Include a 'p' element with class 'time-left' showing 'formatTime(totalSecondsLeft)' to track session progress.",
+            ],
+          },
+          {
+            subtitleDescription: "Add the Control Button",
+            descriptions: [
+              "Render a button element that calls 'toggleTimer' on click to start or pause the timer.",
+              "Set the button's text to 'Pause' when 'isRunning' is true and 'Start' when false, making its purpose clear.",
+              "Ensure the button has a class for styling, like rounded edges and a hover effect, to invite interaction.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 7: Building the Duration Selector",
+        titleDescription:
+          "Create the DurationSelector component to let users choose their session length, like picking the perfect meditation vibe.",
+        sections: [
+          {
+            subtitleDescription: "Set Up the Component",
+            descriptions: [
+              "Define a functional component named 'DurationSelector' to handle session duration choices.",
+              "Create an array of durations (1, 3, 5, 10 minutes) to offer users flexible options.",
+              "Return a 'div' with class 'duration-selector' to contain all selector elements, keeping the layout organized.",
+            ],
+          },
+          {
+            subtitleDescription: "Render the UI",
+            descriptions: [
+              "Add an 'h3' element with 'Select Duration' to label the section clearly for users.",
+              "Create a 'div' to hold duration buttons, ensuring they're arranged neatly, like a row of choices.",
+              "Map over the durations array to render a  render a button for each duration, displaying the duration in minutes (e.g., '1 min').",
+            ],
+          },
+          {
+            subtitleDescription: "Handle User Interaction",
+            descriptions: [
+              "Add a unique key to each button for React's rendering efficiency, avoiding warnings.",
+              "Apply a 'selected' class to the button matching 'selectedDuration' to highlight the current choice.",
+              "Attach an 'onClick' event to each button that calls 'onDurationChange' with the duration, updating the session length.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 8: Styling the Application",
+        titleDescription:
+          "Apply CSS styles to make the app visually appealing and intuitive, like dressing it up for a calming performance.",
+        sections: [
+          {
+            subtitleDescription: "Style the App Container",
+            descriptions: [
+              "In App.css, style the '.app' class to center content vertically and horizontally with a soothing background color.",
+              "Set full-screen height and padding to create an immersive, distraction-free experience.",
+              "Ensure text is legible with a clear font and sufficient contrast.",
+            ],
+          },
+          {
+            subtitleDescription: "Style the Breathing Timer",
+            descriptions: [
+              "Style '.breathing-circle' as a circle with phase-specific colors (e.g., blue for inhale) and a scaling animation to mimic breathing.",
+              "Set '.seconds' to a large, bold font for visibility, centered in the circle.",
+              "Style '.instruction' and '.time-left' with distinct fonts and colors to differentiate guidance from status.",
+            ],
+          },
+          {
+            subtitleDescription: "Style Buttons and Selector",
+            descriptions: [
+              "Style the timer's button with a bold color, rounded edges, and hover effect to make it clickable.",
+              "For '.duration-selector', center buttons with spacing for clarity, and style buttons with a subtle border.",
+              "Add a distinct '.selected' style for duration buttons to show the active choice, with a hover effect for interactivity.",
+            ],
+          },
+          {
+            subtitleDescription: "Ensure Responsiveness",
+            descriptions: [
+              "Use relative units like 'vw' and 'rem' for font sizes and element dimensions to scale across devices.",
+              "Add media queries to reduce circle size and button padding on smaller screens, ensuring usability.",
+              "Test styles on multiple screen sizes to confirm the layout remains clean and functional.",
+            ],
+          },
+        ],
+      },
+      {
+        stepTitle: "Step 9: Testing the Application",
+        titleDescription:
+          "Run and test the app to ensure it works smoothly, like taking it for a test drive before the big reveal.",
+        sections: [
+          {
+            subtitleDescription: "Verify Core Functionality",
+            descriptions: [
+              "Start the development server to launch the app in a browser, checking for errors.",
+              "Click the start button to confirm the timer counts down phases, switches correctly, and plays tones.",
+              "Pause and resume the timer to ensure it maintains state without resetting unexpectedly.",
+            ],
+          },
+          {
+            subtitleDescription: "Test User Interactions",
+            descriptions: [
+              "Select different durations to verify the session time updates and the timer resets properly.",
+              "Refresh the page to confirm settings persist in local storage, maintaining user preferences.",
+              "Test audio cues to ensure each phase plays the correct tone at the right time.",
+            ],
+          },
+        ],
+      },
+    ],
+    taskType: "Live",
+    difficulty: "Easy",
+    authorIndex: 0,
+    prerequisites: ["Live Projects"],
+    completed: false,
+    codesandboxUrl:
+      "https://codesandbox.io/embed/pmpp58?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+img: lesson21,    videoLink: "",
+  },
+];

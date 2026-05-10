@@ -1,0 +1,415 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Introduction to React Programming",
+    "description": "Embark on a comprehensive journey through React’s universe, mastering JSX, Hooks, state management, routing, data fetching, performance, and more to build dynamic, scalable applications, with a roadmap to MERN mastery.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "ProjectSchool",
+      "url": "https://www.projectschool.dev"
+    },
+    "url": "https://www.projectschool.dev/guides/reactintro",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "PT15H"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.projectschool.dev/guides/reactintro",
+      "validFrom": "2024-01-01"
+    },
+    "educationalLevel": "Beginner to Advanced",
+    "teaches": [
+      "React core concepts",
+      "JSX and component-based architecture",
+      "State management with Hooks",
+      "Routing and data fetching in React",
+      "Performance optimization",
+      "MERN stack integration"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.projectschool.dev"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": "https://www.projectschool.dev/guides"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Introduction to React Programming",
+        "item": "https://www.projectschool.dev/guides/reactintro"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "React Router Fundamentals",
+    "description": "Learn to implement navigation and dynamic routing in React with React Router, covering basic route setup, nested routes, route parameters, protected routes, and advanced navigation patterns.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "ProjectSchool",
+      "url": "https://www.projectschool.dev"
+    },
+    "url": "https://www.projectschool.dev/guides/reactrouter",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "PT12H"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.projectschool.dev/guides/reactrouter",
+      "validFrom": "2024-01-01"
+    },
+    "educationalLevel": "Beginner to Advanced",
+    "teaches": [
+      "React Router core concepts",
+      "Dynamic routing with URL parameters",
+      "Nested routes and layouts",
+      "Protected routes and authentication",
+      "Query parameters and navigation Hooks",
+      "Performance optimization with lazy loading"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.projectschool.dev"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": "https://www.projectschool.dev/guides"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "React Router Fundamentals",
+        "item": "https://www.projectschool.dev/guides/reactrouter"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Definitive Guide to Mastering the React useContext Hook",
+    "description": "A comprehensive guide to mastering the React useContext Hook with practical examples, detailed explanations, and advanced patterns for React developers.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "ProjectSchool",
+      "url": "https://www.projectschool.dev"
+    },
+    "url": "https://www.projectschool.dev/guides/usecontext",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "PT10H"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.projectschool.dev/guides/usecontext",
+      "validFrom": "2024-01-01"
+    },
+    "educationalLevel": "Beginner to Advanced",
+    "teaches": [
+      "React useContext Hook",
+      "Context API in React",
+      "State management in React applications",
+      "Building scalable React projects"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.projectschool.dev"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": "https://www.projectschool.dev/guides"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "React useContext Hook Guide",
+        "item": "https://www.projectschool.dev/guides/usecontext"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Definitive Guide to Mastering the React useEffect Hook",
+    "description": "A comprehensive guide to mastering the React useEffect Hook with 14 real-world examples, multi-level explanations, and advanced patterns for React developers.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "ProjectSchool",
+      "url": "https://www.projectschool.dev"
+    },
+    "url": "https://www.projectschool.dev/guides/useeffect",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "PT12H"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.projectschool.dev/guides/useeffect",
+      "validFrom": "2024-01-01"
+    },
+    "educationalLevel": "Beginner to Advanced",
+    "teaches": [
+      "React useEffect Hook",
+      "Side-effect management in React",
+      "Building dynamic React applications",
+      "Real-world React projects"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.projectschool.dev"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": "https://www.projectschool.dev/guides"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "React useEffect Hook Guide",
+        "item": "https://www.projectschool.dev/guides/useeffect"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Definitive Guide to Mastering the React useReducer Hook",
+    "description": "A comprehensive guide to mastering the React useReducer Hook with practical examples, in-depth explanations, and advanced state management patterns for React developers.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "ProjectSchool",
+      "url": "https://www.projectschool.dev"
+    },
+    "url": "https://www.projectschool.dev/guides/usereducer",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "PT10H"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.projectschool.dev/guides/usereducer",
+      "validFrom": "2024-01-01"
+    },
+    "educationalLevel": "Beginner to Advanced",
+    "teaches": [
+      "React useReducer Hook",
+      "State management with useReducer",
+      "Complex state logic in React",
+      "Building scalable React applications"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.projectschool.dev"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": "https://www.projectschool.dev/guides"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "React useReducer Hook Guide",
+        "item": "https://www.projectschool.dev/guides/usereducer"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Definitive Guide to Mastering the React useState Hook",
+    "description": "A comprehensive guide to mastering the React useState Hook with 7 real-world examples, 35 hands-on tasks, and job-ready skills for React developers.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "ProjectSchool",
+      "url": "https://www.projectschool.dev"
+    },
+    "url": "https://www.projectschool.dev/guides/usestate",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "PT10H"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.projectschool.dev/guides/usestate",
+      "validFrom": "2024-01-01"
+    },
+    "educationalLevel": "Beginner to Advanced",
+    "teaches": [
+      "React useState Hook",
+      "State management in React",
+      "Building interactive React applications",
+      "Real-world React projects"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.projectschool.dev"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": "https://www.projectschool.dev/guides"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "React useState Hook Guide",
+        "item": "https://www.projectschool.dev/guides/usestate"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Definitive Guide to Mastering Data Fetching in React",
+    "description": "A transformative, book-length guide to mastering data fetching in React, covering fetch, axios, and async/await with multi-level explanations, practical examples, and advanced patterns. Explore the Galactic Data Network analogy, from beginner-friendly foundations to enterprise-grade applications, with in-depth theory and real-world scenarios.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "ProjectSchool",
+      "url": "https://www.projectschool.dev"
+    },
+    "url": "https://www.projectschool.dev/guides/datafetching",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "PT15H"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.projectschool.dev/guides/datafetching",
+      "validFrom": "2024-01-01"
+    },
+    "educationalLevel": "Beginner to Advanced",
+    "teaches": [
+      "Data fetching with fetch, axios, and async/await",
+      "React Hooks (useEffect, useState, useContext, useReducer)",
+      "Handling API requests, errors, and cancellations",
+      "Advanced patterns: caching, polling, SSR, and WebSockets",
+      "Building scalable, data-driven React applications"
+    ],
+    "learningResourceType": "Tutorial",
+    "keywords": [
+      "React data fetching",
+      "fetch API",
+      "axios",
+      "async/await",
+      "React Hooks",
+      "API integration",
+      "server-side rendering",
+      "Galactic Data Network"
+    ],
+    "educationalCredentialAwarded": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Mastery in React Data Fetching",
+      "description": "Comprehensive understanding of data fetching techniques in React, including fetch, axios, async/await, and advanced patterns for building dynamic applications."
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.projectschool.dev"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": "https://www.projectschool.dev/guides"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Data Fetching in React Guide",
+        "item": "https://www.projectschool.dev/guides/datafetching"
+      }
+    ]
+  }
+]

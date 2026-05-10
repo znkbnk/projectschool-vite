@@ -1,0 +1,114 @@
+.scroll-indicator {
+  position: fixed; /* Make it fixed to the screen */
+  bottom: 20px; /* Push it 20px above the bottom of the viewport */
+  left: 50%; /* Horizontally center it */
+  transform: translateX(-50%); /* Adjust to perfectly center */
+  color: white;
+  border-radius: 50px;
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+  
+  .scroll-indicator.hidden {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  
+  .scroll-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .scroll-text {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .char {
+    display: inline-block;
+    animation: textFloat 2s ease-in-out infinite;
+    background: linear-gradient(45deg, #525252, #ffffff);
+    
+    /* Vendor prefixes for background-clip */
+    -webkit-background-clip: text; /* For WebKit browsers (Safari, older Chrome) */
+    background-clip: text; /* Standard property */
+    
+    /* Text fill for transparent effect */
+    -webkit-text-fill-color: transparent;
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+  
+  @keyframes textFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  .scroll-icon {
+    height: 24px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .chevron {
+    position: relative;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+  }
+  
+  .chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+  }
+  
+  .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+  }
+  
+  .chevron:before,
+  .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+  }
+  
+  .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+  }
+  
+  .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+  }
+  
+  @keyframes move {
+    25% {
+      opacity: 1;
+      transform: translateY(10px) scale3d(1, 1, 1);
+    }
+    75% {
+      opacity: 0;
+      transform: translateY(20px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  

@@ -1,0 +1,789 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "React Lessons Catalog",
+  "description": "A comprehensive collection of free React programming lessons, from beginner-friendly projects to advanced applications, hosted by Project School.",
+  "url": "https://www.projectschool.dev/exercises/React",
+  "datePublished": "2023-01-01",
+  "image": "https://www.projectschool.dev/images/react-course.webp",
+  "inLanguage": "en",
+  "provider": {
+    "@type": "EducationalOrganization",
+    "name": "Project School",
+    "url": "https://www.projectschool.dev",
+    "email": "support@projectschool.dev",
+    "logo": "https://www.projectschool.dev/pslogosmall.webp"
+  },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "Online",
+    "startDate": "2023-01-01",
+    "endDate": "2025-12-31",
+    "instructor": {
+      "@type": "Person",
+      "name": "Jevin",
+      "description": "Instructor for React courses at Project School"
+    },
+    "courseWorkload": "PT285H",
+    "location": {
+      "@type": "VirtualLocation",
+      "name": "Online"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "category": "Free",
+    "price": "0.00",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.projectschool.dev/exercises/React",
+    "availabilityStarts": "2025-01-01",
+    "availabilityEnds": "2028-12-31",
+    "validFrom": "2023-01-01"
+  },
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "name": "3D Interactive Card",
+      "description": "Learn to build a React functional component called Card with mouse movement handling and event listeners for an interactive 3D effect.",
+      "url": "https://www.projectschool.dev/exercises/React/3D-Interactive-Card",
+      "keywords": ["React components", "3D effects", "event listeners"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "BMI Tracker",
+      "description": "Create a React component to calculate Body Mass Index (BMI) based on user input, emphasizing state management.",
+      "url": "https://www.projectschool.dev/exercises/React/BMI-Tracker",
+      "keywords": ["React state", "user input", "BMI calculator"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Dark-Light Mode Toggle",
+      "description": "Set up a React project to display articles with a toggleable light and dark theme using CSS and state.",
+      "url": "https://www.projectschool.dev/exercises/React/Dark-Light-Mode-Toggle",
+      "keywords": ["React themes", "dark mode", "CSS"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Sortify: Search by Name",
+      "description": "Develop a React and Bootstrap app for sorting and managing contact names with search functionality.",
+      "url": "https://www.projectschool.dev/exercises/React/Sortify-Search-by-Name",
+      "keywords": ["React Bootstrap", "search", "sorting"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Simple Quiz App",
+      "description": "Build an interactive quiz app from scratch using React, focusing on state and conditional rendering.",
+      "url": "https://www.projectschool.dev/exercises/React/Simple-Quiz-App",
+      "keywords": ["React quiz", "state management", "conditional rendering"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "FAQ",
+      "description": "Create a user-friendly FAQ app with collapsible sections using React hooks and dynamic rendering.",
+      "url": "https://www.projectschool.dev/exercises/React/FAQ",
+      "keywords": ["React FAQ", "hooks", "collapsible UI"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Birthday Reminder",
+      "description": "Develop a dynamic Birthday Reminder app in React with state management and data filtering.",
+      "url": "https://www.projectschool.dev/exercises/React/Birthday-Reminder",
+      "keywords": ["React state", "data filtering", "dynamic UI"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Dynamic Box Shadow Generator",
+      "description": "Implement a customizable box shadow generator with real-time previews in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Dynamic-Box-Shadow-Generator",
+      "keywords": ["React CSS", "box shadow", "real-time UI"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Memory Game",
+      "description": "Build a Memory Game in React with game state management and card interaction logic.",
+      "url": "https://www.projectschool.dev/exercises/React/Memory-Game",
+      "keywords": ["React game", "state management", "interactivity"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Color Generator",
+      "description": "Create a React app for generating and displaying color palettes with clipboard functionality.",
+      "url": "https://www.projectschool.dev/exercises/React/Color-Generator",
+      "keywords": ["React colors", "clipboard", "dynamic UI"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Range Slider",
+      "description": "Build a customizable double range slider component in React with dynamic styling.",
+      "url": "https://www.projectschool.dev/exercises/React/Range-Slider",
+      "keywords": ["React slider", "dynamic styling", "user input"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Form Validation Component",
+      "description": "Implement a form input validation component with conditional logic and dynamic styling in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Form-Validation-Component",
+      "keywords": ["React forms", "validation", "conditional logic"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Markdown Preview App",
+      "description": "Build a Markdown preview app with real-time rendering using React and a Markdown parser.",
+      "url": "https://www.projectschool.dev/exercises/React/Markdown-Preview-App",
+      "keywords": ["React Markdown", "real-time preview", "text rendering"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Menu App",
+      "description": "Develop a responsive web app for displaying and filtering menu items with advanced React techniques.",
+      "url": "https://www.projectschool.dev/exercises/React/Menu-App",
+      "keywords": ["React filtering", "responsive UI", "dynamic data"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Responsive Navbar",
+      "description": "Create a responsive navbar with logo, navigation links, and social icons in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Responsive-Navbar",
+      "keywords": ["React navbar", "responsive design", "navigation"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Pagination Page",
+      "description": "Implement pagination for displaying GitHub followers using React hooks and API integration.",
+      "url": "https://www.projectschool.dev/exercises/React/Pagination-Page",
+      "keywords": ["React pagination", "API integration", "hooks"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Search Bar",
+      "description": "Build a dynamic search bar with API integration and result filtering in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Search-Bar",
+      "keywords": ["React search", "API", "filtering"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Dropdown",
+      "description": "Create a dropdown menu for selecting programming languages with toggle functionality in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Dropdown",
+      "keywords": ["React dropdown", "toggle", "UI components"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Sidebar",
+      "description": "Implement a sidebar component in React with collapsible navigation options.",
+      "url": "https://www.projectschool.dev/exercises/React/Sidebar",
+      "keywords": ["React sidebar", "navigation", "collapsible"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Dynamic Table with Sorting and Copy Functionality",
+      "description": "Build a dynamic table using react-table with sorting and copy-to-clipboard features.",
+      "url": "https://www.projectschool.dev/exercises/React/Dynamic-Table-with-Sorting-and-Copy-Functionality",
+      "keywords": ["react-table", "sorting", "clipboard"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "To-Do App",
+      "description": "Create a task management app with add, delete, edit, and complete functionality in React.",
+      "url": "https://www.projectschool.dev/exercises/React/To-Do-App",
+      "keywords": ["React to-do", "task management", "state"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Testimonials",
+      "description": "Build a dynamic testimonial display with navigation and animated backgrounds in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Testimonials",
+      "keywords": ["React testimonials", "animations", "navigation"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Voice to Text",
+      "description": "Implement speech recognition for real-time voice-to-text conversion using React.",
+      "url": "https://www.projectschool.dev/exercises/React/Voice-to-Text",
+      "keywords": ["React speech", "voice recognition", "real-time"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Text to Voice",
+      "description": "Create a text-to-speech app using the SpeechSynthesis API in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Text-to-Voice",
+      "keywords": ["React speech", "text-to-speech", "API"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Course Finder",
+      "description": "Develop a web app for discovering and filtering online courses with React.",
+      "url": "https://www.projectschool.dev/exercises/React/Course-Finder",
+      "keywords": ["React filtering", "course discovery", "dynamic UI"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Course Shop",
+      "description": "Build e-commerce components for managing a shopping cart and displaying products in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Course-Shop",
+      "keywords": ["React e-commerce", "shopping cart", "products"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "MaterializeCSS Portfolio",
+      "description": "Create a portfolio website using React and Materialize CSS for a modern, responsive design.",
+      "url": "https://www.projectschool.dev/exercises/React/MATERIALIZECSS-Portfolio",
+      "keywords": ["React portfolio", "Materialize CSS", "responsive"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "MaterializeCSS Web Toolkit",
+      "description": "Build a web interface with React and Materialize CSS, featuring responsive components.",
+      "url": "https://www.projectschool.dev/exercises/React/MaterializeCSS-Web-Toolkit",
+      "keywords": ["React toolkit", "Materialize CSS", "responsive UI"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "TradeHub: React Trading Dashboard",
+      "description": "Develop a trading dashboard for managing investments and monitoring market data in React.",
+      "url": "https://www.projectschool.dev/exercises/React/TradeHub-React-Trading-Dashboard",
+      "keywords": ["React dashboard", "trading", "data management"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Cube Image Gallery",
+      "description": "Create an interactive 3D cube image gallery using CSS transformations in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Cube-Image-Gallery",
+      "keywords": ["React gallery", "3D CSS", "interactivity"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "React Analog Clock",
+      "description": "Build a real-time analog clock simulation using React and CSS animations.",
+      "url": "https://www.projectschool.dev/exercises/React/Analog-Clock",
+      "keywords": ["React clock", "CSS animations", "real-time"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Dynamic Menu Highlighter",
+      "description": "Implement an interactive menu with dynamic highlighting and animated borders in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Dynamic-Menu-Highlighter",
+      "keywords": ["React menu", "animations", "highlighting"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Order Tracker Mobile App",
+      "description": "Create a responsive mobile app for real-time order tracking with a drawer interface in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Order-Tracker-Mobile-App",
+      "keywords": ["React mobile", "order tracking", "responsive"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Timer App",
+      "description": "Develop a countdown timer with start, pause, and reset functions in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Timer-App",
+      "keywords": ["React timer", "countdown", "state management"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "My Portfolio Website",
+      "description": "Build a personal portfolio website with various sections using React's component-based architecture.",
+      "url": "https://www.projectschool.dev/exercises/React/Portfolio-Website",
+      "keywords": ["React portfolio", "components", "responsive"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Celestial Canvas",
+      "description": "Create a dynamic night sky simulation with interactive elements using React and CSS.",
+      "url": "https://www.projectschool.dev/exercises/React/Celestial-Canvas",
+      "keywords": ["React simulation", "CSS animations", "interactivity"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Materialize Portfolio",
+      "description": "Build a dynamic portfolio website with React and Materialize CSS, featuring responsive design.",
+      "url": "https://www.projectschool.dev/exercises/React/Materialize-Portfolio",
+      "keywords": ["React portfolio", "Materialize CSS", "responsive"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "File Uploader",
+      "description": "Develop a file upload component with display, download, and deletion features in React.",
+      "url": "https://www.projectschool.dev/exercises/React/File-Uploader",
+      "keywords": ["React file upload", "file management", "UI"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Cake Website",
+      "description": "Create a responsive bakery website simulation with dynamic components in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Cake-Website",
+      "keywords": ["React website", "responsive", "dynamic UI"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Interactive 3D Card Viewer",
+      "description": "Build an interactive app that rotates a 3D-rendered card based on user interactions in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Interactive-3D-Card-Viewer",
+      "keywords": ["React 3D", "interactivity", "CSS"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "DevPortfolio",
+      "description": "Design a developer portfolio with interactive project filters and responsive design in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Dev-Portfolio",
+      "keywords": ["React portfolio", "filtering", "responsive"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Fruit Carousel",
+      "description": "Create an interactive image carousel showcasing fruit images with navigation and progress indicators.",
+      "url": "https://www.projectschool.dev/exercises/React/Fruit-Carousel",
+      "keywords": ["React carousel", "navigation", "images"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "FitLife Website",
+      "description": "Develop a modern fitness website with personalized programs and smooth navigation in React.",
+      "url": "https://www.projectschool.dev/exercises/React/FitLife-Website",
+      "keywords": ["React website", "fitness", "navigation"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "FAQ Toggle",
+      "description": "Build a dynamic FAQ component with expandable answers using React hooks.",
+      "url": "https://www.projectschool.dev/exercises/React/FAQ-Toggle",
+      "keywords": ["React FAQ", "hooks", "toggle"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Pomodoro Focus Timer",
+      "description": "Create an interactive Pomodoro Timer for productivity with customizable durations in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Pomodoro-Focus-Timer",
+      "keywords": ["React timer", "Pomodoro", "productivity"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Profolio",
+      "description": "Develop a visually appealing portfolio with Framer Motion animations in React.",
+      "url": "https://www.projectschool.dev/exercises/React/Profolio",
+      "keywords": ["React portfolio", "Framer Motion", "animations"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Animated Progress Loader",
+      "description": "Implement an engaging loading animation using Framer Motion in a React app.",
+      "url": "https://www.projectschool.dev/exercises/React/Animated-Progress-Loader",
+      "keywords": ["React loader", "Framer Motion", "animations"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "DynamicLoader",
+      "description": "DynamicLoader is a React application featuring a sophisticated animated loader that transitions smoothly into the main content, showcasing the power of Framer Motion for creating visually engaging user experiences.",
+      "url": "https://www.projectschool.dev/exercises/React/Dynamic-Loader",
+      "keywords": ["React loader", "Framer Motion", "animations"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "SpeechSynth",
+      "description": "SpeechSynth is a web application that converts text into speech using a React-based front end and a Node.js back end with gTTs Text-to-Speech integration. Users can input text and download the generated speech as an MP3 file with a simple and intuitive interface.",
+      "url": "https://www.projectschool.dev/exercises/React/Speech-Synth",
+      "keywords": ["React speech", "text-to-speech", "Node.js", "gTTs"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "SmoothScroll Navigator",
+      "description": "SmoothScroll Navigator is a React application that features a dynamic navigation bar with smooth scrolling and automatic section highlighting. This project demonstrates an intuitive user interface, enhancing the user experience by visually guiding them through different sections of the webpage.",
+      "url": "https://www.projectschool.dev/exercises/React/Smooth-Scroll-Navigator",
+      "keywords": ["React navigation", "smooth scrolling", "UI"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Tesla Experience",
+      "description": "Tesla Experience is a sleek and engaging web application that presents Tesla's innovative electric vehicles, featuring detailed model information and immersive animations. Navigate through Tesla's offerings and discover the unique advantages of each model with an intuitive and visually appealing interface.",
+      "url": "https://www.projectschool.dev/exercises/React/Tesla-Experience",
+      "keywords": ["React website", "animations", "responsive UI"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Dynamic Dashboard",
+      "description": "Dynamic Dashboard is a modern web application that provides an interactive and responsive interface for managing and visualizing various types of data. It features a sidebar navigation, day-based tabbed views, and animated components for displaying schedules, user information, and application details.",
+      "url": "https://www.projectschool.dev/exercises/React/Dynamic-Dashboard",
+      "keywords": ["React dashboard", "data visualization", "responsive"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Quiz Master",
+      "description": "React Quiz Master is an interactive quiz application designed to test and enhance your knowledge of React concepts. Featuring dynamic animations and detailed feedback, it provides a seamless and engaging learning experience for React enthusiasts.",
+      "url": "https://www.projectschool.dev/exercises/React/Quiz-Master",
+      "keywords": ["React quiz", "animations", "learning"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Profile Popup Animation",
+      "description": "A React-based web application that showcases user profile information with an animated popup using Framer Motion and Font Awesome icons. The popup provides additional details about the user, featuring smooth animations for an engaging user experience.",
+      "url": "https://www.projectschool.dev/exercises/React/Profile-Popup-Animation",
+      "keywords": ["React popup", "Framer Motion", "Font Awesome"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Movies4u",
+      "description": "Movies4u is a dynamic React web application that allows users to explore and search through a collection of movie-related images. The app features a responsive header with a search bar and navigation menu, a carousel slider that filters images based on user queries, and an interactive modal for viewing image details.",
+      "url": "https://www.projectschool.dev/exercises/React/Movies4u",
+      "keywords": ["React carousel", "search", "responsive UI"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Nature's Beauty",
+      "description": "Nature's Beauty is a React-based web project that showcases the elegance and tranquility of nature through a visually appealing interface. It features a responsive navigation bar, immersive content sections, and smooth interactivity to enhance the user experience.",
+      "url": "https://www.projectschool.dev/exercises/React/Natures-Beauty",
+      "keywords": ["React website", "responsive", "interactivity"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Captcha Guard",
+      "description": "CaptchaGuard is a simple yet effective React-based captcha validation tool that enhances security by generating random character captchas. It ensures users are not bots by verifying their input against a dynamically generated string, providing immediate visual feedback on success or failure.",
+      "url": "https://www.projectschool.dev/exercises/React/Captcha-Guard",
+      "keywords": ["React captcha", "security", "validation"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Calculator",
+      "description": "This project is a simple calculator built using React. It allows users to input numbers and basic operators, display the current expression, and calculate the result using the mathjs library. Features include adding, deleting, resetting inputs, and evaluating mathematical expressions with error handling for invalid inputs.",
+      "url": "https://www.projectschool.dev/exercises/React/Calculator",
+      "keywords": ["React calculator", "mathjs", "error handling"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Copy To Clipboard",
+      "description": "This React project features a simple clipboard tool that allows users to copy text from a textarea to their clipboard with a single click. It provides immediate feedback by changing the button text to 'Copied!' when the copy operation is successful.",
+      "url": "https://www.projectschool.dev/exercises/React/Copy-To-Clipboard",
+      "keywords": ["React clipboard", "user feedback", "textarea"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "English Dictionary",
+      "description": "This React dictionary app allows users to search for the meaning, phonetic transcription, example sentences, and synonyms of words using an external dictionary API. It provides a dynamic user interface with animated transitions for search results, enhancing the overall user experience.",
+      "url": "https://www.projectschool.dev/exercises/React/English-Dictionary",
+      "keywords": ["React dictionary", "API integration", "animations"],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      }
+    }
+  ],
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.projectschool.dev"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Exercises",
+        "item": "https://www.projectschool.dev/exercises"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "React Lessons Catalog",
+        "item": "https://www.projectschool.dev/exercises/React"
+      }
+    ]
+  }
+}

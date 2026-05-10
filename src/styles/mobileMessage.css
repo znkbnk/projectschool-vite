@@ -1,0 +1,131 @@
+.mobile-message-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #232323;
+  color: #ffffff;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.back-button:hover {
+  background: #2a2a2a;
+  transform: translateX(-5px);
+}
+
+/* Text Container */
+.text-container {
+  position: absolute;
+  top: 40%; /* Adjust this value to position the text above the logo */
+  transform: translateY(-300%); /* Move the text up by its own height */
+  text-align: center;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.message-heading {
+  color: #e60023;
+  font-size: 1rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Logo Container */
+.mobile-logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-logo-container img {
+  width: 80%;
+}
+
+.glow-effect {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(230, 0, 35, 0.2) 0%,
+    transparent 70%
+  );
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 640px) {
+  .pslogosmall {
+    display: block;
+  }
+
+  .message-heading {
+    padding: 1rem;
+  }
+
+   .text-container {
+    top: 50%;
+  }
+ 
+}
+
+@media only screen and (max-width: 375px) {
+  .message-heading {
+    font-size: 0.9rem;
+  }
+
+  .back-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-footer {
+  border-top: 1px solid #f1f1f1;
+  padding: 70px 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  z-index: 1;
+}
+.main-footer ul {
+  list-style: none;
+}
+.main-footer h1 {
+  font-size: 22px;
+  line-height: 117%;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.main-footer h2 {
+  color: #ffffff;
+  font-weight: 500;
+}
+.main-footer ul li {
+  margin: 10px 0;
+}
+.main-footer ul li a,
+.main-footer ul li .fa {
+  color: #ffffffcc;
+  text-decoration: none;
+}
+footer {
+  border-top: 4px solid var(--fill2);
+  font-size: 17px;
+  color: #ffffff;
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.logoinfo p {
+  color: #6eb981;
+  font-size: 17px;
+  margin-top: 5px;
+}
+.contact-details {
+  margin-top: 20px;
+  text-align: center;
+}
+.contact-details li {
+  list-style: none;
+  margin: 10px 0;
+}
+.contact-details li a {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+.contact-details .fa {
+  color: #f1f1f1;
+  margin-right: 10px;
+}
+.sociallogos .logobox {
+  display: flex;
+  flex-direction: column;
+}
+.sociallogos .logobox a {
+  margin: 5px;
+}
+.sociallogos .logobox i {
+  padding: 0 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 22px;
+}
+.sociallogos .logobox i:hover {
+  scale: 1.1;
+}
+.copyright {
+  color: #fff;
+  margin: 20px;
+}
+
+.com ul li {
+  padding: 5px 0;
+}
+.com ul li a {
+  text-decoration: none;
+  color: #ffffffcc;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.com ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s;
+}
+
+.com ul li a:hover::after {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.footer-seo-text {
+  max-width: 800px;
+  margin: 10px auto 0;
+  padding: 0 20px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #ffffffcc;
+  text-align: center;
+}
+
+@media only screen and (max-width: 749px) {
+  .main-footer {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .info {
+    padding: 20px 0;
+  }
+}
+@media (max-width: 480px) {
+  .main-footer {
+    grid-template-columns: 1fr;
+  }
+  .sociallogos {
+    padding: 20px 0;
+  }
+  .com {
+    padding: 20px 0;
+  }
+
+  .main-footer ul li {
+    text-align: center;
+  }
+}

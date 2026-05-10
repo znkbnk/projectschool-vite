@@ -98,6 +98,5 @@ const handlePayment = async (amount) => {
 
 `;              
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default [solutionCode1, solutionCode2, solutionCode3, solutionCode4, solutionCode5, solutionCode6];
 

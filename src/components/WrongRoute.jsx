@@ -1,5 +1,4 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/wrongRoute.css';
 import Footer from './Footer'

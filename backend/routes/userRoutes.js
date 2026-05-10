@@ -1,19 +1,25 @@
 // routes/userRoutes.js
 import express from "express";
+import Stripe from "stripe";
+import process from "node:process";
 import User from "../models/userModel.js";
 import admin from "firebase-admin";
 
 const router = express.Router();
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // Middleware to verify Firebase token
 const verifyFirebaseToken = async (req, res, next) => {
   try {
     const authHeader = req.headers.authorization;
+
     if (!authHeader?.startsWith("Bearer ")) {
       return res.status(401).json({ error: "Missing token" });
     }
+
     const idToken = authHeader.split("Bearer ")[1];
     const decoded = await admin.auth().verifyIdToken(idToken);
+
     req.firebaseUid = decoded.uid;
     next();
   } catch (err) {
@@ -22,20 +28,69 @@ const verifyFirebaseToken = async (req, res, next) => {
   }
 };
 
+// Create Stripe Checkout Session
+router.post(
+  "/create-checkout-session",
+  verifyFirebaseToken,
+  async (req, res) => {
+    try {
+      const { priceId, successUrl, cancelUrl } = req.body;
+
+      if (!priceId || !successUrl || !cancelUrl) {
+        return res.status(400).json({ error: "Missing checkout details" });
+      }
+
+      const user = await User.findOne(
+        { firebaseUid: req.firebaseUid },
+        { email: 1 }
+      );
+
+      if (!user?.email) {
+        return res.status(404).json({ error: "User email not found" });
+      }
+
+      const session = await stripe.checkout.sessions.create({
+        mode: "subscription",
+        line_items: [{ price: priceId, quantity: 1 }],
+        client_reference_id: req.firebaseUid,
+        customer_email: user.email,
+        success_url: successUrl,
+        cancel_url: cancelUrl,
+      });
+
+      return res.json({ url: session.url });
+    } catch (error) {
+      console.error("Checkout session error:", error);
+      return res.status(500).json({
+        error: "Failed to create checkout session",
+      });
+    }
+  }
+);
+
 // Get user subscription status and admin status
 router.get(
   "/users/:uid/subscription-status",
   verifyFirebaseToken,
   async (req, res) => {
-    res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+    res.setHeader(
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, proxy-revalidate"
+    );
     res.setHeader("Pragma", "no-cache");
     res.setHeader("Expires", "0");
     res.setHeader("Surrogate-Control", "no-store");
 
     try {
       const { uid } = req.params;
-      if (!uid) return res.status(400).json({ error: "User ID is required" });
-      if (req.firebaseUid !== uid) return res.status(403).json({ error: "Unauthorized access" });
+
+      if (!uid) {
+        return res.status(400).json({ error: "User ID is required" });
+      }
+
+      if (req.firebaseUid !== uid) {
+        return res.status(403).json({ error: "Unauthorized access" });
+      }
 
       const user = await User.findOne(
         { firebaseUid: uid },
@@ -50,7 +105,7 @@ router.get(
       return res.json(response);
     } catch (error) {
       console.error("Error fetching subscription status:", error);
-      res.status(500).json({
+      return res.status(500).json({
         error: "Internal server error",
         subscriptionStatus: "not_subscribed",
         isAdmin: false,
@@ -69,13 +124,24 @@ router.post(
       const { subscriptionStatus } = req.body;
 
       if (!uid || !subscriptionStatus) {
-        return res.status(400).json({ error: "User ID and subscription status required" });
+        return res.status(400).json({
+          error: "User ID and subscription status required",
+        });
       }
+
       if (req.firebaseUid !== uid) {
         return res.status(403).json({ error: "Unauthorized access" });
       }
 
-      const validStatuses = ["not_subscribed", "subscribed", "past_due", "canceled", "incomplete", "trialing"];
+      const validStatuses = [
+        "not_subscribed",
+        "subscribed",
+        "past_due",
+        "canceled",
+        "incomplete",
+        "trialing",
+      ];
+
       if (!validStatuses.includes(subscriptionStatus)) {
         return res.status(400).json({ error: "Invalid subscription status" });
       }
@@ -90,14 +156,14 @@ router.post(
         return res.status(404).json({ error: "User not found" });
       }
 
-      res.json({
+      return res.json({
         success: true,
         subscriptionStatus: updatedUser.subscriptionStatus,
         isAdmin: updatedUser.isAdmin,
       });
     } catch (error) {
       console.error("Error updating subscription:", error);
-      res.status(500).json({ error: "Internal server error" });
+      return res.status(500).json({ error: "Internal server error" });
     }
   }
 );

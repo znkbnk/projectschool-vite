@@ -1,5 +1,4 @@
 import { CheckCircle, XCircle, ArrowLeft, Sparkles } from "lucide-react";
-import { useState, useEffect } from "react";
 import "./SubscriptionConfirmation.css";
 
 const PARTICLES = [
@@ -26,26 +25,20 @@ const PARTICLES = [
 ];
 
 const Confirmation = () => {
-  const [status, setStatus] = useState(null);
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    setStatus(params.get("status") || "success");
-    setAnimate(true);
-  }, []);
-
-  if (!status) return null;
+  const status =
+    typeof window !== "undefined"
+      ? new URLSearchParams(window.location.search).get("status") || "success"
+      : "success";
 
   const isSuccess = status === "success";
 
   return (
-    <div className='confirmation-container'>
-      <div className='background-particles'>
+    <div className="confirmation-container">
+      <div className="background-particles">
         {PARTICLES.map((style, i) => (
           <div
             key={i}
-            className='particle'
+            className="particle"
             style={{
               left: style.left,
               top: style.top,
@@ -56,53 +49,55 @@ const Confirmation = () => {
         ))}
       </div>
 
-      <div className={`confirmation-card ${animate ? "animate-in" : ""}`}>
+      <div className="confirmation-card animate-in">
         <div
           className={`glow-border ${isSuccess ? "success-glow" : "error-glow"}`}
         />
 
-        <div className='card-content'>
+        <div className="card-content">
           <div
-            className={`icon-container ${animate ? "icon-animate" : ""} ${
+            className={`icon-container icon-animate ${
               isSuccess ? "success-icon" : "error-icon"
             }`}
           >
             {isSuccess ? (
-              <CheckCircle className='main-icon success-bounce' />
+              <CheckCircle className="main-icon success-bounce" />
             ) : (
-              <XCircle className='main-icon error-pulse' />
+              <XCircle className="main-icon error-pulse" />
             )}
+
             {isSuccess && (
               <>
-                <Sparkles className='sparkle sparkle-1' />
-                <Sparkles className='sparkle sparkle-2' />
+                <Sparkles className="sparkle sparkle-1" />
+                <Sparkles className="sparkle sparkle-2" />
               </>
             )}
           </div>
 
-          <h1 className='confirmation-title'>
+          <h1 className="confirmation-title">
             {isSuccess ? "Subscription Confirmed!" : "Subscription Failed"}
           </h1>
 
           {isSuccess ? (
-            <div className='success-content'>
-              <p className='success-description'>
+            <div className="success-content">
+              <p className="success-description">
                 You're all set! Enjoy full access to all premium content on
                 Project School.
               </p>
             </div>
           ) : (
-            <div className='error-content'>
-              <p className='error-title'>Oops! Something went wrong</p>
-              <p className='error-description'>
+            <div className="error-content">
+              <p className="error-title">Oops! Something went wrong</p>
+              <p className="error-description">
                 We couldn't process your subscription. Please try again or reach
                 out to our support team.
               </p>
-              <div className='support-box'>
-                <p className='support-label'>Need help?</p>
+
+              <div className="support-box">
+                <p className="support-label">Need help?</p>
                 <a
-                  href='mailto:support@projectschool.dev'
-                  className='support-email'
+                  href="mailto:support@projectschool.dev"
+                  className="support-email"
                 >
                   support@projectschool.dev
                 </a>
@@ -110,9 +105,9 @@ const Confirmation = () => {
             </div>
           )}
 
-          <div className='return-section'>
-            <a href='https://www.projectschool.dev' className='return-button'>
-              <ArrowLeft className='return-arrow' />
+          <div className="return-section">
+            <a href="https://www.projectschool.dev" className="return-button">
+              <ArrowLeft className="return-arrow" />
               <span>Return to www.projectschool.dev</span>
             </a>
           </div>

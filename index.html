@@ -252,16 +252,17 @@
       Completely silent — errors are swallowed.
     -->
     <script>
-  window.addEventListener("load", function () {
-    const apiUrl = import.meta.env.VITE_API_URL;
-    if (apiUrl) {
-      fetch(apiUrl + "/health", {
-        method: "GET",
-        credentials: "omit",
-      }).catch(() => {});
-    }
-  });
-</script>
+      window.addEventListener("load", function () {
+        const apiUrl = "%VITE_API_URL%";
+
+        if (apiUrl && !apiUrl.startsWith("%")) {
+          fetch(apiUrl + "/health", {
+            method: "GET",
+            credentials: "omit",
+          }).catch(function () {});
+        }
+      });
+    </script>
 
     <!-- Deferred Analytics -->
     <script>

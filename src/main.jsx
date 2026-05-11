@@ -36,8 +36,6 @@ if (isPrerendered) {
 }
 
 // Fixed for Vite environment check
-reportWebVitals((metric) => {
-  if (import.meta.env.DEV) { 
-    console.log(metric);
-  }
-});
+if (import.meta.env.DEV) {
+  reportWebVitals(console.log);
+}

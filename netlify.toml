@@ -2,7 +2,18 @@
 for = "/*"
 
 [headers.values]
-Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://js.stripe.com https://cdn.buymeacoffee.com https://codesandbox.io https://unpkg.com https://cdnjs.cloudflare.com https://apis.google.com https://www.gstatic.com https://firebase.googleapis.com https://*.google-analytics.com https://web.cmp.usercentrics.eu; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://upload.wikimedia.org https://images.pexels.com https://images.unsplash.com https://cdn.buymeacoffee.com https://www.google.com/images/ https://app.usercentrics.eu https://uct.service.usercentrics.eu; frame-src 'self' https://www.youtube.com https://*.codesandbox.io https://codesandbox.io https://js.stripe.com https://projectschool-48842.firebaseapp.com; connect-src 'self' https://*.codesandbox.io https://codesandbox.io https://orca-app-b5bxr.ondigitalocean.app https://api.github.com https://www.googleapis.com https://firebase.googleapis.com https://*.firebaseio.com https://securetoken.googleapis.com https://identitytoolkit.googleapis.com https://firestore.googleapis.com https://region1.google-analytics.com https://www.google-analytics.com https://v1.api.service.cmp.usercentrics.eu https://consent-api.service.consent.usercentrics.eu; base-uri 'self'; form-action 'self'; object-src 'none'"
+Content-Security-Policy = """
+default-src 'self';
+script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://js.stripe.com https://cdn.buymeacoffee.com https://codesandbox.io https://unpkg.com https://cdnjs.cloudflare.com https://apis.google.com https://www.gstatic.com https://firebase.googleapis.com https://*.google-analytics.com https://web.cmp.usercentrics.eu;
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
+font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com;
+img-src 'self' data: https://upload.wikimedia.org https://images.pexels.com https://images.unsplash.com https://cdn.buymeacoffee.com https://www.google.com/images/ https://app.usercentrics.eu https://uct.service.usercentrics.eu;
+frame-src 'self' https://www.youtube.com https://*.codesandbox.io https://codesandbox.io https://js.stripe.com https://projectschool-48842.firebaseapp.com;
+connect-src 'self' https://*.codesandbox.io https://codesandbox.io https://orca-app-b5bxr.ondigitalocean.app https://api.github.com https://www.googleapis.com https://firebase.googleapis.com https://*.firebaseio.com https://securetoken.googleapis.com https://identitytoolkit.googleapis.com https://firestore.googleapis.com https://region1.google-analytics.com https://www.google-analytics.com https://v1.api.service.cmp.usercentrics.eu https://consent-api.service.consent.usercentrics.eu;
+base-uri 'self';
+form-action 'self';
+object-src 'none'
+"""
 Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
 X-Frame-Options = "SAMEORIGIN"
 X-Content-Type-Options = "nosniff"

@@ -1,5 +1,5 @@
 // src/Login/AuthActionHandler.js
-import  { useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 const AuthActionHandler = () => {
@@ -23,11 +23,11 @@ const AuthActionHandler = () => {
     switch (mode) {
       case "verifyEmail":
         console.log("Redirecting to verify-email"); // Debugging
-        navigate(`/verify-email?oobCode=${oobCode}`);
+        navigate(`/verify-email?oobCode=${encodeURIComponent(oobCode)}`);
         break;
       case "resetPassword":
         console.log("Redirecting to reset-password-confirm"); // Debugging
-        navigate(`/reset-password-confirm?oobCode=${oobCode}`);
+        navigate(`/reset-password-confirm?oobCode=${encodeURIComponent(oobCode)}`);
         break;
       default:
         console.error("Unknown mode:", mode); // Debugging

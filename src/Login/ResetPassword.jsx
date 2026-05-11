@@ -1,5 +1,5 @@
 // src/Login/ResetPassword.js
-import  {  useState } from "react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ParticlesBackground from "./ParticlesBackground";
@@ -42,7 +42,10 @@ const ResetPassword = () => {
 
     setIsLoading(true);
     try {
-      await sendPasswordResetEmail(auth, email);
+      await sendPasswordResetEmail(auth, email, {
+        url: `${window.location.origin}/auth-action-handler`,
+        handleCodeInApp: false,
+      });
       toast.success("Password reset email sent! Check your inbox.");
     } catch (error) {
       const errorCode = error.code;

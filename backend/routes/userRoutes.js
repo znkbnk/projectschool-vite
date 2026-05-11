@@ -114,6 +114,54 @@ router.get(
   }
 );
 
+router.post("/create-user", verifyFirebaseToken, async (req, res) => {
+  try {
+    const { firebaseUid, email, emailSubscribed } = req.body;
+
+    if (!firebaseUid || !email) {
+      return res.status(400).json({ error: "Missing required fields" });
+    }
+
+    if (req.firebaseUid !== firebaseUid) {
+      return res.status(403).json({ error: "Unauthorized user creation" });
+    }
+
+    const emailLower = email.toLowerCase();
+    const domain = emailLower.split("@")[1];
+
+    const blockedEmails = [
+      "haze88033@gmail.com",
+      "aneesbilal03@gmail.com",
+      "testuser1234@gmail.com",
+    ];
+    const blockedDomains = ["example.com", "bad.com"];
+
+    if (blockedEmails.includes(emailLower) || blockedDomains.includes(domain)) {
+      return res.status(403).json({
+        error: "This email or domain is not allowed to register.",
+      });
+    }
+
+    const user = await User.findOneAndUpdate(
+      { firebaseUid },
+      {
+        firebaseUid,
+        email: emailLower,
+        emailSubscribed: emailSubscribed ?? false,
+        subscriptionStatus: "not_subscribed",
+        subscriptionPlan: "free",
+      },
+      { upsert: true, new: true, setDefaultsOnInsert: true },
+    );
+
+    return res.json({ message: "User created successfully", user });
+  } catch (error) {
+    console.error("Create user error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+
 // Update user subscription status
 router.post(
   "/users/:uid/update-subscription",
@@ -166,6 +214,7 @@ router.post(
       return res.status(500).json({ error: "Internal server error" });
     }
   }
+  
 );
 
 export { router, verifyFirebaseToken };

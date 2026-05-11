@@ -9,6 +9,8 @@ import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../components/firebase";
 import { toast } from "react-toastify";
 import AuthForm from "./AuthForm";
+import axios from "axios";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -75,31 +77,48 @@ const Login = () => {
     }
   };
 
-  const onGoogleLogin = async () => {
-    if (isLoggingIn) return; // Prevent double submission
-    
-    setIsLoggingIn(true);
-    
-    try {
-      await signInWithPopup(auth, googleProvider);
-      toast.success("Logged in successfully");
-      
-      // Small delay to allow auth state to update before navigation
-      setTimeout(() => {
-        navigate(redirectTo, { replace: true });
-      }, 100);
-      
-    } catch (error) {
-      setIsLoggingIn(false);
-      
-      if (error.code === "auth/popup-closed-by-user") {
-        toast.info("Login cancelled");
-      } else {
-        toast.error("Error: " + error.message);
-      }
-      console.error(error);
+const onGoogleLogin = async () => {
+  if (isLoggingIn) return;
+
+  setIsLoggingIn(true);
+
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
+    const user = result.user;
+    const idToken = await user.getIdToken();
+
+    await axios.post(
+      `${import.meta.env.VITE_API_URL}/api/create-user`,
+      {
+        firebaseUid: user.uid,
+        email: user.email,
+        emailSubscribed: false,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${idToken}`,
+        },
+      },
+    );
+
+    toast.success("Logged in successfully");
+
+    setTimeout(() => {
+      navigate(redirectTo, { replace: true });
+    }, 100);
+  } catch (error) {
+    setIsLoggingIn(false);
+
+    if (error.code === "auth/popup-closed-by-user") {
+      toast.info("Login cancelled");
+    } else {
+      toast.error(error.response?.data?.error || "Error: " + error.message);
     }
-  };
+
+    console.error(error);
+  }
+};
+
 
   const formAnimation = useSpring({
     from: { opacity: 0, transform: "translateY(50px)" },

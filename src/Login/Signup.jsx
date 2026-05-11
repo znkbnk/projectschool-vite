@@ -60,26 +60,33 @@ const Signup = () => {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
-        password
+        password,
       );
       const user = userCredential.user;
 
       try {
         await sendEmailVerification(user);
+
+        const idToken = await user.getIdToken();
+
         await axios.post(
-          "https://www.projectschool.dev/.netlify/functions/create-user",
+          `${import.meta.env.VITE_API_URL}/api/create-user`,
           {
             firebaseUid: user.uid,
             email: user.email,
             emailSubscribed,
-          }
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${idToken}`,
+            },
+          },
         );
 
         await auth.signOut();
         toast.success("User signed up successfully! Please verify your email.");
         navigate("/login");
       } catch (apiError) {
-        // Clean up Firebase user on error
         await user.delete();
         throw apiError;
       }
@@ -105,14 +112,21 @@ const Signup = () => {
         return;
       }
 
-      await axios.post(
-        "https://www.projectschool.dev/.netlify/functions/create-user",
-        {
-          firebaseUid: user.uid,
-          email: user.email,
-          emailSubscribed: false,
-        }
-      );
+   const idToken = await user.getIdToken();
+
+await axios.post(
+  `${import.meta.env.VITE_API_URL}/api/create-user`,
+  {
+    firebaseUid: user.uid,
+    email: user.email,
+    emailSubscribed: false,
+  },
+  {
+    headers: {
+      Authorization: `Bearer ${idToken}`,
+    },
+  },
+);
 
       toast.success("User signed up successfully!");
       navigate("/success");

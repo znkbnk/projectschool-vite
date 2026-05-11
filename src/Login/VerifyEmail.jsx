@@ -1,5 +1,5 @@
 // src/Login/VerifyEmail.js
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { applyActionCode } from "firebase/auth";
 import { auth } from "../components/firebase";
@@ -9,9 +9,13 @@ import { StyledContainer } from "./AuthStyles";
 const VerifyEmail = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const hasVerifiedRef = useRef(false);
 
   useEffect(() => {
-    const oobCode = searchParams.get("oobCode"); // Get the oobCode from the URL
+    if (hasVerifiedRef.current) return;
+    hasVerifiedRef.current = true;
+
+    const oobCode = searchParams.get("oobCode");
 
     if (!oobCode) {
       toast.error("Invalid verification link.");
@@ -21,11 +25,18 @@ const VerifyEmail = () => {
 
     const verifyEmail = async () => {
       try {
-        await applyActionCode(auth, oobCode); // Verify the email using the oobCode
+        await applyActionCode(auth, oobCode);
         toast.success("Email verified successfully! You can now log in.");
         navigate("/login");
       } catch (error) {
-        toast.error("Error verifying email: " + error.message);
+        if (error.code === "auth/invalid-action-code") {
+          toast.error(
+            "This verification link is expired or already used. Please request a new verification email.",
+          );
+        } else {
+          toast.error("Error verifying email: " + error.message);
+        }
+
         navigate("/");
       }
     };
